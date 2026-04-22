@@ -1,0 +1,50 @@
+{
+  "name": "@withqwerty/campos-stadia",
+  "version": "0.1.0-alpha.0",
+  "description": "React pitch primitives for Campos — background, lines, goals, and viewBox transforms, with zero data assumptions.",
+  "license": "MIT",
+  "author": "withqwerty <rahulkeerthi2@gmail.com>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withqwerty/campos.git",
+    "directory": "packages/stadia"
+  },
+  "homepage": "https://campos.withqwerty.com",
+  "bugs": {
+    "url": "https://github.com/withqwerty/campos/issues"
+  },
+  "keywords": [
+    "football",
+    "soccer",
+    "data-visualization",
+    "typescript",
+    "campos",
+    "pitch",
+    "svg",
+    "react",
+    "primitives"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  }
+}

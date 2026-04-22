@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and discussions
+    url: https://github.com/withqwerty/campos/discussions
+    about: Use GitHub Discussions for usage questions, design discussion, and open-ended ideas.
+  - name: Security policy
+    url: https://github.com/withqwerty/campos/security/policy
+    about: Please report security issues privately instead of opening a public issue.

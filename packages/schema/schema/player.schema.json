@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Player",
+  "description": "Player metadata. Only id is required.",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": ["string", "null"] },
+    "teamId": { "type": ["string", "null"] },
+    "jerseyNumber": { "type": ["integer", "null"] },
+    "position": { "type": ["string", "null"] }
+  },
+  "required": ["id"]
+}

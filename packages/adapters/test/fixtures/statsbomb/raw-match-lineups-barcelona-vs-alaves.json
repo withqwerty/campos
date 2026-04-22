@@ -1,0 +1,2053 @@
+{
+  "source": {
+    "provider": "statsbomb-open-data",
+    "sourceRepo": "https://github.com/statsbomb/open-data",
+    "competitionId": 11,
+    "seasonId": 1,
+    "matchId": 15946,
+    "matchesUrl": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/matches/11/1.json",
+    "eventsUrl": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/15946.json",
+    "lineupsUrl": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/lineups/15946.json",
+    "note": "Compact real StatsBomb lineup fixture for matchLineups() coverage. Selected from Barcelona vs Deportivo Alavés to keep the match-day squad plus Starting XI, Tactical Shift, and Substitution events.",
+    "selectedEventIds": [
+      "9f6e2ecf-6685-45df-a62e-c2db3090f6c1",
+      "0300039d-150d-41e4-b29a-76602ef002e6",
+      "d7d34f2c-0a00-4d3c-a0c8-5b91f261bbcb",
+      "3ffa05fd-8046-46cb-97c9-5add5a15ac74",
+      "6bc1f8b7-0ae3-42dd-9033-dfd2467cff25",
+      "2ab6b2ca-5e8b-4b3b-9b25-227ca3a612b6",
+      "0363ba7c-4a9e-42cf-937a-85aa5adb07ce",
+      "75f704d4-e67b-412e-bd1e-c5cf69c212ca",
+      "75675446-b09e-42f8-a690-c1a6c3f24812",
+      "f938c9cd-6f51-4b2a-be0e-bc145f468d5e",
+      "a4824709-8046-44ab-992c-81ed6b764d12",
+      "92035681-1490-40fc-acf6-cb593a7172d2"
+    ],
+    "rawTypeCounts": {
+      "Starting XI": 2,
+      "Tactical Shift": 4,
+      "Substitution": 6
+    }
+  },
+  "matchInfo": {
+    "id": 15946,
+    "homeTeam": {
+      "id": 217,
+      "name": "Barcelona"
+    },
+    "awayTeam": {
+      "id": 206,
+      "name": "Deportivo Alavés"
+    }
+  },
+  "lineups": [
+    {
+      "team_id": 217,
+      "team_name": "Barcelona",
+      "lineup": [
+        {
+          "player_id": 3501,
+          "player_name": "Philippe Coutinho Correia",
+          "player_nickname": "Philippe Coutinho",
+          "jersey_number": 7,
+          "country": {
+            "id": 31,
+            "name": "Brazil"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 15,
+              "position": "Left Center Midfield",
+              "from": "45:00",
+              "to": "45:00",
+              "from_period": 2,
+              "to_period": 2,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Substitution - On (Tactical)"
+            },
+            {
+              "position_id": 2,
+              "position": "Right Back",
+              "from": "45:00",
+              "to": "76:14",
+              "from_period": 2,
+              "to_period": 2,
+              "start_reason": "Substitution - On (Tactical)",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 21,
+              "position": "Left Wing",
+              "from": "76:14",
+              "to": null,
+              "from_period": 2,
+              "to_period": null,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 5203,
+          "player_name": "Sergio Busquets i Burgos",
+          "player_nickname": "Sergio Busquets",
+          "jersey_number": 5,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 9,
+              "position": "Right Defensive Midfield",
+              "from": "00:00",
+              "to": "45:00",
+              "from_period": 1,
+              "to_period": 2,
+              "start_reason": "Starting XI",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 10,
+              "position": "Center Defensive Midfield",
+              "from": "45:00",
+              "to": "84:13",
+              "from_period": 2,
+              "to_period": 2,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Substitution - Off (Tactical)"
+            }
+          ]
+        },
+        {
+          "player_id": 5211,
+          "player_name": "Jordi Alba Ramos",
+          "player_nickname": "Jordi Alba",
+          "jersey_number": 18,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 6,
+              "position": "Left Back",
+              "from": "00:00",
+              "to": null,
+              "from_period": 1,
+              "to_period": null,
+              "start_reason": "Starting XI",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 5213,
+          "player_name": "Gerard Piqué Bernabéu",
+          "player_nickname": "Gerard Piqué",
+          "jersey_number": 3,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 3,
+              "position": "Right Center Back",
+              "from": "00:00",
+              "to": null,
+              "from_period": 1,
+              "to_period": null,
+              "start_reason": "Starting XI",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 5246,
+          "player_name": "Luis Alberto Suárez Díaz",
+          "player_nickname": "Luis Suárez",
+          "jersey_number": 9,
+          "country": {
+            "id": 242,
+            "name": "Uruguay"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 22,
+              "position": "Right Center Forward",
+              "from": "00:00",
+              "to": "45:00",
+              "from_period": 1,
+              "to_period": 2,
+              "start_reason": "Starting XI",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 23,
+              "position": "Center Forward",
+              "from": "45:00",
+              "to": null,
+              "from_period": 2,
+              "to_period": null,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 5470,
+          "player_name": "Ivan Rakitić",
+          "player_nickname": null,
+          "jersey_number": 4,
+          "country": {
+            "id": 56,
+            "name": "Croatia"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 11,
+              "position": "Left Defensive Midfield",
+              "from": "00:00",
+              "to": "45:00",
+              "from_period": 1,
+              "to_period": 2,
+              "start_reason": "Starting XI",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 13,
+              "position": "Right Center Midfield",
+              "from": "45:00",
+              "to": "84:15",
+              "from_period": 2,
+              "to_period": 2,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 10,
+              "position": "Center Defensive Midfield",
+              "from": "84:15",
+              "to": null,
+              "from_period": 2,
+              "to_period": null,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 5477,
+          "player_name": "Ousmane Dembélé",
+          "player_nickname": null,
+          "jersey_number": 11,
+          "country": {
+            "id": 78,
+            "name": "France"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 16,
+              "position": "Left Midfield",
+              "from": "00:00",
+              "to": "45:00",
+              "from_period": 1,
+              "to_period": 2,
+              "start_reason": "Starting XI",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 21,
+              "position": "Left Wing",
+              "from": "45:00",
+              "to": "76:12",
+              "from_period": 2,
+              "to_period": 2,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Substitution - Off (Tactical)"
+            }
+          ]
+        },
+        {
+          "player_id": 5492,
+          "player_name": "Samuel Yves Umtiti",
+          "player_nickname": "Samuel Umtiti",
+          "jersey_number": 23,
+          "country": {
+            "id": 78,
+            "name": "France"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 5,
+              "position": "Left Center Back",
+              "from": "00:00",
+              "to": null,
+              "from_period": 1,
+              "to_period": null,
+              "start_reason": "Starting XI",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 5503,
+          "player_name": "Lionel Andrés Messi Cuccittini",
+          "player_nickname": "Lionel Messi",
+          "jersey_number": 10,
+          "country": {
+            "id": 11,
+            "name": "Argentina"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 24,
+              "position": "Left Center Forward",
+              "from": "00:00",
+              "to": "45:00",
+              "from_period": 1,
+              "to_period": 2,
+              "start_reason": "Starting XI",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 17,
+              "position": "Right Wing",
+              "from": "45:00",
+              "to": null,
+              "from_period": 2,
+              "to_period": null,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 6374,
+          "player_name": "Nélson Cabral Semedo",
+          "player_nickname": "Nélson Semedo",
+          "jersey_number": 2,
+          "country": {
+            "id": 183,
+            "name": "Portugal"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 2,
+              "position": "Right Back",
+              "from": "00:00",
+              "to": "45:00",
+              "from_period": 1,
+              "to_period": 2,
+              "start_reason": "Starting XI",
+              "end_reason": "Substitution - Off (Tactical)"
+            }
+          ]
+        },
+        {
+          "player_id": 6379,
+          "player_name": "Sergi Roberto Carnicer",
+          "player_nickname": "Sergi Roberto",
+          "jersey_number": 20,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 12,
+              "position": "Right Midfield",
+              "from": "00:00",
+              "to": "45:00",
+              "from_period": 1,
+              "to_period": 2,
+              "start_reason": "Starting XI",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 2,
+              "position": "Right Back",
+              "from": "45:00",
+              "to": null,
+              "from_period": 2,
+              "to_period": null,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 8206,
+          "player_name": "Arturo Erasmo Vidal Pardo",
+          "player_nickname": "Arturo Vidal",
+          "jersey_number": 22,
+          "country": {
+            "id": 45,
+            "name": "Chile"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 10,
+              "position": "Center Defensive Midfield",
+              "from": "84:13",
+              "to": "84:15",
+              "from_period": 2,
+              "to_period": 2,
+              "start_reason": "Substitution - On (Tactical)",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 13,
+              "position": "Right Center Midfield",
+              "from": "84:15",
+              "to": null,
+              "from_period": 2,
+              "to_period": null,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 11392,
+          "player_name": "Arthur Henrique Ramos de Oliveira Melo",
+          "player_nickname": "Arthur",
+          "jersey_number": 8,
+          "country": {
+            "id": 31,
+            "name": "Brazil"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 21,
+              "position": "Left Wing",
+              "from": "76:12",
+              "to": "76:14",
+              "from_period": 2,
+              "to_period": 2,
+              "start_reason": "Substitution - On (Tactical)",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 15,
+              "position": "Left Center Midfield",
+              "from": "76:14",
+              "to": null,
+              "from_period": 2,
+              "to_period": null,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 20055,
+          "player_name": "Marc-André ter Stegen",
+          "player_nickname": "Marc-André ter Stegen",
+          "jersey_number": 1,
+          "country": {
+            "id": 85,
+            "name": "Germany"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 1,
+              "position": "Goalkeeper",
+              "from": "00:00",
+              "to": null,
+              "from_period": 1,
+              "to_period": null,
+              "start_reason": "Starting XI",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "team_id": 206,
+      "team_name": "Deportivo Alavés",
+      "lineup": [
+        {
+          "player_id": 6566,
+          "player_name": "Borja González Tomás",
+          "player_nickname": "Borja Bastón",
+          "jersey_number": 18,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 16,
+              "position": "Left Midfield",
+              "from": "67:52",
+              "to": "67:53",
+              "from_period": 2,
+              "to_period": 2,
+              "start_reason": "Substitution - On (Tactical)",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 22,
+              "position": "Right Center Forward",
+              "from": "67:53",
+              "to": null,
+              "from_period": 2,
+              "to_period": null,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 6581,
+          "player_name": "Jonathan Rodríguez Menéndez",
+          "player_nickname": "Jony",
+          "jersey_number": 23,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 16,
+              "position": "Left Midfield",
+              "from": "00:00",
+              "to": "67:52",
+              "from_period": 1,
+              "to_period": 2,
+              "start_reason": "Starting XI",
+              "end_reason": "Substitution - Off (Tactical)"
+            }
+          ]
+        },
+        {
+          "player_id": 6612,
+          "player_name": "Rubén Duarte Sánchez",
+          "player_nickname": "Rubén Duarte",
+          "jersey_number": 3,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 6,
+              "position": "Left Back",
+              "from": "00:00",
+              "to": null,
+              "from_period": 1,
+              "to_period": null,
+              "start_reason": "Starting XI",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 6613,
+          "player_name": "Rubén Sobrino Pozuelo",
+          "player_nickname": "Rubén Sobrino",
+          "jersey_number": 7,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 23,
+              "position": "Center Forward",
+              "from": "00:00",
+              "to": "67:53",
+              "from_period": 1,
+              "to_period": 2,
+              "start_reason": "Starting XI",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 24,
+              "position": "Left Center Forward",
+              "from": "67:53",
+              "to": "70:30",
+              "from_period": 2,
+              "to_period": 2,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Substitution - Off (Injury)"
+            }
+          ]
+        },
+        {
+          "player_id": 6615,
+          "player_name": "Víctor Laguardia Cisneros",
+          "player_nickname": "Víctor Laguardia",
+          "jersey_number": 5,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 3,
+              "position": "Right Center Back",
+              "from": "00:00",
+              "to": null,
+              "from_period": 1,
+              "to_period": null,
+              "start_reason": "Starting XI",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 6617,
+          "player_name": "Ibai Gómez Pérez",
+          "player_nickname": "Ibai Gómez",
+          "jersey_number": 11,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 12,
+              "position": "Right Midfield",
+              "from": "00:00",
+              "to": null,
+              "from_period": 1,
+              "to_period": null,
+              "start_reason": "Starting XI",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 6618,
+          "player_name": "Martín Aguirregabiria Padilla",
+          "player_nickname": "Martín Aguirregabiria",
+          "jersey_number": 21,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 2,
+              "position": "Right Back",
+              "from": "00:00",
+              "to": null,
+              "from_period": 1,
+              "to_period": null,
+              "start_reason": "Starting XI",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 6624,
+          "player_name": "Jorge Franco Alviz",
+          "player_nickname": "Burgui",
+          "jersey_number": 14,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 24,
+              "position": "Left Center Forward",
+              "from": "70:30",
+              "to": null,
+              "from_period": 2,
+              "to_period": null,
+              "start_reason": "Substitution - On (Injury)",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 6626,
+          "player_name": "Mubarak Wakaso",
+          "player_nickname": null,
+          "jersey_number": 22,
+          "country": {
+            "id": 86,
+            "name": "Ghana"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 13,
+              "position": "Right Center Midfield",
+              "from": "00:00",
+              "to": "67:53",
+              "from_period": 1,
+              "to_period": 2,
+              "start_reason": "Starting XI",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 9,
+              "position": "Right Defensive Midfield",
+              "from": "67:53",
+              "to": null,
+              "from_period": 2,
+              "to_period": null,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 6629,
+          "player_name": "Fernando Pacheco Flores",
+          "player_nickname": "Fernando Pacheco",
+          "jersey_number": 1,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 1,
+              "position": "Goalkeeper",
+              "from": "00:00",
+              "to": null,
+              "from_period": 1,
+              "to_period": null,
+              "start_reason": "Starting XI",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 6632,
+          "player_name": "Manuel Alejandro García Sánchez",
+          "player_nickname": "Manu García",
+          "jersey_number": 19,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 15,
+              "position": "Left Center Midfield",
+              "from": "00:00",
+              "to": "67:53",
+              "from_period": 1,
+              "to_period": 2,
+              "start_reason": "Starting XI",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 11,
+              "position": "Left Defensive Midfield",
+              "from": "67:53",
+              "to": null,
+              "from_period": 2,
+              "to_period": null,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 6839,
+          "player_name": "Daniel Alejandro Torres Rojas",
+          "player_nickname": "Dani Torres",
+          "jersey_number": 16,
+          "country": {
+            "id": 49,
+            "name": "Colombia"
+          },
+          "cards": [
+            {
+              "time": "09:15",
+              "card_type": "Yellow Card",
+              "reason": "Foul Committed",
+              "period": 1
+            }
+          ],
+          "positions": [
+            {
+              "position_id": 10,
+              "position": "Center Defensive Midfield",
+              "from": "00:00",
+              "to": "67:48",
+              "from_period": 1,
+              "to_period": 2,
+              "start_reason": "Starting XI",
+              "end_reason": "Substitution - Off (Tactical)"
+            }
+          ]
+        },
+        {
+          "player_id": 6855,
+          "player_name": "Guillermo Alfonso Maripán Loaysa",
+          "player_nickname": "Guillermo Maripán",
+          "jersey_number": 6,
+          "country": {
+            "id": 45,
+            "name": "Chile"
+          },
+          "cards": [
+            {
+              "time": "40:46",
+              "card_type": "Yellow Card",
+              "reason": "Bad Behaviour",
+              "period": 1
+            }
+          ],
+          "positions": [
+            {
+              "position_id": 5,
+              "position": "Left Center Back",
+              "from": "00:00",
+              "to": null,
+              "from_period": 1,
+              "to_period": null,
+              "start_reason": "Starting XI",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        },
+        {
+          "player_id": 6935,
+          "player_name": "Adrián Marín Gómez",
+          "player_nickname": "Adrián Marín",
+          "jersey_number": 17,
+          "country": {
+            "id": 214,
+            "name": "Spain"
+          },
+          "cards": [],
+          "positions": [
+            {
+              "position_id": 10,
+              "position": "Center Defensive Midfield",
+              "from": "67:48",
+              "to": "67:53",
+              "from_period": 2,
+              "to_period": 2,
+              "start_reason": "Substitution - On (Tactical)",
+              "end_reason": "Tactical Shift"
+            },
+            {
+              "position_id": 16,
+              "position": "Left Midfield",
+              "from": "67:53",
+              "to": null,
+              "from_period": 2,
+              "to_period": null,
+              "start_reason": "Tactical Shift",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "9f6e2ecf-6685-45df-a62e-c2db3090f6c1",
+      "index": 1,
+      "period": 1,
+      "timestamp": "00:00:00.000",
+      "minute": 0,
+      "second": 0,
+      "type": {
+        "id": 35,
+        "name": "Starting XI"
+      },
+      "possession": 1,
+      "possession_team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "play_pattern": {
+        "id": 1,
+        "name": "Regular Play"
+      },
+      "team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "duration": 0,
+      "tactics": {
+        "formation": 442,
+        "lineup": [
+          {
+            "player": {
+              "id": 20055,
+              "name": "Marc-André ter Stegen"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 1
+          },
+          {
+            "player": {
+              "id": 6374,
+              "name": "Nélson Cabral Semedo"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 2
+          },
+          {
+            "player": {
+              "id": 5213,
+              "name": "Gerard Piqué Bernabéu"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 3
+          },
+          {
+            "player": {
+              "id": 5492,
+              "name": "Samuel Yves Umtiti"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 23
+          },
+          {
+            "player": {
+              "id": 5211,
+              "name": "Jordi Alba Ramos"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 18
+          },
+          {
+            "player": {
+              "id": 5203,
+              "name": "Sergio Busquets i Burgos"
+            },
+            "position": {
+              "id": 9,
+              "name": "Right Defensive Midfield"
+            },
+            "jersey_number": 5
+          },
+          {
+            "player": {
+              "id": 5470,
+              "name": "Ivan Rakitić"
+            },
+            "position": {
+              "id": 11,
+              "name": "Left Defensive Midfield"
+            },
+            "jersey_number": 4
+          },
+          {
+            "player": {
+              "id": 6379,
+              "name": "Sergi Roberto Carnicer"
+            },
+            "position": {
+              "id": 12,
+              "name": "Right Midfield"
+            },
+            "jersey_number": 20
+          },
+          {
+            "player": {
+              "id": 5477,
+              "name": "Ousmane Dembélé"
+            },
+            "position": {
+              "id": 16,
+              "name": "Left Midfield"
+            },
+            "jersey_number": 11
+          },
+          {
+            "player": {
+              "id": 5246,
+              "name": "Luis Alberto Suárez Díaz"
+            },
+            "position": {
+              "id": 22,
+              "name": "Right Center Forward"
+            },
+            "jersey_number": 9
+          },
+          {
+            "player": {
+              "id": 5503,
+              "name": "Lionel Andrés Messi Cuccittini"
+            },
+            "position": {
+              "id": 24,
+              "name": "Left Center Forward"
+            },
+            "jersey_number": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "0300039d-150d-41e4-b29a-76602ef002e6",
+      "index": 2,
+      "period": 1,
+      "timestamp": "00:00:00.000",
+      "minute": 0,
+      "second": 0,
+      "type": {
+        "id": 35,
+        "name": "Starting XI"
+      },
+      "possession": 1,
+      "possession_team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "play_pattern": {
+        "id": 1,
+        "name": "Regular Play"
+      },
+      "team": {
+        "id": 206,
+        "name": "Deportivo Alavés"
+      },
+      "duration": 0,
+      "tactics": {
+        "formation": 451,
+        "lineup": [
+          {
+            "player": {
+              "id": 6629,
+              "name": "Fernando Pacheco Flores"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 1
+          },
+          {
+            "player": {
+              "id": 6618,
+              "name": "Martín Aguirregabiria Padilla"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 21
+          },
+          {
+            "player": {
+              "id": 6615,
+              "name": "Víctor Laguardia Cisneros"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 5
+          },
+          {
+            "player": {
+              "id": 6855,
+              "name": "Guillermo Alfonso Maripán Loaysa"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 6
+          },
+          {
+            "player": {
+              "id": 6612,
+              "name": "Rubén Duarte Sánchez"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 3
+          },
+          {
+            "player": {
+              "id": 6839,
+              "name": "Daniel Alejandro Torres Rojas"
+            },
+            "position": {
+              "id": 10,
+              "name": "Center Defensive Midfield"
+            },
+            "jersey_number": 16
+          },
+          {
+            "player": {
+              "id": 6617,
+              "name": "Ibai Gómez Pérez"
+            },
+            "position": {
+              "id": 12,
+              "name": "Right Midfield"
+            },
+            "jersey_number": 11
+          },
+          {
+            "player": {
+              "id": 6626,
+              "name": "Mubarak Wakaso"
+            },
+            "position": {
+              "id": 13,
+              "name": "Right Center Midfield"
+            },
+            "jersey_number": 22
+          },
+          {
+            "player": {
+              "id": 6632,
+              "name": "Manuel Alejandro García Sánchez"
+            },
+            "position": {
+              "id": 15,
+              "name": "Left Center Midfield"
+            },
+            "jersey_number": 19
+          },
+          {
+            "player": {
+              "id": 6581,
+              "name": "Jonathan Rodríguez Menéndez"
+            },
+            "position": {
+              "id": 16,
+              "name": "Left Midfield"
+            },
+            "jersey_number": 23
+          },
+          {
+            "player": {
+              "id": 6613,
+              "name": "Rubén Sobrino Pozuelo"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "jersey_number": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "d7d34f2c-0a00-4d3c-a0c8-5b91f261bbcb",
+      "index": 1821,
+      "period": 2,
+      "timestamp": "00:00:00.000",
+      "minute": 45,
+      "second": 0,
+      "type": {
+        "id": 19,
+        "name": "Substitution"
+      },
+      "possession": 73,
+      "possession_team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "play_pattern": {
+        "id": 3,
+        "name": "From Free Kick"
+      },
+      "team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "player": {
+        "id": 6374,
+        "name": "Nélson Cabral Semedo"
+      },
+      "position": {
+        "id": 2,
+        "name": "Right Back"
+      },
+      "duration": 0,
+      "substitution": {
+        "outcome": {
+          "id": 103,
+          "name": "Tactical"
+        },
+        "replacement": {
+          "id": 3501,
+          "name": "Philippe Coutinho Correia"
+        }
+      }
+    },
+    {
+      "id": "3ffa05fd-8046-46cb-97c9-5add5a15ac74",
+      "index": 1822,
+      "period": 2,
+      "timestamp": "00:00:00.190",
+      "minute": 45,
+      "second": 0,
+      "type": {
+        "id": 36,
+        "name": "Tactical Shift"
+      },
+      "possession": 73,
+      "possession_team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "play_pattern": {
+        "id": 3,
+        "name": "From Free Kick"
+      },
+      "team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "duration": 0,
+      "tactics": {
+        "formation": 433,
+        "lineup": [
+          {
+            "player": {
+              "id": 20055,
+              "name": "Marc-André ter Stegen"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 1
+          },
+          {
+            "player": {
+              "id": 6379,
+              "name": "Sergi Roberto Carnicer"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 20
+          },
+          {
+            "player": {
+              "id": 5213,
+              "name": "Gerard Piqué Bernabéu"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 3
+          },
+          {
+            "player": {
+              "id": 5492,
+              "name": "Samuel Yves Umtiti"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 23
+          },
+          {
+            "player": {
+              "id": 5211,
+              "name": "Jordi Alba Ramos"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 18
+          },
+          {
+            "player": {
+              "id": 5203,
+              "name": "Sergio Busquets i Burgos"
+            },
+            "position": {
+              "id": 10,
+              "name": "Center Defensive Midfield"
+            },
+            "jersey_number": 5
+          },
+          {
+            "player": {
+              "id": 5470,
+              "name": "Ivan Rakitić"
+            },
+            "position": {
+              "id": 13,
+              "name": "Right Center Midfield"
+            },
+            "jersey_number": 4
+          },
+          {
+            "player": {
+              "id": 3501,
+              "name": "Philippe Coutinho Correia"
+            },
+            "position": {
+              "id": 15,
+              "name": "Left Center Midfield"
+            },
+            "jersey_number": 7
+          },
+          {
+            "player": {
+              "id": 5503,
+              "name": "Lionel Andrés Messi Cuccittini"
+            },
+            "position": {
+              "id": 17,
+              "name": "Right Wing"
+            },
+            "jersey_number": 10
+          },
+          {
+            "player": {
+              "id": 5477,
+              "name": "Ousmane Dembélé"
+            },
+            "position": {
+              "id": 21,
+              "name": "Left Wing"
+            },
+            "jersey_number": 11
+          },
+          {
+            "player": {
+              "id": 5246,
+              "name": "Luis Alberto Suárez Díaz"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "jersey_number": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "6bc1f8b7-0ae3-42dd-9033-dfd2467cff25",
+      "index": 2857,
+      "period": 2,
+      "timestamp": "00:22:48.530",
+      "minute": 67,
+      "second": 48,
+      "type": {
+        "id": 19,
+        "name": "Substitution"
+      },
+      "possession": 101,
+      "possession_team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "play_pattern": {
+        "id": 1,
+        "name": "Regular Play"
+      },
+      "team": {
+        "id": 206,
+        "name": "Deportivo Alavés"
+      },
+      "player": {
+        "id": 6839,
+        "name": "Daniel Alejandro Torres Rojas"
+      },
+      "position": {
+        "id": 10,
+        "name": "Center Defensive Midfield"
+      },
+      "duration": 0,
+      "substitution": {
+        "outcome": {
+          "id": 103,
+          "name": "Tactical"
+        },
+        "replacement": {
+          "id": 6935,
+          "name": "Adrián Marín Gómez"
+        }
+      }
+    },
+    {
+      "id": "2ab6b2ca-5e8b-4b3b-9b25-227ca3a612b6",
+      "index": 2858,
+      "period": 2,
+      "timestamp": "00:22:52.173",
+      "minute": 67,
+      "second": 52,
+      "type": {
+        "id": 19,
+        "name": "Substitution"
+      },
+      "possession": 101,
+      "possession_team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "play_pattern": {
+        "id": 1,
+        "name": "Regular Play"
+      },
+      "team": {
+        "id": 206,
+        "name": "Deportivo Alavés"
+      },
+      "player": {
+        "id": 6581,
+        "name": "Jonathan Rodríguez Menéndez"
+      },
+      "position": {
+        "id": 16,
+        "name": "Left Midfield"
+      },
+      "duration": 0,
+      "substitution": {
+        "outcome": {
+          "id": 103,
+          "name": "Tactical"
+        },
+        "replacement": {
+          "id": 6566,
+          "name": "Borja González Tomás"
+        }
+      }
+    },
+    {
+      "id": "0363ba7c-4a9e-42cf-937a-85aa5adb07ce",
+      "index": 2859,
+      "period": 2,
+      "timestamp": "00:22:53.106",
+      "minute": 67,
+      "second": 53,
+      "type": {
+        "id": 36,
+        "name": "Tactical Shift"
+      },
+      "possession": 101,
+      "possession_team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "play_pattern": {
+        "id": 1,
+        "name": "Regular Play"
+      },
+      "team": {
+        "id": 206,
+        "name": "Deportivo Alavés"
+      },
+      "duration": 0,
+      "tactics": {
+        "formation": 442,
+        "lineup": [
+          {
+            "player": {
+              "id": 6629,
+              "name": "Fernando Pacheco Flores"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 1
+          },
+          {
+            "player": {
+              "id": 6618,
+              "name": "Martín Aguirregabiria Padilla"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 21
+          },
+          {
+            "player": {
+              "id": 6615,
+              "name": "Víctor Laguardia Cisneros"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 5
+          },
+          {
+            "player": {
+              "id": 6855,
+              "name": "Guillermo Alfonso Maripán Loaysa"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 6
+          },
+          {
+            "player": {
+              "id": 6612,
+              "name": "Rubén Duarte Sánchez"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 3
+          },
+          {
+            "player": {
+              "id": 6626,
+              "name": "Mubarak Wakaso"
+            },
+            "position": {
+              "id": 9,
+              "name": "Right Defensive Midfield"
+            },
+            "jersey_number": 22
+          },
+          {
+            "player": {
+              "id": 6632,
+              "name": "Manuel Alejandro García Sánchez"
+            },
+            "position": {
+              "id": 11,
+              "name": "Left Defensive Midfield"
+            },
+            "jersey_number": 19
+          },
+          {
+            "player": {
+              "id": 6617,
+              "name": "Ibai Gómez Pérez"
+            },
+            "position": {
+              "id": 12,
+              "name": "Right Midfield"
+            },
+            "jersey_number": 11
+          },
+          {
+            "player": {
+              "id": 6935,
+              "name": "Adrián Marín Gómez"
+            },
+            "position": {
+              "id": 16,
+              "name": "Left Midfield"
+            },
+            "jersey_number": 17
+          },
+          {
+            "player": {
+              "id": 6566,
+              "name": "Borja González Tomás"
+            },
+            "position": {
+              "id": 22,
+              "name": "Right Center Forward"
+            },
+            "jersey_number": 18
+          },
+          {
+            "player": {
+              "id": 6613,
+              "name": "Rubén Sobrino Pozuelo"
+            },
+            "position": {
+              "id": 24,
+              "name": "Left Center Forward"
+            },
+            "jersey_number": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "75f704d4-e67b-412e-bd1e-c5cf69c212ca",
+      "index": 2932,
+      "period": 2,
+      "timestamp": "00:25:30.298",
+      "minute": 70,
+      "second": 30,
+      "type": {
+        "id": 19,
+        "name": "Substitution"
+      },
+      "possession": 105,
+      "possession_team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "play_pattern": {
+        "id": 4,
+        "name": "From Throw In"
+      },
+      "team": {
+        "id": 206,
+        "name": "Deportivo Alavés"
+      },
+      "player": {
+        "id": 6613,
+        "name": "Rubén Sobrino Pozuelo"
+      },
+      "position": {
+        "id": 24,
+        "name": "Left Center Forward"
+      },
+      "duration": 0,
+      "substitution": {
+        "outcome": {
+          "id": 102,
+          "name": "Injury"
+        },
+        "replacement": {
+          "id": 6624,
+          "name": "Jorge Franco Alviz"
+        }
+      }
+    },
+    {
+      "id": "75675446-b09e-42f8-a690-c1a6c3f24812",
+      "index": 3112,
+      "period": 2,
+      "timestamp": "00:31:12.033",
+      "minute": 76,
+      "second": 12,
+      "type": {
+        "id": 19,
+        "name": "Substitution"
+      },
+      "possession": 117,
+      "possession_team": {
+        "id": 206,
+        "name": "Deportivo Alavés"
+      },
+      "play_pattern": {
+        "id": 3,
+        "name": "From Free Kick"
+      },
+      "team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "player": {
+        "id": 5477,
+        "name": "Ousmane Dembélé"
+      },
+      "position": {
+        "id": 21,
+        "name": "Left Wing"
+      },
+      "duration": 0,
+      "substitution": {
+        "outcome": {
+          "id": 103,
+          "name": "Tactical"
+        },
+        "replacement": {
+          "id": 11392,
+          "name": "Arthur Henrique Ramos de Oliveira Melo"
+        }
+      }
+    },
+    {
+      "id": "f938c9cd-6f51-4b2a-be0e-bc145f468d5e",
+      "index": 3113,
+      "period": 2,
+      "timestamp": "00:31:14.603",
+      "minute": 76,
+      "second": 14,
+      "type": {
+        "id": 36,
+        "name": "Tactical Shift"
+      },
+      "possession": 117,
+      "possession_team": {
+        "id": 206,
+        "name": "Deportivo Alavés"
+      },
+      "play_pattern": {
+        "id": 3,
+        "name": "From Free Kick"
+      },
+      "team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "duration": 0,
+      "tactics": {
+        "formation": 433,
+        "lineup": [
+          {
+            "player": {
+              "id": 20055,
+              "name": "Marc-André ter Stegen"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 1
+          },
+          {
+            "player": {
+              "id": 6379,
+              "name": "Sergi Roberto Carnicer"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 20
+          },
+          {
+            "player": {
+              "id": 5213,
+              "name": "Gerard Piqué Bernabéu"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 3
+          },
+          {
+            "player": {
+              "id": 5492,
+              "name": "Samuel Yves Umtiti"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 23
+          },
+          {
+            "player": {
+              "id": 5211,
+              "name": "Jordi Alba Ramos"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 18
+          },
+          {
+            "player": {
+              "id": 5203,
+              "name": "Sergio Busquets i Burgos"
+            },
+            "position": {
+              "id": 10,
+              "name": "Center Defensive Midfield"
+            },
+            "jersey_number": 5
+          },
+          {
+            "player": {
+              "id": 5470,
+              "name": "Ivan Rakitić"
+            },
+            "position": {
+              "id": 13,
+              "name": "Right Center Midfield"
+            },
+            "jersey_number": 4
+          },
+          {
+            "player": {
+              "id": 11392,
+              "name": "Arthur Henrique Ramos de Oliveira Melo"
+            },
+            "position": {
+              "id": 15,
+              "name": "Left Center Midfield"
+            },
+            "jersey_number": 8
+          },
+          {
+            "player": {
+              "id": 5503,
+              "name": "Lionel Andrés Messi Cuccittini"
+            },
+            "position": {
+              "id": 17,
+              "name": "Right Wing"
+            },
+            "jersey_number": 10
+          },
+          {
+            "player": {
+              "id": 3501,
+              "name": "Philippe Coutinho Correia"
+            },
+            "position": {
+              "id": 21,
+              "name": "Left Wing"
+            },
+            "jersey_number": 7
+          },
+          {
+            "player": {
+              "id": 5246,
+              "name": "Luis Alberto Suárez Díaz"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "jersey_number": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4824709-8046-44ab-992c-81ed6b764d12",
+      "index": 3388,
+      "period": 2,
+      "timestamp": "00:39:13.095",
+      "minute": 84,
+      "second": 13,
+      "type": {
+        "id": 19,
+        "name": "Substitution"
+      },
+      "possession": 130,
+      "possession_team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "play_pattern": {
+        "id": 1,
+        "name": "Regular Play"
+      },
+      "team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "player": {
+        "id": 5203,
+        "name": "Sergio Busquets i Burgos"
+      },
+      "position": {
+        "id": 10,
+        "name": "Center Defensive Midfield"
+      },
+      "duration": 0,
+      "substitution": {
+        "outcome": {
+          "id": 103,
+          "name": "Tactical"
+        },
+        "replacement": {
+          "id": 8206,
+          "name": "Arturo Erasmo Vidal Pardo"
+        }
+      }
+    },
+    {
+      "id": "92035681-1490-40fc-acf6-cb593a7172d2",
+      "index": 3389,
+      "period": 2,
+      "timestamp": "00:39:15.258",
+      "minute": 84,
+      "second": 15,
+      "type": {
+        "id": 36,
+        "name": "Tactical Shift"
+      },
+      "possession": 130,
+      "possession_team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "play_pattern": {
+        "id": 1,
+        "name": "Regular Play"
+      },
+      "team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "duration": 0,
+      "tactics": {
+        "formation": 433,
+        "lineup": [
+          {
+            "player": {
+              "id": 20055,
+              "name": "Marc-André ter Stegen"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 1
+          },
+          {
+            "player": {
+              "id": 6379,
+              "name": "Sergi Roberto Carnicer"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 20
+          },
+          {
+            "player": {
+              "id": 5213,
+              "name": "Gerard Piqué Bernabéu"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 3
+          },
+          {
+            "player": {
+              "id": 5492,
+              "name": "Samuel Yves Umtiti"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 23
+          },
+          {
+            "player": {
+              "id": 5211,
+              "name": "Jordi Alba Ramos"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 18
+          },
+          {
+            "player": {
+              "id": 5470,
+              "name": "Ivan Rakitić"
+            },
+            "position": {
+              "id": 10,
+              "name": "Center Defensive Midfield"
+            },
+            "jersey_number": 4
+          },
+          {
+            "player": {
+              "id": 8206,
+              "name": "Arturo Erasmo Vidal Pardo"
+            },
+            "position": {
+              "id": 13,
+              "name": "Right Center Midfield"
+            },
+            "jersey_number": 22
+          },
+          {
+            "player": {
+              "id": 11392,
+              "name": "Arthur Henrique Ramos de Oliveira Melo"
+            },
+            "position": {
+              "id": 15,
+              "name": "Left Center Midfield"
+            },
+            "jersey_number": 8
+          },
+          {
+            "player": {
+              "id": 5503,
+              "name": "Lionel Andrés Messi Cuccittini"
+            },
+            "position": {
+              "id": 17,
+              "name": "Right Wing"
+            },
+            "jersey_number": 10
+          },
+          {
+            "player": {
+              "id": 3501,
+              "name": "Philippe Coutinho Correia"
+            },
+            "position": {
+              "id": 21,
+              "name": "Left Wing"
+            },
+            "jersey_number": 7
+          },
+          {
+            "player": {
+              "id": 5246,
+              "name": "Luis Alberto Suárez Díaz"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "jersey_number": 9
+          }
+        ]
+      }
+    }
+  ]
+}

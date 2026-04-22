@@ -1,0 +1,72 @@
+{
+  "name": "@withqwerty/campos-adapters",
+  "version": "0.1.0-alpha.0",
+  "description": "Provider-to-Campos data adapters — Opta, StatsBomb, WhoScored, and Wyscout normalization for the Campos football schema.",
+  "license": "MIT",
+  "author": "withqwerty <rahulkeerthi2@gmail.com>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./opta": {
+      "types": "./dist/src/opta/index.d.ts",
+      "import": "./dist/src/opta/index.js"
+    },
+    "./statsbomb": {
+      "types": "./dist/src/statsbomb/index.d.ts",
+      "import": "./dist/src/statsbomb/index.js"
+    },
+    "./whoscored": {
+      "types": "./dist/src/whoscored/index.d.ts",
+      "import": "./dist/src/whoscored/index.js"
+    },
+    "./wyscout": {
+      "types": "./dist/src/wyscout/index.d.ts",
+      "import": "./dist/src/wyscout/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist/index.js",
+    "dist/index.js.map",
+    "dist/index.d.ts",
+    "dist/index.d.ts.map",
+    "dist/src",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withqwerty/campos.git",
+    "directory": "packages/adapters"
+  },
+  "homepage": "https://campos.withqwerty.com",
+  "bugs": {
+    "url": "https://github.com/withqwerty/campos/issues"
+  },
+  "keywords": [
+    "football",
+    "soccer",
+    "data-visualization",
+    "typescript",
+    "campos",
+    "adapters",
+    "opta",
+    "statsbomb",
+    "whoscored",
+    "wyscout"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json && mv dist/adapters/* dist/ && rmdir dist/adapters"
+  },
+  "dependencies": {
+    "@withqwerty/campos-schema": "workspace:*",
+    "fast-xml-parser": "^5.7.1"
+  }
+}

@@ -1,0 +1,1355 @@
+{
+  "meta": {
+    "component": "PassFlow",
+    "empty": false,
+    "accessibleLabel": "Pass flow: 6 passes across 6×4 zones",
+    "crop": "full",
+    "attackingDirection": "right",
+    "valueMode": "share",
+    "lowDispersionGlyph": "circle",
+    "arrowLengthMode": "equal",
+    "dispersionFloor": 0.3,
+    "minCountForArrow": 2,
+    "warnings": [],
+    "stats": {
+      "totalInput": 6,
+      "totalValid": 6,
+      "clampedXY": 0,
+      "droppedNonFinite": 0,
+      "droppedNoOutcome": 0,
+      "droppedByFilter": 0,
+      "droppedOutOfCrop": 0
+    }
+  },
+  "layout": {
+    "order": ["headerStats", "plot", "legend"]
+  },
+  "headerStats": {
+    "items": [
+      {
+        "label": "Passes",
+        "value": "6"
+      },
+      {
+        "label": "Completion",
+        "value": "83%"
+      },
+      {
+        "label": "Mean length",
+        "value": "22.5"
+      }
+    ]
+  },
+  "grid": {
+    "columns": 6,
+    "rows": 4,
+    "bins": [
+      {
+        "col": 0,
+        "row": 0,
+        "key": "0-0",
+        "x": 0,
+        "y": 0,
+        "width": 16.666666666666668,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 1, row 1 (x 0–17)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 1,
+        "row": 0,
+        "key": "0-1",
+        "x": 16.666666666666668,
+        "y": 0,
+        "width": 16.666666666666668,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 2, row 1 (x 17–33)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 2,
+        "row": 0,
+        "key": "0-2",
+        "x": 33.333333333333336,
+        "y": 0,
+        "width": 16.666666666666664,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 3, row 1 (x 33–50)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 3,
+        "row": 0,
+        "key": "0-3",
+        "x": 50,
+        "y": 0,
+        "width": 16.66666666666667,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 4, row 1 (x 50–67)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 4,
+        "row": 0,
+        "key": "0-4",
+        "x": 66.66666666666667,
+        "y": 0,
+        "width": 16.66666666666667,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 5, row 1 (x 67–83)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 5,
+        "row": 0,
+        "key": "0-5",
+        "x": 83.33333333333334,
+        "y": 0,
+        "width": 16.666666666666657,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 6, row 1 (x 83–100)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 0,
+        "row": 1,
+        "key": "1-0",
+        "x": 0,
+        "y": 25,
+        "width": 16.666666666666668,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 1, row 2 (x 0–17)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 1,
+        "row": 1,
+        "key": "1-1",
+        "x": 16.666666666666668,
+        "y": 25,
+        "width": 16.666666666666668,
+        "height": 25,
+        "count": 1,
+        "directionCount": 1,
+        "value": 0.16666666666666666,
+        "share": 0.16666666666666666,
+        "relativeFrequency": 3.9999999999999987,
+        "intensity": 0.3333333333333333,
+        "fill": "#791d68",
+        "opacity": 1,
+        "meanAngle": null,
+        "resultantLength": 1,
+        "meanDistance": 20,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": true,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 2, row 2 (x 17–33)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "1"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "16.7%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "1.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 2,
+        "row": 1,
+        "key": "1-2",
+        "x": 33.333333333333336,
+        "y": 25,
+        "width": 16.666666666666664,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 3, row 2 (x 33–50)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 3,
+        "row": 1,
+        "key": "1-3",
+        "x": 50,
+        "y": 25,
+        "width": 16.66666666666667,
+        "height": 25,
+        "count": 3,
+        "directionCount": 3,
+        "value": 0.5,
+        "share": 0.5,
+        "relativeFrequency": 11.999999999999995,
+        "intensity": 1,
+        "fill": "#fbffa4",
+        "opacity": 1,
+        "meanAngle": 0,
+        "resultantLength": 1,
+        "meanDistance": 25,
+        "destinations": [],
+        "magnitudeHint": 1,
+        "hasArrow": true,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 4, row 2 (x 50–67)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "3"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "50.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "0° (forward)"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "1.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 4,
+        "row": 1,
+        "key": "1-4",
+        "x": 66.66666666666667,
+        "y": 25,
+        "width": 16.66666666666667,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 5, row 2 (x 67–83)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 5,
+        "row": 1,
+        "key": "1-5",
+        "x": 83.33333333333334,
+        "y": 25,
+        "width": 16.666666666666657,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 6, row 2 (x 83–100)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 0,
+        "row": 2,
+        "key": "2-0",
+        "x": 0,
+        "y": 50,
+        "width": 16.666666666666668,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 1, row 3 (x 0–17)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 1,
+        "row": 2,
+        "key": "2-1",
+        "x": 16.666666666666668,
+        "y": 50,
+        "width": 16.666666666666668,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 2, row 3 (x 17–33)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 2,
+        "row": 2,
+        "key": "2-2",
+        "x": 33.333333333333336,
+        "y": 50,
+        "width": 16.666666666666664,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 3, row 3 (x 33–50)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 3,
+        "row": 2,
+        "key": "2-3",
+        "x": 50,
+        "y": 50,
+        "width": 16.66666666666667,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 4, row 3 (x 50–67)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 4,
+        "row": 2,
+        "key": "2-4",
+        "x": 66.66666666666667,
+        "y": 50,
+        "width": 16.66666666666667,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 5, row 3 (x 67–83)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 5,
+        "row": 2,
+        "key": "2-5",
+        "x": 83.33333333333334,
+        "y": 50,
+        "width": 16.666666666666657,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 6, row 3 (x 83–100)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 0,
+        "row": 3,
+        "key": "3-0",
+        "x": 0,
+        "y": 75,
+        "width": 16.666666666666668,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 1, row 4 (x 0–17)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 1,
+        "row": 3,
+        "key": "3-1",
+        "x": 16.666666666666668,
+        "y": 75,
+        "width": 16.666666666666668,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 2, row 4 (x 17–33)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 2,
+        "row": 3,
+        "key": "3-2",
+        "x": 33.333333333333336,
+        "y": 75,
+        "width": 16.666666666666664,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 3, row 4 (x 33–50)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 3,
+        "row": 3,
+        "key": "3-3",
+        "x": 50,
+        "y": 75,
+        "width": 16.66666666666667,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 4, row 4 (x 50–67)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 4,
+        "row": 3,
+        "key": "3-4",
+        "x": 66.66666666666667,
+        "y": 75,
+        "width": 16.66666666666667,
+        "height": 25,
+        "count": 2,
+        "directionCount": 2,
+        "value": 0.3333333333333333,
+        "share": 0.3333333333333333,
+        "relativeFrequency": 7.9999999999999964,
+        "intensity": 0.6666666666666666,
+        "fill": "#e87230",
+        "opacity": 1,
+        "meanAngle": 0,
+        "resultantLength": 1,
+        "meanDistance": 20,
+        "destinations": [],
+        "magnitudeHint": 1,
+        "hasArrow": true,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 5, row 4 (x 67–83)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "2"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "33.3%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "0° (forward)"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "1.00"
+            }
+          ]
+        }
+      },
+      {
+        "col": 5,
+        "row": 3,
+        "key": "3-5",
+        "x": 83.33333333333334,
+        "y": 75,
+        "width": 16.666666666666657,
+        "height": 25,
+        "count": 0,
+        "directionCount": 0,
+        "value": 0,
+        "share": 0,
+        "relativeFrequency": 0,
+        "intensity": 0,
+        "fill": "rgba(0,0,0,0)",
+        "opacity": 0,
+        "meanAngle": null,
+        "resultantLength": 0,
+        "meanDistance": 0,
+        "destinations": [],
+        "magnitudeHint": 0,
+        "hasArrow": false,
+        "lowDispersion": false,
+        "tooltip": {
+          "rows": [
+            {
+              "key": "zone",
+              "label": "Zone",
+              "value": "col 6, row 4 (x 83–100)"
+            },
+            {
+              "key": "count",
+              "label": "Passes",
+              "value": "0"
+            },
+            {
+              "key": "share",
+              "label": "% of total",
+              "value": "0.0%"
+            },
+            {
+              "key": "direction",
+              "label": "Mean direction",
+              "value": "—"
+            },
+            {
+              "key": "consistency",
+              "label": "Directional consistency",
+              "value": "0.00"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "plot": {
+    "pitch": {
+      "crop": "full",
+      "attackingDirection": "right"
+    }
+  },
+  "legend": {
+    "title": "Pass Origin Share",
+    "domain": [0, 0.5],
+    "stops": [
+      {
+        "offset": 0,
+        "color": "#140e36"
+      },
+      {
+        "offset": 0.3,
+        "color": "#6a176e"
+      },
+      {
+        "offset": 0.5,
+        "color": "#c23a4b"
+      },
+      {
+        "offset": 0.7,
+        "color": "#f07d2a"
+      },
+      {
+        "offset": 1,
+        "color": "#fbffa4"
+      }
+    ],
+    "valueMode": "share"
+  },
+  "emptyState": null
+}

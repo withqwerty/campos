@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/match-summary.schema.json",
+  "title": "MatchSummary",
+  "description": "Canonical live/result/header summary for a single football match.",
+  "type": "object",
+  "required": ["matchId", "status", "home", "away"],
+  "additionalProperties": false,
+  "properties": {
+    "matchId": {
+      "type": "string",
+      "description": "Stable match identifier in the source dataset when known."
+    },
+    "competitionLabel": {
+      "type": ["string", "null"],
+      "description": "Display-ready competition label when known."
+    },
+    "seasonLabel": {
+      "type": ["string", "null"],
+      "description": "Display-ready season label when known."
+    },
+    "kickoff": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Kickoff time as an ISO-8601 timestamp when known."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "scheduled",
+        "live",
+        "halftime",
+        "finished",
+        "postponed",
+        "canceled",
+        "abandoned",
+        "suspended",
+        "awarded",
+        "unknown"
+      ],
+      "description": "Canonical match status for header and live/result UI."
+    },
+    "statusLabel": {
+      "type": ["string", "null"],
+      "description": "Provider or display-ready status label when useful (for example FT, AET, AP, 1st half, or Postponed)."
+    },
+    "resolvedIn": {
+      "type": ["string", "null"],
+      "enum": ["regulation", "extra-time", "shootout", "forfeit", null],
+      "description": "How a finished match was resolved when the source exposes it. Null when unknown or not applicable."
+    },
+    "shootoutWinner": {
+      "type": ["string", "null"],
+      "enum": ["home", "away", null],
+      "description": "Winner of a penalty shootout when resolvedIn is 'shootout'. Null otherwise."
+    },
+    "minute": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "maximum": 200,
+      "description": "Current live match minute when the source exposes it cleanly. Currently no adapter populates this; reserved for future live feeds."
+    },
+    "venue": {
+      "type": ["string", "null"],
+      "description": "Venue label when known."
+    },
+    "attendance": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "description": "Attendance when the source exposes it."
+    },
+    "home": {
+      "$ref": "./match-summary-team.schema.json"
+    },
+    "away": {
+      "$ref": "./match-summary-team.schema.json"
+    },
+    "sourceMeta": {
+      "type": ["object", "null"],
+      "additionalProperties": true,
+      "description": "Provider-scoped metadata bag for provenance and advanced debugging. It must stay JSON-serializable, must not duplicate canonical top-level fields, and must not reinterpret raw provider semantics into fake cross-provider meaning."
+    }
+  }
+}

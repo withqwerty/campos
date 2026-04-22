@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/match-lineups.schema.json",
+  "title": "MatchLineups",
+  "description": "Canonical home and away team sheets for a match.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "matchId": {
+      "type": ["string", "null"],
+      "description": "Stable match identifier when known."
+    },
+    "home": {
+      "oneOf": [{ "$ref": "./team-sheet.schema.json" }, { "type": "null" }],
+      "description": "Home team sheet when decoded."
+    },
+    "away": {
+      "oneOf": [{ "$ref": "./team-sheet.schema.json" }, { "type": "null" }],
+      "description": "Away team sheet when decoded."
+    }
+  }
+}

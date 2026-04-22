@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/player.schema.json",
+  "title": "Player",
+  "description": "A football player. Required fields are id and name; every other field is optional and components must handle missing values.",
+  "type": "object",
+  "required": ["id", "name"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable identifier for this player within the data source. Not assumed to be globally unique across sources."
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name. May be full or short form. Unicode and multi-script names must be supported."
+    },
+    "photo_url": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Optional portrait photo URL. Components must fall back to initials if null or unreachable."
+    },
+    "club_id": {
+      "type": ["string", "null"],
+      "description": "Optional club identifier matching a Club.id."
+    },
+    "league_id": {
+      "type": ["string", "null"],
+      "description": "Optional league identifier."
+    },
+    "nation": {
+      "type": ["string", "null"],
+      "description": "Optional ISO 3166 alpha-3 country code (e.g. FRA, BRA, ENG)."
+    },
+    "position": {
+      "type": ["string", "null"],
+      "description": "Optional position label. Free-form, provider-dependent (e.g. 'Att Mid/Winger', 'LB', 'CF')."
+    },
+    "age": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "maximum": 60,
+      "description": "Age in years at the reference date."
+    },
+    "minutes": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "description": "Total minutes played in the reference period."
+    },
+    "birth_date": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "ISO 8601 date (YYYY-MM-DD)."
+    }
+  }
+}

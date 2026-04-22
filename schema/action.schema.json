@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/action.schema.json",
+  "title": "Action",
+  "description": "A ball-progression action (pass, carry, cross, dribble). Coordinates normalised to [0, 1].",
+  "type": "object",
+  "required": ["id", "start_x", "start_y", "end_x", "end_y", "action_type"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string" },
+    "start_x": { "type": "number", "minimum": 0, "maximum": 1 },
+    "start_y": { "type": "number", "minimum": 0, "maximum": 1 },
+    "end_x": { "type": "number", "minimum": 0, "maximum": 1 },
+    "end_y": { "type": "number", "minimum": 0, "maximum": 1 },
+    "action_type": {
+      "type": "string",
+      "enum": ["pass", "carry", "cross", "dribble", "take_on", "clearance", "recovery"]
+    },
+    "xt": {
+      "type": ["number", "null"],
+      "description": "Expected threat delta for this action. May be negative."
+    },
+    "outcome": {
+      "type": ["string", "null"],
+      "enum": ["success", "fail", null]
+    },
+    "player_id": {
+      "type": ["string", "null"]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+name: Feature request
+description: Propose a scoped improvement to the public Campos surface.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Charts / renderer
+        - Adapters
+        - Schema / types
+        - Stadia primitives
+        - Static export
+        - Site / docs / examples
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What practical problem does this feature solve?
+      placeholder: I want to compare...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed shape
+      description: Share the API or behavior you would expect if you already have one in mind.
+      placeholder: A component or helper like...
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What are you doing today instead?
+      placeholder: I currently work around this by...

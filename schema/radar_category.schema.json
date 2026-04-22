@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/radar_category.schema.json",
+  "title": "RadarCategory",
+  "description": "A single axis on a radar chart.",
+  "type": "object",
+  "required": ["label", "value", "max"],
+  "additionalProperties": false,
+  "properties": {
+    "label": { "type": "string" },
+    "value": { "type": "number" },
+    "comparison_value": {
+      "type": ["number", "null"],
+      "description": "Optional value for a comparison player."
+    },
+    "max": {
+      "type": "number",
+      "description": "Axis maximum for normalisation. Usually the 99th percentile of the peer group."
+    },
+    "reversed": {
+      "type": ["boolean", "null"],
+      "description": "If true, lower raw values render further from centre (for stats like xGA where lower is better)."
+    }
+  }
+}

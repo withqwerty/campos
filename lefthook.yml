@@ -1,0 +1,11 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      glob: "*.{ts,tsx}"
+      run: pnpm exec eslint --no-warn-ignored {staged_files}
+    format:
+      glob: "*.{ts,tsx,json,md,yml,yaml,css,astro}"
+      run: pnpm exec prettier --check {staged_files}
+    typecheck:
+      run: pnpm typecheck

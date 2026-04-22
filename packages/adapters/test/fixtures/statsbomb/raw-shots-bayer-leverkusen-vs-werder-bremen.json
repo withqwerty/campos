@@ -1,0 +1,920 @@
+{
+  "source": {
+    "provider": "statsbomb-open-data",
+    "sourceRepo": "https://github.com/statsbomb/open-data",
+    "competitionId": 9,
+    "seasonId": 281,
+    "matchId": 3895302,
+    "matchesUrl": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/matches/9/281.json",
+    "eventsUrl": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/3895302.json"
+  },
+  "matchInfo": {
+    "id": 3895302,
+    "description": "Bayer Leverkusen vs Werder Bremen",
+    "matchDate": "2024-04-14",
+    "competitionStage": "Regular Season",
+    "homeTeam": {
+      "id": 904,
+      "name": "Bayer Leverkusen"
+    },
+    "awayTeam": {
+      "id": 176,
+      "name": "Werder Bremen"
+    }
+  },
+  "event": [
+    {
+      "id": "bbc2c68d-c096-483d-abf4-32c0175a0f55",
+      "index": 480,
+      "period": 1,
+      "timestamp": "00:07:40.953",
+      "minute": 7,
+      "second": 40,
+      "type": {
+        "id": 16,
+        "name": "Shot"
+      },
+      "possession": 14,
+      "possession_team": {
+        "id": 904,
+        "name": "Bayer Leverkusen"
+      },
+      "play_pattern": {
+        "id": 1,
+        "name": "Regular Play"
+      },
+      "team": {
+        "id": 904,
+        "name": "Bayer Leverkusen"
+      },
+      "player": {
+        "id": 38004,
+        "name": "Piero Martín Hincapié Reyna"
+      },
+      "position": {
+        "id": 8,
+        "name": "Left Wing Back"
+      },
+      "location": [114.6, 33.5],
+      "duration": 0.217872,
+      "under_pressure": true,
+      "related_events": [
+        "735d168e-bdc9-4ffa-a979-ae74e3046b7e",
+        "7ccfdcc6-e1d3-41bb-895a-fb70c2be7f44"
+      ],
+      "shot": {
+        "statsbomb_xg": 0.14338115,
+        "end_location": [118.1, 35.7, 0.2],
+        "key_pass_id": "95ee2820-c4dc-44f2-9fe7-d24cb6edd881",
+        "technique": {
+          "id": 93,
+          "name": "Normal"
+        },
+        "body_part": {
+          "id": 38,
+          "name": "Left Foot"
+        },
+        "type": {
+          "id": 87,
+          "name": "Open Play"
+        },
+        "outcome": {
+          "id": 100,
+          "name": "Saved"
+        },
+        "first_time": true,
+        "freeze_frame": [
+          {
+            "location": [92.1, 63.8],
+            "player": {
+              "id": 8784,
+              "name": "Romano Schmid"
+            },
+            "position": {
+              "id": 15,
+              "name": "Left Center Midfield"
+            },
+            "teammate": false
+          },
+          {
+            "location": [92.9, 39.4],
+            "player": {
+              "id": 8826,
+              "name": "Leonardo Bittencourt"
+            },
+            "position": {
+              "id": 13,
+              "name": "Right Center Midfield"
+            },
+            "teammate": false
+          },
+          {
+            "location": [113.6, 39.8],
+            "player": {
+              "id": 32289,
+              "name": "Victor Okoh Boniface"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "teammate": true
+          },
+          {
+            "location": [113.2, 58.8],
+            "player": {
+              "id": 41411,
+              "name": "Nathan Tella"
+            },
+            "position": {
+              "id": 7,
+              "name": "Right Wing Back"
+            },
+            "teammate": true
+          },
+          {
+            "location": [98.9, 48.8],
+            "player": {
+              "id": 9195,
+              "name": "Robert Andrich"
+            },
+            "position": {
+              "id": 11,
+              "name": "Left Defensive Midfield"
+            },
+            "teammate": true
+          },
+          {
+            "location": [99.1, 60.1],
+            "player": {
+              "id": 8804,
+              "name": "Jonas Hofmann"
+            },
+            "position": {
+              "id": 18,
+              "name": "Right Attacking Midfield"
+            },
+            "teammate": true
+          },
+          {
+            "location": [104.3, 41.0],
+            "player": {
+              "id": 33401,
+              "name": "Amine Adli"
+            },
+            "position": {
+              "id": 20,
+              "name": "Left Attacking Midfield"
+            },
+            "teammate": true
+          },
+          {
+            "location": [114.6, 39.1],
+            "player": {
+              "id": 31100,
+              "name": "Christian Groß"
+            },
+            "position": {
+              "id": 4,
+              "name": "Center Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [118.3, 36.4],
+            "player": {
+              "id": 23198,
+              "name": "Michael Zetterer"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "teammate": false
+          },
+          {
+            "location": [113.8, 55.6],
+            "player": {
+              "id": 6321,
+              "name": "Milos Veljkovic"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [110.8, 61.0],
+            "player": {
+              "id": 28573,
+              "name": "Felix Agu"
+            },
+            "position": {
+              "id": 8,
+              "name": "Left Wing Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [109.3, 48.1],
+            "player": {
+              "id": 21865,
+              "name": "Senne Lynen"
+            },
+            "position": {
+              "id": 10,
+              "name": "Center Defensive Midfield"
+            },
+            "teammate": false
+          },
+          {
+            "location": [113.0, 37.1],
+            "player": {
+              "id": 51769,
+              "name": "Julián Malatini"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [114.3, 34.6],
+            "player": {
+              "id": 8576,
+              "name": "Mitchell Weiser"
+            },
+            "position": {
+              "id": 7,
+              "name": "Right Wing Back"
+            },
+            "teammate": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "b2c3d59d-3bef-4f8a-ad86-26b69940c64e",
+      "index": 684,
+      "period": 1,
+      "timestamp": "00:13:16.073",
+      "minute": 13,
+      "second": 16,
+      "type": {
+        "id": 16,
+        "name": "Shot"
+      },
+      "possession": 26,
+      "possession_team": {
+        "id": 904,
+        "name": "Bayer Leverkusen"
+      },
+      "play_pattern": {
+        "id": 2,
+        "name": "From Corner"
+      },
+      "team": {
+        "id": 904,
+        "name": "Bayer Leverkusen"
+      },
+      "player": {
+        "id": 8221,
+        "name": "Jonathan Tah"
+      },
+      "position": {
+        "id": 4,
+        "name": "Center Back"
+      },
+      "location": [113.9, 47.4],
+      "duration": 0.085298,
+      "related_events": [
+        "c9983c31-83ff-4aa2-be8b-eae4ef407930",
+        "d072b713-5085-45bd-91fb-76cb6c4e6012"
+      ],
+      "shot": {
+        "statsbomb_xg": 0.052781336,
+        "end_location": [114.1, 46.8],
+        "key_pass_id": "f11e6dbe-665c-4c05-a7cb-aa361d8a0bf2",
+        "body_part": {
+          "id": 37,
+          "name": "Head"
+        },
+        "type": {
+          "id": 87,
+          "name": "Open Play"
+        },
+        "outcome": {
+          "id": 96,
+          "name": "Blocked"
+        },
+        "technique": {
+          "id": 93,
+          "name": "Normal"
+        },
+        "freeze_frame": [
+          {
+            "location": [117.1, 37.7],
+            "player": {
+              "id": 33401,
+              "name": "Amine Adli"
+            },
+            "position": {
+              "id": 20,
+              "name": "Left Attacking Midfield"
+            },
+            "teammate": true
+          },
+          {
+            "location": [116.0, 5.3],
+            "player": {
+              "id": 8804,
+              "name": "Jonas Hofmann"
+            },
+            "position": {
+              "id": 18,
+              "name": "Right Attacking Midfield"
+            },
+            "teammate": true
+          },
+          {
+            "location": [112.0, 39.5],
+            "player": {
+              "id": 27133,
+              "name": "Odilon Kossonou"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "teammate": true
+          },
+          {
+            "location": [115.5, 40.5],
+            "player": {
+              "id": 30606,
+              "name": "Edmond Fayçal Tapsoba"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "teammate": true
+          },
+          {
+            "location": [115.7, 35.1],
+            "player": {
+              "id": 38004,
+              "name": "Piero Martín Hincapié Reyna"
+            },
+            "position": {
+              "id": 8,
+              "name": "Left Wing Back"
+            },
+            "teammate": true
+          },
+          {
+            "location": [118.7, 34.6],
+            "player": {
+              "id": 12299,
+              "name": "Marvin Ducksch"
+            },
+            "position": {
+              "id": 24,
+              "name": "Left Center Forward"
+            },
+            "teammate": false
+          },
+          {
+            "location": [115.2, 36.5],
+            "player": {
+              "id": 8576,
+              "name": "Mitchell Weiser"
+            },
+            "position": {
+              "id": 7,
+              "name": "Right Wing Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [109.5, 32.2],
+            "player": {
+              "id": 21865,
+              "name": "Senne Lynen"
+            },
+            "position": {
+              "id": 10,
+              "name": "Center Defensive Midfield"
+            },
+            "teammate": false
+          },
+          {
+            "location": [116.2, 39.0],
+            "player": {
+              "id": 51769,
+              "name": "Julián Malatini"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [113.4, 41.2],
+            "player": {
+              "id": 31100,
+              "name": "Christian Groß"
+            },
+            "position": {
+              "id": 4,
+              "name": "Center Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [113.1, 39.6],
+            "player": {
+              "id": 6321,
+              "name": "Milos Veljkovic"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [104.1, 44.7],
+            "player": {
+              "id": 8826,
+              "name": "Leonardo Bittencourt"
+            },
+            "position": {
+              "id": 13,
+              "name": "Right Center Midfield"
+            },
+            "teammate": false
+          },
+          {
+            "location": [118.9, 41.9],
+            "player": {
+              "id": 23198,
+              "name": "Michael Zetterer"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "teammate": false
+          },
+          {
+            "location": [113.0, 45.1],
+            "player": {
+              "id": 8784,
+              "name": "Romano Schmid"
+            },
+            "position": {
+              "id": 15,
+              "name": "Left Center Midfield"
+            },
+            "teammate": false
+          },
+          {
+            "location": [111.9, 46.2],
+            "player": {
+              "id": 32289,
+              "name": "Victor Okoh Boniface"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "teammate": true
+          },
+          {
+            "location": [95.9, 49.4],
+            "player": {
+              "id": 3500,
+              "name": "Granit Xhaka"
+            },
+            "position": {
+              "id": 9,
+              "name": "Right Defensive Midfield"
+            },
+            "teammate": true
+          },
+          {
+            "location": [114.1, 46.4],
+            "player": {
+              "id": 28573,
+              "name": "Felix Agu"
+            },
+            "position": {
+              "id": 8,
+              "name": "Left Wing Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [113.2, 46.6],
+            "player": {
+              "id": 34870,
+              "name": "Nick Woltemade"
+            },
+            "position": {
+              "id": 22,
+              "name": "Right Center Forward"
+            },
+            "teammate": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "db15dcc2-36bb-4a82-b5ef-c15e68638ce9",
+      "index": 3649,
+      "period": 2,
+      "timestamp": "00:29:45.835",
+      "minute": 74,
+      "second": 45,
+      "type": {
+        "id": 16,
+        "name": "Shot"
+      },
+      "possession": 117,
+      "possession_team": {
+        "id": 176,
+        "name": "Werder Bremen"
+      },
+      "play_pattern": {
+        "id": 4,
+        "name": "From Throw In"
+      },
+      "team": {
+        "id": 176,
+        "name": "Werder Bremen"
+      },
+      "player": {
+        "id": 8784,
+        "name": "Romano Schmid"
+      },
+      "position": {
+        "id": 15,
+        "name": "Left Center Midfield"
+      },
+      "location": [98.2, 42.1],
+      "duration": 1.280355,
+      "related_events": ["64aa80a8-fcec-4323-a96e-b34af2c85db2"],
+      "shot": {
+        "statsbomb_xg": 0.03447609,
+        "end_location": [120.0, 35.3, 1.8],
+        "type": {
+          "id": 87,
+          "name": "Open Play"
+        },
+        "outcome": {
+          "id": 98,
+          "name": "Off T"
+        },
+        "first_time": true,
+        "technique": {
+          "id": 91,
+          "name": "Half Volley"
+        },
+        "body_part": {
+          "id": 40,
+          "name": "Right Foot"
+        },
+        "freeze_frame": [
+          {
+            "location": [116.0, 40.7],
+            "player": {
+              "id": 8667,
+              "name": "Lukáš Hrádecký"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "teammate": false
+          },
+          {
+            "location": [111.4, 45.9],
+            "player": {
+              "id": 38004,
+              "name": "Piero Martín Hincapié Reyna"
+            },
+            "position": {
+              "id": 8,
+              "name": "Left Wing Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [114.7, 41.7],
+            "player": {
+              "id": 8221,
+              "name": "Jonathan Tah"
+            },
+            "position": {
+              "id": 4,
+              "name": "Center Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [112.0, 40.4],
+            "player": {
+              "id": 27133,
+              "name": "Odilon Kossonou"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [107.1, 44.5],
+            "player": {
+              "id": 30606,
+              "name": "Edmond Fayçal Tapsoba"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [106.4, 39.4],
+            "player": {
+              "id": 9195,
+              "name": "Robert Andrich"
+            },
+            "position": {
+              "id": 9,
+              "name": "Right Defensive Midfield"
+            },
+            "teammate": false
+          },
+          {
+            "location": [100.2, 44.4],
+            "player": {
+              "id": 3500,
+              "name": "Granit Xhaka"
+            },
+            "position": {
+              "id": 11,
+              "name": "Left Defensive Midfield"
+            },
+            "teammate": false
+          },
+          {
+            "location": [100.2, 29.2],
+            "player": {
+              "id": 8804,
+              "name": "Jonas Hofmann"
+            },
+            "position": {
+              "id": 18,
+              "name": "Right Attacking Midfield"
+            },
+            "teammate": false
+          },
+          {
+            "location": [100.9, 23.0],
+            "player": {
+              "id": 32712,
+              "name": "Jeremie Frimpong"
+            },
+            "position": {
+              "id": 7,
+              "name": "Right Wing Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [86.0, 60.3],
+            "player": {
+              "id": 7044,
+              "name": "Patrik Schick"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "teammate": false
+          },
+          {
+            "location": [85.8, 52.7],
+            "player": {
+              "id": 51769,
+              "name": "Julián Malatini"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "teammate": true
+          },
+          {
+            "location": [96.5, 42.8],
+            "player": {
+              "id": 21865,
+              "name": "Senne Lynen"
+            },
+            "position": {
+              "id": 10,
+              "name": "Center Defensive Midfield"
+            },
+            "teammate": true
+          },
+          {
+            "location": [111.9, 34.4],
+            "player": {
+              "id": 5666,
+              "name": "Dawid Kownacki"
+            },
+            "position": {
+              "id": 22,
+              "name": "Right Center Forward"
+            },
+            "teammate": true
+          },
+          {
+            "location": [109.1, 46.5],
+            "player": {
+              "id": 8576,
+              "name": "Mitchell Weiser"
+            },
+            "position": {
+              "id": 7,
+              "name": "Right Wing Back"
+            },
+            "teammate": true
+          },
+          {
+            "location": [96.4, 66.0],
+            "player": {
+              "id": 8826,
+              "name": "Leonardo Bittencourt"
+            },
+            "position": {
+              "id": 13,
+              "name": "Right Center Midfield"
+            },
+            "teammate": true
+          },
+          {
+            "location": [112.9, 43.9],
+            "player": {
+              "id": 12299,
+              "name": "Marvin Ducksch"
+            },
+            "position": {
+              "id": 24,
+              "name": "Left Center Forward"
+            },
+            "teammate": true
+          },
+          {
+            "location": [105.3, 30.6],
+            "player": {
+              "id": 24179,
+              "name": "Olivier Deman"
+            },
+            "position": {
+              "id": 8,
+              "name": "Left Wing Back"
+            },
+            "teammate": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "4a223f2d-3c3f-4655-b561-9c43a03b0f42",
+      "index": 3984,
+      "period": 2,
+      "timestamp": "00:37:29.786",
+      "minute": 82,
+      "second": 29,
+      "type": {
+        "id": 16,
+        "name": "Shot"
+      },
+      "possession": 131,
+      "possession_team": {
+        "id": 904,
+        "name": "Bayer Leverkusen"
+      },
+      "play_pattern": {
+        "id": 6,
+        "name": "From Counter"
+      },
+      "team": {
+        "id": 904,
+        "name": "Bayer Leverkusen"
+      },
+      "player": {
+        "id": 40724,
+        "name": "Florian Wirtz"
+      },
+      "position": {
+        "id": 20,
+        "name": "Left Attacking Midfield"
+      },
+      "location": [103.6, 35.0],
+      "duration": 0.464015,
+      "related_events": ["4a00ec6b-df99-4893-9504-e1670218ab90"],
+      "shot": {
+        "one_on_one": true,
+        "statsbomb_xg": 0.43832713,
+        "end_location": [120.0, 37.9, 0.6],
+        "key_pass_id": "b9dc3ef6-4336-4f16-aeed-71898b37c4c4",
+        "technique": {
+          "id": 93,
+          "name": "Normal"
+        },
+        "body_part": {
+          "id": 40,
+          "name": "Right Foot"
+        },
+        "type": {
+          "id": 87,
+          "name": "Open Play"
+        },
+        "outcome": {
+          "id": 97,
+          "name": "Goal"
+        },
+        "freeze_frame": [
+          {
+            "location": [93.4, 47.1],
+            "player": {
+              "id": 6321,
+              "name": "Milos Veljkovic"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [100.1, 40.7],
+            "player": {
+              "id": 31100,
+              "name": "Christian Groß"
+            },
+            "position": {
+              "id": 4,
+              "name": "Center Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [100.6, 33.3],
+            "player": {
+              "id": 51769,
+              "name": "Julián Malatini"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "teammate": false
+          },
+          {
+            "location": [111.1, 37.3],
+            "player": {
+              "id": 23198,
+              "name": "Michael Zetterer"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "teammate": false
+          },
+          {
+            "location": [100.4, 41.7],
+            "player": {
+              "id": 7044,
+              "name": "Patrik Schick"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "teammate": true
+          }
+        ]
+      }
+    }
+  ]
+}

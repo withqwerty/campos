@@ -1,0 +1,114 @@
+{
+  "home": {
+    "id": 2835084771,
+    "eventId": 2,
+    "typeId": 34,
+    "periodId": 16,
+    "timeMin": 0,
+    "timeSec": 0,
+    "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+    "outcome": 1,
+    "x": 0,
+    "y": 0,
+    "timeStamp": "2025-08-15T17:55:03.788Z",
+    "lastModified": "2025-08-15T19:03:18Z",
+    "qualifier": [
+      {
+        "id": 5840679577,
+        "qualifierId": 194,
+        "value": "dxze3b3fsfl814bjcs7q6wcet"
+      },
+      {
+        "id": 5840679567,
+        "qualifierId": 30,
+        "value": "53d0pvr7ylvfhp6p749iniqc5, 9qo448ueot8pfc5oqo378wag9, a2zavv31d2aadyddk0kjttdgq, am6ppbdrbz4ml3xsbty53o73d, 2zfjgh5747ge9r9q0thbk123t, dxze3b3fsfl814bjcs7q6wcet, 5ilkkfbsss0bxd6ttdlqg0uz9, avh60ensgiwz1qalvn1bbqkfd, 3vx94h32ahujciraspdayj9t6, 2k5g68ywtr79lc45wozvifqlm, 9psfk94nduz6icnuwty5v9all, 20o2dr1mdk18xhxmkujzgak89, 29dp5gmu5xbd04mozwxq5tjh1, 3kti58d195gmtzwrjh5nprx05, c6nl81c1q4unq5js94s6s942x, 3kdl679ra6mlobdg09xqf7fft, dz2rfsmhib89jwilpuub10qcq, eziqega9e25bg939pfh4vjp3p, e51jmlxup2pdr8ikl98etxgd0, 154gonr6x9vuraxmzd9zi5xck"
+      },
+      {
+        "id": 5840679579,
+        "qualifierId": 197,
+        "value": "23267"
+      },
+      {
+        "id": 5840679569,
+        "qualifierId": 44,
+        "value": "1, 2, 2, 3, 2, 2, 3, 3, 4, 3, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5"
+      },
+      {
+        "id": 5840679573,
+        "qualifierId": 130,
+        "value": "8"
+      },
+      {
+        "id": 5840679581,
+        "qualifierId": 227,
+        "value": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+      },
+      {
+        "id": 5840679575,
+        "qualifierId": 131,
+        "value": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+      },
+      {
+        "id": 5840679571,
+        "qualifierId": 59,
+        "value": "1, 30, 6, 10, 5, 4, 11, 8, 22, 7, 18, 25, 2, 3, 14, 17, 19, 26, 42, 73"
+      }
+    ]
+  },
+  "away": {
+    "id": 2835084823,
+    "eventId": 2,
+    "typeId": 34,
+    "periodId": 16,
+    "timeMin": 0,
+    "timeSec": 0,
+    "contestantId": "1pse9ta7a45pi2w2grjim70ge",
+    "outcome": 1,
+    "x": 0,
+    "y": 0,
+    "timeStamp": "2025-08-15T17:55:07.917Z",
+    "lastModified": "2025-08-15T19:04:59Z",
+    "qualifier": [
+      {
+        "id": 5840679837,
+        "qualifierId": 44,
+        "value": "1, 2, 2, 3, 2, 2, 3, 3, 4, 3, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5"
+      },
+      {
+        "id": 5840679843,
+        "qualifierId": 131,
+        "value": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+      },
+      {
+        "id": 5840679841,
+        "qualifierId": 130,
+        "value": "7"
+      },
+      {
+        "id": 5840679835,
+        "qualifierId": 30,
+        "value": "bcfzovs0pj9urgv9r0ykjnlrd, 80bmtj7l07ohb2h475w955n9, 92qqdiryqd8juqdjq8585476y, 7dbzcwyph2xoljyhaogjo7mcp, 7c0b5fz3m1uw0fwpm051e6rfu, 95pzsjfh0wf6isp6qpf9lddyh, 7tnuxlg9l4rjhc7j3ko36hduy, mfsus6ryni5b1hjn0y70sbo4, 2wl0uylmkzi2ls7v4amgaa1yi, b3gobhr43y8oxpafvp4f8rgmh, 96ou7x51dxymv16l0ocsuhbyt, b1y7pnmjciimn2ntaf8o5m73e, 5rslwexx17p7hqwp9p3vgcxuy, erge77vege2a3zor041ert5w4, 3f2e9orrwiljklmmzwh2m7uvo, 9ea8t509bssf2bhp1n5xxvrl6, ctq9si3nbc6n8cznhlcvtixd6, 33cny48k38nlo8pcx3i24ldqt, a27jmusots4qlgmc8yrecv02c, bch2qxtejv4kj2h1zyfpl05qs"
+      },
+      {
+        "id": 5840679849,
+        "qualifierId": 227,
+        "value": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+      },
+      {
+        "id": 5840679839,
+        "qualifierId": 59,
+        "value": "1, 15, 3, 12, 18, 5, 24, 8, 9, 16, 7, 40, 2, 20, 22, 23, 25, 29, 47, 50"
+      },
+      {
+        "id": 5840679845,
+        "qualifierId": 194,
+        "value": "80bmtj7l07ohb2h475w955n9"
+      },
+      {
+        "id": 5840679847,
+        "qualifierId": 197,
+        "value": "31554"
+      }
+    ]
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "source": {
+    "provider": "statsbomb-open-data",
+    "sourceRepo": "https://github.com/statsbomb/open-data",
+    "competitionId": 11,
+    "seasonId": 4,
+    "matchId": 15946,
+    "matchesUrl": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/matches/11/4.json",
+    "eventsUrl": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/15946.json",
+    "selectedEventIds": [
+      "3cd35952-9d03-4aa4-8676-54aff47621a1",
+      "f8132d81-31dc-45ec-ae0a-455471f6aba7"
+    ]
+  },
+  "matchInfo": {
+    "id": 15946,
+    "description": "Barcelona vs Deportivo Alavés",
+    "matchDate": "2018-08-18",
+    "competitionStage": "Regular Season",
+    "homeTeam": {
+      "id": 217,
+      "name": "Barcelona"
+    },
+    "awayTeam": {
+      "id": 206,
+      "name": "Deportivo Alavés"
+    }
+  },
+  "event": [
+    {
+      "id": "3cd35952-9d03-4aa4-8676-54aff47621a1",
+      "index": 1588,
+      "period": 1,
+      "timestamp": "00:37:28.603",
+      "minute": 37,
+      "second": 28,
+      "type": {
+        "id": 16,
+        "name": "Shot"
+      },
+      "possession": 61,
+      "possession_team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "play_pattern": {
+        "id": 3,
+        "name": "From Free Kick"
+      },
+      "team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "player": {
+        "id": 5503,
+        "name": "Lionel Andrés Messi Cuccittini"
+      },
+      "position": {
+        "id": 24,
+        "name": "Left Center Forward"
+      },
+      "location": [96.5, 52.6],
+      "duration": 1.228019,
+      "related_events": ["827f3394-fa08-4902-b92a-75b62fd6f7b4"],
+      "shot": {
+        "statsbomb_xg": 0.049073674,
+        "end_location": [120.0, 43.2, 2.8],
+        "body_part": {
+          "id": 38,
+          "name": "Left Foot"
+        },
+        "type": {
+          "id": 62,
+          "name": "Free Kick"
+        },
+        "outcome": {
+          "id": 99,
+          "name": "Post"
+        },
+        "technique": {
+          "id": 93,
+          "name": "Normal"
+        }
+      }
+    },
+    {
+      "id": "f8132d81-31dc-45ec-ae0a-455471f6aba7",
+      "index": 2721,
+      "period": 2,
+      "timestamp": "00:18:12.217",
+      "minute": 63,
+      "second": 12,
+      "type": {
+        "id": 16,
+        "name": "Shot"
+      },
+      "possession": 97,
+      "possession_team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "play_pattern": {
+        "id": 3,
+        "name": "From Free Kick"
+      },
+      "team": {
+        "id": 217,
+        "name": "Barcelona"
+      },
+      "player": {
+        "id": 5503,
+        "name": "Lionel Andrés Messi Cuccittini"
+      },
+      "position": {
+        "id": 17,
+        "name": "Right Wing"
+      },
+      "location": [97.8, 45.4],
+      "duration": 1.807257,
+      "related_events": ["44667b6b-4c68-4e65-a825-12aa5a2a2bf9"],
+      "shot": {
+        "statsbomb_xg": 0.08320293,
+        "end_location": [120.0, 42.5, 0.2],
+        "body_part": {
+          "id": 38,
+          "name": "Left Foot"
+        },
+        "type": {
+          "id": 62,
+          "name": "Free Kick"
+        },
+        "outcome": {
+          "id": 97,
+          "name": "Goal"
+        },
+        "technique": {
+          "id": 93,
+          "name": "Normal"
+        }
+      }
+    }
+  ]
+}

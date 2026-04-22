@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/club.schema.json",
+  "title": "Club",
+  "description": "A football club. Required fields are id and name.",
+  "type": "object",
+  "required": ["id", "name"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable club identifier within the data source."
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (e.g. 'Bayern München', 'Manchester City')."
+    },
+    "crest_url": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Optional club crest image URL."
+    },
+    "league_id": {
+      "type": ["string", "null"],
+      "description": "Optional league identifier."
+    },
+    "colour_primary": {
+      "type": ["string", "null"],
+      "pattern": "^#[0-9A-Fa-f]{6}$",
+      "description": "Primary club colour as 6-digit hex (e.g. '#DC052D'). Optional."
+    },
+    "colour_secondary": {
+      "type": ["string", "null"],
+      "pattern": "^#[0-9A-Fa-f]{6}$",
+      "description": "Secondary club colour as 6-digit hex. Optional."
+    }
+  }
+}

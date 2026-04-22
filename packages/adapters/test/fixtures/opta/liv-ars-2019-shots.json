@@ -1,0 +1,1041 @@
+{
+  "_source": "Opta expected-goals feed, match 6n4m8v4zxnycb012fumln13e2 (Liverpool 3-1 Arsenal, 2019-08-24). Shot events only.",
+  "matchId": "6n4m8v4zxnycb012fumln13e2",
+  "homeTeamId": "c8h9bw1l82s06h77xxrelzhur",
+  "awayTeamId": "4dsgumo7d4zupm2ugsvm4zm4d",
+  "events": [
+    {
+      "id": 564806028,
+      "eventId": 19,
+      "typeId": 13,
+      "periodId": 1,
+      "timeMin": 1,
+      "timeSec": 18,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 75.5,
+      "y": 75.3,
+      "playerId": "eziqega9e25bg939pfh4vjp3p",
+      "playerName": "A. Robertson",
+      "qualifier": [
+        {
+          "qualifierId": 72
+        },
+        {
+          "qualifierId": 103,
+          "value": "1.4"
+        },
+        {
+          "qualifierId": 102,
+          "value": "37.1"
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0225"
+        }
+      ]
+    },
+    {
+      "id": 2059116902,
+      "eventId": 89,
+      "typeId": 13,
+      "periodId": 1,
+      "timeMin": 8,
+      "timeSec": 19,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 91.6,
+      "y": 39.4,
+      "playerId": "2lyib1m8bhrkcc3ukk12fbefp",
+      "playerName": "G. Wijnaldum",
+      "qualifier": [
+        {
+          "qualifierId": 25
+        },
+        {
+          "qualifierId": 102,
+          "value": "64.7"
+        },
+        {
+          "qualifierId": 72
+        },
+        {
+          "qualifierId": 103,
+          "value": "72.2"
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0737"
+        }
+      ]
+    },
+    {
+      "id": 571468084,
+      "eventId": 106,
+      "typeId": 13,
+      "periodId": 1,
+      "timeMin": 10,
+      "timeSec": 40,
+      "contestantId": "4dsgumo7d4zupm2ugsvm4zm4d",
+      "outcome": 1,
+      "x": 79.1,
+      "y": 30.3,
+      "playerId": "actvnm36s31zf8wh8hjikzlqt",
+      "playerName": "P. Aubameyang",
+      "qualifier": [
+        {
+          "qualifierId": 103,
+          "value": "12.5"
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0287"
+        },
+        {
+          "qualifierId": 102,
+          "value": "58.0"
+        },
+        {
+          "qualifierId": 20
+        }
+      ]
+    },
+    {
+      "id": 870184110,
+      "eventId": 153,
+      "typeId": 15,
+      "periodId": 1,
+      "timeMin": 14,
+      "timeSec": 44,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 75.7,
+      "y": 71.8,
+      "playerId": "eziqega9e25bg939pfh4vjp3p",
+      "playerName": "A. Robertson",
+      "qualifier": [
+        {
+          "qualifierId": 321,
+          "value": "0.0241"
+        },
+        {
+          "qualifierId": 82
+        },
+        {
+          "qualifierId": 72
+        }
+      ]
+    },
+    {
+      "id": 633154037,
+      "eventId": 182,
+      "typeId": 15,
+      "periodId": 1,
+      "timeMin": 18,
+      "timeSec": 37,
+      "contestantId": "4dsgumo7d4zupm2ugsvm4zm4d",
+      "outcome": 1,
+      "x": 77.7,
+      "y": 33.0,
+      "playerId": "3n9jnuteyjx6w6dxviuead0b9",
+      "playerName": "N. P\u00e9p\u00e9",
+      "qualifier": [
+        {
+          "qualifierId": 72
+        },
+        {
+          "qualifierId": 102,
+          "value": "49.4"
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0431"
+        },
+        {
+          "qualifierId": 103,
+          "value": "7.6"
+        },
+        {
+          "qualifierId": 322,
+          "value": "0.0246"
+        }
+      ]
+    },
+    {
+      "id": 1821141167,
+      "eventId": 229,
+      "typeId": 15,
+      "periodId": 1,
+      "timeMin": 20,
+      "timeSec": 0,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 84.7,
+      "y": 38.5,
+      "playerId": "cotiiu6mjkfx5xa63nhfbdf4l",
+      "playerName": "S. Man\u00e9",
+      "qualifier": [
+        {
+          "qualifierId": 20
+        },
+        {
+          "qualifierId": 102,
+          "value": "52.8"
+        },
+        {
+          "qualifierId": 322,
+          "value": "0.1459"
+        },
+        {
+          "qualifierId": 103,
+          "value": "11.4"
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0473"
+        }
+      ]
+    },
+    {
+      "id": 1182144136,
+      "eventId": 204,
+      "typeId": 15,
+      "periodId": 1,
+      "timeMin": 20,
+      "timeSec": 27,
+      "contestantId": "4dsgumo7d4zupm2ugsvm4zm4d",
+      "outcome": 1,
+      "x": 91.2,
+      "y": 63.4,
+      "playerId": "3n9jnuteyjx6w6dxviuead0b9",
+      "playerName": "N. P\u00e9p\u00e9",
+      "qualifier": [
+        {
+          "qualifierId": 72
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0689"
+        },
+        {
+          "qualifierId": 82
+        }
+      ]
+    },
+    {
+      "id": 1456525726,
+      "eventId": 260,
+      "typeId": 15,
+      "periodId": 1,
+      "timeMin": 22,
+      "timeSec": 16,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 85.7,
+      "y": 58.8,
+      "playerId": "6b9erfx1rf9nff83300tntadx",
+      "playerName": "Roberto Firmino",
+      "qualifier": [
+        {
+          "qualifierId": 82
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0646"
+        },
+        {
+          "qualifierId": 72
+        }
+      ]
+    },
+    {
+      "id": 1855408908,
+      "eventId": 287,
+      "typeId": 13,
+      "periodId": 1,
+      "timeMin": 23,
+      "timeSec": 50,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 77.3,
+      "y": 75.9,
+      "playerId": "cotiiu6mjkfx5xa63nhfbdf4l",
+      "playerName": "S. Man\u00e9",
+      "qualifier": [
+        {
+          "qualifierId": 102,
+          "value": "35.1"
+        },
+        {
+          "qualifierId": 103,
+          "value": "86.1"
+        },
+        {
+          "qualifierId": 20
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0236"
+        }
+      ]
+    },
+    {
+      "id": 706975744,
+      "eventId": 292,
+      "typeId": 13,
+      "periodId": 1,
+      "timeMin": 30,
+      "timeSec": 17,
+      "contestantId": "4dsgumo7d4zupm2ugsvm4zm4d",
+      "outcome": 1,
+      "x": 80.0,
+      "y": 38.3,
+      "playerId": "3n9jnuteyjx6w6dxviuead0b9",
+      "playerName": "N. P\u00e9p\u00e9",
+      "qualifier": [
+        {
+          "qualifierId": 321,
+          "value": "0.035"
+        },
+        {
+          "qualifierId": 72
+        },
+        {
+          "qualifierId": 102,
+          "value": "56.5"
+        },
+        {
+          "qualifierId": 103,
+          "value": "40.3"
+        }
+      ]
+    },
+    {
+      "id": 1871463231,
+      "eventId": 371,
+      "typeId": 15,
+      "periodId": 1,
+      "timeMin": 31,
+      "timeSec": 25,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 84.6,
+      "y": 32.6,
+      "playerId": "25yu90pekqr1lhs098f3uxy39",
+      "playerName": "J. Henderson",
+      "qualifier": [
+        {
+          "qualifierId": 82
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0508"
+        },
+        {
+          "qualifierId": 20
+        }
+      ]
+    },
+    {
+      "id": 339019102,
+      "eventId": 305,
+      "typeId": 15,
+      "periodId": 1,
+      "timeMin": 33,
+      "timeSec": 47,
+      "contestantId": "4dsgumo7d4zupm2ugsvm4zm4d",
+      "outcome": 1,
+      "x": 81.5,
+      "y": 49.3,
+      "playerId": "3n9jnuteyjx6w6dxviuead0b9",
+      "playerName": "N. P\u00e9p\u00e9",
+      "qualifier": [
+        {
+          "qualifierId": 322,
+          "value": "0.3034"
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.3914"
+        },
+        {
+          "qualifierId": 23
+        },
+        {
+          "qualifierId": 72
+        },
+        {
+          "qualifierId": 103,
+          "value": "1.3"
+        },
+        {
+          "qualifierId": 102,
+          "value": "49.7"
+        }
+      ]
+    },
+    {
+      "id": 1972923153,
+      "eventId": 418,
+      "typeId": 15,
+      "periodId": 1,
+      "timeMin": 38,
+      "timeSec": 10,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 89.7,
+      "y": 58.1,
+      "playerId": "dxze3b3fsfl814bjcs7q6wcet",
+      "playerName": "V. van Dijk",
+      "qualifier": [
+        {
+          "qualifierId": 321,
+          "value": "0.036"
+        },
+        {
+          "qualifierId": 15
+        },
+        {
+          "qualifierId": 82
+        },
+        {
+          "qualifierId": 25
+        }
+      ]
+    },
+    {
+      "id": 401928854,
+      "eventId": 423,
+      "typeId": 15,
+      "periodId": 1,
+      "timeMin": 38,
+      "timeSec": 17,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 87.3,
+      "y": 29.1,
+      "playerId": "19z8jmren3eytg7fbuzqv73kl",
+      "playerName": "T. Alexander-Arnold",
+      "qualifier": [
+        {
+          "qualifierId": 321,
+          "value": "0.027"
+        },
+        {
+          "qualifierId": 25
+        },
+        {
+          "qualifierId": 82
+        },
+        {
+          "qualifierId": 20
+        }
+      ]
+    },
+    {
+      "id": 843226165,
+      "eventId": 427,
+      "typeId": 13,
+      "periodId": 1,
+      "timeMin": 38,
+      "timeSec": 58,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 87.5,
+      "y": 29.2,
+      "playerId": "5ilkkfbsss0bxd6ttdlqg0uz9",
+      "playerName": "Mohamed Salah",
+      "qualifier": [
+        {
+          "qualifierId": 102,
+          "value": "56.3"
+        },
+        {
+          "qualifierId": 103,
+          "value": "16.7"
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0487"
+        },
+        {
+          "qualifierId": 72
+        }
+      ]
+    },
+    {
+      "id": 620807054,
+      "eventId": 432,
+      "typeId": 15,
+      "periodId": 1,
+      "timeMin": 39,
+      "timeSec": 32,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 77.7,
+      "y": 44.0,
+      "playerId": "6b9erfx1rf9nff83300tntadx",
+      "playerName": "Roberto Firmino",
+      "qualifier": [
+        {
+          "qualifierId": 321,
+          "value": "0.0329"
+        },
+        {
+          "qualifierId": 82
+        },
+        {
+          "qualifierId": 72
+        }
+      ]
+    },
+    {
+      "id": 177469806,
+      "eventId": 442,
+      "typeId": 16,
+      "periodId": 1,
+      "timeMin": 40,
+      "timeSec": 14,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 92.7,
+      "y": 51.0,
+      "playerId": "kvchpptoxgvcyiv358w9gtzp",
+      "playerName": "J. Matip",
+      "qualifier": [
+        {
+          "qualifierId": 103,
+          "value": "33.5"
+        },
+        {
+          "qualifierId": 322,
+          "value": "0.28"
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0942"
+        },
+        {
+          "qualifierId": 102,
+          "value": "52.0"
+        },
+        {
+          "qualifierId": 25
+        },
+        {
+          "qualifierId": 15
+        }
+      ]
+    },
+    {
+      "id": 731488585,
+      "eventId": 489,
+      "typeId": 13,
+      "periodId": 1,
+      "timeMin": 45,
+      "timeSec": 31,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 92.4,
+      "y": 47.0,
+      "playerId": "cotiiu6mjkfx5xa63nhfbdf4l",
+      "playerName": "S. Man\u00e9",
+      "qualifier": [
+        {
+          "qualifierId": 102,
+          "value": "41.5"
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.081"
+        },
+        {
+          "qualifierId": 103,
+          "value": "75"
+        },
+        {
+          "qualifierId": 25
+        },
+        {
+          "qualifierId": 15
+        }
+      ]
+    },
+    {
+      "id": 1271711863,
+      "eventId": 504,
+      "typeId": 15,
+      "periodId": 1,
+      "timeMin": 46,
+      "timeSec": 30,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 81.9,
+      "y": 44.0,
+      "playerId": "2lyib1m8bhrkcc3ukk12fbefp",
+      "playerName": "G. Wijnaldum",
+      "qualifier": [
+        {
+          "qualifierId": 72
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0432"
+        },
+        {
+          "qualifierId": 82
+        }
+      ]
+    },
+    {
+      "id": 235611568,
+      "eventId": 506,
+      "typeId": 15,
+      "periodId": 1,
+      "timeMin": 46,
+      "timeSec": 33,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 78.7,
+      "y": 58.1,
+      "playerId": "6b9erfx1rf9nff83300tntadx",
+      "playerName": "Roberto Firmino",
+      "qualifier": [
+        {
+          "qualifierId": 321,
+          "value": "0.0517"
+        },
+        {
+          "qualifierId": 82
+        },
+        {
+          "qualifierId": 20
+        }
+      ]
+    },
+    {
+      "id": 270011615,
+      "eventId": 543,
+      "typeId": 16,
+      "periodId": 2,
+      "timeMin": 48,
+      "timeSec": 18,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 88.5,
+      "y": 50.0,
+      "playerId": "5ilkkfbsss0bxd6ttdlqg0uz9",
+      "playerName": "Mohamed Salah",
+      "qualifier": [
+        {
+          "qualifierId": 9
+        },
+        {
+          "qualifierId": 102,
+          "value": "54.2"
+        },
+        {
+          "qualifierId": 322,
+          "value": "0.9968"
+        },
+        {
+          "qualifierId": 72
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.7884"
+        },
+        {
+          "qualifierId": 103,
+          "value": "27.2"
+        }
+      ]
+    },
+    {
+      "id": 1665878963,
+      "eventId": 565,
+      "typeId": 15,
+      "periodId": 2,
+      "timeMin": 50,
+      "timeSec": 52,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 80.7,
+      "y": 25.8,
+      "playerId": "5ilkkfbsss0bxd6ttdlqg0uz9",
+      "playerName": "Mohamed Salah",
+      "qualifier": [
+        {
+          "qualifierId": 72
+        },
+        {
+          "qualifierId": 82
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0276"
+        }
+      ]
+    },
+    {
+      "id": 1678367694,
+      "eventId": 475,
+      "typeId": 15,
+      "periodId": 2,
+      "timeMin": 51,
+      "timeSec": 12,
+      "contestantId": "4dsgumo7d4zupm2ugsvm4zm4d",
+      "outcome": 1,
+      "x": 90.2,
+      "y": 36.6,
+      "playerId": "actvnm36s31zf8wh8hjikzlqt",
+      "playerName": "P. Aubameyang",
+      "qualifier": [
+        {
+          "qualifierId": 82
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.2456"
+        },
+        {
+          "qualifierId": 20
+        }
+      ]
+    },
+    {
+      "id": 1193409263,
+      "eventId": 590,
+      "typeId": 15,
+      "periodId": 2,
+      "timeMin": 52,
+      "timeSec": 38,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 84.1,
+      "y": 38.7,
+      "playerId": "19z8jmren3eytg7fbuzqv73kl",
+      "playerName": "T. Alexander-Arnold",
+      "qualifier": [
+        {
+          "qualifierId": 321,
+          "value": "0.0456"
+        },
+        {
+          "qualifierId": 20
+        },
+        {
+          "qualifierId": 82
+        }
+      ]
+    },
+    {
+      "id": 752855786,
+      "eventId": 592,
+      "typeId": 15,
+      "periodId": 2,
+      "timeMin": 52,
+      "timeSec": 46,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 85.3,
+      "y": 40.6,
+      "playerId": "19z8jmren3eytg7fbuzqv73kl",
+      "playerName": "T. Alexander-Arnold",
+      "qualifier": [
+        {
+          "qualifierId": 321,
+          "value": "0.0524"
+        },
+        {
+          "qualifierId": 72
+        },
+        {
+          "qualifierId": 82
+        }
+      ]
+    },
+    {
+      "id": 575146070,
+      "eventId": 625,
+      "typeId": 15,
+      "periodId": 2,
+      "timeMin": 55,
+      "timeSec": 7,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 77.7,
+      "y": 62.3,
+      "playerId": "6b9erfx1rf9nff83300tntadx",
+      "playerName": "Roberto Firmino",
+      "qualifier": [
+        {
+          "qualifierId": 82
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0306"
+        },
+        {
+          "qualifierId": 20
+        }
+      ]
+    },
+    {
+      "id": 1214330445,
+      "eventId": 628,
+      "typeId": 13,
+      "periodId": 2,
+      "timeMin": 55,
+      "timeSec": 14,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 94.7,
+      "y": 52.5,
+      "playerId": "5ilkkfbsss0bxd6ttdlqg0uz9",
+      "playerName": "Mohamed Salah",
+      "qualifier": [
+        {
+          "qualifierId": 15
+        },
+        {
+          "qualifierId": 103,
+          "value": "56.9"
+        },
+        {
+          "qualifierId": 102,
+          "value": "47.7"
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.4094"
+        }
+      ]
+    },
+    {
+      "id": 1384276202,
+      "eventId": 651,
+      "typeId": 16,
+      "periodId": 2,
+      "timeMin": 58,
+      "timeSec": 0,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 85.7,
+      "y": 34.9,
+      "playerId": "5ilkkfbsss0bxd6ttdlqg0uz9",
+      "playerName": "Mohamed Salah",
+      "qualifier": [
+        {
+          "qualifierId": 322,
+          "value": "0.8256"
+        },
+        {
+          "qualifierId": 72
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.286"
+        },
+        {
+          "qualifierId": 102,
+          "value": "53.5"
+        },
+        {
+          "qualifierId": 103,
+          "value": "0.6"
+        }
+      ]
+    },
+    {
+      "id": 675992300,
+      "eventId": 664,
+      "typeId": 15,
+      "periodId": 2,
+      "timeMin": 60,
+      "timeSec": 59,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 87.0,
+      "y": 65.5,
+      "playerId": "eziqega9e25bg939pfh4vjp3p",
+      "playerName": "A. Robertson",
+      "qualifier": [
+        {
+          "qualifierId": 82
+        },
+        {
+          "qualifierId": 72
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0567"
+        }
+      ]
+    },
+    {
+      "id": 2118530889,
+      "eventId": 670,
+      "typeId": 15,
+      "periodId": 2,
+      "timeMin": 61,
+      "timeSec": 33,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 85.1,
+      "y": 64.3,
+      "playerId": "6b9erfx1rf9nff83300tntadx",
+      "playerName": "Roberto Firmino",
+      "qualifier": [
+        {
+          "qualifierId": 103,
+          "value": "23.4"
+        },
+        {
+          "qualifierId": 322,
+          "value": "0.048"
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0446"
+        },
+        {
+          "qualifierId": 102,
+          "value": "51.0"
+        },
+        {
+          "qualifierId": 72
+        }
+      ]
+    },
+    {
+      "id": 910793716,
+      "eventId": 607,
+      "typeId": 13,
+      "periodId": 2,
+      "timeMin": 63,
+      "timeSec": 0,
+      "contestantId": "4dsgumo7d4zupm2ugsvm4zm4d",
+      "outcome": 1,
+      "x": 91.5,
+      "y": 41.3,
+      "playerId": "aouukz8amckwqx5zvarvy69qt",
+      "playerName": "Nacho Monreal",
+      "qualifier": [
+        {
+          "qualifierId": 15
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0448"
+        },
+        {
+          "qualifierId": 25
+        },
+        {
+          "qualifierId": 103,
+          "value": "4.2"
+        },
+        {
+          "qualifierId": 102,
+          "value": "80.5"
+        }
+      ]
+    },
+    {
+      "id": 2123768245,
+      "eventId": 733,
+      "typeId": 15,
+      "periodId": 2,
+      "timeMin": 68,
+      "timeSec": 9,
+      "contestantId": "c8h9bw1l82s06h77xxrelzhur",
+      "outcome": 1,
+      "x": 84.3,
+      "y": 43.9,
+      "playerId": "6b9erfx1rf9nff83300tntadx",
+      "playerName": "Roberto Firmino",
+      "qualifier": [
+        {
+          "qualifierId": 72
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0519"
+        },
+        {
+          "qualifierId": 82
+        }
+      ]
+    },
+    {
+      "id": 541388173,
+      "eventId": 825,
+      "typeId": 16,
+      "periodId": 2,
+      "timeMin": 84,
+      "timeSec": 2,
+      "contestantId": "4dsgumo7d4zupm2ugsvm4zm4d",
+      "outcome": 1,
+      "x": 89.5,
+      "y": 50.2,
+      "playerId": "cp5hkhz2p2twjtiw8vphfv9hx",
+      "playerName": "L. Torreira",
+      "qualifier": [
+        {
+          "qualifierId": 102,
+          "value": "47.2"
+        },
+        {
+          "qualifierId": 322,
+          "value": "0.251"
+        },
+        {
+          "qualifierId": 103,
+          "value": "3.2"
+        },
+        {
+          "qualifierId": 20
+        },
+        {
+          "qualifierId": 321,
+          "value": "0.0989"
+        }
+      ]
+    },
+    {
+      "id": 822044852,
+      "eventId": 918,
+      "typeId": 13,
+      "periodId": 2,
+      "timeMin": 93,
+      "timeSec": 3,
+      "contestantId": "4dsgumo7d4zupm2ugsvm4zm4d",
+      "outcome": 1,
+      "x": 72.4,
+      "y": 52.5,
+      "playerId": "7goksqm8rew8chdswsx5cidhx",
+      "playerName": "David Luiz",
+      "qualifier": [
+        {
+          "qualifierId": 321,
+          "value": "0.0589"
+        },
+        {
+          "qualifierId": 26
+        },
+        {
+          "qualifierId": 102,
+          "value": "56.3"
+        },
+        {
+          "qualifierId": 20
+        },
+        {
+          "qualifierId": 103,
+          "value": "70.8"
+        }
+      ]
+    }
+  ]
+}

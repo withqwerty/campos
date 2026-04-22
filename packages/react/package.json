@@ -1,0 +1,73 @@
+{
+  "name": "@withqwerty/campos-react",
+  "version": "0.1.0-alpha.0",
+  "description": "React SVG components for football data visualizations — shot maps, pass networks, heatmaps, radar and pizza charts. Main entry point for the Campos library.",
+  "license": "MIT",
+  "author": "withqwerty <rahulkeerthi2@gmail.com>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist/index.js",
+    "dist/index.js.map",
+    "dist/index.d.ts",
+    "dist/index.d.ts.map",
+    "dist/src",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withqwerty/campos.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://campos.withqwerty.com",
+  "bugs": {
+    "url": "https://github.com/withqwerty/campos/issues"
+  },
+  "keywords": [
+    "football",
+    "soccer",
+    "data-visualization",
+    "typescript",
+    "campos",
+    "react",
+    "svg",
+    "charts",
+    "shot-map",
+    "pass-network",
+    "heatmap",
+    "radar-chart",
+    "pizza-chart",
+    "xg",
+    "expected-goals"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json && mv dist/react/* dist/ && rmdir dist/react"
+  },
+  "dependencies": {
+    "@withqwerty/campos-schema": "workspace:*",
+    "@withqwerty/campos-stadia": "workspace:*",
+    "d3-array": "^3.2.4",
+    "d3-format": "^3.1.2",
+    "d3-scale": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/d3-array": "^3.2.1",
+    "@types/d3-format": "^3.0.4",
+    "@types/d3-scale": "^4.0.9"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  }
+}

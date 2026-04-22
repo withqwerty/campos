@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/match-context.schema.json",
+  "title": "MatchContext",
+  "description": "Context required by some adapters to normalize events into Campos pitch space.",
+  "type": "object",
+  "required": ["matchId", "homeTeamId", "awayTeamId"],
+  "additionalProperties": false,
+  "properties": {
+    "matchId": {
+      "type": "string"
+    },
+    "homeTeamId": {
+      "type": "string"
+    },
+    "awayTeamId": {
+      "type": "string"
+    },
+    "periods": {
+      "description": "For non-attack-relative feeds (e.g. Opta F24), `homeAttacksToward` tells the adapter which way the home team attacked in each period so it can rotate coordinates into the canonical attacker frame. For attack-relative feeds the period directions are not consulted by the adapter.",
+      "type": ["object", "null"],
+      "required": ["firstHalf", "secondHalf"],
+      "additionalProperties": false,
+      "properties": {
+        "firstHalf": {
+          "type": "object",
+          "required": ["homeAttacksToward"],
+          "additionalProperties": false,
+          "properties": {
+            "homeAttacksToward": {
+              "type": "string",
+              "enum": ["increasing-x", "decreasing-x"]
+            }
+          }
+        },
+        "secondHalf": {
+          "type": "object",
+          "required": ["homeAttacksToward"],
+          "additionalProperties": false,
+          "properties": {
+            "homeAttacksToward": {
+              "type": "string",
+              "enum": ["increasing-x", "decreasing-x"]
+            }
+          }
+        },
+        "extraTimeFirstHalf": {
+          "type": "object",
+          "required": ["homeAttacksToward"],
+          "additionalProperties": false,
+          "properties": {
+            "homeAttacksToward": {
+              "type": "string",
+              "enum": ["increasing-x", "decreasing-x"]
+            }
+          }
+        },
+        "extraTimeSecondHalf": {
+          "type": "object",
+          "required": ["homeAttacksToward"],
+          "additionalProperties": false,
+          "properties": {
+            "homeAttacksToward": {
+              "type": "string",
+              "enum": ["increasing-x", "decreasing-x"]
+            }
+          }
+        }
+      }
+    },
+    "attackRelative": {
+      "description": "Set true for feeds where coordinates are already attack-relative (x=100 always toward the goal being attacked, for all teams in all periods). Opta expected-goals feeds use this encoding; standard Opta F24 match-event feeds do not.",
+      "type": "boolean"
+    },
+    "pitchDimensions": {
+      "type": ["object", "null"],
+      "required": ["length", "width"],
+      "additionalProperties": false,
+      "properties": {
+        "length": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "width": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    }
+  }
+}

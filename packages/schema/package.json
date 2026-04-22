@@ -1,0 +1,47 @@
+{
+  "name": "@withqwerty/campos-schema",
+  "version": "0.1.0-alpha.0",
+  "description": "Canonical football data types for Campos — generated TypeScript definitions for shots, passes, events, players, and clubs.",
+  "license": "MIT",
+  "author": "withqwerty <rahulkeerthi2@gmail.com>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withqwerty/campos.git",
+    "directory": "packages/schema"
+  },
+  "homepage": "https://campos.withqwerty.com",
+  "bugs": {
+    "url": "https://github.com/withqwerty/campos/issues"
+  },
+  "keywords": [
+    "football",
+    "soccer",
+    "data-visualization",
+    "typescript",
+    "campos",
+    "schema",
+    "types",
+    "json-schema"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "generate": "node ./scripts/generate-types.mjs",
+    "build": "rm -rf dist && tsc -p tsconfig.json"
+  }
+}

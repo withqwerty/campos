@@ -1,0 +1,1363 @@
+{
+  "source": {
+    "provider": "Stats Perform",
+    "sourcePath": "local/reference/statsperform/kloppy-tests/statsperform_event_ma3.json",
+    "notes": "Curated real MA3 event fixture with direction events, lineup seed events, and early live events for match 71pif9hi2vwzp6q0xzilyxst0."
+  },
+  "matchInfo": {
+    "id": "71pif9hi2vwzp6q0xzilyxst0",
+    "coverageLevel": "15",
+    "date": "2021-09-11Z",
+    "time": "18:30:00Z",
+    "localDate": "2021-09-11",
+    "localTime": "20:30:00",
+    "week": "6",
+    "attendanceInfoId": "2",
+    "attendanceInfo": "Limited Audience",
+    "numberOfPeriods": 2,
+    "periodLength": 45,
+    "lastUpdated": "2024-03-14T21:27:20Z",
+    "description": "Hamburger SV vs Sandhausen",
+    "sport": {
+      "id": "289u5typ3vp4ifwh5thalohmq",
+      "name": "Soccer"
+    },
+    "ruleset": {
+      "id": "79plas4983031idr6vw83nuel",
+      "name": "Men"
+    },
+    "competition": {
+      "id": "722fdbecxzcq9788l6jqclzlw",
+      "name": "2. Bundesliga",
+      "knownName": "German Bundesliga Zwei",
+      "competitionCode": "2.B",
+      "competitionFormat": "Domestic league",
+      "country": {
+        "id": "36min0qztu8eydwvpv8t1is0m",
+        "name": "Germany"
+      }
+    },
+    "tournamentCalendar": {
+      "id": "93wcwtf25153hracvqva88aac",
+      "startDate": "2021-07-23Z",
+      "endDate": "2022-05-15Z",
+      "name": "2021/2022"
+    },
+    "stage": {
+      "id": "9443wbz12vfz0f7ewmg8xhes4",
+      "formatId": "e2q01r9o9jwiq1fls93d1sslx",
+      "startDate": "2021-07-23Z",
+      "endDate": "2022-05-15Z",
+      "name": "Regular Season"
+    },
+    "contestant": [
+      {
+        "id": "75xi6hloabmnjn2kzgj1g8h1s",
+        "name": "Hamburger SV",
+        "shortName": "Hamburg",
+        "officialName": "Hamburger SV",
+        "code": "HSV",
+        "position": "home",
+        "country": {
+          "id": "36min0qztu8eydwvpv8t1is0m",
+          "name": "Germany"
+        }
+      },
+      {
+        "id": "884uzyf1wosc7ykji6e18gifp",
+        "name": "Sandhausen",
+        "shortName": "Sandhausen",
+        "officialName": "SV Sandhausen",
+        "code": "SVS",
+        "position": "away",
+        "country": {
+          "id": "36min0qztu8eydwvpv8t1is0m",
+          "name": "Germany"
+        }
+      }
+    ],
+    "venue": {
+      "id": "8gaqzo8y471bfkkc3tq7ra7o",
+      "neutral": "no",
+      "longName": "Volksparkstadion",
+      "shortName": "Volksparkstadion"
+    }
+  },
+  "liveData": {
+    "matchDetails": {
+      "periodId": 14,
+      "matchStatus": "Played",
+      "winner": "home",
+      "matchLengthMin": 97,
+      "matchLengthSec": 41,
+      "period": [
+        {
+          "id": 1,
+          "start": "2021-09-11T18:30:06Z",
+          "end": "2021-09-11T19:15:08Z",
+          "lengthMin": 45,
+          "lengthSec": 2
+        },
+        {
+          "id": 2,
+          "start": "2021-09-11T19:34:13Z",
+          "end": "2021-09-11T20:26:52Z",
+          "lengthMin": 52,
+          "lengthSec": 39
+        }
+      ],
+      "scores": {
+        "ht": {
+          "home": 0,
+          "away": 0
+        },
+        "ft": {
+          "home": 2,
+          "away": 1
+        },
+        "total": {
+          "home": 2,
+          "away": 1
+        }
+      }
+    },
+    "event": [
+      {
+        "id": 2328542063,
+        "eventId": 1,
+        "typeId": 34,
+        "periodId": 16,
+        "timeMin": 0,
+        "timeSec": 0,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "outcome": 1,
+        "x": 0,
+        "y": 0,
+        "timeStamp": "2021-09-11T17:39:28.239Z",
+        "lastModified": "2021-09-11T17:39:10Z",
+        "qualifier": [
+          {
+            "id": 3087870323,
+            "qualifierId": 130,
+            "value": "4"
+          },
+          {
+            "id": 3087870311,
+            "qualifierId": 30,
+            "value": "8b60vtt1stnmt2uoj0f4lh49h, ci4pwzieoc94uj3i1371bsatx, 46vr35g415omy60ahbiv40wk5, apdrig6xt1hxub1986s3uh1x, n82tdzb1liltoe33f5p6xbhm, do9g7p0jtcfngmvq1uzy2tqdx, 8metzwuemi3edqhsv2pnqqbx1, 2nrmndj0uq3f46c2cb1fbf85, e7if3ma2jblaurrokcxadk0k5, aksjicf4keobpav3tuujngell, enpnulwzdxetukh80iwyazkk5, 3xq9irm7o2mp3zdlw4qt5plka, etfmz143p0d2yowiiijd8g6sq, 7b9gqjq7z692znpoklj7c057u, 4tufo2e9tsw24l2cx7m5b6xh, 3mp7p8tytgkbwi8itxl5mfkrt, 1px9whllb1pnprmgq4fjw3qhh, bhshqnrzmdjbqhtr8rcy7tca2, 4o4sv7lm8h0qvwiv81enhjv1l, 9ed74dfr9aeuedaf63l0i7aei"
+          },
+          {
+            "id": 3087870335,
+            "qualifierId": 194,
+            "value": "do9g7p0jtcfngmvq1uzy2tqdx"
+          },
+          {
+            "id": 3087870315,
+            "qualifierId": 44,
+            "value": "1, 2, 2, 3, 2, 2, 3, 3, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5"
+          },
+          {
+            "id": 3087870339,
+            "qualifierId": 197,
+            "value": "4938"
+          },
+          {
+            "id": 3087870319,
+            "qualifierId": 59,
+            "value": "1, 2, 21, 23, 34, 4, 6, 3, 9, 19, 10, 8, 11, 14, 16, 18, 28, 41, 44, 48"
+          },
+          {
+            "id": 3087870329,
+            "qualifierId": 131,
+            "value": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+          },
+          {
+            "id": 3087870343,
+            "qualifierId": 227,
+            "value": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+          }
+        ]
+      },
+      {
+        "id": 2328543167,
+        "eventId": 1,
+        "typeId": 34,
+        "periodId": 16,
+        "timeMin": 0,
+        "timeSec": 0,
+        "contestantId": "884uzyf1wosc7ykji6e18gifp",
+        "outcome": 1,
+        "x": 0,
+        "y": 0,
+        "timeStamp": "2021-09-11T17:40:17.141Z",
+        "lastModified": "2021-09-11T17:39:59Z",
+        "qualifier": [
+          {
+            "id": 3087875847,
+            "qualifierId": 59,
+            "value": "1, 19, 36, 17, 15, 2, 30, 22, 9, 26, 27, 5, 7, 8, 13, 14, 18, 23, 25, 35"
+          },
+          {
+            "id": 3087875857,
+            "qualifierId": 194,
+            "value": "47ye0gt6bw2ilvl9s0e0ogr11"
+          },
+          {
+            "id": 3087875865,
+            "qualifierId": 227,
+            "value": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+          },
+          {
+            "id": 3087875851,
+            "qualifierId": 130,
+            "value": "5"
+          },
+          {
+            "id": 3087875853,
+            "qualifierId": 131,
+            "value": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+          },
+          {
+            "id": 3087875843,
+            "qualifierId": 44,
+            "value": "1, 2, 2, 3, 2, 2, 3, 3, 4, 3, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5"
+          },
+          {
+            "id": 3087875841,
+            "qualifierId": 30,
+            "value": "5ysw8ditixnietm3lejwmw4id, ehvnch6p70deczk99k156jglx, 8tqphrtr7fraqeunw67iwwq8l, 68u3vd1upyaz92c06d1ekpbyt, 4oaj1qrhwobtrso61687x9ck5, 47ye0gt6bw2ilvl9s0e0ogr11, dkf9v2y9a7ogw6k53crs6dc5x, 4wk62n7739xlysrxoky33mf2t, dvljd3jdouhags70b4rv7jl5h, 2np4n7d10f0jsgor0zbs5acwl, 8jildds7zfj7uk3iohmmkj3kl, 8sh1fdq95u43vc8cku5ckf6xh, 8asvg8sto06l27xjgbzyzqx1x, 5revw8iy1mhgi4jbb5nae2ind, 7adaw298hyb8lf2lqsc428vrp, 8l443indci9k4q1i3akstjmc5, c7nq7mou1gyrzl60ho7pmaok5, 6hh1y9t572yqk7d1zegi0hm5m, hpzxgnwobdttfgd04dykf26t, cipmd3k2nfv0ddic0l8go14gl"
+          },
+          {
+            "id": 3087875861,
+            "qualifierId": 197,
+            "value": "8283"
+          }
+        ]
+      },
+      {
+        "id": 2328589731,
+        "eventId": 2,
+        "typeId": 32,
+        "periodId": 1,
+        "timeMin": 0,
+        "timeSec": 0,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "outcome": 1,
+        "x": 0,
+        "y": 0,
+        "timeStamp": "2021-09-11T18:30:06.787Z",
+        "lastModified": "2021-09-15T06:48:59Z",
+        "qualifier": [
+          {
+            "id": 3088123721,
+            "qualifierId": 127,
+            "value": "Left to Right"
+          }
+        ]
+      },
+      {
+        "id": 2328589745,
+        "eventId": 2,
+        "typeId": 32,
+        "periodId": 1,
+        "timeMin": 0,
+        "timeSec": 0,
+        "contestantId": "884uzyf1wosc7ykji6e18gifp",
+        "outcome": 1,
+        "x": 0,
+        "y": 0,
+        "timeStamp": "2021-09-11T18:30:06.787Z",
+        "lastModified": "2021-09-15T06:49:00Z",
+        "qualifier": [
+          {
+            "id": 3088123765,
+            "qualifierId": 127,
+            "value": "Right to Left"
+          }
+        ]
+      },
+      {
+        "id": 2328589789,
+        "eventId": 3,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 0,
+        "timeSec": 0,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "playerId": "aksjicf4keobpav3tuujngell",
+        "playerName": "M. Wintzheimer",
+        "outcome": 1,
+        "x": 50,
+        "y": 50,
+        "timeStamp": "2021-09-11T18:30:06.817Z",
+        "lastModified": "2021-09-16T05:47:19Z",
+        "qualifier": [
+          {
+            "id": 3098033315,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088123979,
+            "qualifierId": 141,
+            "value": "51.0"
+          },
+          {
+            "id": 3088123975,
+            "qualifierId": 56,
+            "value": "Back"
+          },
+          {
+            "id": 3088123985,
+            "qualifierId": 279,
+            "value": "S"
+          },
+          {
+            "id": 3088123983,
+            "qualifierId": 213,
+            "value": "3.1"
+          },
+          {
+            "id": 3088123977,
+            "qualifierId": 140,
+            "value": "33.9"
+          },
+          {
+            "id": 3088123981,
+            "qualifierId": 212,
+            "value": "16.9"
+          }
+        ]
+      },
+      {
+        "id": 2328589863,
+        "eventId": 4,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 0,
+        "timeSec": 2,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "playerId": "apdrig6xt1hxub1986s3uh1x",
+        "playerName": "J. Meffert",
+        "outcome": 1,
+        "x": 33.9,
+        "y": 51,
+        "timeStamp": "2021-09-11T18:30:08.862Z",
+        "lastModified": "2021-09-16T05:47:25Z",
+        "qualifier": [
+          {
+            "id": 3088124291,
+            "qualifierId": 56,
+            "value": "Back"
+          },
+          {
+            "id": 3088124295,
+            "qualifierId": 140,
+            "value": "34.0"
+          },
+          {
+            "id": 3088124299,
+            "qualifierId": 141,
+            "value": "88.6"
+          },
+          {
+            "id": 3098033369,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088124305,
+            "qualifierId": 213,
+            "value": "1.6"
+          },
+          {
+            "id": 3088124303,
+            "qualifierId": 212,
+            "value": "25.6"
+          }
+        ]
+      },
+      {
+        "id": 2328589885,
+        "eventId": 5,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 0,
+        "timeSec": 6,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "playerId": "46vr35g415omy60ahbiv40wk5",
+        "playerName": "T. Leibold",
+        "outcome": 1,
+        "x": 34.2,
+        "y": 88.6,
+        "timeStamp": "2021-09-11T18:30:13.590Z",
+        "lastModified": "2021-09-16T05:47:36Z",
+        "qualifier": [
+          {
+            "id": 3088124411,
+            "qualifierId": 56,
+            "value": "Left"
+          },
+          {
+            "id": 3088124413,
+            "qualifierId": 140,
+            "value": "56.1"
+          },
+          {
+            "id": 3088124415,
+            "qualifierId": 141,
+            "value": "92.7"
+          },
+          {
+            "id": 3088124419,
+            "qualifierId": 213,
+            "value": "0.1"
+          },
+          {
+            "id": 3088124409,
+            "qualifierId": 155
+          },
+          {
+            "id": 3098033441,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088124417,
+            "qualifierId": 212,
+            "value": "23.2"
+          }
+        ]
+      },
+      {
+        "id": 2328589929,
+        "eventId": 6,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 0,
+        "timeSec": 9,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "playerId": "2nrmndj0uq3f46c2cb1fbf85",
+        "playerName": "M. Heyer",
+        "outcome": 1,
+        "x": 56.8,
+        "y": 94.2,
+        "timeStamp": "2021-09-11T18:30:16.160Z",
+        "lastModified": "2021-09-16T05:47:46Z",
+        "qualifier": [
+          {
+            "id": 3088124613,
+            "qualifierId": 140,
+            "value": "48.0"
+          },
+          {
+            "id": 3088124611,
+            "qualifierId": 56,
+            "value": "Back"
+          },
+          {
+            "id": 3088124615,
+            "qualifierId": 141,
+            "value": "96.6"
+          },
+          {
+            "id": 3088124619,
+            "qualifierId": 213,
+            "value": "3.0"
+          },
+          {
+            "id": 3098033525,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088124617,
+            "qualifierId": 212,
+            "value": "9.4"
+          }
+        ]
+      },
+      {
+        "id": 2328590577,
+        "eventId": 9,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 0,
+        "timeSec": 40,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "playerId": "46vr35g415omy60ahbiv40wk5",
+        "playerName": "T. Leibold",
+        "outcome": 1,
+        "x": 46.1,
+        "y": 94.7,
+        "timeStamp": "2021-09-11T18:30:47.273Z",
+        "lastModified": "2021-09-16T05:48:04Z",
+        "qualifier": [
+          {
+            "id": 3098033699,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088127687,
+            "qualifierId": 212,
+            "value": "20.0"
+          },
+          {
+            "id": 3088127679,
+            "qualifierId": 152
+          },
+          {
+            "id": 3088127689,
+            "qualifierId": 213,
+            "value": "3.9"
+          },
+          {
+            "id": 3088127685,
+            "qualifierId": 141,
+            "value": "73.8"
+          },
+          {
+            "id": 3088127683,
+            "qualifierId": 140,
+            "value": "32.7"
+          },
+          {
+            "id": 3088127681,
+            "qualifierId": 56,
+            "value": "Back"
+          },
+          {
+            "id": 3088127677,
+            "qualifierId": 5
+          }
+        ]
+      },
+      {
+        "id": 2328590611,
+        "eventId": 10,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 0,
+        "timeSec": 43,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "playerId": "do9g7p0jtcfngmvq1uzy2tqdx",
+        "playerName": "S. Schonlau",
+        "outcome": 1,
+        "x": 32.7,
+        "y": 73.8,
+        "timeStamp": "2021-09-11T18:30:50.537Z",
+        "lastModified": "2021-09-16T05:48:16Z",
+        "qualifier": [
+          {
+            "id": 3088127853,
+            "qualifierId": 213,
+            "value": "4.0"
+          },
+          {
+            "id": 3088127851,
+            "qualifierId": 212,
+            "value": "12.1"
+          },
+          {
+            "id": 3088127845,
+            "qualifierId": 56,
+            "value": "Back"
+          },
+          {
+            "id": 3088127847,
+            "qualifierId": 140,
+            "value": "25.0"
+          },
+          {
+            "id": 3088127849,
+            "qualifierId": 141,
+            "value": "60.5"
+          },
+          {
+            "id": 3098033787,
+            "qualifierId": 178
+          }
+        ]
+      },
+      {
+        "id": 2328590625,
+        "eventId": 11,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 0,
+        "timeSec": 47,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "playerId": "8b60vtt1stnmt2uoj0f4lh49h",
+        "playerName": "Daniel Heuer Fernandes",
+        "outcome": 1,
+        "x": 25,
+        "y": 60.5,
+        "timeStamp": "2021-09-11T18:30:53.947Z",
+        "lastModified": "2021-09-16T05:48:23Z",
+        "qualifier": [
+          {
+            "id": 3088127947,
+            "qualifierId": 213,
+            "value": "1.1"
+          },
+          {
+            "id": 3088127939,
+            "qualifierId": 56,
+            "value": "Back"
+          },
+          {
+            "id": 3088127945,
+            "qualifierId": 212,
+            "value": "9.2"
+          },
+          {
+            "id": 3098033857,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088127941,
+            "qualifierId": 140,
+            "value": "29.0"
+          },
+          {
+            "id": 3088127943,
+            "qualifierId": 141,
+            "value": "72.6"
+          }
+        ]
+      },
+      {
+        "id": 2328590679,
+        "eventId": 12,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 0,
+        "timeSec": 49,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "playerId": "do9g7p0jtcfngmvq1uzy2tqdx",
+        "playerName": "S. Schonlau",
+        "outcome": 1,
+        "x": 29,
+        "y": 72.6,
+        "timeStamp": "2021-09-11T18:30:56.131Z",
+        "lastModified": "2021-09-16T05:48:28Z",
+        "qualifier": [
+          {
+            "id": 3088128193,
+            "qualifierId": 56,
+            "value": "Back"
+          },
+          {
+            "id": 3088128195,
+            "qualifierId": 140,
+            "value": "32.9"
+          },
+          {
+            "id": 3088128201,
+            "qualifierId": 213,
+            "value": "1.3"
+          },
+          {
+            "id": 3088128199,
+            "qualifierId": 212,
+            "value": "13.1"
+          },
+          {
+            "id": 3098033897,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088128197,
+            "qualifierId": 141,
+            "value": "90.9"
+          }
+        ]
+      },
+      {
+        "id": 2328590717,
+        "eventId": 13,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 0,
+        "timeSec": 51,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "playerId": "46vr35g415omy60ahbiv40wk5",
+        "playerName": "T. Leibold",
+        "outcome": 1,
+        "x": 35,
+        "y": 91.5,
+        "timeStamp": "2021-09-11T18:30:58.533Z",
+        "lastModified": "2021-09-16T05:48:39Z",
+        "qualifier": [
+          {
+            "id": 3088128325,
+            "qualifierId": 212,
+            "value": "18.1"
+          },
+          {
+            "id": 3088128321,
+            "qualifierId": 140,
+            "value": "52.1"
+          },
+          {
+            "id": 3088128323,
+            "qualifierId": 141,
+            "value": "87.7"
+          },
+          {
+            "id": 3088128319,
+            "qualifierId": 56,
+            "value": "Left"
+          },
+          {
+            "id": 3098033979,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088128327,
+            "qualifierId": 213,
+            "value": "6.1"
+          }
+        ]
+      },
+      {
+        "id": 2328590733,
+        "eventId": 14,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 0,
+        "timeSec": 53,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "playerId": "enpnulwzdxetukh80iwyazkk5",
+        "playerName": "S. Kittel",
+        "outcome": 0,
+        "x": 52.1,
+        "y": 87.7,
+        "timeStamp": "2021-09-11T18:30:59.856Z",
+        "lastModified": "2021-09-16T05:48:46Z",
+        "qualifier": [
+          {
+            "id": 3088128415,
+            "qualifierId": 56,
+            "value": "Left"
+          },
+          {
+            "id": 3088128413,
+            "qualifierId": 155
+          },
+          {
+            "id": 3088128421,
+            "qualifierId": 212,
+            "value": "11.9"
+          },
+          {
+            "id": 3098034023,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088128423,
+            "qualifierId": 213,
+            "value": "0.9"
+          },
+          {
+            "id": 3088128419,
+            "qualifierId": 141,
+            "value": "100.0"
+          },
+          {
+            "id": 3088128417,
+            "qualifierId": 140,
+            "value": "58.7"
+          }
+        ]
+      },
+      {
+        "id": 2328591011,
+        "eventId": 5,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 1,
+        "timeSec": 9,
+        "contestantId": "884uzyf1wosc7ykji6e18gifp",
+        "playerId": "ehvnch6p70deczk99k156jglx",
+        "playerName": "B. Ajdini",
+        "outcome": 0,
+        "x": 50.8,
+        "y": 0,
+        "timeStamp": "2021-09-11T18:31:15.950Z",
+        "lastModified": "2021-09-16T05:48:58Z",
+        "qualifier": [
+          {
+            "id": 3088129793,
+            "qualifierId": 141,
+            "value": "16.4"
+          },
+          {
+            "id": 3088129791,
+            "qualifierId": 140,
+            "value": "69.7"
+          },
+          {
+            "id": 3088129795,
+            "qualifierId": 212,
+            "value": "23.5"
+          },
+          {
+            "id": 3088129789,
+            "qualifierId": 56,
+            "value": "Right"
+          },
+          {
+            "id": 3088129799,
+            "qualifierId": 1
+          },
+          {
+            "id": 3088129787,
+            "qualifierId": 107
+          },
+          {
+            "id": 3088129797,
+            "qualifierId": 213,
+            "value": "0.6"
+          }
+        ]
+      },
+      {
+        "id": 2328591053,
+        "eventId": 16,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 1,
+        "timeSec": 11,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "playerId": "n82tdzb1liltoe33f5p6xbhm",
+        "playerName": "J. David",
+        "outcome": 0,
+        "x": 26.5,
+        "y": 71.2,
+        "timeStamp": "2021-09-11T18:31:17.956Z",
+        "lastModified": "2021-09-16T05:49:04Z",
+        "qualifier": [
+          {
+            "id": 3088129975,
+            "qualifierId": 3
+          },
+          {
+            "id": 3098034175,
+            "qualifierId": 388
+          },
+          {
+            "id": 3088129983,
+            "qualifierId": 212,
+            "value": "18.0"
+          },
+          {
+            "id": 3088129981,
+            "qualifierId": 141,
+            "value": "96.3"
+          },
+          {
+            "id": 3088129977,
+            "qualifierId": 56,
+            "value": "Back"
+          },
+          {
+            "id": 3088129979,
+            "qualifierId": 140,
+            "value": "31.9"
+          },
+          {
+            "id": 3088129985,
+            "qualifierId": 213,
+            "value": "1.3"
+          }
+        ]
+      },
+      {
+        "id": 2328591151,
+        "eventId": 6,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 1,
+        "timeSec": 15,
+        "contestantId": "884uzyf1wosc7ykji6e18gifp",
+        "playerId": "ehvnch6p70deczk99k156jglx",
+        "playerName": "B. Ajdini",
+        "outcome": 0,
+        "x": 71.7,
+        "y": 3.1,
+        "timeStamp": "2021-09-11T18:31:22.729Z",
+        "lastModified": "2021-09-16T05:49:39Z",
+        "qualifier": [
+          {
+            "id": 3088130449,
+            "qualifierId": 141,
+            "value": "2.9"
+          },
+          {
+            "id": 3088130455,
+            "qualifierId": 1
+          },
+          {
+            "id": 3088130445,
+            "qualifierId": 56,
+            "value": "Right"
+          },
+          {
+            "id": 3088130443,
+            "qualifierId": 157
+          },
+          {
+            "id": 3098034395,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088130453,
+            "qualifierId": 213,
+            "value": "6.3"
+          },
+          {
+            "id": 3088130451,
+            "qualifierId": 212,
+            "value": "16.3"
+          },
+          {
+            "id": 3088130447,
+            "qualifierId": 140,
+            "value": "87.2"
+          }
+        ]
+      },
+      {
+        "id": 2328591193,
+        "eventId": 18,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 1,
+        "timeSec": 19,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "playerId": "46vr35g415omy60ahbiv40wk5",
+        "playerName": "T. Leibold",
+        "outcome": 1,
+        "x": 13.5,
+        "y": 95.7,
+        "timeStamp": "2021-09-11T18:31:26.383Z",
+        "lastModified": "2021-09-16T05:51:48Z",
+        "qualifier": [
+          {
+            "id": 3088130689,
+            "qualifierId": 155
+          },
+          {
+            "id": 3088130695,
+            "qualifierId": 141,
+            "value": "82.1"
+          },
+          {
+            "id": 3088130693,
+            "qualifierId": 140,
+            "value": "13.9"
+          },
+          {
+            "id": 3088130691,
+            "qualifierId": 56,
+            "value": "Back"
+          },
+          {
+            "id": 3098035427,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088130699,
+            "qualifierId": 213,
+            "value": "4.8"
+          },
+          {
+            "id": 3088130697,
+            "qualifierId": 212,
+            "value": "9.3"
+          }
+        ]
+      },
+      {
+        "id": 2328591361,
+        "eventId": 8,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 1,
+        "timeSec": 27,
+        "contestantId": "884uzyf1wosc7ykji6e18gifp",
+        "playerId": "ehvnch6p70deczk99k156jglx",
+        "playerName": "B. Ajdini",
+        "outcome": 1,
+        "x": 66.1,
+        "y": 8,
+        "timeStamp": "2021-09-11T18:31:33.863Z",
+        "lastModified": "2021-09-16T05:52:17Z",
+        "qualifier": [
+          {
+            "id": 3088131481,
+            "qualifierId": 213,
+            "value": "5.6"
+          },
+          {
+            "id": 3088131477,
+            "qualifierId": 141,
+            "value": "2.3"
+          },
+          {
+            "id": 3098035659,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088131479,
+            "qualifierId": 212,
+            "value": "6.3"
+          },
+          {
+            "id": 3088131473,
+            "qualifierId": 56,
+            "value": "Right"
+          },
+          {
+            "id": 3088131475,
+            "qualifierId": 140,
+            "value": "70.8"
+          }
+        ]
+      },
+      {
+        "id": 2328591375,
+        "eventId": 9,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 1,
+        "timeSec": 32,
+        "contestantId": "884uzyf1wosc7ykji6e18gifp",
+        "playerId": "68u3vd1upyaz92c06d1ekpbyt",
+        "playerName": "E. Zenga",
+        "outcome": 0,
+        "x": 87.1,
+        "y": 2.9,
+        "timeStamp": "2021-09-11T18:31:39.191Z",
+        "lastModified": "2021-09-16T05:52:56Z",
+        "qualifier": [
+          {
+            "id": 3093689363,
+            "qualifierId": 225
+          },
+          {
+            "id": 3088131547,
+            "qualifierId": 212,
+            "value": "1.5"
+          },
+          {
+            "id": 3093689365,
+            "qualifierId": 386
+          },
+          {
+            "id": 3088131537,
+            "qualifierId": 2
+          },
+          {
+            "id": 3088131549,
+            "qualifierId": 213,
+            "value": "1.2"
+          },
+          {
+            "id": 3098035925,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088131543,
+            "qualifierId": 140,
+            "value": "87.6"
+          },
+          {
+            "id": 3093689367,
+            "qualifierId": 20
+          },
+          {
+            "id": 3088131539,
+            "qualifierId": 155
+          },
+          {
+            "id": 3088131545,
+            "qualifierId": 141,
+            "value": "5.0"
+          },
+          {
+            "id": 3088131585,
+            "qualifierId": 233,
+            "value": "21"
+          },
+          {
+            "id": 3088131541,
+            "qualifierId": 56,
+            "value": "Right"
+          }
+        ]
+      },
+      {
+        "id": 2328591503,
+        "eventId": 10,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 1,
+        "timeSec": 39,
+        "contestantId": "884uzyf1wosc7ykji6e18gifp",
+        "playerId": "47ye0gt6bw2ilvl9s0e0ogr11",
+        "playerName": "A. Zhirov",
+        "outcome": 1,
+        "x": 61.8,
+        "y": 5.9,
+        "timeStamp": "2021-09-11T18:31:45.890Z",
+        "lastModified": "2021-09-16T05:53:27Z",
+        "qualifier": [
+          {
+            "id": 3098036177,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088132137,
+            "qualifierId": 213,
+            "value": "6.3"
+          },
+          {
+            "id": 3088132127,
+            "qualifierId": 3
+          },
+          {
+            "id": 3088132133,
+            "qualifierId": 141,
+            "value": "5.5"
+          },
+          {
+            "id": 3088132131,
+            "qualifierId": 140,
+            "value": "74.0"
+          },
+          {
+            "id": 3088132135,
+            "qualifierId": 212,
+            "value": "12.8"
+          },
+          {
+            "id": 3088132129,
+            "qualifierId": 56,
+            "value": "Right"
+          }
+        ]
+      },
+      {
+        "id": 2328591549,
+        "eventId": 11,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 1,
+        "timeSec": 40,
+        "contestantId": "884uzyf1wosc7ykji6e18gifp",
+        "playerId": "68u3vd1upyaz92c06d1ekpbyt",
+        "playerName": "E. Zenga",
+        "outcome": 1,
+        "keyPass": 1,
+        "x": 74,
+        "y": 5.5,
+        "timeStamp": "2021-09-11T18:31:47.656Z",
+        "lastModified": "2021-09-16T06:01:10Z",
+        "qualifier": [
+          {
+            "id": 3088132405,
+            "qualifierId": 212,
+            "value": "13.8"
+          },
+          {
+            "id": 3088132399,
+            "qualifierId": 56,
+            "value": "Right"
+          },
+          {
+            "id": 3088132401,
+            "qualifierId": 140,
+            "value": "85.4"
+          },
+          {
+            "id": 3088132403,
+            "qualifierId": 141,
+            "value": "15.5"
+          },
+          {
+            "id": 3088132395,
+            "qualifierId": 3
+          },
+          {
+            "id": 3088132397,
+            "qualifierId": 168
+          },
+          {
+            "id": 3098036219,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088133945,
+            "qualifierId": 210,
+            "value": "15"
+          },
+          {
+            "id": 3088132407,
+            "qualifierId": 213,
+            "value": "0.5"
+          }
+        ]
+      },
+      {
+        "id": 2328591675,
+        "eventId": 14,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 1,
+        "timeSec": 46,
+        "contestantId": "884uzyf1wosc7ykji6e18gifp",
+        "playerId": "68u3vd1upyaz92c06d1ekpbyt",
+        "playerName": "E. Zenga",
+        "outcome": 0,
+        "x": 77.4,
+        "y": 5.5,
+        "timeStamp": "2021-09-11T18:31:53.470Z",
+        "lastModified": "2021-09-16T06:01:31Z",
+        "qualifier": [
+          {
+            "id": 3088133011,
+            "qualifierId": 56,
+            "value": "Left"
+          },
+          {
+            "id": 3088133013,
+            "qualifierId": 140,
+            "value": "87.8"
+          },
+          {
+            "id": 3088133021,
+            "qualifierId": 1
+          },
+          {
+            "id": 3098041673,
+            "qualifierId": 178
+          },
+          {
+            "id": 3088133015,
+            "qualifierId": 141,
+            "value": "100.0"
+          },
+          {
+            "id": 3088133019,
+            "qualifierId": 213,
+            "value": "1.4"
+          },
+          {
+            "id": 3088133009,
+            "qualifierId": 196
+          },
+          {
+            "id": 3088133017,
+            "qualifierId": 212,
+            "value": "65.9"
+          },
+          {
+            "id": 3088133007,
+            "qualifierId": 155
+          }
+        ]
+      },
+      {
+        "id": 2328592035,
+        "eventId": 16,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 2,
+        "timeSec": 17,
+        "contestantId": "884uzyf1wosc7ykji6e18gifp",
+        "playerId": "8tqphrtr7fraqeunw67iwwq8l",
+        "playerName": "C. Okoroji",
+        "outcome": 0,
+        "x": 20.7,
+        "y": 36.6,
+        "timeStamp": "2021-09-11T18:32:23.897Z",
+        "lastModified": "2021-09-16T06:13:05Z",
+        "qualifier": [
+          {
+            "id": 3098049799,
+            "qualifierId": 388
+          },
+          {
+            "id": 3088134747,
+            "qualifierId": 141,
+            "value": "27.7"
+          },
+          {
+            "id": 3088134745,
+            "qualifierId": 140,
+            "value": "23.0"
+          },
+          {
+            "id": 3088134743,
+            "qualifierId": 56,
+            "value": "Back"
+          },
+          {
+            "id": 3088134741,
+            "qualifierId": 3
+          },
+          {
+            "id": 3088134751,
+            "qualifierId": 213,
+            "value": "5.1"
+          },
+          {
+            "id": 3088134749,
+            "qualifierId": 212,
+            "value": "6.5"
+          }
+        ]
+      },
+      {
+        "id": 2328632665,
+        "eventId": 328,
+        "typeId": 32,
+        "periodId": 2,
+        "timeMin": 45,
+        "timeSec": 0,
+        "contestantId": "884uzyf1wosc7ykji6e18gifp",
+        "outcome": 1,
+        "x": 0,
+        "y": 0,
+        "timeStamp": "2021-09-11T19:34:13.432Z",
+        "lastModified": "2021-09-15T06:50:04Z",
+        "qualifier": [
+          {
+            "id": 3088363173,
+            "qualifierId": 127,
+            "value": "Left to Right"
+          }
+        ]
+      },
+      {
+        "id": 2328632669,
+        "eventId": 513,
+        "typeId": 32,
+        "periodId": 2,
+        "timeMin": 45,
+        "timeSec": 0,
+        "contestantId": "75xi6hloabmnjn2kzgj1g8h1s",
+        "outcome": 1,
+        "x": 0,
+        "y": 0,
+        "timeStamp": "2021-09-11T19:34:13.432Z",
+        "lastModified": "2021-09-15T06:50:05Z",
+        "qualifier": [
+          {
+            "id": 3088363209,
+            "qualifierId": 127,
+            "value": "Right to Left"
+          }
+        ]
+      }
+    ]
+  }
+}

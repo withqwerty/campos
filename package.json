@@ -1,0 +1,65 @@
+{
+  "name": "campos",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "generate:schema": "pnpm --filter @withqwerty/campos-schema generate",
+    "generate:formations": "python3 scripts/extract-mplsoccer-formations.py",
+    "build": "pnpm generate:schema && pnpm --filter @withqwerty/campos-schema build && pnpm --filter @withqwerty/campos-adapters build && pnpm --filter @withqwerty/campos-stadia build && pnpm --filter @withqwerty/campos-react build && pnpm --filter @withqwerty/campos-static build",
+    "typecheck": "pnpm generate:schema && tsc --noEmit -p tsconfig.json",
+    "test": "pnpm generate:schema && vitest run",
+    "test:watch": "pnpm generate:schema && vitest",
+    "test:coverage": "pnpm generate:schema && vitest run --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify:package-imports": "node ./scripts/verify-package-imports.mjs",
+    "export:package-repo": "node ./scripts/repo-split/export-package-repo.mjs",
+    "export:site-repo": "node ./scripts/repo-split/export-site-repo.mjs",
+    "export:linked-workspace": "node ./scripts/repo-split/create-linked-workspace.mjs",
+    "check": "scripts/check.sh",
+    "check:verbose": "scripts/check.sh --verbose",
+    "clean": "rm -rf packages/*/dist apps/*/dist apps/*/.astro",
+    "site:dev": "pnpm --filter @withqwerty/campos-site dev",
+    "site:build": "pnpm --filter @withqwerty/campos-site build",
+    "agent-gate": "node scripts/agent-gate/run.mjs",
+    "agent-gate:all": "scripts/agent-gate/run-all.sh",
+    "agent-gate:screenshot": "node scripts/agent-gate/screenshotter.mjs",
+    "prepare": "lefthook install"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "axe-core": "^4.11.2",
+    "eslint": "^10.2.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "jsdom": "^26.1.0",
+    "json-schema-to-typescript": "^15.0.4",
+    "lefthook": "^2.1.5",
+    "prettier": "^3.8.1",
+    "prettier-plugin-astro": "^0.14.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.58.1",
+    "vitest": "^3.2.4",
+    "vitest-axe": "^0.1.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ],
+    "overrides": {
+      "react": "19.2.5",
+      "react-dom": "19.2.5"
+    }
+  }
+}

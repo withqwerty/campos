@@ -1,0 +1,5064 @@
+{
+  "source": {
+    "provider": "Impect",
+    "sourcePath": "local/reference/impect/open-data/data",
+    "licensePath": "local/reference/impect/open-data/LICENSE.pdf",
+    "notes": "Curated real Impect open-data fixture for match 122838 with lineup, player, squad, and event fragments."
+  },
+  "match": {
+    "iterationId": 743,
+    "id": 122838,
+    "homeSquadId": 38,
+    "awaySquadId": 33,
+    "scheduledDate": "2023-08-18T18:30:00Z",
+    "lastCalculationDate": "2025-08-28T06:30:00.471380Z",
+    "matchDay": {
+      "index": 0,
+      "name": "1. Spieltag"
+    },
+    "available": true,
+    "idMappings": [
+      {
+        "heim_spiel": ["9684272"]
+      },
+      {
+        "skill_corner": ["1033915"]
+      }
+    ]
+  },
+  "lineups": {
+    "id": 122838,
+    "dateTime": "2023-08-18T18:30:00Z",
+    "lastCalculationDate": "2025-08-28T06:30:00.471380Z",
+    "iterationId": 743,
+    "squadHome": {
+      "id": 38,
+      "players": [
+        {
+          "id": 1028,
+          "shirtNumber": 8
+        },
+        {
+          "id": 1049,
+          "shirtNumber": 13
+        },
+        {
+          "id": 1099,
+          "shirtNumber": 10
+        },
+        {
+          "id": 1120,
+          "shirtNumber": 3
+        },
+        {
+          "id": 1159,
+          "shirtNumber": 30
+        },
+        {
+          "id": 3153,
+          "shirtNumber": 20
+        },
+        {
+          "id": 3772,
+          "shirtNumber": 32
+        },
+        {
+          "id": 4366,
+          "shirtNumber": 9
+        },
+        {
+          "id": 5097,
+          "shirtNumber": 24
+        },
+        {
+          "id": 6201,
+          "shirtNumber": 5
+        },
+        {
+          "id": 6469,
+          "shirtNumber": 14
+        },
+        {
+          "id": 8451,
+          "shirtNumber": 1
+        },
+        {
+          "id": 9550,
+          "shirtNumber": 11
+        },
+        {
+          "id": 9762,
+          "shirtNumber": 23
+        },
+        {
+          "id": 9770,
+          "shirtNumber": 7
+        },
+        {
+          "id": 13599,
+          "shirtNumber": 6
+        },
+        {
+          "id": 23157,
+          "shirtNumber": 36
+        },
+        {
+          "id": 31010,
+          "shirtNumber": 28
+        },
+        {
+          "id": 109588,
+          "shirtNumber": 35
+        },
+        {
+          "id": 109888,
+          "shirtNumber": 17
+        }
+      ],
+      "startingPositions": [
+        {
+          "playerId": 1028,
+          "position": "RIGHT_WINGBACK_DEFENDER",
+          "positionSide": "RIGHT"
+        },
+        {
+          "playerId": 1049,
+          "position": "CENTRAL_DEFENDER",
+          "positionSide": "CENTRE"
+        },
+        {
+          "playerId": 1099,
+          "position": "ATTACKING_MIDFIELD",
+          "positionSide": "CENTRE_LEFT"
+        },
+        {
+          "playerId": 1120,
+          "position": "LEFT_WINGBACK_DEFENDER",
+          "positionSide": "LEFT"
+        },
+        {
+          "playerId": 3772,
+          "position": "CENTRAL_DEFENDER",
+          "positionSide": "CENTRE_LEFT"
+        },
+        {
+          "playerId": 6201,
+          "position": "CENTRAL_DEFENDER",
+          "positionSide": "CENTRE_RIGHT"
+        },
+        {
+          "playerId": 6469,
+          "position": "DEFENSE_MIDFIELD",
+          "positionSide": "CENTRE"
+        },
+        {
+          "playerId": 8451,
+          "position": "GOALKEEPER",
+          "positionSide": "CENTRE"
+        },
+        {
+          "playerId": 9550,
+          "position": "CENTER_FORWARD",
+          "positionSide": "CENTRE_RIGHT"
+        },
+        {
+          "playerId": 9770,
+          "position": "CENTER_FORWARD",
+          "positionSide": "CENTRE_LEFT"
+        },
+        {
+          "playerId": 13599,
+          "position": "ATTACKING_MIDFIELD",
+          "positionSide": "CENTRE_RIGHT"
+        }
+      ],
+      "substitutions": [
+        {
+          "gameTime": {
+            "gameTime": "58:34.2450",
+            "gameTimeInSec": 10814.245
+          },
+          "playerId": 1028,
+          "toPosition": "BANK",
+          "positionSide": "UNKNOWN",
+          "fromPosition": "RIGHT_WINGBACK_DEFENDER",
+          "fromPositionSide": "RIGHT",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "58:34.2450",
+            "gameTimeInSec": 10814.245
+          },
+          "playerId": 5097,
+          "toPosition": "RIGHT_WINGBACK_DEFENDER",
+          "positionSide": "RIGHT",
+          "fromPosition": "BANK",
+          "fromPositionSide": "UNKNOWN",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "67:27.5490",
+            "gameTimeInSec": 11347.549
+          },
+          "playerId": 1099,
+          "toPosition": "BANK",
+          "positionSide": "UNKNOWN",
+          "fromPosition": "ATTACKING_MIDFIELD",
+          "fromPositionSide": "CENTRE_LEFT",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "67:27.5490",
+            "gameTimeInSec": 11347.549
+          },
+          "playerId": 3153,
+          "toPosition": "ATTACKING_MIDFIELD",
+          "positionSide": "CENTRE_LEFT",
+          "fromPosition": "BANK",
+          "fromPositionSide": "UNKNOWN",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "67:27.5490",
+            "gameTimeInSec": 11347.549
+          },
+          "playerId": 6469,
+          "toPosition": "BANK",
+          "positionSide": "UNKNOWN",
+          "fromPosition": "DEFENSE_MIDFIELD",
+          "fromPositionSide": "CENTRE",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "67:27.5490",
+            "gameTimeInSec": 11347.549
+          },
+          "playerId": 23157,
+          "toPosition": "DEFENSE_MIDFIELD",
+          "positionSide": "CENTRE",
+          "fromPosition": "BANK",
+          "fromPositionSide": "UNKNOWN",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "78:16.5980",
+            "gameTimeInSec": 11996.598
+          },
+          "playerId": 1120,
+          "toPosition": "BANK",
+          "positionSide": "UNKNOWN",
+          "fromPosition": "LEFT_WINGBACK_DEFENDER",
+          "fromPositionSide": "LEFT",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "78:16.5980",
+            "gameTimeInSec": 11996.598
+          },
+          "playerId": 4366,
+          "toPosition": "ATTACKING_MIDFIELD",
+          "positionSide": "CENTRE_RIGHT",
+          "fromPosition": "BANK",
+          "fromPositionSide": "UNKNOWN",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "78:16.5980",
+            "gameTimeInSec": 11996.598
+          },
+          "playerId": 13599,
+          "toPosition": "BANK",
+          "positionSide": "UNKNOWN",
+          "fromPosition": "ATTACKING_MIDFIELD",
+          "fromPositionSide": "CENTRE_RIGHT",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "78:16.5980",
+            "gameTimeInSec": 11996.598
+          },
+          "playerId": 109588,
+          "toPosition": "LEFT_WINGBACK_DEFENDER",
+          "positionSide": "LEFT",
+          "fromPosition": "BANK",
+          "fromPositionSide": "UNKNOWN",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        }
+      ],
+      "startingFormation": "5-1-2-2",
+      "formations": [
+        {
+          "gameTime": "00:00.0000",
+          "gameTimeInSec": 0,
+          "formation": "5-1-2-2"
+        }
+      ],
+      "coachId": null
+    },
+    "squadAway": {
+      "id": 33,
+      "players": [
+        {
+          "id": 98,
+          "shirtNumber": 6
+        },
+        {
+          "id": 204,
+          "shirtNumber": 10
+        },
+        {
+          "id": 216,
+          "shirtNumber": 25
+        },
+        {
+          "id": 231,
+          "shirtNumber": 9
+        },
+        {
+          "id": 309,
+          "shirtNumber": 11
+        },
+        {
+          "id": 929,
+          "shirtNumber": 13
+        },
+        {
+          "id": 1053,
+          "shirtNumber": 8
+        },
+        {
+          "id": 1202,
+          "shirtNumber": 26
+        },
+        {
+          "id": 2013,
+          "shirtNumber": 5
+        },
+        {
+          "id": 7594,
+          "shirtNumber": 27
+        },
+        {
+          "id": 7910,
+          "shirtNumber": 4
+        },
+        {
+          "id": 7947,
+          "shirtNumber": 2
+        },
+        {
+          "id": 8358,
+          "shirtNumber": 40
+        },
+        {
+          "id": 28349,
+          "shirtNumber": 38
+        },
+        {
+          "id": 32432,
+          "shirtNumber": 19
+        },
+        {
+          "id": 50321,
+          "shirtNumber": 3
+        },
+        {
+          "id": 53703,
+          "shirtNumber": 42
+        },
+        {
+          "id": 66678,
+          "shirtNumber": 39
+        },
+        {
+          "id": 103990,
+          "shirtNumber": 41
+        },
+        {
+          "id": 104207,
+          "shirtNumber": 43
+        }
+      ],
+      "startingPositions": [
+        {
+          "playerId": 98,
+          "position": "DEFENSE_MIDFIELD",
+          "positionSide": "CENTRE_LEFT"
+        },
+        {
+          "playerId": 204,
+          "position": "RIGHT_WINGER",
+          "positionSide": "RIGHT"
+        },
+        {
+          "playerId": 231,
+          "position": "CENTER_FORWARD",
+          "positionSide": "CENTRE"
+        },
+        {
+          "playerId": 309,
+          "position": "LEFT_WINGER",
+          "positionSide": "LEFT"
+        },
+        {
+          "playerId": 1053,
+          "position": "DEFENSE_MIDFIELD",
+          "positionSide": "CENTRE_RIGHT"
+        },
+        {
+          "playerId": 1202,
+          "position": "GOALKEEPER",
+          "positionSide": "CENTRE"
+        },
+        {
+          "playerId": 7947,
+          "position": "CENTRAL_DEFENDER",
+          "positionSide": "CENTRE_RIGHT"
+        },
+        {
+          "playerId": 8358,
+          "position": "RIGHT_WINGBACK_DEFENDER",
+          "positionSide": "RIGHT"
+        },
+        {
+          "playerId": 32432,
+          "position": "LEFT_WINGBACK_DEFENDER",
+          "positionSide": "LEFT"
+        },
+        {
+          "playerId": 50321,
+          "position": "CENTRAL_DEFENDER",
+          "positionSide": "CENTRE_LEFT"
+        },
+        {
+          "playerId": 53703,
+          "position": "ATTACKING_MIDFIELD",
+          "positionSide": "CENTRE"
+        }
+      ],
+      "substitutions": [
+        {
+          "gameTime": {
+            "gameTime": "66:59.3910",
+            "gameTimeInSec": 11319.391
+          },
+          "playerId": 7910,
+          "toPosition": "CENTRAL_DEFENDER",
+          "positionSide": "CENTRE_LEFT",
+          "fromPosition": "BANK",
+          "fromPositionSide": "UNKNOWN",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "66:59.3910",
+            "gameTimeInSec": 11319.391
+          },
+          "playerId": 50321,
+          "toPosition": "BANK",
+          "positionSide": "UNKNOWN",
+          "fromPosition": "CENTRAL_DEFENDER",
+          "fromPositionSide": "CENTRE_LEFT",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "78:44.2600",
+            "gameTimeInSec": 12024.26
+          },
+          "playerId": 1053,
+          "toPosition": "BANK",
+          "positionSide": "UNKNOWN",
+          "fromPosition": "DEFENSE_MIDFIELD",
+          "fromPositionSide": "CENTRE_RIGHT",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "78:44.2600",
+            "gameTimeInSec": 12024.26
+          },
+          "playerId": 7594,
+          "toPosition": "DEFENSE_MIDFIELD",
+          "positionSide": "CENTRE_RIGHT",
+          "fromPosition": "BANK",
+          "fromPositionSide": "UNKNOWN",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "83:21.0430",
+            "gameTimeInSec": 12301.043
+          },
+          "playerId": 216,
+          "toPosition": "ATTACKING_MIDFIELD",
+          "positionSide": "CENTRE",
+          "fromPosition": "BANK",
+          "fromPositionSide": "UNKNOWN",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "83:21.0430",
+            "gameTimeInSec": 12301.043
+          },
+          "playerId": 231,
+          "toPosition": "BANK",
+          "positionSide": "UNKNOWN",
+          "fromPosition": "CENTER_FORWARD",
+          "fromPositionSide": "CENTRE",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "83:21.0430",
+            "gameTimeInSec": 12301.043
+          },
+          "playerId": 309,
+          "toPosition": "BANK",
+          "positionSide": "UNKNOWN",
+          "fromPosition": "LEFT_WINGER",
+          "fromPositionSide": "LEFT",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "83:21.0430",
+            "gameTimeInSec": 12301.043
+          },
+          "playerId": 929,
+          "toPosition": "LEFT_WINGER",
+          "positionSide": "LEFT",
+          "fromPosition": "BANK",
+          "fromPositionSide": "UNKNOWN",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "83:21.0430",
+            "gameTimeInSec": 12301.043
+          },
+          "playerId": 53703,
+          "toPosition": "BANK",
+          "positionSide": "UNKNOWN",
+          "fromPosition": "ATTACKING_MIDFIELD",
+          "fromPositionSide": "CENTRE",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        },
+        {
+          "gameTime": {
+            "gameTime": "83:21.0430",
+            "gameTimeInSec": 12301.043
+          },
+          "playerId": 66678,
+          "toPosition": "CENTER_FORWARD",
+          "positionSide": "CENTRE",
+          "fromPosition": "BANK",
+          "fromPositionSide": "UNKNOWN",
+          "exchangedPlayerId": null,
+          "substitutionType": null
+        }
+      ],
+      "startingFormation": "4-2-3-1",
+      "formations": [
+        {
+          "gameTime": "00:00.0000",
+          "gameTimeInSec": 0,
+          "formation": "4-2-3-1"
+        }
+      ],
+      "coachId": null
+    }
+  },
+  "squads": [
+    {
+      "id": 33,
+      "name": "FC Bayern München",
+      "countryId": 466,
+      "type": "CLUB",
+      "gender": "MALE",
+      "imageUrl": "https://s3.eu-central-1.amazonaws.com/impect-images/v3/squad/m/f89ad0a55f3c8a7314a2b575167ecb90f479edea.png",
+      "idMappings": [
+        {
+          "heim_spiel": ["209"]
+        },
+        {
+          "skill_corner": ["100"]
+        }
+      ],
+      "access": true
+    },
+    {
+      "id": 38,
+      "name": "SV Werder Bremen",
+      "countryId": 466,
+      "type": "CLUB",
+      "gender": "MALE",
+      "imageUrl": "https://s3.eu-central-1.amazonaws.com/impect-images/squad/5bd98128299f6d854e02e710c8459abf.png",
+      "idMappings": [
+        {
+          "heim_spiel": ["2134"]
+        },
+        {
+          "skill_corner": ["111"]
+        }
+      ],
+      "access": true
+    }
+  ],
+  "players": [
+    {
+      "id": 98,
+      "firstname": "Joshua",
+      "lastname": "Kimmich",
+      "commonname": "Joshua Kimmich",
+      "birthdate": "1995-02-08",
+      "birthplace": "Rottweil",
+      "leg": "RIGHT",
+      "countryIds": [466],
+      "gender": "MALE",
+      "currentSquadId": 33,
+      "idMappings": [
+        {
+          "heim_spiel": ["234281"]
+        },
+        {
+          "skill_corner": ["5472"]
+        }
+      ]
+    },
+    {
+      "id": 204,
+      "firstname": "Leroy",
+      "lastname": "Sané",
+      "commonname": "Leroy Sané",
+      "birthdate": "1996-01-11",
+      "birthplace": "Essen",
+      "leg": "LEFT",
+      "countryIds": [466, 494],
+      "gender": "MALE",
+      "currentSquadId": 1265,
+      "idMappings": [
+        {
+          "heim_spiel": ["262055"]
+        },
+        {
+          "skill_corner": ["6184"]
+        }
+      ]
+    },
+    {
+      "id": 216,
+      "firstname": "Thomas",
+      "lastname": "Müller",
+      "commonname": "Thomas Müller",
+      "birthdate": "1989-09-13",
+      "birthplace": "Weilheim in Oberbayern",
+      "leg": "RIGHT",
+      "countryIds": [466],
+      "gender": "MALE",
+      "currentSquadId": 33,
+      "idMappings": [
+        {
+          "heim_spiel": ["3249"]
+        },
+        {
+          "skill_corner": ["10308"]
+        }
+      ]
+    },
+    {
+      "id": 231,
+      "firstname": "Harry",
+      "lastname": "Kane",
+      "commonname": "Harry Kane",
+      "birthdate": "1993-07-28",
+      "birthplace": "London",
+      "leg": "RIGHT",
+      "countryIds": [549],
+      "gender": "MALE",
+      "currentSquadId": 33,
+      "idMappings": [
+        {
+          "heim_spiel": ["236781"]
+        },
+        {
+          "skill_corner": ["4219"]
+        }
+      ]
+    },
+    {
+      "id": 309,
+      "firstname": "Kingsley",
+      "lastname": "Coman",
+      "commonname": "Kingsley Coman",
+      "birthdate": "1996-06-13",
+      "birthplace": "Paris",
+      "leg": "RIGHT",
+      "countryIds": [417, 494],
+      "gender": "MALE",
+      "currentSquadId": 33,
+      "idMappings": [
+        {
+          "heim_spiel": ["301526"]
+        },
+        {
+          "skill_corner": ["5922"]
+        }
+      ]
+    },
+    {
+      "id": 929,
+      "firstname": "Eric-Maxim",
+      "lastname": "Choupo-Moting",
+      "commonname": "Eric-Maxim Choupo-Moting",
+      "birthdate": "1989-03-23",
+      "birthplace": "Hamburg",
+      "leg": "RIGHT",
+      "countryIds": [466, 437],
+      "gender": "MALE",
+      "currentSquadId": 1860,
+      "idMappings": [
+        {
+          "heim_spiel": ["14446"]
+        },
+        {
+          "skill_corner": ["3139"]
+        }
+      ]
+    },
+    {
+      "id": 1028,
+      "firstname": "Mitchell",
+      "lastname": "Weiser",
+      "commonname": "Mitchell Weiser",
+      "birthdate": "1994-04-21",
+      "birthplace": "Troisdorf",
+      "leg": "RIGHT",
+      "countryIds": [466, 391],
+      "gender": "MALE",
+      "currentSquadId": 38,
+      "idMappings": [
+        {
+          "heim_spiel": ["231379"]
+        },
+        {
+          "skill_corner": ["7704"]
+        }
+      ]
+    },
+    {
+      "id": 1049,
+      "firstname": "Milos",
+      "lastname": "Veljkovic",
+      "commonname": "Milos Veljkovic",
+      "birthdate": "1995-09-26",
+      "birthplace": "Basel",
+      "leg": "RIGHT",
+      "countryIds": [576, 464],
+      "gender": "MALE",
+      "currentSquadId": 782,
+      "idMappings": [
+        {
+          "heim_spiel": ["301269"]
+        },
+        {
+          "skill_corner": ["7659"]
+        }
+      ]
+    },
+    {
+      "id": 1053,
+      "firstname": "Leon",
+      "lastname": "Goretzka",
+      "commonname": "Leon Goretzka",
+      "birthdate": "1995-02-06",
+      "birthplace": "Bochum",
+      "leg": "RIGHT",
+      "countryIds": [466],
+      "gender": "MALE",
+      "currentSquadId": 33,
+      "idMappings": [
+        {
+          "heim_spiel": ["231656"]
+        },
+        {
+          "skill_corner": ["6158"]
+        }
+      ]
+    },
+    {
+      "id": 1099,
+      "firstname": "Leonardo",
+      "lastname": "Bittencourt",
+      "commonname": "Leonardo Bittencourt",
+      "birthdate": "1993-12-19",
+      "birthplace": "Leipzig",
+      "leg": "RIGHT",
+      "countryIds": [412, 466],
+      "gender": "MALE",
+      "currentSquadId": 38,
+      "idMappings": [
+        {
+          "heim_spiel": ["231272"]
+        },
+        {
+          "skill_corner": ["6167"]
+        }
+      ]
+    },
+    {
+      "id": 1120,
+      "firstname": "Anthony",
+      "lastname": "Jung",
+      "commonname": "Anthony Jung",
+      "birthdate": "1991-11-03",
+      "birthplace": "Villajoyosa",
+      "leg": "LEFT",
+      "countryIds": [491, 466],
+      "gender": "MALE",
+      "currentSquadId": 34,
+      "idMappings": [
+        {
+          "heim_spiel": ["226802"]
+        },
+        {
+          "skill_corner": ["16437"]
+        }
+      ]
+    },
+    {
+      "id": 1159,
+      "firstname": "Michael",
+      "lastname": "Zetterer",
+      "commonname": "Michael Zetterer",
+      "birthdate": "1995-07-12",
+      "birthplace": "München",
+      "leg": "BOTH",
+      "countryIds": [466],
+      "gender": "MALE",
+      "currentSquadId": 38,
+      "idMappings": [
+        {
+          "heim_spiel": ["263720"]
+        },
+        {
+          "skill_corner": ["19073"]
+        }
+      ]
+    },
+    {
+      "id": 1202,
+      "firstname": "Sven",
+      "lastname": "Ulreich",
+      "commonname": "Sven Ulreich",
+      "birthdate": "1988-08-03",
+      "birthplace": "Schorndorf",
+      "leg": "RIGHT",
+      "countryIds": [466],
+      "gender": "MALE",
+      "currentSquadId": 33,
+      "idMappings": [
+        {
+          "heim_spiel": ["28316"]
+        },
+        {
+          "skill_corner": ["10177"]
+        }
+      ]
+    },
+    {
+      "id": 2013,
+      "firstname": "Benjamin",
+      "lastname": "Pavard",
+      "commonname": "Benjamin Pavard",
+      "birthdate": "1996-03-28",
+      "birthplace": "Maubeuge",
+      "leg": "RIGHT",
+      "countryIds": [494],
+      "gender": "MALE",
+      "currentSquadId": 406,
+      "idMappings": [
+        {
+          "heim_spiel": ["379963"]
+        },
+        {
+          "skill_corner": ["1298"]
+        }
+      ]
+    },
+    {
+      "id": 3153,
+      "firstname": "Romano",
+      "lastname": "Schmid",
+      "commonname": "Romano Schmid",
+      "birthdate": "2000-01-27",
+      "birthplace": "Graz",
+      "leg": "RIGHT",
+      "countryIds": [398],
+      "gender": "MALE",
+      "currentSquadId": 38,
+      "idMappings": [
+        {
+          "heim_spiel": ["426867"]
+        },
+        {
+          "skill_corner": ["13592"]
+        }
+      ]
+    },
+    {
+      "id": 3772,
+      "firstname": "Marco",
+      "lastname": "Friedl",
+      "commonname": "Marco Friedl",
+      "birthdate": "1998-03-16",
+      "birthplace": "Kirchbichl",
+      "leg": "LEFT",
+      "countryIds": [398],
+      "gender": "MALE",
+      "currentSquadId": 38,
+      "idMappings": [
+        {
+          "heim_spiel": ["347862"]
+        },
+        {
+          "skill_corner": ["19076"]
+        }
+      ]
+    },
+    {
+      "id": 4366,
+      "firstname": "Dawid",
+      "lastname": "Kownacki",
+      "commonname": "Dawid Kownacki",
+      "birthdate": "1997-03-14",
+      "birthplace": "Gorzów Wielkopolski",
+      "leg": "RIGHT",
+      "countryIds": [427],
+      "gender": "MALE",
+      "currentSquadId": 38,
+      "idMappings": [
+        {
+          "heim_spiel": ["321088"]
+        },
+        {
+          "skill_corner": ["2553"]
+        }
+      ]
+    },
+    {
+      "id": 5097,
+      "firstname": "Oliver",
+      "lastname": "Burke",
+      "commonname": "Oliver Burke",
+      "birthdate": "1997-04-07",
+      "birthplace": "Kirkcaldy",
+      "leg": "RIGHT",
+      "countryIds": [559],
+      "gender": "MALE",
+      "currentSquadId": 446,
+      "idMappings": [
+        {
+          "heim_spiel": ["377193"]
+        },
+        {
+          "skill_corner": ["18651"]
+        }
+      ]
+    },
+    {
+      "id": 6201,
+      "firstname": "Amos",
+      "lastname": "Pieper",
+      "commonname": "Amos Pieper",
+      "birthdate": "1998-01-17",
+      "birthplace": "Lüdinghausen",
+      "leg": "RIGHT",
+      "countryIds": [466],
+      "gender": "MALE",
+      "currentSquadId": 38,
+      "idMappings": [
+        {
+          "heim_spiel": ["341169"]
+        },
+        {
+          "skill_corner": ["25507"]
+        }
+      ]
+    },
+    {
+      "id": 6469,
+      "firstname": "Senne",
+      "lastname": "Lynen",
+      "commonname": "Senne Lynen",
+      "birthdate": "1999-02-19",
+      "birthplace": "Antwerpen",
+      "leg": "RIGHT",
+      "countryIds": [376],
+      "gender": "MALE",
+      "currentSquadId": 38,
+      "idMappings": [
+        {
+          "heim_spiel": ["427502"]
+        },
+        {
+          "skill_corner": ["39663"]
+        }
+      ]
+    },
+    {
+      "id": 7594,
+      "firstname": "Konrad",
+      "lastname": "Laimer",
+      "commonname": "Konrad Laimer",
+      "birthdate": "1997-05-27",
+      "birthplace": "Salzburg",
+      "leg": "RIGHT",
+      "countryIds": [398],
+      "gender": "MALE",
+      "currentSquadId": 33,
+      "idMappings": [
+        {
+          "heim_spiel": ["319011"]
+        },
+        {
+          "skill_corner": ["11749"]
+        }
+      ]
+    },
+    {
+      "id": 7910,
+      "firstname": null,
+      "lastname": null,
+      "commonname": "Matthijs de Ligt",
+      "birthdate": "1999-08-12",
+      "birthplace": "Leiderdorp",
+      "leg": "RIGHT",
+      "countryIds": [384],
+      "gender": "MALE",
+      "currentSquadId": 252,
+      "idMappings": [
+        {
+          "heim_spiel": ["397112"]
+        },
+        {
+          "skill_corner": ["11559"]
+        }
+      ]
+    },
+    {
+      "id": 7947,
+      "firstname": "Dayot",
+      "lastname": "Upamecano",
+      "commonname": "Dayot Upamecano",
+      "birthdate": "1998-10-27",
+      "birthplace": "Évreux",
+      "leg": "RIGHT",
+      "countryIds": [494, 513],
+      "gender": "MALE",
+      "currentSquadId": 33,
+      "idMappings": [
+        {
+          "heim_spiel": ["399317"]
+        },
+        {
+          "skill_corner": ["11516"]
+        }
+      ]
+    },
+    {
+      "id": 8358,
+      "firstname": "Noussair",
+      "lastname": "Mazraoui",
+      "commonname": "Noussair Mazraoui",
+      "birthdate": "1997-11-14",
+      "birthplace": "Leiderdorp",
+      "leg": "RIGHT",
+      "countryIds": [595, 384],
+      "gender": "MALE",
+      "currentSquadId": 252,
+      "idMappings": [
+        {
+          "heim_spiel": ["423081"]
+        },
+        {
+          "skill_corner": ["12380"]
+        }
+      ]
+    },
+    {
+      "id": 8451,
+      "firstname": "Jiri",
+      "lastname": "Pavlenka",
+      "commonname": "Jiri Pavlenka",
+      "birthdate": "1992-04-14",
+      "birthplace": "Hlučín",
+      "leg": "RIGHT",
+      "countryIds": [522],
+      "gender": "MALE",
+      "currentSquadId": 403,
+      "idMappings": [
+        {
+          "heim_spiel": ["313374"]
+        },
+        {
+          "skill_corner": ["17444"]
+        }
+      ]
+    },
+    {
+      "id": 9550,
+      "firstname": "Niclas",
+      "lastname": "Füllkrug",
+      "commonname": "Niclas Füllkrug",
+      "birthdate": "1993-02-09",
+      "birthplace": "Hannover",
+      "leg": "RIGHT",
+      "countryIds": [466],
+      "gender": "MALE",
+      "currentSquadId": 303,
+      "idMappings": [
+        {
+          "heim_spiel": ["230772"]
+        },
+        {
+          "skill_corner": ["7962"]
+        }
+      ]
+    },
+    {
+      "id": 9762,
+      "firstname": "Nicolai",
+      "lastname": "Rapp",
+      "commonname": "Nicolai Rapp",
+      "birthdate": "1996-12-13",
+      "birthplace": "Heidelberg",
+      "leg": "RIGHT",
+      "countryIds": [466],
+      "gender": "MALE",
+      "currentSquadId": 438,
+      "idMappings": [
+        {
+          "heim_spiel": ["297151"]
+        },
+        {
+          "skill_corner": ["19324"]
+        }
+      ]
+    },
+    {
+      "id": 9770,
+      "firstname": "Marvin",
+      "lastname": "Ducksch",
+      "commonname": "Marvin Ducksch",
+      "birthdate": "1994-03-07",
+      "birthplace": "Dortmund",
+      "leg": "RIGHT",
+      "countryIds": [466],
+      "gender": "MALE",
+      "currentSquadId": 38,
+      "idMappings": [
+        {
+          "heim_spiel": ["231556"]
+        },
+        {
+          "skill_corner": ["7077"]
+        }
+      ]
+    },
+    {
+      "id": 13599,
+      "firstname": "Jens",
+      "lastname": "Stage",
+      "commonname": "Jens Stage",
+      "birthdate": "1996-11-08",
+      "birthplace": "Højbjerg",
+      "leg": "RIGHT",
+      "countryIds": [445],
+      "gender": "MALE",
+      "currentSquadId": 38,
+      "idMappings": [
+        {
+          "heim_spiel": ["442698"]
+        },
+        {
+          "skill_corner": ["22900"]
+        }
+      ]
+    },
+    {
+      "id": 23157,
+      "firstname": "Christian",
+      "lastname": "Groß",
+      "commonname": "Christian Groß",
+      "birthdate": "1989-02-08",
+      "birthplace": "Bremen",
+      "leg": "BOTH",
+      "countryIds": [466],
+      "gender": "MALE",
+      "currentSquadId": 38,
+      "idMappings": [
+        {
+          "heim_spiel": ["14470"]
+        },
+        {
+          "skill_corner": ["24042"]
+        }
+      ]
+    },
+    {
+      "id": 28349,
+      "firstname": "Ryan",
+      "lastname": "Gravenberch",
+      "commonname": "Ryan Gravenberch",
+      "birthdate": "2002-05-16",
+      "birthplace": "Amsterdam",
+      "leg": "RIGHT",
+      "countryIds": [384, 504],
+      "gender": "MALE",
+      "currentSquadId": 297,
+      "idMappings": [
+        {
+          "heim_spiel": ["513233"]
+        },
+        {
+          "skill_corner": ["13486"]
+        }
+      ]
+    },
+    {
+      "id": 31010,
+      "firstname": "Ilia",
+      "lastname": "Gruev",
+      "commonname": "Ilia Gruev",
+      "birthdate": "2000-05-06",
+      "birthplace": "Sofia",
+      "leg": "LEFT",
+      "countryIds": [466, 414],
+      "gender": "MALE",
+      "currentSquadId": 889,
+      "idMappings": [
+        {
+          "heim_spiel": ["465655"]
+        },
+        {
+          "skill_corner": ["24044"]
+        }
+      ]
+    },
+    {
+      "id": 32432,
+      "firstname": "Alphonso",
+      "lastname": "Davies",
+      "commonname": "Alphonso Davies",
+      "birthdate": "2000-11-02",
+      "birthplace": "Buduburam",
+      "leg": "LEFT",
+      "countryIds": [568, 550],
+      "gender": "MALE",
+      "currentSquadId": 33,
+      "idMappings": [
+        {
+          "heim_spiel": ["457633"]
+        },
+        {
+          "skill_corner": ["17902"]
+        }
+      ]
+    },
+    {
+      "id": 50321,
+      "firstname": "Min-jae",
+      "lastname": "Kim",
+      "commonname": "Min-jae Kim",
+      "birthdate": "1996-11-15",
+      "birthplace": "Tongyeong, Gyeongnam",
+      "leg": "RIGHT",
+      "countryIds": [556],
+      "gender": "MALE",
+      "currentSquadId": 33,
+      "idMappings": [
+        {
+          "heim_spiel": ["530777"]
+        },
+        {
+          "skill_corner": ["25425"]
+        }
+      ]
+    },
+    {
+      "id": 53703,
+      "firstname": "Jamal",
+      "lastname": "Musiala",
+      "commonname": "Jamal Musiala",
+      "birthdate": "2003-02-26",
+      "birthplace": "Stuttgart",
+      "leg": "RIGHT",
+      "countryIds": [549, 466],
+      "gender": "MALE",
+      "currentSquadId": 33,
+      "idMappings": [
+        {
+          "heim_spiel": ["569675"]
+        },
+        {
+          "skill_corner": ["25734"]
+        }
+      ]
+    },
+    {
+      "id": 66678,
+      "firstname": "Mathys",
+      "lastname": "Tel",
+      "commonname": "Mathys Tel",
+      "birthdate": "2005-04-27",
+      "birthplace": "Sarcelles",
+      "leg": "RIGHT",
+      "countryIds": [417, 494],
+      "gender": "MALE",
+      "currentSquadId": 238,
+      "idMappings": [
+        {
+          "heim_spiel": ["692468"]
+        },
+        {
+          "skill_corner": ["31212"]
+        }
+      ]
+    },
+    {
+      "id": 103990,
+      "firstname": "Frans",
+      "lastname": "Krätzig",
+      "commonname": "Frans Krätzig",
+      "birthdate": "2003-01-14",
+      "birthplace": "",
+      "leg": "LEFT",
+      "countryIds": [466],
+      "gender": "MALE",
+      "currentSquadId": 402,
+      "idMappings": [
+        {
+          "heim_spiel": ["614121"]
+        },
+        {
+          "skill_corner": ["628278"]
+        }
+      ]
+    },
+    {
+      "id": 104207,
+      "firstname": null,
+      "lastname": null,
+      "commonname": "Tom Ritzy Hülsmann",
+      "birthdate": "2004-04-11",
+      "birthplace": "Trier",
+      "leg": "RIGHT",
+      "countryIds": [466],
+      "gender": "MALE",
+      "currentSquadId": 1914,
+      "idMappings": [
+        {
+          "heim_spiel": ["614119"]
+        },
+        {
+          "skill_corner": ["105606"]
+        }
+      ]
+    },
+    {
+      "id": 109588,
+      "firstname": "Leon",
+      "lastname": "Opitz",
+      "commonname": "Leon Opitz",
+      "birthdate": "2005-04-11",
+      "birthplace": "",
+      "leg": "LEFT",
+      "countryIds": [466],
+      "gender": "MALE",
+      "currentSquadId": 38,
+      "idMappings": [
+        {
+          "heim_spiel": ["650609"]
+        },
+        {
+          "skill_corner": ["736373"]
+        }
+      ]
+    },
+    {
+      "id": 109888,
+      "firstname": "Justin",
+      "lastname": "Njinmah",
+      "commonname": "Justin Njinmah",
+      "birthdate": "2000-11-15",
+      "birthplace": "Hamburg",
+      "leg": "BOTH",
+      "countryIds": [389, 466],
+      "gender": "MALE",
+      "currentSquadId": 38,
+      "idMappings": [
+        {
+          "heim_spiel": ["549064"]
+        },
+        {
+          "skill_corner": ["104130"]
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "index": 0,
+      "id": 4858179098,
+      "gameTime": {
+        "gameTime": "00:00.0000",
+        "gameTimeInSec": 0
+      },
+      "squadId": 33,
+      "player": {
+        "id": 204,
+        "position": "RIGHT_WINGER",
+        "positionSide": "RIGHT"
+      },
+      "pressure": 0,
+      "actionType": "KICK_OFF",
+      "start": {
+        "coordinates": {
+          "x": 0,
+          "y": 0
+        },
+        "adjCoordinates": {
+          "x": 0,
+          "y": 0
+        },
+        "packingZone": "CBC",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "CENTER"
+      },
+      "end": null,
+      "action": "KICKOFF_WHISTLE",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 0,
+        "angle": null,
+        "receiver": null
+      },
+      "currentAttackingSquadId": 33,
+      "bodyPart": "FOOT",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 0.332,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.005388,
+        "opponent": 0.0004
+      },
+      "distanceToGoal": 52.5,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 0,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 3,
+      "id": 4858179101,
+      "gameTime": {
+        "gameTime": "00:01.6511",
+        "gameTimeInSec": 1.6511
+      },
+      "squadId": 33,
+      "player": {
+        "id": 1202,
+        "position": "GOALKEEPER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 0,
+      "actionType": "DRIBBLE",
+      "start": {
+        "coordinates": {
+          "x": -31.1,
+          "y": 4.7
+        },
+        "adjCoordinates": {
+          "x": -31.1,
+          "y": 4.7
+        },
+        "packingZone": "GKC",
+        "pitchPosition": "FIRST_THIRD",
+        "lane": "CENTER"
+      },
+      "end": {
+        "coordinates": {
+          "x": -30.9,
+          "y": -0.1
+        },
+        "adjCoordinates": {
+          "x": -30.9,
+          "y": -0.1
+        },
+        "packingZone": "GKC",
+        "pitchPosition": "FIRST_THIRD",
+        "lane": "CENTER"
+      },
+      "action": "DRIBBLE",
+      "phase": "IN_POSSESSION",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 33,
+      "bodyPart": "FOOT_LOW",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 2.5419,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.001445,
+        "opponent": 0.001177
+      },
+      "distanceToGoal": 83.8,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 1,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 4,
+      "id": 4858179102,
+      "gameTime": {
+        "gameTime": "00:04.1930",
+        "gameTimeInSec": 4.193
+      },
+      "squadId": 33,
+      "player": {
+        "id": 1202,
+        "position": "GOALKEEPER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 0,
+      "actionType": "PASS",
+      "start": {
+        "coordinates": {
+          "x": -30.9,
+          "y": -0.1
+        },
+        "adjCoordinates": {
+          "x": -30.9,
+          "y": -0.1
+        },
+        "packingZone": "GKC",
+        "pitchPosition": "FIRST_THIRD",
+        "lane": "CENTER"
+      },
+      "end": {
+        "coordinates": {
+          "x": 13.4,
+          "y": 27.8
+        },
+        "adjCoordinates": {
+          "x": 13.4,
+          "y": 27.8
+        },
+        "packingZone": "OPP_WR",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "LEFT_WING"
+      },
+      "action": "DIAGONAL_PASS",
+      "phase": "IN_POSSESSION",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 52.4,
+        "angle": 32.3,
+        "receiver": {
+          "playerId": 1028,
+          "type": "OPPONENT"
+        }
+      },
+      "currentAttackingSquadId": 33,
+      "bodyPart": "FOOT",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 2.712,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.001445,
+        "opponent": 0.001177
+      },
+      "distanceToGoal": 83.4,
+      "result": "NEUTRAL",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 1,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 5,
+      "id": 4858179103,
+      "gameTime": {
+        "gameTime": "00:06.9050",
+        "gameTimeInSec": 6.905
+      },
+      "squadId": 38,
+      "player": {
+        "id": 1028,
+        "position": "RIGHT_WINGBACK_DEFENDER",
+        "positionSide": "RIGHT"
+      },
+      "pressure": 90,
+      "actionType": "LOOSE_BALL_REGAIN",
+      "start": {
+        "coordinates": {
+          "x": 13.4,
+          "y": 27.8
+        },
+        "adjCoordinates": {
+          "x": -13.4,
+          "y": -27.8
+        },
+        "packingZone": "WR",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "end": null,
+      "action": "HEADER",
+      "phase": "SECOND_BALL",
+      "duel": {
+        "duelType": "AERIAL_DUEL",
+        "playerId": 231
+      },
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 33,
+      "bodyPart": "HEAD",
+      "bodyPartExtended": "HEAD",
+      "previousPassHeight": "HIGH",
+      "duration": 0.0001,
+      "opponents": 9,
+      "pxT": {
+        "team": 0.000906,
+        "opponent": 0.001615
+      },
+      "distanceToGoal": 71.6,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": 231,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "LESS_THAN_ONE_METER",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 1,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 6,
+      "id": 4858179104,
+      "gameTime": {
+        "gameTime": "00:06.9051",
+        "gameTimeInSec": 6.9051
+      },
+      "squadId": 38,
+      "player": {
+        "id": 1028,
+        "position": "RIGHT_WINGBACK_DEFENDER",
+        "positionSide": "RIGHT"
+      },
+      "pressure": 90,
+      "actionType": "PASS",
+      "start": {
+        "coordinates": {
+          "x": 13.4,
+          "y": 27.8
+        },
+        "adjCoordinates": {
+          "x": -13.4,
+          "y": -27.8
+        },
+        "packingZone": "WR",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": 20.1,
+          "y": 24.9
+        },
+        "adjCoordinates": {
+          "x": -20.1,
+          "y": -24.9
+        },
+        "packingZone": "DMR",
+        "pitchPosition": "FIRST_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "action": "HEADER",
+      "phase": "SECOND_BALL",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 7.3,
+        "angle": 156,
+        "receiver": {
+          "playerId": 13599,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 33,
+      "bodyPart": "HEAD",
+      "bodyPartExtended": "HEAD",
+      "previousPassHeight": null,
+      "duration": 1.3549,
+      "opponents": 9,
+      "pxT": {
+        "team": 0.000906,
+        "opponent": 0.001615
+      },
+      "distanceToGoal": 71.6,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "LESS_THAN_ONE_METER",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 1,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 8,
+      "id": 4858179106,
+      "gameTime": {
+        "gameTime": "00:08.2601",
+        "gameTimeInSec": 8.2601
+      },
+      "squadId": 38,
+      "player": {
+        "id": 13599,
+        "position": "ATTACKING_MIDFIELD",
+        "positionSide": "CENTRE_RIGHT"
+      },
+      "pressure": 60,
+      "actionType": "CLEARANCE",
+      "start": {
+        "coordinates": {
+          "x": 20.1,
+          "y": 24.9
+        },
+        "adjCoordinates": {
+          "x": -20.1,
+          "y": -24.9
+        },
+        "packingZone": "DMR",
+        "pitchPosition": "FIRST_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": -9.5,
+          "y": 14.3
+        },
+        "adjCoordinates": {
+          "x": 9.5,
+          "y": -14.3
+        },
+        "packingZone": "OPP_CBC",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_HALF_SPACE"
+      },
+      "action": "CLEARANCE",
+      "phase": "SECOND_BALL",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 31.4,
+        "angle": 19.6,
+        "receiver": {
+          "playerId": 50321,
+          "type": "OPPONENT"
+        }
+      },
+      "currentAttackingSquadId": 33,
+      "bodyPart": "FOOT",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 3.4799,
+      "opponents": 10,
+      "pxT": {
+        "team": 0.000818,
+        "opponent": 0.001615
+      },
+      "distanceToGoal": 76.8,
+      "result": "FAIL",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "LESS_THAN_ONE_METER",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 1,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 9,
+      "id": 4858179107,
+      "gameTime": {
+        "gameTime": "00:11.7400",
+        "gameTimeInSec": 11.74
+      },
+      "squadId": 33,
+      "player": {
+        "id": 50321,
+        "position": "CENTRAL_DEFENDER",
+        "positionSide": "CENTRE_LEFT"
+      },
+      "pressure": 70,
+      "actionType": "LOOSE_BALL_REGAIN",
+      "start": {
+        "coordinates": {
+          "x": -9.5,
+          "y": 14.3
+        },
+        "adjCoordinates": {
+          "x": -9.5,
+          "y": 14.3
+        },
+        "packingZone": "CBC",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "LEFT_HALF_SPACE"
+      },
+      "end": null,
+      "action": "HEADER",
+      "phase": "SECOND_BALL",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 33,
+      "bodyPart": "HEAD",
+      "bodyPartExtended": "HEAD",
+      "previousPassHeight": "HIGH",
+      "duration": 0.0001,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.001528,
+        "opponent": 0.001615
+      },
+      "distanceToGoal": 63.6,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": 9770,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "LESS_THAN_ONE_METER",
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 1,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 10,
+      "id": 4858179108,
+      "gameTime": {
+        "gameTime": "00:11.7401",
+        "gameTimeInSec": 11.7401
+      },
+      "squadId": 33,
+      "player": {
+        "id": 50321,
+        "position": "CENTRAL_DEFENDER",
+        "positionSide": "CENTRE_LEFT"
+      },
+      "pressure": 70,
+      "actionType": "PASS",
+      "start": {
+        "coordinates": {
+          "x": -9.5,
+          "y": 14.3
+        },
+        "adjCoordinates": {
+          "x": -9.5,
+          "y": 14.3
+        },
+        "packingZone": "CBC",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "LEFT_HALF_SPACE"
+      },
+      "end": {
+        "coordinates": {
+          "x": -9.6,
+          "y": 34
+        },
+        "adjCoordinates": {
+          "x": -9.6,
+          "y": 34
+        },
+        "packingZone": null,
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "LEFT_WING"
+      },
+      "action": "HEADER",
+      "phase": "SECOND_BALL",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 19.7,
+        "angle": 90.4,
+        "receiver": null
+      },
+      "currentAttackingSquadId": 33,
+      "bodyPart": "HEAD",
+      "bodyPartExtended": "HEAD",
+      "previousPassHeight": null,
+      "duration": 2.4349,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.001528,
+        "opponent": 0.001615
+      },
+      "distanceToGoal": 63.6,
+      "result": "FAIL",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "LESS_THAN_ONE_METER",
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 1,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 12,
+      "id": 4858179110,
+      "gameTime": {
+        "gameTime": "00:24.3500",
+        "gameTimeInSec": 24.35
+      },
+      "squadId": 38,
+      "player": {
+        "id": 1028,
+        "position": "RIGHT_WINGBACK_DEFENDER",
+        "positionSide": "RIGHT"
+      },
+      "pressure": 0,
+      "actionType": "THROW_IN",
+      "start": {
+        "coordinates": {
+          "x": -9.6,
+          "y": 34
+        },
+        "adjCoordinates": {
+          "x": 9.6,
+          "y": -34
+        },
+        "packingZone": "WR",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": -13.3,
+          "y": 24.5
+        },
+        "adjCoordinates": {
+          "x": 13.3,
+          "y": -24.5
+        },
+        "packingZone": "DMC",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "action": "THROW_IN",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 10.2,
+        "angle": 68.7,
+        "receiver": {
+          "playerId": 9550,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 38,
+      "bodyPart": null,
+      "bodyPartExtended": "HAND",
+      "previousPassHeight": null,
+      "duration": 0.811,
+      "opponents": 9,
+      "pxT": {
+        "team": 0.001489,
+        "opponent": 0.000427
+      },
+      "distanceToGoal": 54.7,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 2,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 14,
+      "id": 4858179112,
+      "gameTime": {
+        "gameTime": "00:25.1611",
+        "gameTimeInSec": 25.1611
+      },
+      "squadId": 38,
+      "player": {
+        "id": 9550,
+        "position": "CENTER_FORWARD",
+        "positionSide": "CENTRE_RIGHT"
+      },
+      "pressure": 30,
+      "actionType": "DRIBBLE",
+      "start": {
+        "coordinates": {
+          "x": -13.3,
+          "y": 24.5
+        },
+        "adjCoordinates": {
+          "x": 13.3,
+          "y": -24.5
+        },
+        "packingZone": "DMC",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": -11.1,
+          "y": 28.3
+        },
+        "adjCoordinates": {
+          "x": 11.1,
+          "y": -28.3
+        },
+        "packingZone": "DMR",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "action": "DRIBBLE",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT_HIGH",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 1.0429,
+      "opponents": 8,
+      "pxT": {
+        "team": 0.005596,
+        "opponent": 0.000508
+      },
+      "distanceToGoal": 46.2,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "THREE_METERS",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 2,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 15,
+      "id": 4858179113,
+      "gameTime": {
+        "gameTime": "00:26.2040",
+        "gameTimeInSec": 26.204
+      },
+      "squadId": 38,
+      "player": {
+        "id": 9550,
+        "position": "CENTER_FORWARD",
+        "positionSide": "CENTRE_RIGHT"
+      },
+      "pressure": 80,
+      "actionType": "PASS",
+      "start": {
+        "coordinates": {
+          "x": -11.1,
+          "y": 28.3
+        },
+        "adjCoordinates": {
+          "x": 11.1,
+          "y": -28.3
+        },
+        "packingZone": "DMR",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": 15.2,
+          "y": 27.1
+        },
+        "adjCoordinates": {
+          "x": -15.2,
+          "y": -27.1
+        },
+        "packingZone": "CBR",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "action": "LOW_PASS",
+      "phase": "SET_PIECE",
+      "duel": {
+        "duelType": "GROUND_DUEL",
+        "playerId": 98
+      },
+      "shot": null,
+      "pass": {
+        "distance": 26.3,
+        "angle": 177.3,
+        "receiver": {
+          "playerId": 6201,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 3.427,
+      "opponents": 9,
+      "pxT": {
+        "team": 0.003317,
+        "opponent": 0.000791
+      },
+      "distanceToGoal": 50.2,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": 98,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "LESS_THAN_ONE_METER",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 2,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 17,
+      "id": 4858179115,
+      "gameTime": {
+        "gameTime": "00:29.6311",
+        "gameTimeInSec": 29.6311
+      },
+      "squadId": 38,
+      "player": {
+        "id": 6201,
+        "position": "CENTRAL_DEFENDER",
+        "positionSide": "CENTRE_RIGHT"
+      },
+      "pressure": 0,
+      "actionType": "DRIBBLE",
+      "start": {
+        "coordinates": {
+          "x": 15.2,
+          "y": 27.1
+        },
+        "adjCoordinates": {
+          "x": -15.2,
+          "y": -27.1
+        },
+        "packingZone": "CBR",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": 19.9,
+          "y": 25.1
+        },
+        "adjCoordinates": {
+          "x": -19.9,
+          "y": -25.1
+        },
+        "packingZone": "CBR",
+        "pitchPosition": "FIRST_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "action": "DRIBBLE",
+      "phase": "IN_POSSESSION",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT_LOW",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 0.8529,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.001445,
+        "opponent": 0.000578
+      },
+      "distanceToGoal": 72.9,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 2,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 18,
+      "id": 4858179116,
+      "gameTime": {
+        "gameTime": "00:30.4840",
+        "gameTimeInSec": 30.484
+      },
+      "squadId": 38,
+      "player": {
+        "id": 6201,
+        "position": "CENTRAL_DEFENDER",
+        "positionSide": "CENTRE_RIGHT"
+      },
+      "pressure": 0,
+      "actionType": "PASS",
+      "start": {
+        "coordinates": {
+          "x": 19.9,
+          "y": 25.1
+        },
+        "adjCoordinates": {
+          "x": -19.9,
+          "y": -25.1
+        },
+        "packingZone": "CBR",
+        "pitchPosition": "FIRST_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": 43,
+          "y": 6
+        },
+        "adjCoordinates": {
+          "x": -43,
+          "y": -6
+        },
+        "packingZone": "GKC",
+        "pitchPosition": "OWN_BOX",
+        "lane": "CENTER"
+      },
+      "action": "LOW_PASS",
+      "phase": "IN_POSSESSION",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 30,
+        "angle": 140.5,
+        "receiver": {
+          "playerId": 8451,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 2.633,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.001445,
+        "opponent": 0.000578
+      },
+      "distanceToGoal": 76.6,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 2,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 20,
+      "id": 4858179118,
+      "gameTime": {
+        "gameTime": "00:33.1171",
+        "gameTimeInSec": 33.1171
+      },
+      "squadId": 38,
+      "player": {
+        "id": 8451,
+        "position": "GOALKEEPER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 0,
+      "actionType": "DRIBBLE",
+      "start": {
+        "coordinates": {
+          "x": 43,
+          "y": 6
+        },
+        "adjCoordinates": {
+          "x": -43,
+          "y": -6
+        },
+        "packingZone": "GKC",
+        "pitchPosition": "OWN_BOX",
+        "lane": "CENTER"
+      },
+      "end": {
+        "coordinates": {
+          "x": 43.6,
+          "y": 9.4
+        },
+        "adjCoordinates": {
+          "x": -43.6,
+          "y": -9.4
+        },
+        "packingZone": "GKR",
+        "pitchPosition": "OWN_BOX",
+        "lane": "RIGHT_HALF_SPACE"
+      },
+      "action": "DRIBBLE",
+      "phase": "IN_POSSESSION",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT_LOW",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 1.2519,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.000833,
+        "opponent": 0.001682
+      },
+      "distanceToGoal": 95.7,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 2,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 21,
+      "id": 4858179119,
+      "gameTime": {
+        "gameTime": "00:34.3690",
+        "gameTimeInSec": 34.369
+      },
+      "squadId": 38,
+      "player": {
+        "id": 8451,
+        "position": "GOALKEEPER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 20,
+      "actionType": "PASS",
+      "start": {
+        "coordinates": {
+          "x": 43.6,
+          "y": 9.4
+        },
+        "adjCoordinates": {
+          "x": -43.6,
+          "y": -9.4
+        },
+        "packingZone": "GKR",
+        "pitchPosition": "OWN_BOX",
+        "lane": "RIGHT_HALF_SPACE"
+      },
+      "end": {
+        "coordinates": {
+          "x": 7.6,
+          "y": 28.3
+        },
+        "adjCoordinates": {
+          "x": -7.6,
+          "y": -28.3
+        },
+        "packingZone": "OPP_WL",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "action": "CHIPPED_PASS",
+      "phase": "IN_POSSESSION",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 40.7,
+        "angle": 332.3,
+        "receiver": {
+          "playerId": 32432,
+          "type": "OPPONENT"
+        }
+      },
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 2.958,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.000623,
+        "opponent": 0.004197
+      },
+      "distanceToGoal": 96.6,
+      "result": "FAIL",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "THREE_METERS",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 2,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 22,
+      "id": 4858179120,
+      "gameTime": {
+        "gameTime": "00:37.3270",
+        "gameTimeInSec": 37.327
+      },
+      "squadId": 33,
+      "player": {
+        "id": 32432,
+        "position": "LEFT_WINGBACK_DEFENDER",
+        "positionSide": "LEFT"
+      },
+      "pressure": 40,
+      "actionType": "LOOSE_BALL_REGAIN",
+      "start": {
+        "coordinates": {
+          "x": 7.6,
+          "y": 28.3
+        },
+        "adjCoordinates": {
+          "x": 7.6,
+          "y": 28.3
+        },
+        "packingZone": "WL",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "LEFT_WING"
+      },
+      "end": null,
+      "action": "HEADER",
+      "phase": "SECOND_BALL",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 38,
+      "bodyPart": "HEAD",
+      "bodyPartExtended": "HEAD",
+      "previousPassHeight": "HIGH",
+      "duration": 0.0001,
+      "opponents": 9,
+      "pxT": {
+        "team": 0.002712,
+        "opponent": 0.000749
+      },
+      "distanceToGoal": 53.1,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "THREE_METERS",
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 2,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 23,
+      "id": 4858179121,
+      "gameTime": {
+        "gameTime": "00:37.3271",
+        "gameTimeInSec": 37.3271
+      },
+      "squadId": 33,
+      "player": {
+        "id": 32432,
+        "position": "LEFT_WINGBACK_DEFENDER",
+        "positionSide": "LEFT"
+      },
+      "pressure": 40,
+      "actionType": "PASS",
+      "start": {
+        "coordinates": {
+          "x": 7.6,
+          "y": 28.3
+        },
+        "adjCoordinates": {
+          "x": 7.6,
+          "y": 28.3
+        },
+        "packingZone": "WL",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "LEFT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": 11.6,
+          "y": 21.8
+        },
+        "adjCoordinates": {
+          "x": 11.6,
+          "y": 21.8
+        },
+        "packingZone": "OPP_CMR",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "LEFT_WING"
+      },
+      "action": "HEADER",
+      "phase": "SECOND_BALL",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 7.7,
+        "angle": 301.1,
+        "receiver": {
+          "playerId": 13599,
+          "type": "OPPONENT"
+        }
+      },
+      "currentAttackingSquadId": 38,
+      "bodyPart": "HEAD",
+      "bodyPartExtended": "HEAD",
+      "previousPassHeight": null,
+      "duration": 0.4549,
+      "opponents": 9,
+      "pxT": {
+        "team": 0.002712,
+        "opponent": 0.000749
+      },
+      "distanceToGoal": 53.1,
+      "result": "FAIL",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "THREE_METERS",
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 2,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 25,
+      "id": 4858179123,
+      "gameTime": {
+        "gameTime": "00:37.7821",
+        "gameTimeInSec": 37.7821
+      },
+      "squadId": 38,
+      "player": {
+        "id": 13599,
+        "position": "ATTACKING_MIDFIELD",
+        "positionSide": "CENTRE_RIGHT"
+      },
+      "pressure": 0,
+      "actionType": "CLEARANCE",
+      "start": {
+        "coordinates": {
+          "x": 11.6,
+          "y": 21.8
+        },
+        "adjCoordinates": {
+          "x": -11.6,
+          "y": -21.8
+        },
+        "packingZone": "CMR",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": 19.4,
+          "y": 34
+        },
+        "adjCoordinates": {
+          "x": -19.4,
+          "y": -34
+        },
+        "packingZone": null,
+        "pitchPosition": "FIRST_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "action": "CLEARANCE",
+      "phase": "ATTACKING_TRANSITION",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 14.5,
+        "angle": 237.5,
+        "receiver": null
+      },
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 3.6139,
+      "opponents": 7,
+      "pxT": {
+        "team": 0.004623,
+        "opponent": 0.000578
+      },
+      "distanceToGoal": 67.7,
+      "result": "FAIL",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 2,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 27,
+      "id": 4858179125,
+      "gameTime": {
+        "gameTime": "00:46.4500",
+        "gameTimeInSec": 46.45
+      },
+      "squadId": 33,
+      "player": {
+        "id": 32432,
+        "position": "LEFT_WINGBACK_DEFENDER",
+        "positionSide": "LEFT"
+      },
+      "pressure": 0,
+      "actionType": "THROW_IN",
+      "start": {
+        "coordinates": {
+          "x": 19.4,
+          "y": 34
+        },
+        "adjCoordinates": {
+          "x": 19.4,
+          "y": 34
+        },
+        "packingZone": "FBL",
+        "pitchPosition": "FINAL_THIRD",
+        "lane": "LEFT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": 17.1,
+          "y": 25.5
+        },
+        "adjCoordinates": {
+          "x": 17.1,
+          "y": 25.5
+        },
+        "packingZone": "DMC",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "LEFT_WING"
+      },
+      "action": "THROW_IN",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 8.8,
+        "angle": 255.3,
+        "receiver": {
+          "playerId": 98,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 33,
+      "bodyPart": null,
+      "bodyPartExtended": "HAND",
+      "previousPassHeight": null,
+      "duration": 0.589,
+      "opponents": 10,
+      "pxT": {
+        "team": 0.003046,
+        "opponent": 0.000427
+      },
+      "distanceToGoal": 47.5,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 3,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 29,
+      "id": 4858179127,
+      "gameTime": {
+        "gameTime": "00:47.0391",
+        "gameTimeInSec": 47.0391
+      },
+      "squadId": 33,
+      "player": {
+        "id": 98,
+        "position": "DEFENSE_MIDFIELD",
+        "positionSide": "CENTRE_LEFT"
+      },
+      "pressure": 0,
+      "actionType": "DRIBBLE",
+      "start": {
+        "coordinates": {
+          "x": 17.1,
+          "y": 25.5
+        },
+        "adjCoordinates": {
+          "x": 17.1,
+          "y": 25.5
+        },
+        "packingZone": "DMC",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "LEFT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": 19.2,
+          "y": 25.7
+        },
+        "adjCoordinates": {
+          "x": 19.2,
+          "y": 25.7
+        },
+        "packingZone": "DMC",
+        "pitchPosition": "FINAL_THIRD",
+        "lane": "LEFT_WING"
+      },
+      "action": "DRIBBLE",
+      "phase": "IN_POSSESSION",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 33,
+      "bodyPart": "FOOT_HIGH",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 0.7889,
+      "opponents": 10,
+      "pxT": {
+        "team": 0.006337,
+        "opponent": 0.000399
+      },
+      "distanceToGoal": 43.6,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 3,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 30,
+      "id": 4858179128,
+      "gameTime": {
+        "gameTime": "00:47.8280",
+        "gameTimeInSec": 47.828
+      },
+      "squadId": 33,
+      "player": {
+        "id": 98,
+        "position": "DEFENSE_MIDFIELD",
+        "positionSide": "CENTRE_LEFT"
+      },
+      "pressure": 10,
+      "actionType": "PASS",
+      "start": {
+        "coordinates": {
+          "x": 19.2,
+          "y": 25.7
+        },
+        "adjCoordinates": {
+          "x": 19.2,
+          "y": 25.7
+        },
+        "packingZone": "DMC",
+        "pitchPosition": "FINAL_THIRD",
+        "lane": "LEFT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": 18.4,
+          "y": 31.5
+        },
+        "adjCoordinates": {
+          "x": 18.4,
+          "y": 31.5
+        },
+        "packingZone": "FBL",
+        "pitchPosition": "FINAL_THIRD",
+        "lane": "LEFT_WING"
+      },
+      "action": "LOW_PASS",
+      "phase": "IN_POSSESSION",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 5.9,
+        "angle": 98.5,
+        "receiver": {
+          "playerId": 32432,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 33,
+      "bodyPart": "FOOT",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 0.639,
+      "opponents": 10,
+      "pxT": {
+        "team": 0.006337,
+        "opponent": 0.000399
+      },
+      "distanceToGoal": 42,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "FOUR_METERS",
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 3,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 34,
+      "id": 4858179132,
+      "gameTime": {
+        "gameTime": "00:49.9891",
+        "gameTimeInSec": 49.9891
+      },
+      "squadId": 33,
+      "player": {
+        "id": 50321,
+        "position": "CENTRAL_DEFENDER",
+        "positionSide": "CENTRE_LEFT"
+      },
+      "pressure": 0,
+      "actionType": "DRIBBLE",
+      "start": {
+        "coordinates": {
+          "x": -2.2,
+          "y": 29.6
+        },
+        "adjCoordinates": {
+          "x": -2.2,
+          "y": 29.6
+        },
+        "packingZone": "FBL",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "LEFT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": -2.9,
+          "y": 26.5
+        },
+        "adjCoordinates": {
+          "x": -2.9,
+          "y": 26.5
+        },
+        "packingZone": "CBL",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "LEFT_WING"
+      },
+      "action": "DRIBBLE",
+      "phase": "IN_POSSESSION",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 33,
+      "bodyPart": "FOOT_LOW",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 1.0019,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.002829,
+        "opponent": 0.0004
+      },
+      "distanceToGoal": 62.2,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 3,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 64,
+      "id": 4858179162,
+      "gameTime": {
+        "gameTime": "01:15.4761",
+        "gameTimeInSec": 75.4761
+      },
+      "squadId": 38,
+      "player": {
+        "id": 1028,
+        "position": "RIGHT_WINGBACK_DEFENDER",
+        "positionSide": "RIGHT"
+      },
+      "pressure": 80,
+      "actionType": "CLEARANCE",
+      "start": {
+        "coordinates": {
+          "x": 4.5,
+          "y": 25.4
+        },
+        "adjCoordinates": {
+          "x": -4.5,
+          "y": -25.4
+        },
+        "packingZone": "FBR",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": 5,
+          "y": 31.1
+        },
+        "adjCoordinates": {
+          "x": -5,
+          "y": -31.1
+        },
+        "packingZone": "FBR",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "action": "CLEARANCE",
+      "phase": "ATTACKING_TRANSITION",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 5.7,
+        "angle": 265,
+        "receiver": {
+          "playerId": 6201,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 0.5339,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.001528,
+        "opponent": 0.001118
+      },
+      "distanceToGoal": 62.4,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "LESS_THAN_ONE_METER",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 4,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 91,
+      "id": 4858179189,
+      "gameTime": {
+        "gameTime": "01:50.8420",
+        "gameTimeInSec": 110.842
+      },
+      "squadId": 38,
+      "player": {
+        "id": 6201,
+        "position": "CENTRAL_DEFENDER",
+        "positionSide": "CENTRE_RIGHT"
+      },
+      "pressure": null,
+      "actionType": "FOUL",
+      "start": null,
+      "end": null,
+      "action": "FOUL",
+      "phase": null,
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": null,
+      "bodyPart": null,
+      "bodyPartExtended": null,
+      "previousPassHeight": null,
+      "duration": 9.7339,
+      "opponents": null,
+      "pxT": {
+        "team": 0.000495,
+        "opponent": 0.002845
+      },
+      "distanceToGoal": null,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": 309,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 5,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 92,
+      "id": 4858179190,
+      "gameTime": {
+        "gameTime": "02:00.5759",
+        "gameTimeInSec": 120.5759
+      },
+      "squadId": 33,
+      "player": {
+        "id": 50321,
+        "position": "CENTRAL_DEFENDER",
+        "positionSide": "CENTRE_LEFT"
+      },
+      "pressure": 0,
+      "actionType": "FREE_KICK",
+      "start": {
+        "coordinates": {
+          "x": -7.6,
+          "y": 9.9
+        },
+        "adjCoordinates": {
+          "x": -7.6,
+          "y": 9.9
+        },
+        "packingZone": "CBL",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "LEFT_HALF_SPACE"
+      },
+      "end": {
+        "coordinates": {
+          "x": -0.6,
+          "y": 4.2
+        },
+        "adjCoordinates": {
+          "x": -0.6,
+          "y": 4.2
+        },
+        "packingZone": "CBC",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "CENTER"
+      },
+      "action": "FREE_KICK",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 9.1,
+        "angle": 321.1,
+        "receiver": {
+          "playerId": 98,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 33,
+      "bodyPart": null,
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 0.0001,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.002845,
+        "opponent": 0.000495
+      },
+      "distanceToGoal": 60.9,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": {
+        "id": 51824014,
+        "subPhaseId": 55402922,
+        "mainEvent": true
+      },
+      "sequenceIndex": 6,
+      "inferredSetPiece": true
+    },
+    {
+      "index": 116,
+      "id": 4858179214,
+      "gameTime": {
+        "gameTime": "02:47.2040",
+        "gameTimeInSec": 167.204
+      },
+      "squadId": 38,
+      "player": {
+        "id": 8451,
+        "position": "GOALKEEPER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 0,
+      "actionType": "GOAL_KICK",
+      "start": {
+        "coordinates": {
+          "x": 47,
+          "y": 0
+        },
+        "adjCoordinates": {
+          "x": -47,
+          "y": 0
+        },
+        "packingZone": "GKC",
+        "pitchPosition": "OWN_BOX",
+        "lane": "CENTER"
+      },
+      "end": {
+        "coordinates": {
+          "x": 39.7,
+          "y": 22.6
+        },
+        "adjCoordinates": {
+          "x": -39.7,
+          "y": -22.6
+        },
+        "packingZone": "CBR",
+        "pitchPosition": "FIRST_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "action": "GOAL_KICK",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 23.8,
+        "angle": 287.9,
+        "receiver": {
+          "playerId": 1049,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 38,
+      "bodyPart": null,
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 2.671,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.001121,
+        "opponent": 0.000805
+      },
+      "distanceToGoal": 99.5,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 7,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 141,
+      "id": 4858179239,
+      "gameTime": {
+        "gameTime": "03:12.6750",
+        "gameTimeInSec": 192.675
+      },
+      "squadId": 33,
+      "player": {
+        "id": 204,
+        "position": "RIGHT_WINGER",
+        "positionSide": "RIGHT"
+      },
+      "pressure": 20,
+      "actionType": "SHOT",
+      "start": {
+        "coordinates": {
+          "x": 39.3,
+          "y": -5.5
+        },
+        "adjCoordinates": {
+          "x": 39.3,
+          "y": -5.5
+        },
+        "packingZone": "IBC",
+        "pitchPosition": "OPPONENT_BOX",
+        "lane": "CENTER"
+      },
+      "end": {
+        "coordinates": {
+          "x": 52.5,
+          "y": 2.6
+        },
+        "adjCoordinates": {
+          "x": 52.5,
+          "y": 2.6
+        },
+        "packingZone": null,
+        "pitchPosition": "OPPONENT_BOX",
+        "lane": "CENTER"
+      },
+      "action": "ONE_VS_ONE_AGAINST_GK",
+      "phase": "ATTACKING_TRANSITION",
+      "duel": null,
+      "shot": {
+        "distance": 14.3,
+        "angle": 22.5,
+        "targetPoint": {
+          "y": 2.6173913043478265,
+          "z": 0.12562318840579723
+        }
+      },
+      "pass": null,
+      "currentAttackingSquadId": 33,
+      "bodyPart": "FOOT_RIGHT",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 1.217,
+      "opponents": 1,
+      "pxT": {
+        "team": 0.315637,
+        "opponent": 0.000355
+      },
+      "distanceToGoal": 14.3,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "THREE_METERS",
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 8,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 142,
+      "id": 4858179240,
+      "gameTime": {
+        "gameTime": "03:13.8920",
+        "gameTimeInSec": 193.892
+      },
+      "squadId": 33,
+      "player": {
+        "id": 204,
+        "position": "RIGHT_WINGER",
+        "positionSide": "RIGHT"
+      },
+      "pressure": null,
+      "actionType": "GOAL",
+      "start": null,
+      "end": null,
+      "action": "GOAL",
+      "phase": null,
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": null,
+      "bodyPart": null,
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 58.64,
+      "opponents": null,
+      "pxT": null,
+      "distanceToGoal": null,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 8,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 143,
+      "id": 4858179241,
+      "gameTime": {
+        "gameTime": "04:12.5320",
+        "gameTimeInSec": 252.532
+      },
+      "squadId": 38,
+      "player": {
+        "id": 9770,
+        "position": "CENTER_FORWARD",
+        "positionSide": "CENTRE_LEFT"
+      },
+      "pressure": 0,
+      "actionType": "KICK_OFF",
+      "start": {
+        "coordinates": {
+          "x": 0,
+          "y": 0
+        },
+        "adjCoordinates": {
+          "x": 0,
+          "y": 0
+        },
+        "packingZone": "CBC",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "CENTER"
+      },
+      "end": {
+        "coordinates": {
+          "x": 20.7,
+          "y": -1.9
+        },
+        "adjCoordinates": {
+          "x": -20.7,
+          "y": 1.9
+        },
+        "packingZone": "CBC",
+        "pitchPosition": "FIRST_THIRD",
+        "lane": "CENTER"
+      },
+      "action": "KICKOFF_WHISTLE",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 20.8,
+        "angle": 174.8,
+        "receiver": {
+          "playerId": 3772,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 1.856,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.005388,
+        "opponent": 0.0004
+      },
+      "distanceToGoal": 52.5,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 9,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 160,
+      "id": 4858179258,
+      "gameTime": {
+        "gameTime": "04:28.7710",
+        "gameTimeInSec": 268.771
+      },
+      "squadId": 33,
+      "player": {
+        "id": 32432,
+        "position": "LEFT_WINGBACK_DEFENDER",
+        "positionSide": "LEFT"
+      },
+      "pressure": null,
+      "actionType": "FOUL",
+      "start": null,
+      "end": null,
+      "action": "FOUL",
+      "phase": null,
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": null,
+      "bodyPart": null,
+      "bodyPartExtended": null,
+      "previousPassHeight": null,
+      "duration": 37.123,
+      "opponents": null,
+      "pxT": {
+        "team": 0.000495,
+        "opponent": 0.011315
+      },
+      "distanceToGoal": null,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": 1028,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 10,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 161,
+      "id": 4858179259,
+      "gameTime": {
+        "gameTime": "05:05.8940",
+        "gameTimeInSec": 305.894
+      },
+      "squadId": 38,
+      "player": {
+        "id": 9770,
+        "position": "CENTER_FORWARD",
+        "positionSide": "CENTRE_LEFT"
+      },
+      "pressure": 0,
+      "actionType": "FREE_KICK",
+      "start": {
+        "coordinates": {
+          "x": -14.8,
+          "y": 25.7
+        },
+        "adjCoordinates": {
+          "x": 14.8,
+          "y": -25.7
+        },
+        "packingZone": "CBR",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": -39.3,
+          "y": 1.1
+        },
+        "adjCoordinates": {
+          "x": 39.3,
+          "y": -1.1
+        },
+        "packingZone": "OPP_CBC",
+        "pitchPosition": "OPPONENT_BOX",
+        "lane": "CENTER"
+      },
+      "action": "FREE_KICK",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 34.8,
+        "angle": 45.1,
+        "receiver": {
+          "playerId": 231,
+          "type": "OPPONENT"
+        }
+      },
+      "currentAttackingSquadId": 38,
+      "bodyPart": null,
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 1.488,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.011315,
+        "opponent": 0.000495
+      },
+      "distanceToGoal": 45.6,
+      "result": "FAIL",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": {
+        "id": 51824017,
+        "subPhaseId": 55402925,
+        "mainEvent": true
+      },
+      "sequenceIndex": 11,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 167,
+      "id": 4858179265,
+      "gameTime": {
+        "gameTime": "05:17.3930",
+        "gameTimeInSec": 317.393
+      },
+      "squadId": 38,
+      "player": {
+        "id": 1049,
+        "position": "CENTRAL_DEFENDER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 0,
+      "actionType": "INTERCEPTION",
+      "start": {
+        "coordinates": {
+          "x": 19.4,
+          "y": 8.8
+        },
+        "adjCoordinates": {
+          "x": -19.4,
+          "y": -8.8
+        },
+        "packingZone": "DMC",
+        "pitchPosition": "FIRST_THIRD",
+        "lane": "CENTER"
+      },
+      "end": null,
+      "action": "INTERCEPTION",
+      "phase": "ATTACKING_TRANSITION",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT_LOW",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": "LOW",
+      "duration": 0.0001,
+      "opponents": 9,
+      "pxT": {
+        "team": 0.001947,
+        "opponent": 0.000805
+      },
+      "distanceToGoal": 72.4,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 13,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 210,
+      "id": 4858179308,
+      "gameTime": {
+        "gameTime": "05:52.5370",
+        "gameTimeInSec": 352.537
+      },
+      "squadId": 38,
+      "player": {
+        "id": 1028,
+        "position": "RIGHT_WINGBACK_DEFENDER",
+        "positionSide": "RIGHT"
+      },
+      "pressure": null,
+      "actionType": "FOUL",
+      "start": null,
+      "end": null,
+      "action": "FOUL",
+      "phase": null,
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": null,
+      "bodyPart": null,
+      "bodyPartExtended": null,
+      "previousPassHeight": null,
+      "duration": 14.094,
+      "opponents": null,
+      "pxT": {
+        "team": 0.000495,
+        "opponent": 0.011315
+      },
+      "distanceToGoal": null,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": 309,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 14,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 211,
+      "id": 4858179309,
+      "gameTime": {
+        "gameTime": "06:06.6310",
+        "gameTimeInSec": 366.631
+      },
+      "squadId": 33,
+      "player": {
+        "id": 98,
+        "position": "DEFENSE_MIDFIELD",
+        "positionSide": "CENTRE_LEFT"
+      },
+      "pressure": 0,
+      "actionType": "FREE_KICK",
+      "start": {
+        "coordinates": {
+          "x": 8.2,
+          "y": 18.3
+        },
+        "adjCoordinates": {
+          "x": 8.2,
+          "y": 18.3
+        },
+        "packingZone": "CBL",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "LEFT_HALF_SPACE"
+      },
+      "end": {
+        "coordinates": {
+          "x": -1.5,
+          "y": 3
+        },
+        "adjCoordinates": {
+          "x": -1.5,
+          "y": 3
+        },
+        "packingZone": "CBC",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "CENTER"
+      },
+      "action": "FREE_KICK",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 18.2,
+        "angle": 237.5,
+        "receiver": {
+          "playerId": 7947,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 33,
+      "bodyPart": null,
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 1.666,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.011315,
+        "opponent": 0.000495
+      },
+      "distanceToGoal": 47.9,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": {
+        "id": 51824018,
+        "subPhaseId": 55402926,
+        "mainEvent": true
+      },
+      "sequenceIndex": 15,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 240,
+      "id": 4858179338,
+      "gameTime": {
+        "gameTime": "06:54.2770",
+        "gameTimeInSec": 414.277
+      },
+      "squadId": 38,
+      "player": {
+        "id": 8451,
+        "position": "GOALKEEPER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 0,
+      "actionType": "GOAL_KICK",
+      "start": {
+        "coordinates": {
+          "x": 47,
+          "y": 0
+        },
+        "adjCoordinates": {
+          "x": -47,
+          "y": 0
+        },
+        "packingZone": "GKC",
+        "pitchPosition": "OWN_BOX",
+        "lane": "CENTER"
+      },
+      "end": {
+        "coordinates": {
+          "x": 40,
+          "y": 15
+        },
+        "adjCoordinates": {
+          "x": -40,
+          "y": -15
+        },
+        "packingZone": "CBR",
+        "pitchPosition": "OWN_BOX",
+        "lane": "RIGHT_HALF_SPACE"
+      },
+      "action": "GOAL_KICK",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 16.5,
+        "angle": 294.9,
+        "receiver": {
+          "playerId": 1049,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 38,
+      "bodyPart": null,
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 1.811,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.001121,
+        "opponent": 0.000805
+      },
+      "distanceToGoal": 99.5,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 16,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 290,
+      "id": 4858179388,
+      "gameTime": {
+        "gameTime": "10:51.7880",
+        "gameTimeInSec": 651.788
+      },
+      "squadId": 33,
+      "player": {
+        "id": 231,
+        "position": "CENTER_FORWARD",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 10,
+      "actionType": "SHOT",
+      "start": {
+        "coordinates": {
+          "x": 25.4,
+          "y": 4.8
+        },
+        "adjCoordinates": {
+          "x": 25.4,
+          "y": 4.8
+        },
+        "packingZone": "CBC",
+        "pitchPosition": "FINAL_THIRD",
+        "lane": "CENTER"
+      },
+      "end": {
+        "coordinates": {
+          "x": 29.5,
+          "y": 4.4
+        },
+        "adjCoordinates": {
+          "x": 29.5,
+          "y": 4.4
+        },
+        "packingZone": "OPP_CMC",
+        "pitchPosition": "FINAL_THIRD",
+        "lane": "CENTER"
+      },
+      "action": "LONG_RANGE_SHOT",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": {
+        "distance": 27.5,
+        "angle": 10.1,
+        "targetPoint": null
+      },
+      "pass": null,
+      "currentAttackingSquadId": 33,
+      "bodyPart": "FOOT_RIGHT",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 0.052,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.015186,
+        "opponent": 0.000399
+      },
+      "distanceToGoal": 27.5,
+      "result": "FAIL",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "FOUR_METERS",
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": {
+        "id": 51824022,
+        "subPhaseId": 55402930,
+        "mainEvent": true
+      },
+      "sequenceIndex": 21,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 307,
+      "id": 4858179405,
+      "gameTime": {
+        "gameTime": "11:10.2670",
+        "gameTimeInSec": 670.267
+      },
+      "squadId": 38,
+      "player": {
+        "id": 1049,
+        "position": "CENTRAL_DEFENDER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 30,
+      "actionType": "INTERCEPTION",
+      "start": {
+        "coordinates": {
+          "x": 31.3,
+          "y": -9.8
+        },
+        "adjCoordinates": {
+          "x": -31.3,
+          "y": 9.8
+        },
+        "packingZone": "CBC",
+        "pitchPosition": "FIRST_THIRD",
+        "lane": "LEFT_HALF_SPACE"
+      },
+      "end": null,
+      "action": "INTERCEPTION",
+      "phase": "ATTACKING_TRANSITION",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT_LOW",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": "LOW",
+      "duration": 0.0001,
+      "opponents": 10,
+      "pxT": {
+        "team": 0.001358,
+        "opponent": 0.00232
+      },
+      "distanceToGoal": 84.3,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "TWO_METERS",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 24,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 406,
+      "id": 4858179504,
+      "gameTime": {
+        "gameTime": "13:08.3020",
+        "gameTimeInSec": 788.302
+      },
+      "squadId": 38,
+      "player": {
+        "id": 8451,
+        "position": "GOALKEEPER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 0,
+      "actionType": "GK_CATCH",
+      "start": {
+        "coordinates": {
+          "x": 48,
+          "y": -0.8
+        },
+        "adjCoordinates": {
+          "x": -48,
+          "y": 0.8
+        },
+        "packingZone": "GKC",
+        "pitchPosition": "OWN_BOX",
+        "lane": "CENTER"
+      },
+      "end": null,
+      "action": "CATCH",
+      "phase": "ATTACKING_TRANSITION",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT_LOW",
+      "bodyPartExtended": "HAND",
+      "previousPassHeight": "LOW",
+      "duration": 0.0001,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.000833,
+        "opponent": 0.001986
+      },
+      "distanceToGoal": 100.5,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 29,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 433,
+      "id": 4858179531,
+      "gameTime": {
+        "gameTime": "14:01.7450",
+        "gameTimeInSec": 841.745
+      },
+      "squadId": 38,
+      "player": {
+        "id": 1028,
+        "position": "RIGHT_WINGBACK_DEFENDER",
+        "positionSide": "RIGHT"
+      },
+      "pressure": 0,
+      "actionType": "THROW_IN",
+      "start": {
+        "coordinates": {
+          "x": -37.3,
+          "y": 34
+        },
+        "adjCoordinates": {
+          "x": 37.3,
+          "y": -34
+        },
+        "packingZone": "FBR",
+        "pitchPosition": "FINAL_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": -37,
+          "y": 22
+        },
+        "adjCoordinates": {
+          "x": 37,
+          "y": -22
+        },
+        "packingZone": "WR",
+        "pitchPosition": "FINAL_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "action": "THROW_IN",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 12,
+        "angle": 91.8,
+        "receiver": {
+          "playerId": 9770,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 38,
+      "bodyPart": null,
+      "bodyPartExtended": "HAND",
+      "previousPassHeight": null,
+      "duration": 1.127,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.00642,
+        "opponent": 0.000427
+      },
+      "distanceToGoal": 37.2,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 30,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 470,
+      "id": 4858179568,
+      "gameTime": {
+        "gameTime": "14:49.0460",
+        "gameTimeInSec": 889.046
+      },
+      "squadId": 33,
+      "player": {
+        "id": 1202,
+        "position": "GOALKEEPER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 0,
+      "actionType": "GK_CATCH",
+      "start": {
+        "coordinates": {
+          "x": -48.6,
+          "y": -0.9
+        },
+        "adjCoordinates": {
+          "x": -48.6,
+          "y": -0.9
+        },
+        "packingZone": "GKR",
+        "pitchPosition": "OWN_BOX",
+        "lane": "CENTER"
+      },
+      "end": null,
+      "action": "CATCH",
+      "phase": "ATTACKING_TRANSITION",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 33,
+      "bodyPart": "HEAD",
+      "bodyPartExtended": "HAND",
+      "previousPassHeight": "HIGH",
+      "duration": 0.0001,
+      "opponents": 10,
+      "pxT": {
+        "team": 0.000994,
+        "opponent": 0.001986
+      },
+      "distanceToGoal": 101.1,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": 9550,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "LESS_THAN_ONE_METER",
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 35,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 537,
+      "id": 4858179635,
+      "gameTime": {
+        "gameTime": "16:12.4630",
+        "gameTimeInSec": 972.463
+      },
+      "squadId": 38,
+      "player": {
+        "id": 8451,
+        "position": "GOALKEEPER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 0,
+      "actionType": "GK_CATCH",
+      "start": {
+        "coordinates": {
+          "x": 42.8,
+          "y": 7.2
+        },
+        "adjCoordinates": {
+          "x": -42.8,
+          "y": -7.2
+        },
+        "packingZone": "GKC",
+        "pitchPosition": "OWN_BOX",
+        "lane": "CENTER"
+      },
+      "end": null,
+      "action": "CATCH",
+      "phase": "ATTACKING_TRANSITION",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT_HIGH",
+      "bodyPartExtended": "HAND",
+      "previousPassHeight": "HIGH",
+      "duration": 0.0001,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.000833,
+        "opponent": 0.001682
+      },
+      "distanceToGoal": 95.5,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 37,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 609,
+      "id": 4858179707,
+      "gameTime": {
+        "gameTime": "17:30.0790",
+        "gameTimeInSec": 1050.079
+      },
+      "squadId": 38,
+      "player": {
+        "id": 6469,
+        "position": "DEFENSE_MIDFIELD",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 0,
+      "actionType": "INTERCEPTION",
+      "start": {
+        "coordinates": {
+          "x": 22,
+          "y": -12.5
+        },
+        "adjCoordinates": {
+          "x": -22,
+          "y": 12.5
+        },
+        "packingZone": "CML",
+        "pitchPosition": "FIRST_THIRD",
+        "lane": "LEFT_HALF_SPACE"
+      },
+      "end": null,
+      "action": "INTERCEPTION",
+      "phase": "ATTACKING_TRANSITION",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT_LOW",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": "LOW",
+      "duration": 0.0001,
+      "opponents": 7,
+      "pxT": {
+        "team": 0.002547,
+        "opponent": 0.000805
+      },
+      "distanceToGoal": 75.5,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 39,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 648,
+      "id": 4858179746,
+      "gameTime": {
+        "gameTime": "18:13.9710",
+        "gameTimeInSec": 1093.971
+      },
+      "squadId": 33,
+      "player": {
+        "id": 53703,
+        "position": "ATTACKING_MIDFIELD",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 10,
+      "actionType": "SHOT",
+      "start": {
+        "coordinates": {
+          "x": 30.5,
+          "y": 6.2
+        },
+        "adjCoordinates": {
+          "x": 30.5,
+          "y": 6.2
+        },
+        "packingZone": "AML",
+        "pitchPosition": "FINAL_THIRD",
+        "lane": "CENTER"
+      },
+      "end": {
+        "coordinates": {
+          "x": 52.5,
+          "y": 4.1
+        },
+        "adjCoordinates": {
+          "x": 52.5,
+          "y": 4.1
+        },
+        "packingZone": null,
+        "pitchPosition": "OPPONENT_BOX",
+        "lane": "CENTER"
+      },
+      "action": "LONG_RANGE_SHOT",
+      "phase": "IN_POSSESSION",
+      "duel": null,
+      "shot": {
+        "distance": 22.8,
+        "angle": 15.7,
+        "targetPoint": null
+      },
+      "pass": null,
+      "currentAttackingSquadId": 33,
+      "bodyPart": "FOOT_RIGHT",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 1.069,
+      "opponents": 5,
+      "pxT": {
+        "team": 0.027963,
+        "opponent": 0.000399
+      },
+      "distanceToGoal": 22.8,
+      "result": "FAIL",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "FOUR_METERS",
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 40,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 650,
+      "id": 4858179748,
+      "gameTime": {
+        "gameTime": "18:44.8999",
+        "gameTimeInSec": 1124.8999
+      },
+      "squadId": 38,
+      "player": {
+        "id": 8451,
+        "position": "GOALKEEPER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 0,
+      "actionType": "GOAL_KICK",
+      "start": {
+        "coordinates": {
+          "x": 47,
+          "y": 0
+        },
+        "adjCoordinates": {
+          "x": -47,
+          "y": 0
+        },
+        "packingZone": "GKC",
+        "pitchPosition": "OWN_BOX",
+        "lane": "CENTER"
+      },
+      "end": {
+        "coordinates": {
+          "x": -21.8,
+          "y": -3.4
+        },
+        "adjCoordinates": {
+          "x": 21.8,
+          "y": 3.4
+        },
+        "packingZone": "AMC",
+        "pitchPosition": "FINAL_THIRD",
+        "lane": "CENTER"
+      },
+      "action": "GOAL_KICK",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 68.9,
+        "angle": 2.8,
+        "receiver": {
+          "playerId": 9550,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 38,
+      "bodyPart": null,
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 0.0001,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.001121,
+        "opponent": 0.000805
+      },
+      "distanceToGoal": 99.5,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 41,
+      "inferredSetPiece": true
+    },
+    {
+      "index": 804,
+      "id": 4858179902,
+      "gameTime": {
+        "gameTime": "24:20.1450",
+        "gameTimeInSec": 1460.145
+      },
+      "squadId": 33,
+      "player": {
+        "id": 204,
+        "position": "RIGHT_WINGER",
+        "positionSide": "RIGHT"
+      },
+      "pressure": 0,
+      "actionType": "CORNER",
+      "start": {
+        "coordinates": {
+          "x": 52.5,
+          "y": 34
+        },
+        "adjCoordinates": {
+          "x": 52.5,
+          "y": 34
+        },
+        "packingZone": "WL",
+        "pitchPosition": "FINAL_THIRD",
+        "lane": "LEFT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": 45.9,
+          "y": 1
+        },
+        "adjCoordinates": {
+          "x": 45.9,
+          "y": 1
+        },
+        "packingZone": "AMC",
+        "pitchPosition": "OPPONENT_BOX",
+        "lane": "CENTER"
+      },
+      "action": "CORNER",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 33.7,
+        "angle": 258.6,
+        "receiver": {
+          "playerId": 231,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 33,
+      "bodyPart": null,
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 1.415,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.030389,
+        "opponent": 0.000628
+      },
+      "distanceToGoal": 34,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": {
+        "id": 51824032,
+        "subPhaseId": 55402940,
+        "mainEvent": true
+      },
+      "sequenceIndex": 53,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 1136,
+      "id": 4858180234,
+      "gameTime": {
+        "gameTime": "33:21.8990",
+        "gameTimeInSec": 2001.899
+      },
+      "squadId": 38,
+      "player": {
+        "id": 8451,
+        "position": "GOALKEEPER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 100,
+      "actionType": "GK_SAVE",
+      "start": {
+        "coordinates": {
+          "x": 51.3,
+          "y": 2.8
+        },
+        "adjCoordinates": {
+          "x": -51.3,
+          "y": -2.8
+        },
+        "packingZone": "GKC",
+        "pitchPosition": "OWN_BOX",
+        "lane": "CENTER"
+      },
+      "end": null,
+      "action": "SAVE",
+      "phase": "SECOND_BALL",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 33,
+      "bodyPart": "FOOT_LOW",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": "LOW",
+      "duration": 1.452,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.000392,
+        "opponent": 0.014079
+      },
+      "distanceToGoal": 103.9,
+      "result": null,
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 76,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 1493,
+      "id": 4858180591,
+      "gameTime": {
+        "gameTime": "44:35.9160",
+        "gameTimeInSec": 2675.916
+      },
+      "squadId": 33,
+      "player": {
+        "id": 98,
+        "position": "DEFENSE_MIDFIELD",
+        "positionSide": "CENTRE_LEFT"
+      },
+      "pressure": 0,
+      "actionType": "CORNER",
+      "start": {
+        "coordinates": {
+          "x": 52.5,
+          "y": -34
+        },
+        "adjCoordinates": {
+          "x": 52.5,
+          "y": -34
+        },
+        "packingZone": "WR",
+        "pitchPosition": "FINAL_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": 44.1,
+          "y": 5
+        },
+        "adjCoordinates": {
+          "x": 44.1,
+          "y": 5
+        },
+        "packingZone": "AMC",
+        "pitchPosition": "OPPONENT_BOX",
+        "lane": "CENTER"
+      },
+      "action": "CORNER",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 39.9,
+        "angle": 102.2,
+        "receiver": {
+          "playerId": 50321,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 33,
+      "bodyPart": null,
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 2.094,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.030389,
+        "opponent": 0.000628
+      },
+      "distanceToGoal": 34,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": {
+        "id": 51824044,
+        "subPhaseId": 55402952,
+        "mainEvent": true
+      },
+      "sequenceIndex": 96,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 1554,
+      "id": 4858180652,
+      "gameTime": {
+        "gameTime": "45:00.0000 (+02:23.0350)",
+        "gameTimeInSec": 2843.035
+      },
+      "squadId": 33,
+      "player": {
+        "id": 98,
+        "position": "DEFENSE_MIDFIELD",
+        "positionSide": "CENTRE_LEFT"
+      },
+      "pressure": 0,
+      "actionType": "CORNER",
+      "start": {
+        "coordinates": {
+          "x": 52.5,
+          "y": -34
+        },
+        "adjCoordinates": {
+          "x": 52.5,
+          "y": -34
+        },
+        "packingZone": "WR",
+        "pitchPosition": "FINAL_THIRD",
+        "lane": "RIGHT_WING"
+      },
+      "end": {
+        "coordinates": {
+          "x": 30,
+          "y": -16.9
+        },
+        "adjCoordinates": {
+          "x": 30,
+          "y": -16.9
+        },
+        "packingZone": "CBR",
+        "pitchPosition": "FINAL_THIRD",
+        "lane": "RIGHT_HALF_SPACE"
+      },
+      "action": "CORNER",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 28.2,
+        "angle": 142.7,
+        "receiver": {
+          "playerId": 204,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 33,
+      "bodyPart": null,
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 3.249,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.030389,
+        "opponent": 0.000628
+      },
+      "distanceToGoal": 34,
+      "result": "SUCCESS",
+      "periodId": 1,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": {
+        "id": 51824046,
+        "subPhaseId": 55402954,
+        "mainEvent": true
+      },
+      "sequenceIndex": 100,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 1583,
+      "id": 4858180681,
+      "gameTime": {
+        "gameTime": "45:00.0000",
+        "gameTimeInSec": 10000
+      },
+      "squadId": 38,
+      "player": {
+        "id": 9770,
+        "position": "CENTER_FORWARD",
+        "positionSide": "CENTRE_LEFT"
+      },
+      "pressure": 0,
+      "actionType": "KICK_OFF",
+      "start": {
+        "coordinates": {
+          "x": 0,
+          "y": 0
+        },
+        "adjCoordinates": {
+          "x": 0,
+          "y": 0
+        },
+        "packingZone": "CBC",
+        "pitchPosition": "MIDDLE_THIRD",
+        "lane": "CENTER"
+      },
+      "end": {
+        "coordinates": {
+          "x": -19.2,
+          "y": -5.8
+        },
+        "adjCoordinates": {
+          "x": -19.2,
+          "y": -5.8
+        },
+        "packingZone": "CBC",
+        "pitchPosition": "FIRST_THIRD",
+        "lane": "CENTER"
+      },
+      "action": "KICKOFF_WHISTLE",
+      "phase": "SET_PIECE",
+      "duel": null,
+      "shot": null,
+      "pass": {
+        "distance": 20.1,
+        "angle": 196.8,
+        "receiver": {
+          "playerId": 3772,
+          "type": "TEAMMATE"
+        }
+      },
+      "currentAttackingSquadId": 38,
+      "bodyPart": "FOOT",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 0.287,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.005388,
+        "opponent": 0.0004
+      },
+      "distanceToGoal": 52.5,
+      "result": "SUCCESS",
+      "periodId": 2,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 101,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 2071,
+      "id": 4858181169,
+      "gameTime": {
+        "gameTime": "60:40.1440",
+        "gameTimeInSec": 10940.144
+      },
+      "squadId": 38,
+      "player": {
+        "id": 8451,
+        "position": "GOALKEEPER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 100,
+      "actionType": "GK_SAVE",
+      "start": {
+        "coordinates": {
+          "x": -48,
+          "y": -0.3
+        },
+        "adjCoordinates": {
+          "x": -48,
+          "y": -0.3
+        },
+        "packingZone": "GKC",
+        "pitchPosition": "OWN_BOX",
+        "lane": "CENTER"
+      },
+      "end": null,
+      "action": "SAVE",
+      "phase": "SECOND_BALL",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 33,
+      "bodyPart": "FOOT_LOW",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": "LOW",
+      "duration": 0.703,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.000392,
+        "opponent": 0.014079
+      },
+      "distanceToGoal": 100.6,
+      "result": null,
+      "periodId": 2,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 137,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 2458,
+      "id": 4858181556,
+      "gameTime": {
+        "gameTime": "73:53.4410",
+        "gameTimeInSec": 11733.441
+      },
+      "squadId": 33,
+      "player": {
+        "id": 231,
+        "position": "CENTER_FORWARD",
+        "positionSide": "CENTRE"
+      },
+      "pressure": null,
+      "actionType": "GOAL",
+      "start": null,
+      "end": null,
+      "action": "GOAL",
+      "phase": null,
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": null,
+      "bodyPart": null,
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 81.212,
+      "opponents": null,
+      "pxT": null,
+      "distanceToGoal": null,
+      "result": null,
+      "periodId": 2,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 163,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 2658,
+      "id": 4858181756,
+      "gameTime": {
+        "gameTime": "84:04.5170",
+        "gameTimeInSec": 12344.517
+      },
+      "squadId": 38,
+      "player": {
+        "id": 8451,
+        "position": "GOALKEEPER",
+        "positionSide": "CENTRE"
+      },
+      "pressure": 100,
+      "actionType": "GK_SAVE",
+      "start": {
+        "coordinates": {
+          "x": -47.6,
+          "y": 2.4
+        },
+        "adjCoordinates": {
+          "x": -47.6,
+          "y": 2.4
+        },
+        "packingZone": "GKC",
+        "pitchPosition": "OWN_BOX",
+        "lane": "CENTER"
+      },
+      "end": null,
+      "action": "SAVE",
+      "phase": "SECOND_BALL",
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": 33,
+      "bodyPart": "FOOT_LOW",
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": "LOW",
+      "duration": 2.817,
+      "opponents": 11,
+      "pxT": {
+        "team": 0.000392,
+        "opponent": 0.014079
+      },
+      "distanceToGoal": 100.2,
+      "result": null,
+      "periodId": 2,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": "MORE_THAN_FOUR_METERS",
+      "formation": {
+        "team": "5-1-2-2",
+        "opponent": "4-2-3-1"
+      },
+      "setPiece": null,
+      "sequenceIndex": 184,
+      "inferredSetPiece": false
+    },
+    {
+      "index": 2815,
+      "id": 4858181913,
+      "gameTime": {
+        "gameTime": "89:52.0320",
+        "gameTimeInSec": 12692.032
+      },
+      "squadId": 33,
+      "player": {
+        "id": 204,
+        "position": "RIGHT_WINGER",
+        "positionSide": "RIGHT"
+      },
+      "pressure": null,
+      "actionType": "GOAL",
+      "start": null,
+      "end": null,
+      "action": "GOAL",
+      "phase": null,
+      "duel": null,
+      "shot": null,
+      "pass": null,
+      "currentAttackingSquadId": null,
+      "bodyPart": null,
+      "bodyPartExtended": "FOOT",
+      "previousPassHeight": null,
+      "duration": 54.674,
+      "opponents": null,
+      "pxT": null,
+      "distanceToGoal": null,
+      "result": null,
+      "periodId": 2,
+      "pressingPlayerId": null,
+      "fouledPlayerId": null,
+      "distanceToOpponent": null,
+      "formation": {
+        "team": "4-2-3-1",
+        "opponent": "5-1-2-2"
+      },
+      "setPiece": null,
+      "sequenceIndex": 195,
+      "inferredSetPiece": false
+    }
+  ]
+}

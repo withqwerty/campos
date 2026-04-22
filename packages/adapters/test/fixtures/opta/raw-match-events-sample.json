@@ -1,0 +1,203 @@
+{
+  "matchInfo": {
+    "id": "abc123match",
+    "description": "Team A vs Team B",
+    "contestant": [
+      {
+        "id": "team-a",
+        "name": "Team A",
+        "shortName": "TMA",
+        "officialName": "Team A FC",
+        "code": "TMA",
+        "position": "home"
+      },
+      {
+        "id": "team-b",
+        "name": "Team B",
+        "shortName": "TMB",
+        "officialName": "Team B FC",
+        "code": "TMB",
+        "position": "away"
+      }
+    ]
+  },
+  "liveData": {
+    "event": [
+      {
+        "id": 1001,
+        "eventId": 1,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 1,
+        "timeSec": 12,
+        "contestantId": "team-a",
+        "playerId": "player-1",
+        "playerName": "A. Passer",
+        "outcome": 1,
+        "x": 35.2,
+        "y": 48.0,
+        "qualifier": [
+          { "qualifierId": 140, "value": "55.8" },
+          { "qualifierId": 141, "value": "52.1" }
+        ]
+      },
+      {
+        "id": 1002,
+        "eventId": 2,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 5,
+        "timeSec": 30,
+        "contestantId": "team-b",
+        "playerId": "player-2",
+        "playerName": "B. Midfielder",
+        "outcome": 1,
+        "x": 62.0,
+        "y": 30.0,
+        "qualifier": [
+          { "qualifierId": 2 },
+          { "qualifierId": 140, "value": "88.5" },
+          { "qualifierId": 141, "value": "15.0" }
+        ]
+      },
+      {
+        "id": 1003,
+        "eventId": 3,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 12,
+        "timeSec": 45,
+        "contestantId": "team-a",
+        "playerId": "player-3",
+        "playerName": "C. Playmaker",
+        "outcome": 1,
+        "x": 70.0,
+        "y": 55.0,
+        "qualifier": [
+          { "qualifierId": 4 },
+          { "qualifierId": 210 },
+          { "qualifierId": 140, "value": "90.2" },
+          { "qualifierId": 141, "value": "50.0" }
+        ]
+      },
+      {
+        "id": 1004,
+        "eventId": 4,
+        "typeId": 13,
+        "periodId": 1,
+        "timeMin": 13,
+        "timeSec": 0,
+        "contestantId": "team-a",
+        "playerId": "player-4",
+        "playerName": "D. Striker",
+        "outcome": 0,
+        "x": 92.0,
+        "y": 48.5,
+        "qualifier": [{ "qualifierId": 20 }, { "qualifierId": 213, "value": "0.35" }]
+      },
+      {
+        "id": 1005,
+        "eventId": 5,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 20,
+        "timeSec": 10,
+        "contestantId": "team-a",
+        "playerId": "player-5",
+        "playerName": "E. Defender",
+        "outcome": 1,
+        "x": 15.0,
+        "y": 80.0,
+        "qualifier": [{ "qualifierId": 7 }]
+      },
+      {
+        "id": 1006,
+        "eventId": 6,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 25,
+        "timeSec": 0,
+        "contestantId": "team-b",
+        "playerId": "player-6",
+        "playerName": "F. Winger",
+        "outcome": 0,
+        "x": 50.0,
+        "y": 10.0,
+        "qualifier": [
+          { "qualifierId": 107 },
+          { "qualifierId": 140, "value": "58.0" },
+          { "qualifierId": 141, "value": "25.0" }
+        ]
+      },
+      {
+        "id": 1007,
+        "eventId": 7,
+        "typeId": 1,
+        "periodId": 2,
+        "timeMin": 55,
+        "timeSec": 22,
+        "contestantId": "team-a",
+        "playerId": "player-1",
+        "playerName": "A. Passer",
+        "outcome": 1,
+        "x": 45.0,
+        "y": 60.0,
+        "qualifier": [
+          { "qualifierId": 6 },
+          { "qualifierId": 140, "value": "85.0" },
+          { "qualifierId": 141, "value": "48.0" }
+        ]
+      },
+      {
+        "id": 1008,
+        "eventId": 8,
+        "typeId": 16,
+        "periodId": 2,
+        "timeMin": 60,
+        "timeSec": 5,
+        "contestantId": "team-b",
+        "playerId": "player-7",
+        "playerName": "G. Forward",
+        "outcome": 1,
+        "x": 88.0,
+        "y": 45.0,
+        "qualifier": [{ "qualifierId": 15 }, { "qualifierId": 213, "value": "0.12" }]
+      },
+      {
+        "id": 1009,
+        "eventId": 9,
+        "typeId": 1,
+        "periodId": 1,
+        "timeMin": 30,
+        "timeSec": 0,
+        "contestantId": "team-a",
+        "playerId": "player-1",
+        "playerName": "A. Passer",
+        "outcome": 1,
+        "x": 40.0,
+        "y": 50.0,
+        "qualifier": []
+      },
+      {
+        "id": 1010,
+        "eventId": 10,
+        "typeId": 15,
+        "periodId": 1,
+        "timeMin": 35,
+        "timeSec": 15,
+        "contestantId": "team-b",
+        "playerId": "player-8",
+        "playerName": "H. Attacker",
+        "outcome": 1,
+        "x": 85.0,
+        "y": 52.0,
+        "qualifier": [
+          { "qualifierId": 72 },
+          { "qualifierId": 82 },
+          { "qualifierId": 140, "value": "95.0" },
+          { "qualifierId": 141, "value": "48.0" }
+        ]
+      }
+    ]
+  }
+}

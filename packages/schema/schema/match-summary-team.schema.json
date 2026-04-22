@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/match-summary-team.schema.json",
+  "title": "MatchSummaryTeam",
+  "description": "Canonical scoreline-side summary for one team in a match header or live/result card.",
+  "type": "object",
+  "required": ["teamLabel"],
+  "additionalProperties": false,
+  "properties": {
+    "teamId": {
+      "type": ["string", "null"],
+      "description": "Stable team identifier when the source provides one."
+    },
+    "teamLabel": {
+      "type": "string",
+      "description": "Display-ready team label."
+    },
+    "score": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "description": "Current or final goals for this team."
+    },
+    "xg": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "description": "Team expected-goals total when the source provides it."
+    },
+    "penalties": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "description": "Penalty shootout or tiebreak goals when the source exposes them."
+    },
+    "redCards": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "description": "Team red-card count when the source exposes it."
+    },
+    "sourceMeta": {
+      "type": ["object", "null"],
+      "additionalProperties": true,
+      "description": "Provider-scoped metadata bag for provenance and advanced debugging. It must stay JSON-serializable, must not duplicate canonical top-level fields, and must not reinterpret raw provider semantics into fake cross-provider meaning."
+    }
+  }
+}

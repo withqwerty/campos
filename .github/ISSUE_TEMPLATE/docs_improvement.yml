@@ -1,0 +1,26 @@
+name: Docs or example improvement
+description: Report unclear docs, broken examples, or missing guidance.
+title: "[Docs]: "
+labels:
+  - documentation
+body:
+  - type: textarea
+    id: location
+    attributes:
+      label: Where is the problem?
+      description: Link the page, file, example, or section.
+      placeholder: README, getting-started page, ShotMap docs, package README...
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is unclear, missing, or incorrect?
+      placeholder: The example implies that...
+    validations:
+      required: true
+  - type: textarea
+    id: better
+    attributes:
+      label: What would make it better?
+      placeholder: A smaller example, clearer wording, an export note, a warning about...

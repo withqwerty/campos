@@ -1,0 +1,53 @@
+# Editor artefacts
+*.swp
+*.swo
+.DS_Store
+.idea/
+.vscode/
+
+# Package manager lockfiles
+node_modules/
+
+# Local-only raw data and reference material copied in for implementation work
+local/
+
+# JS/TS build output
+packages/*/dist/
+apps/*/dist/
+apps/*/.astro/
+
+# Agent/session-local state
+.claude/
+.remember/
+.agents/
+skills-lock.json
+AGENTS.md
+CLAUDE.md
+
+# Gate runner outputs — regenerated on each run; review markdown files are committed
+docs/reviews/screenshots/**/*.png
+docs/reviews/*-gate-summary.json
+
+# Internal docs (not for public repo)
+docs/internal/
+
+# Generated JS/declaration artifacts accidentally emitted into source trees
+packages/*/src/*.js
+packages/*/src/*.js.map
+packages/*/src/*.d.ts
+packages/*/src/*.d.ts.map
+
+docs/solutions
+docs/superpowers
+lab
+/scripts
+!/scripts/
+/scripts/*
+!/scripts/repo-split/
+scripts/repo-split/*
+!/scripts/repo-split/*.mjs
+.tmp-playwright
+.playwright-mcp
+.env
+.dev.vars
+.wrangler/

@@ -1,0 +1,827 @@
+{
+  "_meta": {
+    "matchId": 1903447,
+    "date": "2026-03-15",
+    "home": "Liverpool",
+    "away": "Tottenham",
+    "league": "Premier League",
+    "r2Bucket": "whoscored-data",
+    "r2Key": "whoscored/1903447.json.gz",
+    "source": "cloudflare-r2 whoscored-data",
+    "note": "Trimmed matchCentreData: per-player stats/shotZones/incidentEvents removed; players[] and formations[] preserved verbatim for adapter tests."
+  },
+  "home": {
+    "teamId": 26,
+    "name": "Liverpool",
+    "players": [
+      {
+        "playerId": 114147,
+        "shirtNo": 1,
+        "name": "Alisson Becker",
+        "position": "GK",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 369875,
+        "shirtNo": 8,
+        "name": "Dominik Szoboszlai",
+        "position": "DR",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 95408,
+        "shirtNo": 4,
+        "name": "Virgil van Dijk",
+        "position": "DC",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 136451,
+        "shirtNo": 2,
+        "name": "Joe Gomez",
+        "position": "DC",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 115726,
+        "shirtNo": 26,
+        "name": "Andy Robertson",
+        "position": "DL",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 345319,
+        "shirtNo": 10,
+        "name": "Alexis Mac Allister",
+        "position": "DMC",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 363884,
+        "shirtNo": 38,
+        "name": "Ryan Gravenberch",
+        "position": "DMC",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 392644,
+        "shirtNo": 30,
+        "name": "Jeremie Frimpong",
+        "position": "AMR",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 394786,
+        "shirtNo": 7,
+        "name": "Florian Wirtz",
+        "position": "AMC",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 548566,
+        "shirtNo": 73,
+        "name": "Rio Ngumoha",
+        "position": "AML",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 352825,
+        "shirtNo": 18,
+        "name": "Cody Gakpo",
+        "position": "FW",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 108226,
+        "shirtNo": 11,
+        "name": "Mohamed Salah",
+        "position": "Sub"
+      },
+      {
+        "playerId": 403784,
+        "shirtNo": 22,
+        "name": "Hugo Ekitiké",
+        "position": "Sub"
+      },
+      {
+        "playerId": 322971,
+        "shirtNo": 14,
+        "name": "Federico Chiesa",
+        "position": "Sub"
+      },
+      {
+        "playerId": 355354,
+        "shirtNo": 17,
+        "name": "Curtis Jones",
+        "position": "Sub"
+      },
+      {
+        "playerId": 509423,
+        "shirtNo": 42,
+        "name": "Trey Nyoni",
+        "position": "Sub"
+      },
+      {
+        "playerId": 345957,
+        "shirtNo": 5,
+        "name": "Ibrahima Konaté",
+        "position": "Sub"
+      },
+      {
+        "playerId": 401633,
+        "shirtNo": 25,
+        "name": "Giorgi Mamardashvili",
+        "position": "Sub"
+      },
+      {
+        "playerId": 424273,
+        "shirtNo": 6,
+        "name": "Milos Kerkez",
+        "position": "Sub"
+      },
+      {
+        "playerId": 403764,
+        "shirtNo": 47,
+        "name": "Calvin Ramsay",
+        "position": "Sub"
+      }
+    ],
+    "formations": [
+      {
+        "period": 16,
+        "playerIds": [
+          114147, 369875, 115726, 345319, 136451, 95408, 392644, 363884, 352825, 394786,
+          548566, 401633, 345957, 424273, 108226, 322971, 355354, 403784, 509423, 403764
+        ],
+        "formationId": 8,
+        "formationName": "4231",
+        "jerseyNumbers": [
+          1, 8, 26, 10, 2, 4, 30, 38, 18, 7, 73, 25, 5, 6, 11, 14, 17, 22, 42, 47
+        ],
+        "formationSlots": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "captainPlayerId": 95408,
+        "endMinuteExpanded": 66,
+        "formationPositions": [
+          {
+            "vertical": 0,
+            "horizontal": 5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 1
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 9
+          },
+          {
+            "vertical": 5,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 7,
+            "horizontal": 2
+          },
+          {
+            "vertical": 5,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 9,
+            "horizontal": 5
+          },
+          {
+            "vertical": 7,
+            "horizontal": 5
+          },
+          {
+            "vertical": 7,
+            "horizontal": 8
+          }
+        ],
+        "startMinuteExpanded": 0
+      },
+      {
+        "period": 2,
+        "playerIds": [
+          114147, 369875, 115726, 345319, 136451, 95408, 108226, 363884, 403784, 355354,
+          352825, 401633, 345957, 424273, 322971, 509423, 403764
+        ],
+        "formationId": 8,
+        "formationName": "4231",
+        "jerseyNumbers": [1, 8, 26, 10, 2, 4, 11, 38, 22, 17, 18, 25, 5, 6, 14, 42, 47],
+        "formationSlots": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 0, 0, 0, 0, 0],
+        "captainPlayerId": 95408,
+        "endMinuteExpanded": 85,
+        "formationPositions": [
+          {
+            "vertical": 0,
+            "horizontal": 5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 1
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 9
+          },
+          {
+            "vertical": 5,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 7,
+            "horizontal": 2
+          },
+          {
+            "vertical": 5,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 9,
+            "horizontal": 5
+          },
+          {
+            "vertical": 7,
+            "horizontal": 5
+          },
+          {
+            "vertical": 7,
+            "horizontal": 8
+          }
+        ],
+        "startMinuteExpanded": 66
+      },
+      {
+        "period": 2,
+        "playerIds": [
+          114147, 369875, 115726, 345319, 136451, 95408, 108226, 363884, 403784, 355354,
+          509423, 401633, 345957, 424273, 322971, 352825, 403764
+        ],
+        "formationId": 8,
+        "formationName": "4231",
+        "jerseyNumbers": [1, 8, 26, 10, 2, 4, 11, 38, 22, 17, 42, 25, 5, 6, 14, 18, 47],
+        "subOnPlayerId": 509423,
+        "formationSlots": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 0, 0, 0, 0, 0],
+        "subOffPlayerId": 352825,
+        "captainPlayerId": 95408,
+        "endMinuteExpanded": 93,
+        "formationPositions": [
+          {
+            "vertical": 0,
+            "horizontal": 5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 1
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 9
+          },
+          {
+            "vertical": 5,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 7,
+            "horizontal": 2
+          },
+          {
+            "vertical": 5,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 9,
+            "horizontal": 5
+          },
+          {
+            "vertical": 7,
+            "horizontal": 5
+          },
+          {
+            "vertical": 7,
+            "horizontal": 8
+          }
+        ],
+        "startMinuteExpanded": 85
+      },
+      {
+        "period": 2,
+        "playerIds": [
+          114147, 369875, 115726, 355354, 136451, 95408, 108226, 363884, 322971, 509423,
+          403784, 401633, 345957, 424273, 403764
+        ],
+        "formationId": 8,
+        "formationName": "4231",
+        "jerseyNumbers": [1, 8, 26, 17, 2, 4, 11, 38, 14, 42, 22, 25, 5, 6, 47],
+        "formationSlots": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 0, 0, 0],
+        "captainPlayerId": 95408,
+        "endMinuteExpanded": 96,
+        "formationPositions": [
+          {
+            "vertical": 0,
+            "horizontal": 5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 1
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 9
+          },
+          {
+            "vertical": 5,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 7,
+            "horizontal": 2
+          },
+          {
+            "vertical": 5,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 9,
+            "horizontal": 5
+          },
+          {
+            "vertical": 7,
+            "horizontal": 5
+          },
+          {
+            "vertical": 7,
+            "horizontal": 8
+          }
+        ],
+        "startMinuteExpanded": 93
+      }
+    ]
+  },
+  "away": {
+    "teamId": 30,
+    "name": "Tottenham",
+    "players": [
+      {
+        "playerId": 147863,
+        "shirtNo": 1,
+        "name": "Guglielmo Vicario",
+        "position": "GK",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 362352,
+        "shirtNo": 23,
+        "name": "Pedro Porro",
+        "position": "DR",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 330816,
+        "shirtNo": 4,
+        "name": "Kevin Danso",
+        "position": "DC",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 400097,
+        "shirtNo": 3,
+        "name": "Radu Dragusin",
+        "position": "DC",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 362219,
+        "shirtNo": 24,
+        "name": "Djed Spence",
+        "position": "DL",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 549079,
+        "shirtNo": 38,
+        "name": "Souza",
+        "position": "MR",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 403859,
+        "shirtNo": 29,
+        "name": "Pape Matar Sarr",
+        "position": "MC",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 429922,
+        "shirtNo": 14,
+        "name": "Archie Gray",
+        "position": "MC",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 422885,
+        "shirtNo": 11,
+        "name": "Mathys Tel",
+        "position": "ML",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 317804,
+        "shirtNo": 9,
+        "name": "Richarlison",
+        "position": "FW",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 136459,
+        "shirtNo": 19,
+        "name": "Dominic Solanke",
+        "position": "FW",
+        "isFirstEleven": true
+      },
+      {
+        "playerId": 333542,
+        "shirtNo": 39,
+        "name": "Randal Kolo Muani",
+        "position": "Sub"
+      },
+      {
+        "playerId": 399772,
+        "shirtNo": 7,
+        "name": "Xavi Simons",
+        "position": "Sub"
+      },
+      {
+        "playerId": 545661,
+        "shirtNo": 52,
+        "name": "Callum Olusesi",
+        "position": "Sub"
+      },
+      {
+        "playerId": 572656,
+        "shirtNo": 76,
+        "name": "James Rowswell",
+        "position": "Sub"
+      },
+      {
+        "playerId": 457006,
+        "shirtNo": 31,
+        "name": "Antonín Kinsky",
+        "position": "Sub"
+      },
+      {
+        "playerId": 386134,
+        "shirtNo": 40,
+        "name": "Brandon Austin",
+        "position": "Sub"
+      },
+      {
+        "playerId": 481813,
+        "shirtNo": 79,
+        "name": "James Wilson",
+        "position": "Sub"
+      }
+    ],
+    "formations": [
+      {
+        "period": 16,
+        "playerIds": [
+          147863, 362352, 362219, 429922, 330816, 400097, 549079, 403859, 136459, 317804,
+          422885, 457006, 386134, 399772, 333542, 545661, 572656, 481813
+        ],
+        "formationId": 2,
+        "formationName": "442",
+        "jerseyNumbers": [
+          1, 23, 24, 14, 4, 3, 38, 29, 19, 9, 11, 31, 40, 7, 39, 52, 76, 79
+        ],
+        "formationSlots": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 0, 0, 0, 0, 0, 0],
+        "captainPlayerId": 362352,
+        "endMinuteExpanded": 58,
+        "formationPositions": [
+          {
+            "vertical": 0,
+            "horizontal": 5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 1
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 9
+          },
+          {
+            "vertical": 6,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 6,
+            "horizontal": 1
+          },
+          {
+            "vertical": 6,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 9,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 9,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 6,
+            "horizontal": 9
+          }
+        ],
+        "startMinuteExpanded": 0
+      },
+      {
+        "period": 2,
+        "playerIds": [
+          147863, 362352, 362219, 429922, 330816, 400097, 422885, 403859, 136459, 317804,
+          399772, 457006, 386134, 333542, 545661, 572656, 481813
+        ],
+        "formationId": 2,
+        "formationName": "442",
+        "jerseyNumbers": [1, 23, 24, 14, 4, 3, 11, 29, 19, 9, 7, 31, 40, 39, 52, 76, 79],
+        "formationSlots": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 0, 0, 0, 0, 0],
+        "captainPlayerId": 362352,
+        "endMinuteExpanded": 77,
+        "formationPositions": [
+          {
+            "vertical": 0,
+            "horizontal": 5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 1
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 9
+          },
+          {
+            "vertical": 6,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 6,
+            "horizontal": 1
+          },
+          {
+            "vertical": 6,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 9,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 9,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 6,
+            "horizontal": 9
+          }
+        ],
+        "startMinuteExpanded": 58
+      },
+      {
+        "period": 2,
+        "playerIds": [
+          147863, 362352, 362219, 429922, 330816, 400097, 333542, 403859, 136459, 317804,
+          399772, 457006, 386134, 422885, 545661, 572656, 481813
+        ],
+        "formationId": 2,
+        "formationName": "442",
+        "jerseyNumbers": [1, 23, 24, 14, 4, 3, 39, 29, 19, 9, 7, 31, 40, 11, 52, 76, 79],
+        "subOnPlayerId": 333542,
+        "formationSlots": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 0, 0, 0, 0, 0],
+        "subOffPlayerId": 422885,
+        "captainPlayerId": 362352,
+        "endMinuteExpanded": 78,
+        "formationPositions": [
+          {
+            "vertical": 0,
+            "horizontal": 5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 1
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 9
+          },
+          {
+            "vertical": 6,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 6,
+            "horizontal": 1
+          },
+          {
+            "vertical": 6,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 9,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 9,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 6,
+            "horizontal": 9
+          }
+        ],
+        "startMinuteExpanded": 77
+      },
+      {
+        "period": 2,
+        "playerIds": [
+          147863, 362352, 429922, 545661, 330816, 400097, 333542, 403859, 136459, 317804,
+          399772, 457006, 386134, 572656, 481813
+        ],
+        "formationId": 2,
+        "formationName": "442",
+        "jerseyNumbers": [1, 23, 14, 52, 4, 3, 39, 29, 19, 9, 7, 31, 40, 76, 79],
+        "formationSlots": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 0, 0, 0],
+        "captainPlayerId": 362352,
+        "endMinuteExpanded": 98,
+        "formationPositions": [
+          {
+            "vertical": 0,
+            "horizontal": 5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 1
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 9
+          },
+          {
+            "vertical": 6,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 2.5,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 6,
+            "horizontal": 1
+          },
+          {
+            "vertical": 6,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 9,
+            "horizontal": 6.5
+          },
+          {
+            "vertical": 9,
+            "horizontal": 3.5
+          },
+          {
+            "vertical": 6,
+            "horizontal": 9
+          }
+        ],
+        "startMinuteExpanded": 78
+      },
+      {
+        "period": 2,
+        "playerIds": [
+          147863, 362352, 429922, 400097, 330816, 572656, 333542, 545661, 136459, 403859,
+          399772, 457006, 386134, 481813
+        ],
+        "formationId": 11,
+        "formationName": "541",
+        "jerseyNumbers": [1, 23, 14, 3, 4, 76, 39, 52, 19, 29, 7, 31, 40, 79],
+        "formationSlots": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 0, 0],
+        "captainPlayerId": 362352,
+        "endMinuteExpanded": 96,
+        "formationPositions": [
+          {
+            "vertical": 0,
+            "horizontal": 5
+          },
+          {
+            "vertical": 3,
+            "horizontal": 1
+          },
+          {
+            "vertical": 3,
+            "horizontal": 9
+          },
+          {
+            "vertical": 3,
+            "horizontal": 7
+          },
+          {
+            "vertical": 3,
+            "horizontal": 5
+          },
+          {
+            "vertical": 3,
+            "horizontal": 3
+          },
+          {
+            "vertical": 6,
+            "horizontal": 2
+          },
+          {
+            "vertical": 6,
+            "horizontal": 4
+          },
+          {
+            "vertical": 9,
+            "horizontal": 5
+          },
+          {
+            "vertical": 6,
+            "horizontal": 6
+          },
+          {
+            "vertical": 6,
+            "horizontal": 8
+          }
+        ],
+        "startMinuteExpanded": 98
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/percentile_row.schema.json",
+  "title": "PercentileRow",
+  "description": "A single stat with its raw value and percentile rank vs a peer group. Used by PercentileRibbon and PercentileGroup.",
+  "type": "object",
+  "required": ["stat_id", "label", "value", "percentile"],
+  "additionalProperties": false,
+  "properties": {
+    "stat_id": {
+      "type": "string",
+      "description": "Stable stat identifier (e.g. 'npxg_p90')."
+    },
+    "label": {
+      "type": "string",
+      "description": "Display label (e.g. 'Non-penalty xG per 90')."
+    },
+    "category": {
+      "type": ["string", "null"],
+      "description": "Optional category grouping (e.g. 'Shooting', 'Creation')."
+    },
+    "value": {
+      "type": "number",
+      "description": "Raw stat value."
+    },
+    "percentile": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Percentile rank within the peer group."
+    },
+    "comparison_percentile": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Optional second percentile for a comparison player."
+    }
+  }
+}

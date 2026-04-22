@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/shot.schema.json",
+  "title": "Shot",
+  "description": "A single shot attempt. Coordinates are normalised to [0, 1] on both axes where (0, 0) is the attacking team's defensive corner and (1, 1) is the attacking corner of the goal being attacked. If x or y is present, the other must also be present (enforced at runtime in validators.py).",
+  "type": "object",
+  "required": ["id", "xg"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable shot identifier."
+    },
+    "x": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Normalised X coordinate (attacking direction). Must be present if y is present."
+    },
+    "y": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Normalised Y coordinate (width). Must be present if x is present."
+    },
+    "xg": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Expected-goals value for this shot."
+    },
+    "body_part": {
+      "type": ["string", "null"],
+      "enum": ["foot", "head", "other", null],
+      "description": "Body part used. Free-form 'other' covers chest, shoulder, unusual cases."
+    },
+    "outcome": {
+      "type": ["string", "null"],
+      "enum": ["goal", "saved", "blocked", "off_target", "post", "own_goal", null],
+      "description": "Shot outcome."
+    },
+    "minute": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "maximum": 200,
+      "description": "Match minute (covers 90 + max stoppage)."
+    },
+    "player_id": {
+      "type": ["string", "null"],
+      "description": "Optional Player.id of the shot taker."
+    }
+  },
+  "dependentRequired": {
+    "x": ["y"],
+    "y": ["x"]
+  }
+}

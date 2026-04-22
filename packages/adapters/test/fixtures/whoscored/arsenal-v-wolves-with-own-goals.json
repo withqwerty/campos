@@ -1,0 +1,563 @@
+{
+  "home": {
+    "teamId": 13
+  },
+  "away": {
+    "teamId": 161
+  },
+  "playerIdNameDictionary": {
+    "94042": "Matt Doherty",
+    "101856": "Christian N\u00f8rgaard",
+    "105603": "Sam Johnstone",
+    "113880": "Kepa Arrizabalaga",
+    "113994": "Leandro Trossard",
+    "122714": "Jos\u00e9 S\u00e1",
+    "238916": "Mikel Merino",
+    "247454": "Martin \u00d8degaard",
+    "262854": "Hwang Hee-Chan",
+    "276366": "David Raya",
+    "279379": "Gabriel Jesus",
+    "322036": "Ben White",
+    "332325": "Declan Rice",
+    "332403": "Eberechi Eze",
+    "333048": "J\u00f8rgen Strand Larsen",
+    "361822": "William Saliba",
+    "362815": "Viktor Gy\u00f6keres",
+    "367185": "Bukayo Saka",
+    "368547": "Ki-Jana Hoever",
+    "372424": "Mart\u00edn Zubimendi",
+    "380706": "Gabriel Martinelli",
+    "388650": "Jurri\u00ebn Timber",
+    "389935": "Noni Madueke",
+    "397585": "Andr\u00e9",
+    "402056": "Tolu Arokodare",
+    "402810": "Emmanuel Agbadou",
+    "403693": "Jo\u00e3o Gomes",
+    "404245": "Ladislav Krejc\u00ed",
+    "404832": "Piero Hincapi\u00e9",
+    "408580": "Jackson Tchatchoua",
+    "415341": "David M\u00f8ller Wolfe",
+    "424039": "Jhon Arias",
+    "425060": "Yerson Mosquera",
+    "431283": "Toti Gomes",
+    "437381": "Tawanda Chirewa",
+    "444241": "Santiago Bueno",
+    "456771": "Ethan Nwaneri",
+    "467918": "Myles Lewis-Skelly",
+    "544982": "Fer L\u00f3pez",
+    "554310": "Mateus Man\u00e9"
+  },
+  "events": [
+    {
+      "id": 2883046627,
+      "eventId": 62,
+      "minute": 6,
+      "second": 56,
+      "teamId": 13,
+      "playerId": 388650,
+      "relatedEventId": 61,
+      "relatedPlayerId": 367185,
+      "x": 91.5,
+      "y": 53.2,
+      "expandedMinute": 6,
+      "period": {
+        "value": 1,
+        "displayName": "FirstHalf"
+      },
+      "type": {
+        "value": 13,
+        "displayName": "MissedShots"
+      },
+      "outcomeType": {
+        "value": 1,
+        "displayName": "Successful"
+      },
+      "qualifiers": [
+        {
+          "type": {
+            "value": 214,
+            "displayName": "BigChance"
+          }
+        },
+        {
+          "type": {
+            "value": 154,
+            "displayName": "IntentionalAssist"
+          }
+        },
+        {
+          "type": {
+            "value": 102,
+            "displayName": "GoalMouthY"
+          },
+          "value": "46.7"
+        },
+        {
+          "type": {
+            "value": 103,
+            "displayName": "GoalMouthZ"
+          },
+          "value": "58.3"
+        },
+        {
+          "type": {
+            "value": 56,
+            "displayName": "Zone"
+          },
+          "value": "Center"
+        },
+        {
+          "type": {
+            "value": 328,
+            "displayName": "FirstTouch"
+          }
+        },
+        {
+          "type": {
+            "value": 55,
+            "displayName": "RelatedEventId"
+          },
+          "value": "61"
+        },
+        {
+          "type": {
+            "value": 15,
+            "displayName": "Head"
+          }
+        },
+        {
+          "type": {
+            "value": 29,
+            "displayName": "Assisted"
+          }
+        },
+        {
+          "type": {
+            "value": 22,
+            "displayName": "RegularPlay"
+          }
+        },
+        {
+          "type": {
+            "value": 17,
+            "displayName": "BoxCentre"
+          }
+        }
+      ],
+      "satisfiedEventsTypes": [91, 7, 90, 10, 85, 201, 1, 3, 14],
+      "isTouch": true,
+      "goalMouthZ": 58.3,
+      "goalMouthY": 46.7,
+      "isShot": true
+    },
+    {
+      "id": 2883052589,
+      "eventId": 139,
+      "minute": 16,
+      "second": 35,
+      "teamId": 13,
+      "playerId": 332325,
+      "relatedEventId": 137,
+      "relatedPlayerId": 367185,
+      "x": 92.1,
+      "y": 54.2,
+      "expandedMinute": 16,
+      "period": {
+        "value": 1,
+        "displayName": "FirstHalf"
+      },
+      "type": {
+        "value": 13,
+        "displayName": "MissedShots"
+      },
+      "outcomeType": {
+        "value": 1,
+        "displayName": "Successful"
+      },
+      "qualifiers": [
+        {
+          "type": {
+            "value": 22,
+            "displayName": "RegularPlay"
+          }
+        },
+        {
+          "type": {
+            "value": 214,
+            "displayName": "BigChance"
+          }
+        },
+        {
+          "type": {
+            "value": 103,
+            "displayName": "GoalMouthZ"
+          },
+          "value": "13.9"
+        },
+        {
+          "type": {
+            "value": 56,
+            "displayName": "Zone"
+          },
+          "value": "Center"
+        },
+        {
+          "type": {
+            "value": 55,
+            "displayName": "RelatedEventId"
+          },
+          "value": "137"
+        },
+        {
+          "type": {
+            "value": 328,
+            "displayName": "FirstTouch"
+          }
+        },
+        {
+          "type": {
+            "value": 147,
+            "displayName": "BlockedY"
+          },
+          "value": "57.0"
+        },
+        {
+          "type": {
+            "value": 102,
+            "displayName": "GoalMouthY"
+          },
+          "value": "58.0"
+        },
+        {
+          "type": {
+            "value": 17,
+            "displayName": "BoxCentre"
+          }
+        },
+        {
+          "type": {
+            "value": 29,
+            "displayName": "Assisted"
+          }
+        },
+        {
+          "type": {
+            "value": 154,
+            "displayName": "IntentionalAssist"
+          }
+        },
+        {
+          "type": {
+            "value": 146,
+            "displayName": "BlockedX"
+          },
+          "value": "99.5"
+        },
+        {
+          "type": {
+            "value": 15,
+            "displayName": "Head"
+          }
+        }
+      ],
+      "satisfiedEventsTypes": [91, 7, 90, 10, 88, 201, 1, 3, 14],
+      "isTouch": true,
+      "blockedX": 99.5,
+      "blockedY": 57,
+      "goalMouthZ": 13.9,
+      "goalMouthY": 58,
+      "isShot": true
+    },
+    {
+      "id": 2883059205,
+      "eventId": 167,
+      "minute": 26,
+      "second": 21,
+      "teamId": 161,
+      "playerId": 262854,
+      "relatedEventId": 165,
+      "relatedPlayerId": 425060,
+      "x": 85.4,
+      "y": 39.8,
+      "expandedMinute": 26,
+      "period": {
+        "value": 1,
+        "displayName": "FirstHalf"
+      },
+      "type": {
+        "value": 15,
+        "displayName": "SavedShot"
+      },
+      "outcomeType": {
+        "value": 1,
+        "displayName": "Successful"
+      },
+      "qualifiers": [
+        {
+          "type": {
+            "value": 20,
+            "displayName": "RightFoot"
+          }
+        },
+        {
+          "type": {
+            "value": 215,
+            "displayName": "IndividualPlay"
+          }
+        },
+        {
+          "type": {
+            "value": 102,
+            "displayName": "GoalMouthY"
+          },
+          "value": "53.6"
+        },
+        {
+          "type": {
+            "value": 55,
+            "displayName": "RelatedEventId"
+          },
+          "value": "165"
+        },
+        {
+          "type": {
+            "value": 17,
+            "displayName": "BoxCentre"
+          }
+        },
+        {
+          "type": {
+            "value": 76,
+            "displayName": "LowLeft"
+          }
+        },
+        {
+          "type": {
+            "value": 146,
+            "displayName": "BlockedX"
+          },
+          "value": "96.9"
+        },
+        {
+          "type": {
+            "value": 103,
+            "displayName": "GoalMouthZ"
+          },
+          "value": "8.2"
+        },
+        {
+          "type": {
+            "value": 56,
+            "displayName": "Zone"
+          },
+          "value": "Center"
+        },
+        {
+          "type": {
+            "value": 147,
+            "displayName": "BlockedY"
+          },
+          "value": "47.7"
+        },
+        {
+          "type": {
+            "value": 23,
+            "displayName": "FastBreak"
+          }
+        },
+        {
+          "type": {
+            "value": 233,
+            "displayName": "OppositeRelatedEvent"
+          },
+          "value": "229"
+        },
+        {
+          "type": {
+            "value": 29,
+            "displayName": "Assisted"
+          }
+        },
+        {
+          "type": {
+            "value": 214,
+            "displayName": "BigChance"
+          }
+        }
+      ],
+      "satisfiedEventsTypes": [91, 9, 10, 201, 1, 4, 12],
+      "isTouch": true,
+      "blockedX": 96.9,
+      "blockedY": 47.7,
+      "goalMouthZ": 8.2,
+      "goalMouthY": 53.6,
+      "isShot": true
+    },
+    {
+      "id": 2883089517,
+      "eventId": 396,
+      "minute": 69,
+      "second": 15,
+      "teamId": 161,
+      "playerId": 105603,
+      "x": 0.8,
+      "y": 47.9,
+      "expandedMinute": 74,
+      "period": {
+        "value": 2,
+        "displayName": "SecondHalf"
+      },
+      "type": {
+        "value": 16,
+        "displayName": "Goal"
+      },
+      "outcomeType": {
+        "value": 1,
+        "displayName": "Successful"
+      },
+      "qualifiers": [
+        {
+          "type": {
+            "value": 76,
+            "displayName": "LowLeft"
+          }
+        },
+        {
+          "type": {
+            "value": 25,
+            "displayName": "FromCorner"
+          }
+        },
+        {
+          "type": {
+            "value": 103,
+            "displayName": "GoalMouthZ"
+          },
+          "value": "18.4"
+        },
+        {
+          "type": {
+            "value": 21,
+            "displayName": "OtherBodyPart"
+          }
+        },
+        {
+          "type": {
+            "value": 28,
+            "displayName": "OwnGoal"
+          }
+        },
+        {
+          "type": {
+            "value": 102,
+            "displayName": "GoalMouthY"
+          },
+          "value": "52.6"
+        },
+        {
+          "type": {
+            "value": 56,
+            "displayName": "Zone"
+          },
+          "value": "Center"
+        },
+        {
+          "type": {
+            "value": 16,
+            "displayName": "SmallBoxCentre"
+          }
+        }
+      ],
+      "satisfiedEventsTypes": [91, 23],
+      "isTouch": true,
+      "goalMouthZ": 18.4,
+      "goalMouthY": 52.6,
+      "isOwnGoal": true,
+      "isGoal": true,
+      "isShot": true
+    },
+    {
+      "id": 2883098519,
+      "eventId": 591,
+      "minute": 93,
+      "second": 3,
+      "teamId": 161,
+      "playerId": 425060,
+      "x": 7.6,
+      "y": 50.9,
+      "expandedMinute": 98,
+      "period": {
+        "value": 2,
+        "displayName": "SecondHalf"
+      },
+      "type": {
+        "value": 16,
+        "displayName": "Goal"
+      },
+      "outcomeType": {
+        "value": 1,
+        "displayName": "Successful"
+      },
+      "qualifiers": [
+        {
+          "type": {
+            "value": 103,
+            "displayName": "GoalMouthZ"
+          },
+          "value": "16.5"
+        },
+        {
+          "type": {
+            "value": 22,
+            "displayName": "RegularPlay"
+          }
+        },
+        {
+          "type": {
+            "value": 15,
+            "displayName": "Head"
+          }
+        },
+        {
+          "type": {
+            "value": 17,
+            "displayName": "BoxCentre"
+          }
+        },
+        {
+          "type": {
+            "value": 56,
+            "displayName": "Zone"
+          },
+          "value": "Center"
+        },
+        {
+          "type": {
+            "value": 76,
+            "displayName": "LowLeft"
+          }
+        },
+        {
+          "type": {
+            "value": 28,
+            "displayName": "OwnGoal"
+          }
+        },
+        {
+          "type": {
+            "value": 102,
+            "displayName": "GoalMouthY"
+          },
+          "value": "53.3"
+        }
+      ],
+      "satisfiedEventsTypes": [91, 23],
+      "isTouch": true,
+      "goalMouthZ": 16.5,
+      "goalMouthY": 53.3,
+      "isOwnGoal": true,
+      "isGoal": true,
+      "isShot": true
+    }
+  ]
+}

@@ -1,0 +1,1122 @@
+{
+  "source": {
+    "provider": "wyscout-open-data",
+    "note": "Compact match-scoped Wyscout player/team lookup fixture for Arsenal vs Southampton lineups coverage.",
+    "originalPlayersFile": "players.json",
+    "originalTeamsFile": "teams.json",
+    "originalPlayersFileId": "15073721",
+    "originalTeamsFileId": "15073697",
+    "competition": "England",
+    "originalMatchId": 2500040
+  },
+  "teams": [
+    {
+      "city": "Southampton, Hampshire",
+      "name": "Southampton",
+      "wyId": 1619,
+      "officialName": "Southampton FC",
+      "area": {
+        "name": "England",
+        "id": "0",
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "type": "club"
+    },
+    {
+      "city": "London",
+      "name": "Arsenal",
+      "wyId": 1609,
+      "officialName": "Arsenal FC",
+      "area": {
+        "name": "England",
+        "id": "0",
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "type": "club"
+    }
+  ],
+  "players": [
+    {
+      "passportArea": {
+        "name": "Serbia",
+        "id": "688",
+        "alpha3code": "SRB",
+        "alpha2code": "RS"
+      },
+      "weight": 76,
+      "firstName": "Du\\u0161an",
+      "middleName": "",
+      "lastName": "Tadi\\u0107",
+      "currentTeamId": 9,
+      "birthDate": "1988-11-20",
+      "height": 181,
+      "role": {
+        "code2": "MD",
+        "code3": "MID",
+        "name": "Midfielder"
+      },
+      "birthArea": {
+        "name": "Serbia",
+        "id": "688",
+        "alpha3code": "SRB",
+        "alpha2code": "RS"
+      },
+      "wyId": 383,
+      "foot": "left",
+      "shortName": "D. Tadi\\u0107",
+      "currentNationalTeamId": 17322
+    },
+    {
+      "passportArea": {
+        "name": "England",
+        "id": "0",
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "weight": 75,
+      "firstName": "Alex",
+      "middleName": "",
+      "lastName": "Iwobi",
+      "currentTeamId": 1609,
+      "birthDate": "1996-05-03",
+      "height": 180,
+      "role": {
+        "code2": "MD",
+        "code3": "MID",
+        "name": "Midfielder"
+      },
+      "birthArea": {
+        "name": "Nigeria",
+        "id": "566",
+        "alpha3code": "NGA",
+        "alpha2code": "NG"
+      },
+      "wyId": 230020,
+      "foot": "right",
+      "shortName": "A. Iwobi",
+      "currentNationalTeamId": 16823
+    },
+    {
+      "passportArea": {
+        "name": "Japan",
+        "id": "392",
+        "alpha3code": "JPN",
+        "alpha2code": "JP"
+      },
+      "weight": 78,
+      "firstName": "Maya",
+      "middleName": "",
+      "lastName": "Yoshida",
+      "currentTeamId": 1619,
+      "birthDate": "1988-08-24",
+      "height": 189,
+      "role": {
+        "code2": "DF",
+        "code3": "DEF",
+        "name": "Defender"
+      },
+      "birthArea": {
+        "name": "Japan",
+        "id": "392",
+        "alpha3code": "JPN",
+        "alpha2code": "JP"
+      },
+      "wyId": 703,
+      "foot": "right",
+      "shortName": "M. Yoshida",
+      "currentNationalTeamId": 12913
+    },
+    {
+      "passportArea": {
+        "name": "Germany",
+        "id": "276",
+        "alpha3code": "DEU",
+        "alpha2code": "DE"
+      },
+      "weight": 76,
+      "firstName": "Mesut",
+      "middleName": "",
+      "lastName": "\\u00d6zil",
+      "currentTeamId": 1609,
+      "birthDate": "1988-10-15",
+      "height": 180,
+      "role": {
+        "code2": "MD",
+        "code3": "MID",
+        "name": "Midfielder"
+      },
+      "birthArea": {
+        "name": "Germany",
+        "id": "276",
+        "alpha3code": "DEU",
+        "alpha2code": "DE"
+      },
+      "wyId": 3319,
+      "foot": "left",
+      "shortName": "M. \\u00d6zil",
+      "currentNationalTeamId": 3148
+    },
+    {
+      "passportArea": {
+        "name": "Portugal",
+        "id": "620",
+        "alpha3code": "PRT",
+        "alpha2code": "PT"
+      },
+      "weight": 67,
+      "firstName": "C\\u00e9dric Ricardo",
+      "middleName": "",
+      "lastName": "Alves Soares",
+      "currentTeamId": 1619,
+      "birthDate": "1991-08-31",
+      "height": 172,
+      "role": {
+        "code2": "DF",
+        "code3": "DEF",
+        "name": "Defender"
+      },
+      "birthArea": {
+        "name": "Germany",
+        "id": "276",
+        "alpha3code": "DEU",
+        "alpha2code": "DE"
+      },
+      "wyId": 70389,
+      "foot": "right",
+      "shortName": "C\\u00e9dric Soares",
+      "currentNationalTeamId": 9905
+    },
+    {
+      "passportArea": {
+        "name": "Ghana",
+        "id": "288",
+        "alpha3code": "GHA",
+        "alpha2code": "GH"
+      },
+      "weight": 73,
+      "firstName": "Daniel Nii",
+      "middleName": "",
+      "lastName": "Tackie Mensah Welbeck",
+      "currentTeamId": 1609,
+      "birthDate": "1990-11-26",
+      "height": 185,
+      "role": {
+        "code2": "FW",
+        "code3": "FWD",
+        "name": "Forward"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": "0",
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 7945,
+      "foot": "right",
+      "shortName": "D. Welbeck",
+      "currentNationalTeamId": 2413
+    },
+    {
+      "passportArea": {
+        "name": "Albania",
+        "id": "8",
+        "alpha3code": "ALB",
+        "alpha2code": "AL"
+      },
+      "weight": 82,
+      "firstName": "Granit",
+      "middleName": "",
+      "lastName": "Xhaka",
+      "currentTeamId": 1609,
+      "birthDate": "1992-09-27",
+      "height": 185,
+      "role": {
+        "code2": "MD",
+        "code3": "MID",
+        "name": "Midfielder"
+      },
+      "birthArea": {
+        "name": "Switzerland",
+        "id": "756",
+        "alpha3code": "CHE",
+        "alpha2code": "CH"
+      },
+      "wyId": 49876,
+      "foot": "left",
+      "shortName": "G. Xhaka",
+      "currentNationalTeamId": 6697
+    },
+    {
+      "passportArea": {
+        "name": "Spain",
+        "id": "724",
+        "alpha3code": "ESP",
+        "alpha2code": "ES"
+      },
+      "weight": 72,
+      "firstName": "Ignacio",
+      "middleName": "",
+      "lastName": "Monreal Eraso",
+      "currentTeamId": 1609,
+      "birthDate": "1986-02-26",
+      "height": 179,
+      "role": {
+        "code2": "DF",
+        "code3": "DEF",
+        "name": "Defender"
+      },
+      "birthArea": {
+        "name": "Spain",
+        "id": "724",
+        "alpha3code": "ESP",
+        "alpha2code": "ES"
+      },
+      "wyId": 3560,
+      "foot": "left",
+      "shortName": "Nacho Monreal",
+      "currentNationalTeamId": 1598
+    },
+    {
+      "passportArea": {
+        "name": "Egypt",
+        "id": "818",
+        "alpha3code": "EGY",
+        "alpha2code": "EG"
+      },
+      "weight": 70,
+      "firstName": "Mohamed Naser",
+      "middleName": "",
+      "lastName": "Elsayed Elneny",
+      "currentTeamId": 1609,
+      "birthDate": "1992-07-11",
+      "height": 180,
+      "role": {
+        "code2": "MD",
+        "code3": "MID",
+        "name": "Midfielder"
+      },
+      "birthArea": {
+        "name": "Egypt",
+        "id": "818",
+        "alpha3code": "EGY",
+        "alpha2code": "EG"
+      },
+      "wyId": 120339,
+      "foot": "right",
+      "shortName": "Mohamed Elneny",
+      "currentNationalTeamId": 16129
+    },
+    {
+      "passportArea": {
+        "name": "France",
+        "id": 250,
+        "alpha3code": "FRA",
+        "alpha2code": "FR"
+      },
+      "weight": 84,
+      "firstName": "Pierre-Emile",
+      "middleName": "",
+      "lastName": "H\\u00f8jbjerg",
+      "currentTeamId": 1619,
+      "birthDate": "1995-08-05",
+      "height": 185,
+      "role": {
+        "code2": "MD",
+        "code3": "MID",
+        "name": "Midfielder"
+      },
+      "birthArea": {
+        "name": "Denmark",
+        "id": 208,
+        "alpha3code": "DNK",
+        "alpha2code": "DK"
+      },
+      "wyId": 135114,
+      "foot": "right",
+      "shortName": "P. H\\u00f8jbjerg",
+      "currentNationalTeamId": 7712
+    },
+    {
+      "passportArea": {
+        "name": "Ireland Republic",
+        "id": 372,
+        "alpha3code": "IRL",
+        "alpha2code": "IE"
+      },
+      "weight": 70,
+      "firstName": "Shane ",
+      "middleName": "",
+      "lastName": "Long",
+      "currentTeamId": 1619,
+      "birthDate": "1987-01-22",
+      "height": 178,
+      "role": {
+        "code2": "FW",
+        "code3": "FWD",
+        "name": "Forward"
+      },
+      "birthArea": {
+        "name": "Ireland Republic",
+        "id": 372,
+        "alpha3code": "IRL",
+        "alpha2code": "IE"
+      },
+      "wyId": 8384,
+      "foot": "right",
+      "shortName": "S. Long",
+      "currentNationalTeamId": 8274
+    },
+    {
+      "passportArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "weight": 79,
+      "firstName": "Alex",
+      "middleName": "",
+      "lastName": "McCarthy",
+      "currentTeamId": 1619,
+      "birthDate": "1989-12-03",
+      "height": 193,
+      "role": {
+        "code2": "GK",
+        "code3": "GKP",
+        "name": "Goalkeeper"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 8580,
+      "foot": "right",
+      "shortName": "A. McCarthy",
+      "currentNationalTeamId": 2413
+    },
+    {
+      "passportArea": {
+        "name": "Netherlands",
+        "id": 528,
+        "alpha3code": "NLD",
+        "alpha2code": "NL"
+      },
+      "weight": 82,
+      "firstName": "Wesley",
+      "middleName": "",
+      "lastName": "Hoedt",
+      "currentTeamId": 1619,
+      "birthDate": "1994-03-06",
+      "height": 192,
+      "role": {
+        "code2": "DF",
+        "code3": "DEF",
+        "name": "Defender"
+      },
+      "birthArea": {
+        "name": "Netherlands",
+        "id": 528,
+        "alpha3code": "NLD",
+        "alpha2code": "NL"
+      },
+      "wyId": 268776,
+      "foot": "left",
+      "shortName": "W. Hoedt",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "Italy",
+        "id": 380,
+        "alpha3code": "ITA",
+        "alpha2code": "IT"
+      },
+      "weight": 81,
+      "firstName": "Manolo",
+      "middleName": "",
+      "lastName": "Gabbiadini",
+      "currentTeamId": 1619,
+      "birthDate": "1991-11-26",
+      "height": 186,
+      "role": {
+        "code2": "FW",
+        "code3": "FWD",
+        "name": "Forward"
+      },
+      "birthArea": {
+        "name": "Italy",
+        "id": 380,
+        "alpha3code": "ITA",
+        "alpha2code": "IT"
+      },
+      "wyId": 20857,
+      "foot": "left",
+      "shortName": "M. Gabbiadini",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "Czech Republic",
+        "id": 203,
+        "alpha3code": "CZE",
+        "alpha2code": "CZ"
+      },
+      "weight": 90,
+      "firstName": "Petr",
+      "middleName": "",
+      "lastName": "\\u010cech",
+      "currentTeamId": 1609,
+      "birthDate": "1982-05-20",
+      "height": 196,
+      "role": {
+        "code2": "GK",
+        "code3": "GKP",
+        "name": "Goalkeeper"
+      },
+      "birthArea": {
+        "name": "Czech Republic",
+        "id": 203,
+        "alpha3code": "CZE",
+        "alpha2code": "CZ"
+      },
+      "wyId": 7882,
+      "foot": "left",
+      "shortName": "P. \\u010cech",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "weight": 93,
+      "firstName": "Fraser",
+      "middleName": "",
+      "lastName": "Forster",
+      "currentTeamId": 1619,
+      "birthDate": "1988-03-17",
+      "height": 201,
+      "role": {
+        "code2": "GK",
+        "code3": "GKP",
+        "name": "Goalkeeper"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 61941,
+      "foot": "right",
+      "shortName": "F. Forster",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "weight": 85,
+      "firstName": "Ryan",
+      "middleName": "",
+      "lastName": "Bertrand",
+      "currentTeamId": 1619,
+      "birthDate": "1989-08-05",
+      "height": 179,
+      "role": {
+        "code2": "DF",
+        "code3": "DEF",
+        "name": "Defender"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 7885,
+      "foot": "left",
+      "shortName": "R. Bertrand",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "Gabon",
+        "id": 266,
+        "alpha3code": "GAB",
+        "alpha2code": "GA"
+      },
+      "weight": 80,
+      "firstName": "Pierre-Emerick",
+      "middleName": "",
+      "lastName": "Aubameyang",
+      "currentTeamId": 1609,
+      "birthDate": "1989-06-18",
+      "height": 187,
+      "role": {
+        "code2": "FW",
+        "code3": "FWD",
+        "name": "Forward"
+      },
+      "birthArea": {
+        "name": "France",
+        "id": 250,
+        "alpha3code": "FRA",
+        "alpha2code": "FR"
+      },
+      "wyId": 25867,
+      "foot": "right",
+      "shortName": "P. Aubameyang",
+      "currentNationalTeamId": 19062
+    },
+    {
+      "passportArea": {
+        "name": "France",
+        "id": 250,
+        "alpha3code": "FRA",
+        "alpha2code": "FR"
+      },
+      "weight": 69,
+      "firstName": "J\\u00e9r\\u00e9my",
+      "middleName": "",
+      "lastName": "Pied",
+      "currentTeamId": 3776,
+      "birthDate": "1989-02-23",
+      "height": 173,
+      "role": {
+        "code2": "DF",
+        "code3": "DEF",
+        "name": "Defender"
+      },
+      "birthArea": {
+        "name": "France",
+        "id": 250,
+        "alpha3code": "FRA",
+        "alpha2code": "FR"
+      },
+      "wyId": 25415,
+      "foot": "right",
+      "shortName": "J. Pied",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "weight": 68,
+      "firstName": "Jack",
+      "middleName": "",
+      "lastName": "Wilshere",
+      "currentTeamId": 1633,
+      "birthDate": "1992-01-01",
+      "height": 172,
+      "role": {
+        "code2": "MD",
+        "code3": "MID",
+        "name": "Midfielder"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 7873,
+      "foot": "left",
+      "shortName": "J. Wilshere",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "Guadeloupe",
+        "id": 312,
+        "alpha3code": "GLP",
+        "alpha2code": "GP"
+      },
+      "weight": 73,
+      "firstName": "Alexandre",
+      "middleName": "",
+      "lastName": "Lacazette",
+      "currentTeamId": 1609,
+      "birthDate": "1991-05-28",
+      "height": 175,
+      "role": {
+        "code2": "FW",
+        "code3": "FWD",
+        "name": "Forward"
+      },
+      "birthArea": {
+        "name": "France",
+        "id": 250,
+        "alpha3code": "FRA",
+        "alpha2code": "FR"
+      },
+      "wyId": 25413,
+      "foot": "right",
+      "shortName": "A. Lacazette",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "Albania",
+        "id": 8,
+        "alpha3code": "ALB",
+        "alpha2code": "AL"
+      },
+      "weight": 82,
+      "firstName": "Shkodran",
+      "middleName": "",
+      "lastName": "Mustafi",
+      "currentTeamId": 1609,
+      "birthDate": "1992-04-17",
+      "height": 184,
+      "role": {
+        "code2": "DF",
+        "code3": "DEF",
+        "name": "Defender"
+      },
+      "birthArea": {
+        "name": "Germany",
+        "id": 276,
+        "alpha3code": "DEU",
+        "alpha2code": "DE"
+      },
+      "wyId": 20612,
+      "foot": "right",
+      "shortName": "S. Mustafi",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "Spain",
+        "id": 724,
+        "alpha3code": "ESP",
+        "alpha2code": "ES"
+      },
+      "weight": 83,
+      "firstName": "Oriol",
+      "middleName": "",
+      "lastName": "Romeu Vidal",
+      "currentTeamId": 1619,
+      "birthDate": "1991-09-24",
+      "height": 183,
+      "role": {
+        "code2": "MD",
+        "code3": "MID",
+        "name": "Midfielder"
+      },
+      "birthArea": {
+        "name": "Spain",
+        "id": 724,
+        "alpha3code": "ESP",
+        "alpha2code": "ES"
+      },
+      "wyId": 7899,
+      "foot": "right",
+      "shortName": "Oriol Romeu",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "weight": 84,
+      "firstName": "Charlie",
+      "middleName": "",
+      "lastName": "Austin",
+      "currentTeamId": 1619,
+      "birthDate": "1989-07-05",
+      "height": 188,
+      "role": {
+        "code2": "FW",
+        "code3": "FWD",
+        "name": "Forward"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 8953,
+      "foot": "right",
+      "shortName": "C. Austin",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "Ireland Republic",
+        "id": 372,
+        "alpha3code": "IRL",
+        "alpha2code": "IE"
+      },
+      "weight": 75,
+      "firstName": "Nathan",
+      "middleName": "",
+      "lastName": "Redmond",
+      "currentTeamId": 1619,
+      "birthDate": "1994-03-06",
+      "height": 173,
+      "role": {
+        "code2": "MD",
+        "code3": "MID",
+        "name": "Midfielder"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 8116,
+      "foot": "right",
+      "shortName": "N. Redmond",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "weight": 84,
+      "firstName": "Jack",
+      "middleName": "",
+      "lastName": "Stephens",
+      "currentTeamId": 1619,
+      "birthDate": "1994-01-27",
+      "height": 185,
+      "role": {
+        "code2": "DF",
+        "code3": "DEF",
+        "name": "Defender"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 8136,
+      "foot": "right",
+      "shortName": "J. Stephens",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "weight": 66,
+      "firstName": "James ",
+      "middleName": "",
+      "lastName": "Ward-Prowse",
+      "currentTeamId": 1619,
+      "birthDate": "1994-11-01",
+      "height": 173,
+      "role": {
+        "code2": "MD",
+        "code3": "MID",
+        "name": "Midfielder"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 8144,
+      "foot": "right",
+      "shortName": "J. Ward-Prowse",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "Bosnia-Herzegovina",
+        "id": 70,
+        "alpha3code": "BIH",
+        "alpha2code": "BA"
+      },
+      "weight": 85,
+      "firstName": "Sead",
+      "middleName": "",
+      "lastName": "Kola\\u0161inac",
+      "currentTeamId": 1609,
+      "birthDate": "1993-06-20",
+      "height": 183,
+      "role": {
+        "code2": "DF",
+        "code3": "DEF",
+        "name": "Defender"
+      },
+      "birthArea": {
+        "name": "Germany",
+        "id": 276,
+        "alpha3code": "DEU",
+        "alpha2code": "DE"
+      },
+      "wyId": 14869,
+      "foot": "left",
+      "shortName": "S. Kola\\u0161inac",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "weight": 81,
+      "firstName": "Matt",
+      "middleName": "",
+      "lastName": "Macey",
+      "currentTeamId": 1649,
+      "birthDate": "1994-09-09",
+      "height": 198,
+      "role": {
+        "code2": "GK",
+        "code3": "GKP",
+        "name": "Goalkeeper"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 171166,
+      "foot": "right",
+      "shortName": "M. Macey",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "weight": 66,
+      "firstName": "Calum",
+      "middleName": "",
+      "lastName": "Chambers",
+      "currentTeamId": 1616,
+      "birthDate": "1995-01-20",
+      "height": 182,
+      "role": {
+        "code2": "DF",
+        "code3": "DEF",
+        "name": "Defender"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 171283,
+      "foot": "right",
+      "shortName": "C. Chambers",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "Spain",
+        "id": 724,
+        "alpha3code": "ESP",
+        "alpha2code": "ES"
+      },
+      "weight": 74,
+      "firstName": "H\\u00e9ctor",
+      "middleName": "",
+      "lastName": "Beller\\u00edn Moruno",
+      "currentTeamId": 1609,
+      "birthDate": "1995-03-19",
+      "height": 178,
+      "role": {
+        "code2": "DF",
+        "code3": "DEF",
+        "name": "Defender"
+      },
+      "birthArea": {
+        "name": "Spain",
+        "id": 724,
+        "alpha3code": "ESP",
+        "alpha2code": "ES"
+      },
+      "wyId": 167145,
+      "foot": "right",
+      "shortName": "Beller\\u00edn",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "Morocco",
+        "id": 504,
+        "alpha3code": "MAR",
+        "alpha2code": "MA"
+      },
+      "weight": 60,
+      "firstName": "Sofiane",
+      "middleName": "",
+      "lastName": "Boufal",
+      "currentTeamId": 692,
+      "birthDate": "1993-09-17",
+      "height": 170,
+      "role": {
+        "code2": "MD",
+        "code3": "MID",
+        "name": "Midfielder"
+      },
+      "birthArea": {
+        "name": "France",
+        "id": 250,
+        "alpha3code": "FRA",
+        "alpha2code": "FR"
+      },
+      "wyId": 215983,
+      "foot": "right",
+      "shortName": "S. Boufal",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "weight": 67,
+      "firstName": "Joshua",
+      "middleName": "",
+      "lastName": "Sims",
+      "currentTeamId": 1637,
+      "birthDate": "1997-03-28",
+      "height": 168,
+      "role": {
+        "code2": "MD",
+        "code3": "MID",
+        "name": "Midfielder"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 302520,
+      "foot": "left",
+      "shortName": "J. Sims",
+      "currentNationalTeamId": 2421
+    },
+    {
+      "passportArea": {
+        "name": "Ghana",
+        "id": 288,
+        "alpha3code": "GHA",
+        "alpha2code": "GH"
+      },
+      "weight": 70,
+      "firstName": "Eddie",
+      "middleName": "",
+      "lastName": "Nketiah",
+      "currentTeamId": 39822,
+      "birthDate": "1999-05-30",
+      "height": 178,
+      "role": {
+        "code2": "FW",
+        "code3": "FWD",
+        "name": "Forward"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 346158,
+      "foot": "right",
+      "shortName": "E. Nketiah",
+      "currentNationalTeamId": 2421
+    },
+    {
+      "passportArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "weight": 75,
+      "firstName": "Rob",
+      "middleName": "",
+      "lastName": "Holding",
+      "currentTeamId": 1609,
+      "birthDate": "1995-09-20",
+      "height": 189,
+      "role": {
+        "code2": "DF",
+        "code3": "DEF",
+        "name": "Defender"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 370224,
+      "foot": "right",
+      "shortName": "R. Holding",
+      "currentNationalTeamId": "null"
+    },
+    {
+      "passportArea": {
+        "name": "Zimbabwe",
+        "id": 716,
+        "alpha3code": "ZWE",
+        "alpha2code": "ZW"
+      },
+      "weight": 71,
+      "firstName": "Reiss",
+      "middleName": "",
+      "lastName": "Nelson",
+      "currentTeamId": 2482,
+      "birthDate": "1999-12-10",
+      "height": 176,
+      "role": {
+        "code2": "MD",
+        "code3": "MID",
+        "name": "Midfielder"
+      },
+      "birthArea": {
+        "name": "England",
+        "id": 0,
+        "alpha3code": "XEN",
+        "alpha2code": ""
+      },
+      "wyId": 397098,
+      "foot": "right",
+      "shortName": "R. Nelson",
+      "currentNationalTeamId": 2420
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/team-sheet.schema.json",
+  "title": "TeamSheet",
+  "description": "Canonical match-day team sheet for one side of a match.",
+  "type": "object",
+  "required": ["teamId", "starters", "bench"],
+  "additionalProperties": false,
+  "properties": {
+    "teamId": {
+      "type": "string",
+      "description": "Stable team identifier."
+    },
+    "teamLabel": {
+      "type": ["string", "null"],
+      "description": "Display-ready team label when known."
+    },
+    "formation": {
+      "type": ["string", "null"],
+      "description": "Kickoff or current formation label when known."
+    },
+    "captainPlayerId": {
+      "type": ["string", "null"],
+      "description": "Convenience reference for the team's captain."
+    },
+    "starters": {
+      "type": "array",
+      "description": "Starting XI or available starter list.",
+      "items": { "$ref": "./team-sheet-player.schema.json" }
+    },
+    "bench": {
+      "type": "array",
+      "description": "Named substitutes or bench players.",
+      "items": { "$ref": "./team-sheet-player.schema.json" }
+    },
+    "unavailable": {
+      "type": "array",
+      "description": "Optional broader squad members who are unavailable or outside the named bench.",
+      "items": { "$ref": "./team-sheet-player.schema.json" }
+    },
+    "sourceMeta": {
+      "type": ["object", "null"],
+      "additionalProperties": true,
+      "description": "Provider-scoped metadata bag for provenance and advanced debugging. It must stay JSON-serializable, must not duplicate canonical top-level fields, and must not reinterpret raw provider semantics into fake cross-provider meaning."
+    }
+  }
+}

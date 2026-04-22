@@ -1,0 +1,26 @@
+Campos is a football UI library for humans and agents.
+
+Primary architecture docs:
+- docs/architecture-decision.md
+- docs/README.md
+
+Active workspace packages:
+- packages/react: primary runtime package for chart components such as <ShotMap />
+- packages/adapters: provider normalization such as fromOpta.shots()
+- packages/schema: canonical football types and schema helpers
+- packages/stadia: pitch and goal primitives for football surfaces
+- packages/static: server-side SVG/PNG export
+
+Implementation conventions:
+- Prefer canonical entities from @withqwerty/campos-schema over provider-shaped objects.
+- Use adapters for raw data normalization instead of embedding provider logic in renderers.
+- Keep @withqwerty/campos-react task-shaped and zero-config friendly.
+- Treat @withqwerty/campos-react as the primary consumer entry point for charts.
+
+Current workspace shape:
+- React-first chart package
+- active adapter package
+- shared schema package
+- shared Stadia surface primitives
+- static export package
+- Astro demo site under apps/site

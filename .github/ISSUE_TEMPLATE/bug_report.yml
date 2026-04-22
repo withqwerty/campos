@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a concrete bug in a package, demo page, or export path.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: dropdown
+    id: package
+    attributes:
+      label: Affected area
+      description: Which part of Campos is affected?
+      options:
+        - "@withqwerty/campos-react"
+        - "@withqwerty/campos-adapters"
+        - "@withqwerty/campos-schema"
+        - "@withqwerty/campos-stadia"
+        - "@withqwerty/campos-static"
+        - Site / docs / examples
+    validations:
+      required: true
+  - type: textarea
+    id: bug
+    attributes:
+      label: What happened?
+      description: Describe the current behavior and why it is incorrect.
+      placeholder: The chart renders with overlapping labels when...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: Labels should remain readable and the legend should...
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Provide a minimal reproduction, code snippet, or step list.
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include package versions, browser, OS, and any relevant runtime details.
+      placeholder: campos-react 0.1.0-alpha.x, React 19, Node 22, Chrome 135, macOS...

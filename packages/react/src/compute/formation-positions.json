@@ -1,0 +1,5641 @@
+{
+  "1234": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "CB",
+      "slot": 2,
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "RDM",
+      "slot": 3,
+      "x": 42.0,
+      "y": 30.0
+    },
+    {
+      "code": "LDM",
+      "slot": 4,
+      "x": 42.0,
+      "y": 70.0
+    },
+    {
+      "code": "CM",
+      "slot": 5,
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCM",
+      "slot": 6,
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "RW",
+      "slot": 8,
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "slot": 9,
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCF",
+      "slot": 10,
+      "x": 90.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCF",
+      "slot": 11,
+      "x": 90.0,
+      "y": 62.5
+    }
+  ],
+  "1324": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "CB",
+      "slot": 2,
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "RDM",
+      "slot": 3,
+      "x": 42.0,
+      "y": 30.0
+    },
+    {
+      "code": "LDM",
+      "slot": 4,
+      "x": 42.0,
+      "y": 70.0
+    },
+    {
+      "code": "CDM",
+      "slot": 5,
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCM",
+      "slot": 6,
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "RW",
+      "slot": 8,
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "slot": 9,
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCF",
+      "slot": 10,
+      "x": 90.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCF",
+      "slot": 11,
+      "x": 90.0,
+      "y": 62.5
+    }
+  ],
+  "1423": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "CB",
+      "slot": 2,
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "RM",
+      "slot": 3,
+      "x": 58.0,
+      "y": 10.0
+    },
+    {
+      "code": "LM",
+      "slot": 4,
+      "x": 58.0,
+      "y": 90.0
+    },
+    {
+      "code": "LCM",
+      "slot": 5,
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCM",
+      "slot": 6,
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "RAM",
+      "slot": 7,
+      "x": 74.0,
+      "y": 30.0
+    },
+    {
+      "code": "LAM",
+      "slot": 8,
+      "x": 74.0,
+      "y": 70.0
+    },
+    {
+      "code": "ST",
+      "slot": 9,
+      "x": 90.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCF",
+      "slot": 10,
+      "x": 90.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCF",
+      "slot": 11,
+      "x": 90.0,
+      "y": 62.5
+    }
+  ],
+  "1432": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "CB",
+      "slot": 2,
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "RM",
+      "slot": 3,
+      "x": 58.0,
+      "y": 10.0
+    },
+    {
+      "code": "LM",
+      "slot": 4,
+      "x": 58.0,
+      "y": 90.0
+    },
+    {
+      "code": "LCM",
+      "slot": 5,
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCM",
+      "slot": 6,
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "RAM",
+      "slot": 7,
+      "x": 74.0,
+      "y": 30.0
+    },
+    {
+      "code": "LAM",
+      "slot": 8,
+      "x": 74.0,
+      "y": 70.0
+    },
+    {
+      "code": "CAM",
+      "slot": 9,
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCF",
+      "slot": 10,
+      "x": 90.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCF",
+      "slot": 11,
+      "x": 90.0,
+      "y": 62.5
+    }
+  ],
+  "2233": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCB",
+      "slot": 3,
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "LCM",
+      "slot": 4,
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCM",
+      "slot": 5,
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "CAM",
+      "slot": 6,
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "LAM",
+      "slot": 7,
+      "x": 74.0,
+      "y": 70.0
+    },
+    {
+      "code": "RAM",
+      "slot": 8,
+      "x": 74.0,
+      "y": 30.0
+    },
+    {
+      "code": "RCF",
+      "slot": 9,
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "slot": 10,
+      "x": 90.0,
+      "y": 70.0
+    },
+    {
+      "code": "ST",
+      "slot": 11,
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "2332": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCB",
+      "slot": 3,
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "CDM",
+      "slot": 4,
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCM",
+      "slot": 5,
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCM",
+      "slot": 6,
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "CAM",
+      "slot": 7,
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "LAM",
+      "slot": 8,
+      "x": 74.0,
+      "y": 70.0
+    },
+    {
+      "code": "RAM",
+      "slot": 9,
+      "x": 74.0,
+      "y": 30.0
+    },
+    {
+      "code": "RCF",
+      "slot": 10,
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "slot": 11,
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "2413": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCB",
+      "slot": 3,
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "slot": 4,
+      "x": 42.0,
+      "y": 10.0
+    },
+    {
+      "code": "LWB",
+      "slot": 5,
+      "x": 42.0,
+      "y": 90.0
+    },
+    {
+      "code": "LCM",
+      "slot": 6,
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "CAM",
+      "slot": 8,
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "ST",
+      "slot": 9,
+      "x": 90.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCF",
+      "slot": 10,
+      "x": 90.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCF",
+      "slot": 11,
+      "x": 90.0,
+      "y": 62.5
+    }
+  ],
+  "2422": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCB",
+      "slot": 3,
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "slot": 4,
+      "x": 42.0,
+      "y": 10.0
+    },
+    {
+      "code": "LWB",
+      "slot": 5,
+      "x": 42.0,
+      "y": 90.0
+    },
+    {
+      "code": "LCM",
+      "slot": 6,
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "RAM",
+      "slot": 8,
+      "x": 74.0,
+      "y": 30.0
+    },
+    {
+      "code": "LAM",
+      "slot": 9,
+      "x": 74.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCF",
+      "slot": 10,
+      "x": 90.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCF",
+      "slot": 11,
+      "x": 90.0,
+      "y": 62.5
+    }
+  ],
+  "2431": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCB",
+      "slot": 3,
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "slot": 4,
+      "x": 42.0,
+      "y": 10.0
+    },
+    {
+      "code": "LWB",
+      "slot": 5,
+      "x": 42.0,
+      "y": 90.0
+    },
+    {
+      "code": "LCM",
+      "slot": 6,
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "CAM",
+      "slot": 8,
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "LAM",
+      "slot": 9,
+      "x": 74.0,
+      "y": 70.0
+    },
+    {
+      "code": "RAM",
+      "slot": 10,
+      "x": 74.0,
+      "y": 30.0
+    },
+    {
+      "code": "ST",
+      "slot": 11,
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "312112": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "statsbomb": [1],
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "statsbomb": [3],
+      "x": 23.33,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "slot": 3,
+      "statsbomb": [4],
+      "x": 23.33,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "statsbomb": [5],
+      "x": 23.33,
+      "y": 70.0
+    },
+    {
+      "code": "CDM",
+      "slot": 5,
+      "statsbomb": [10],
+      "x": 36.67,
+      "y": 50.0
+    },
+    {
+      "code": "RCM",
+      "slot": 6,
+      "statsbomb": [13],
+      "x": 50.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 7,
+      "statsbomb": [15],
+      "x": 50.0,
+      "y": 70.0
+    },
+    {
+      "code": "CAM",
+      "slot": 8,
+      "statsbomb": [19],
+      "x": 63.33,
+      "y": 50.0
+    },
+    {
+      "code": "RCF",
+      "slot": 9,
+      "statsbomb": [22],
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "slot": 10,
+      "statsbomb": [24],
+      "x": 90.0,
+      "y": 70.0
+    },
+    {
+      "code": "SS",
+      "slot": 11,
+      "statsbomb": [25],
+      "x": 76.67,
+      "y": 50.0
+    }
+  ],
+  "31213": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 6,
+      "slot": 2,
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 5,
+      "slot": 3,
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "CDM",
+      "opta": 8,
+      "slot": 5,
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCM",
+      "opta": 2,
+      "slot": 6,
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "opta": 3,
+      "slot": 7,
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "opta": 10,
+      "slot": 8,
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "CAM",
+      "opta": 7,
+      "slot": 9,
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "LW",
+      "opta": 11,
+      "slot": 10,
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "31222": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "statsbomb": [1],
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "statsbomb": [3],
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "slot": 3,
+      "statsbomb": [4],
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "statsbomb": [5],
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "CDM",
+      "slot": 5,
+      "statsbomb": [10],
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCM",
+      "slot": 6,
+      "statsbomb": [13],
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 7,
+      "statsbomb": [15],
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "slot": 8,
+      "statsbomb": [17],
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "slot": 9,
+      "statsbomb": [21],
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCF",
+      "slot": 10,
+      "statsbomb": [22],
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "slot": 11,
+      "statsbomb": [24],
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "31312": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 6,
+      "slot": 2,
+      "x": 23.33,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 5,
+      "slot": 3,
+      "x": 23.33,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "x": 23.33,
+      "y": 70.0
+    },
+    {
+      "code": "CDM",
+      "opta": 7,
+      "slot": 5,
+      "x": 36.67,
+      "y": 50.0
+    },
+    {
+      "code": "RCM",
+      "opta": 2,
+      "slot": 6,
+      "x": 50.0,
+      "y": 30.0
+    },
+    {
+      "code": "CM",
+      "opta": 8,
+      "slot": 7,
+      "x": 50.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCM",
+      "opta": 3,
+      "slot": 8,
+      "x": 50.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCF",
+      "opta": 10,
+      "slot": 9,
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "opta": 11,
+      "slot": 10,
+      "x": 90.0,
+      "y": 70.0
+    },
+    {
+      "code": "SS",
+      "opta": 9,
+      "slot": 11,
+      "x": 76.67,
+      "y": 50.0
+    }
+  ],
+  "3142": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 2,
+      "statsbomb": [3],
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 4,
+      "slot": 3,
+      "statsbomb": [4],
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 6,
+      "slot": 4,
+      "statsbomb": [5],
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "CDM",
+      "opta": 8,
+      "slot": 5,
+      "statsbomb": [10],
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "RM",
+      "opta": 2,
+      "slot": 6,
+      "statsbomb": [12],
+      "x": 58.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCM",
+      "opta": 7,
+      "slot": 7,
+      "statsbomb": [13],
+      "x": 58.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCM",
+      "opta": 11,
+      "slot": 8,
+      "statsbomb": [15],
+      "x": 58.0,
+      "y": 62.5
+    },
+    {
+      "code": "LM",
+      "opta": 3,
+      "slot": 9,
+      "statsbomb": [16],
+      "x": 58.0,
+      "y": 87.5
+    },
+    {
+      "code": "RCF",
+      "opta": 9,
+      "slot": 10,
+      "statsbomb": [22],
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "opta": 10,
+      "slot": 11,
+      "statsbomb": [24],
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "32122": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "statsbomb": [1],
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "statsbomb": [3],
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "slot": 3,
+      "statsbomb": [4],
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "statsbomb": [5],
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "slot": 5,
+      "statsbomb": [7],
+      "x": 42.0,
+      "y": 10.0
+    },
+    {
+      "code": "LWB",
+      "slot": 6,
+      "statsbomb": [8],
+      "x": 42.0,
+      "y": 90.0
+    },
+    {
+      "code": "CM",
+      "slot": 7,
+      "statsbomb": [14],
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "RAM",
+      "slot": 8,
+      "statsbomb": [18],
+      "x": 74.0,
+      "y": 30.0
+    },
+    {
+      "code": "LAM",
+      "slot": 9,
+      "statsbomb": [20],
+      "x": 74.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCF",
+      "slot": 10,
+      "statsbomb": [22],
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "slot": 11,
+      "statsbomb": [24],
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "32221": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "statsbomb": [1],
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "statsbomb": [3],
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "slot": 3,
+      "statsbomb": [4],
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "statsbomb": [5],
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RDM",
+      "slot": 5,
+      "statsbomb": [9, 7],
+      "x": 42.0,
+      "y": 37.5
+    },
+    {
+      "code": "LDM",
+      "slot": 6,
+      "statsbomb": [11, 8],
+      "x": 42.0,
+      "y": 62.5
+    },
+    {
+      "code": "RM",
+      "slot": 7,
+      "statsbomb": [12, 13],
+      "x": 58.0,
+      "y": 10.0
+    },
+    {
+      "code": "LM",
+      "slot": 8,
+      "statsbomb": [16, 15],
+      "x": 58.0,
+      "y": 90.0
+    },
+    {
+      "code": "RAM",
+      "slot": 9,
+      "statsbomb": [18, 17],
+      "x": 74.0,
+      "y": 37.5
+    },
+    {
+      "code": "LAM",
+      "slot": 10,
+      "statsbomb": [20, 21],
+      "x": 74.0,
+      "y": 62.5
+    },
+    {
+      "code": "ST",
+      "slot": 11,
+      "statsbomb": [23],
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "3232": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "statsbomb": [3],
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "slot": 3,
+      "statsbomb": [4],
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "slot": 5,
+      "statsbomb": [7],
+      "wyscout": "rdmf",
+      "x": 42.0,
+      "y": 10.0
+    },
+    {
+      "code": "LWB",
+      "slot": 6,
+      "statsbomb": [8],
+      "wyscout": "ldmf",
+      "x": 42.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "statsbomb": [13],
+      "wyscout": "ramf",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "CM",
+      "slot": 8,
+      "statsbomb": [14],
+      "wyscout": "amf",
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCM",
+      "slot": 9,
+      "statsbomb": [15],
+      "wyscout": "lamf",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCF",
+      "slot": 10,
+      "statsbomb": [22],
+      "wyscout": "ss",
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "slot": 11,
+      "statsbomb": [24],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "3241": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 6,
+      "slot": 2,
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 5,
+      "slot": 3,
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RDM",
+      "opta": 2,
+      "slot": 5,
+      "x": 42.0,
+      "y": 37.5
+    },
+    {
+      "code": "LDM",
+      "opta": 3,
+      "slot": 6,
+      "x": 42.0,
+      "y": 62.5
+    },
+    {
+      "code": "RW",
+      "opta": 10,
+      "slot": 7,
+      "x": 74.0,
+      "y": 12.5
+    },
+    {
+      "code": "RAM",
+      "opta": 7,
+      "slot": 8,
+      "x": 74.0,
+      "y": 37.5
+    },
+    {
+      "code": "LAM",
+      "opta": 8,
+      "slot": 9,
+      "x": 74.0,
+      "y": 62.5
+    },
+    {
+      "code": "LW",
+      "opta": 11,
+      "slot": 10,
+      "x": 74.0,
+      "y": 87.5
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "3322": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "statsbomb": [1],
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "statsbomb": [3],
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "slot": 3,
+      "statsbomb": [4],
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "statsbomb": [5],
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCM",
+      "slot": 5,
+      "statsbomb": [7],
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 6,
+      "statsbomb": [8],
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "CM",
+      "slot": 7,
+      "statsbomb": [14],
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "RAM",
+      "slot": 8,
+      "statsbomb": [18],
+      "x": 74.0,
+      "y": 30.0
+    },
+    {
+      "code": "LAM",
+      "slot": 9,
+      "statsbomb": [20],
+      "x": 74.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCF",
+      "slot": 10,
+      "statsbomb": [22],
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "slot": 11,
+      "statsbomb": [24],
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "3331": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 6,
+      "slot": 2,
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 5,
+      "slot": 3,
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RDM",
+      "opta": 2,
+      "slot": 5,
+      "wyscout": "rcmf3",
+      "x": 42.0,
+      "y": 30.0
+    },
+    {
+      "code": "CDM",
+      "opta": 8,
+      "slot": 6,
+      "wyscout": "dmf",
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "LDM",
+      "opta": 3,
+      "slot": 7,
+      "wyscout": "lcmf3",
+      "x": 42.0,
+      "y": 70.0
+    },
+    {
+      "code": "RM",
+      "opta": 10,
+      "slot": 8,
+      "wyscout": "ramf",
+      "x": 58.0,
+      "y": 10.0
+    },
+    {
+      "code": "LM",
+      "opta": 11,
+      "slot": 9,
+      "wyscout": "lamf",
+      "x": 58.0,
+      "y": 90.0
+    },
+    {
+      "code": "CAM",
+      "opta": 7,
+      "slot": 10,
+      "wyscout": "amf",
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "341": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "slot": 3,
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "slot": 5,
+      "wyscout": "rwb",
+      "x": 42.0,
+      "y": 10.0
+    },
+    {
+      "code": "LWB",
+      "slot": 6,
+      "wyscout": "lwb",
+      "x": 42.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "wyscout": "rcmf",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 8,
+      "wyscout": "lcmf",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "ST",
+      "slot": 9,
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "3411": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "slot": 3,
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "slot": 5,
+      "wyscout": "rwb",
+      "x": 42.0,
+      "y": 10.0
+    },
+    {
+      "code": "LWB",
+      "slot": 6,
+      "wyscout": "lwb",
+      "x": 42.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "wyscout": "rcmf",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 8,
+      "wyscout": "lcmf",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "CAM",
+      "slot": 9,
+      "wyscout": "amf",
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "ST",
+      "slot": 10,
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "3412": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 6,
+      "slot": 2,
+      "statsbomb": [3],
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [4],
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "opta": 2,
+      "slot": 5,
+      "statsbomb": [7, 12],
+      "wyscout": "rwb",
+      "x": 42.0,
+      "y": 10.0
+    },
+    {
+      "code": "LWB",
+      "opta": 3,
+      "slot": 6,
+      "statsbomb": [8, 16],
+      "wyscout": "lwb",
+      "x": 42.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "opta": 7,
+      "slot": 7,
+      "statsbomb": [9, 13],
+      "wyscout": "rcmf",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "opta": 8,
+      "slot": 8,
+      "statsbomb": [11, 15],
+      "wyscout": "lcmf",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "CAM",
+      "opta": 9,
+      "slot": 9,
+      "statsbomb": [19],
+      "wyscout": "amf",
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCF",
+      "opta": 10,
+      "slot": 10,
+      "statsbomb": [22],
+      "wyscout": "ss",
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "opta": 11,
+      "slot": 11,
+      "statsbomb": [24],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "3412flat": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 6,
+      "slot": 2,
+      "statsbomb": [3],
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [4],
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RM",
+      "opta": 2,
+      "slot": 5,
+      "statsbomb": [7, 12],
+      "wyscout": "rwb",
+      "x": 58.0,
+      "y": 10.0
+    },
+    {
+      "code": "LM",
+      "opta": 3,
+      "slot": 6,
+      "statsbomb": [8, 16],
+      "wyscout": "lwb",
+      "x": 58.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "opta": 7,
+      "slot": 7,
+      "statsbomb": [9, 13],
+      "wyscout": "rcmf",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "opta": 8,
+      "slot": 8,
+      "statsbomb": [11, 15],
+      "wyscout": "lcmf",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "CAM",
+      "opta": 9,
+      "slot": 9,
+      "statsbomb": [19],
+      "wyscout": "amf",
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCF",
+      "opta": 10,
+      "slot": 10,
+      "statsbomb": [22],
+      "wyscout": "ss",
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "opta": 11,
+      "slot": 11,
+      "statsbomb": [24],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "342": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "slot": 3,
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "slot": 5,
+      "wyscout": "rwb",
+      "x": 42.0,
+      "y": 10.0
+    },
+    {
+      "code": "LWB",
+      "slot": 6,
+      "wyscout": "lwb",
+      "x": 42.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "wyscout": "rcmf",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 8,
+      "wyscout": "lcmf",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCF",
+      "slot": 9,
+      "wyscout": "ss",
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "slot": 10,
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "3421": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 6,
+      "slot": 2,
+      "statsbomb": [3],
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [4],
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "opta": 2,
+      "slot": 5,
+      "statsbomb": [7, 12],
+      "wyscout": "rwb",
+      "x": 42.0,
+      "y": 12.5
+    },
+    {
+      "code": "RDM",
+      "opta": 7,
+      "slot": 6,
+      "statsbomb": [9, 13],
+      "wyscout": "rcmf",
+      "x": 42.0,
+      "y": 37.5
+    },
+    {
+      "code": "LDM",
+      "opta": 8,
+      "slot": 7,
+      "statsbomb": [11, 15],
+      "wyscout": "lcmf",
+      "x": 42.0,
+      "y": 62.5
+    },
+    {
+      "code": "LWB",
+      "opta": 3,
+      "slot": 8,
+      "statsbomb": [8, 16],
+      "wyscout": "lwb",
+      "x": 42.0,
+      "y": 87.5
+    },
+    {
+      "code": "RAM",
+      "opta": 10,
+      "slot": 9,
+      "statsbomb": [18, 17],
+      "wyscout": "ramf",
+      "x": 74.0,
+      "y": 37.5
+    },
+    {
+      "code": "LAM",
+      "opta": 11,
+      "slot": 10,
+      "statsbomb": [20, 21],
+      "wyscout": "lamf",
+      "x": 74.0,
+      "y": 62.5
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [23],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "3421flat": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 6,
+      "slot": 2,
+      "statsbomb": [3],
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [4],
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RM",
+      "opta": 2,
+      "slot": 5,
+      "statsbomb": [7, 12],
+      "wyscout": "rwb",
+      "x": 58.0,
+      "y": 12.5
+    },
+    {
+      "code": "RDM",
+      "opta": 7,
+      "slot": 6,
+      "statsbomb": [9, 13],
+      "wyscout": "rcmf",
+      "x": 42.0,
+      "y": 37.5
+    },
+    {
+      "code": "LDM",
+      "opta": 8,
+      "slot": 7,
+      "statsbomb": [11, 15],
+      "wyscout": "lcmf",
+      "x": 42.0,
+      "y": 62.5
+    },
+    {
+      "code": "LM",
+      "opta": 3,
+      "slot": 8,
+      "statsbomb": [8, 16],
+      "wyscout": "lwb",
+      "x": 58.0,
+      "y": 87.5
+    },
+    {
+      "code": "RAM",
+      "opta": 10,
+      "slot": 9,
+      "statsbomb": [18, 17],
+      "wyscout": "ramf",
+      "x": 74.0,
+      "y": 37.5
+    },
+    {
+      "code": "LAM",
+      "opta": 11,
+      "slot": 10,
+      "statsbomb": [20, 21],
+      "wyscout": "lamf",
+      "x": 74.0,
+      "y": 62.5
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [23],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "343": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 6,
+      "slot": 2,
+      "statsbomb": [3],
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [4],
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "opta": 2,
+      "slot": 5,
+      "statsbomb": [7, 12],
+      "wyscout": "rwb",
+      "x": 42.0,
+      "y": 10.0
+    },
+    {
+      "code": "LWB",
+      "opta": 3,
+      "slot": 6,
+      "statsbomb": [8, 16],
+      "wyscout": "lwb",
+      "x": 42.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "opta": 7,
+      "slot": 7,
+      "statsbomb": [9, 13],
+      "wyscout": "rcmf",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "opta": 8,
+      "slot": 8,
+      "statsbomb": [11, 15],
+      "wyscout": "lcmf",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "opta": 10,
+      "slot": 9,
+      "statsbomb": [17, 22, 18],
+      "wyscout": "rwf",
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "opta": 11,
+      "slot": 10,
+      "statsbomb": [21, 24, 20],
+      "wyscout": "lwf",
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [23, 25],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "343flat": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 6,
+      "slot": 2,
+      "statsbomb": [3],
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [4],
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RM",
+      "opta": 2,
+      "slot": 5,
+      "statsbomb": [7, 12],
+      "wyscout": "rwb",
+      "x": 58.0,
+      "y": 10.0
+    },
+    {
+      "code": "LM",
+      "opta": 3,
+      "slot": 6,
+      "statsbomb": [8, 16],
+      "wyscout": "lwb",
+      "x": 58.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "opta": 7,
+      "slot": 7,
+      "statsbomb": [9, 13],
+      "wyscout": "rcmf",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "opta": 8,
+      "slot": 8,
+      "statsbomb": [11, 15],
+      "wyscout": "lcmf",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "opta": 10,
+      "slot": 9,
+      "statsbomb": [17, 22, 18],
+      "wyscout": "rwf",
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "opta": 11,
+      "slot": 10,
+      "statsbomb": [21, 24, 20],
+      "wyscout": "lwf",
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [23, 25],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "351": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "slot": 3,
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "slot": 5,
+      "wyscout": "rwb",
+      "x": 42.0,
+      "y": 10.0
+    },
+    {
+      "code": "LWB",
+      "slot": 6,
+      "wyscout": "lwb",
+      "x": 42.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "wyscout": "rcmf3",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "CM",
+      "slot": 8,
+      "wyscout": "dmf",
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCM",
+      "slot": 9,
+      "wyscout": "lcmf3",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "ST",
+      "slot": 10,
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "3511": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 2,
+      "statsbomb": [3],
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 6,
+      "slot": 3,
+      "statsbomb": [4],
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "opta": 2,
+      "slot": 5,
+      "statsbomb": [7, 12],
+      "wyscout": "rcmf3",
+      "x": 42.0,
+      "y": 10.0
+    },
+    {
+      "code": "CDM",
+      "opta": 11,
+      "slot": 6,
+      "statsbomb": [10, 14],
+      "wyscout": "dmf",
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "LWB",
+      "opta": 3,
+      "slot": 7,
+      "statsbomb": [8, 16],
+      "wyscout": "lcmf3",
+      "x": 42.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "opta": 7,
+      "slot": 8,
+      "statsbomb": [13, 9],
+      "wyscout": "rw",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "opta": 8,
+      "slot": 9,
+      "statsbomb": [15, 11],
+      "wyscout": "lw",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "CAM",
+      "opta": 10,
+      "slot": 10,
+      "statsbomb": [19, 25],
+      "wyscout": "amf",
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [23],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "3511flat": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 2,
+      "statsbomb": [3],
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 6,
+      "slot": 3,
+      "statsbomb": [4],
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RM",
+      "opta": 2,
+      "slot": 5,
+      "statsbomb": [7, 12],
+      "wyscout": "rcmf3",
+      "x": 58.0,
+      "y": 10.0
+    },
+    {
+      "code": "CDM",
+      "opta": 11,
+      "slot": 6,
+      "statsbomb": [10, 14],
+      "wyscout": "dmf",
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "LM",
+      "opta": 3,
+      "slot": 7,
+      "statsbomb": [8, 16],
+      "wyscout": "lcmf3",
+      "x": 58.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "opta": 7,
+      "slot": 8,
+      "statsbomb": [13, 9],
+      "wyscout": "rw",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "opta": 8,
+      "slot": 9,
+      "statsbomb": [15, 11],
+      "wyscout": "lw",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "CAM",
+      "opta": 10,
+      "slot": 10,
+      "statsbomb": [19, 25],
+      "wyscout": "amf",
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [23],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "352": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 6,
+      "slot": 2,
+      "statsbomb": [3],
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [4],
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "opta": 2,
+      "slot": 5,
+      "statsbomb": [7, 12, 17],
+      "wyscout": "rwb",
+      "x": 42.0,
+      "y": 10.0
+    },
+    {
+      "code": "LWB",
+      "opta": 3,
+      "slot": 6,
+      "statsbomb": [8, 16, 21],
+      "wyscout": "lwb",
+      "x": 42.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "opta": 7,
+      "slot": 7,
+      "statsbomb": [13, 18],
+      "wyscout": "rcmf3",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "CM",
+      "opta": 11,
+      "slot": 8,
+      "statsbomb": [10, 14],
+      "wyscout": "dmf",
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCM",
+      "opta": 8,
+      "slot": 9,
+      "statsbomb": [15, 20],
+      "wyscout": "lcmf3",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCF",
+      "opta": 10,
+      "slot": 10,
+      "statsbomb": [22],
+      "wyscout": "ss",
+      "x": 90.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCF",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [24],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 62.5
+    }
+  ],
+  "41131": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "statsbomb": [1],
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "statsbomb": [2],
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "statsbomb": [3],
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "statsbomb": [5],
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "slot": 5,
+      "statsbomb": [6],
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "CDM",
+      "slot": 6,
+      "statsbomb": [10],
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "CM",
+      "slot": 7,
+      "statsbomb": [14],
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "RW",
+      "slot": 8,
+      "statsbomb": [17],
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "CAM",
+      "slot": 9,
+      "statsbomb": [19],
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "LW",
+      "slot": 10,
+      "statsbomb": [21],
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "ST",
+      "slot": 11,
+      "statsbomb": [23],
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "41212": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 2,
+      "statsbomb": [2],
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [3],
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "opta": 6,
+      "slot": 4,
+      "statsbomb": [5],
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 5,
+      "statsbomb": [6],
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "CDM",
+      "opta": 4,
+      "slot": 6,
+      "statsbomb": [10],
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCM",
+      "opta": 7,
+      "slot": 7,
+      "statsbomb": [13, 12],
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "opta": 11,
+      "slot": 8,
+      "statsbomb": [15, 16],
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "CAM",
+      "opta": 8,
+      "slot": 9,
+      "statsbomb": [19, 25],
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCF",
+      "opta": 10,
+      "slot": 10,
+      "statsbomb": [22],
+      "x": 90.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCF",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [24],
+      "x": 90.0,
+      "y": 62.5
+    }
+  ],
+  "41221": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "statsbomb": [1],
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "statsbomb": [2],
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "statsbomb": [3],
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "statsbomb": [5],
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "slot": 5,
+      "statsbomb": [6],
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "CDM",
+      "slot": 6,
+      "statsbomb": [10],
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "statsbomb": [13],
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 8,
+      "statsbomb": [15],
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "slot": 9,
+      "statsbomb": [17, 18],
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "slot": 10,
+      "statsbomb": [21, 20],
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "ST",
+      "slot": 11,
+      "statsbomb": [23, 25],
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "4131": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "slot": 5,
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "CDM",
+      "slot": 6,
+      "wyscout": "dmf",
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "RW",
+      "slot": 7,
+      "wyscout": "ramf",
+      "x": 74.0,
+      "y": 12.5
+    },
+    {
+      "code": "CAM",
+      "slot": 8,
+      "wyscout": "amf",
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "LW",
+      "slot": 9,
+      "wyscout": "lamf",
+      "x": 74.0,
+      "y": 87.5
+    },
+    {
+      "code": "ST",
+      "slot": 10,
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "4132": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 2,
+      "statsbomb": [2],
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [3],
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "opta": 6,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 5,
+      "statsbomb": [6],
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "CDM",
+      "opta": 4,
+      "slot": 6,
+      "statsbomb": [10],
+      "wyscout": "dmf",
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "RW",
+      "opta": 7,
+      "slot": 7,
+      "statsbomb": [17, 12],
+      "wyscout": "ramf",
+      "x": 74.0,
+      "y": 12.5
+    },
+    {
+      "code": "CAM",
+      "opta": 8,
+      "slot": 8,
+      "statsbomb": [19],
+      "wyscout": "amf",
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "LW",
+      "opta": 11,
+      "slot": 9,
+      "statsbomb": [21, 16],
+      "wyscout": "lamf",
+      "x": 74.0,
+      "y": 87.5
+    },
+    {
+      "code": "RCF",
+      "opta": 9,
+      "slot": 10,
+      "statsbomb": [22],
+      "wyscout": "ss",
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "opta": 10,
+      "slot": 11,
+      "statsbomb": [24],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "4141": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 2,
+      "statsbomb": [2],
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [3],
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "opta": 6,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 5,
+      "statsbomb": [6],
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "CDM",
+      "opta": 4,
+      "slot": 6,
+      "statsbomb": [10, 14],
+      "wyscout": "dmf",
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "RM",
+      "opta": 7,
+      "slot": 7,
+      "statsbomb": [12, 17],
+      "wyscout": "rw",
+      "x": 58.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCM",
+      "opta": 8,
+      "slot": 8,
+      "statsbomb": [13, 18],
+      "wyscout": "rcmf",
+      "x": 58.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCM",
+      "opta": 10,
+      "slot": 9,
+      "statsbomb": [15, 20],
+      "wyscout": "lcmf",
+      "x": 58.0,
+      "y": 62.5
+    },
+    {
+      "code": "LM",
+      "opta": 11,
+      "slot": 10,
+      "statsbomb": [16, 21],
+      "wyscout": "lw",
+      "x": 58.0,
+      "y": 87.5
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [23],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "4212": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "slot": 5,
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RDM",
+      "slot": 6,
+      "wyscout": "rdmf",
+      "x": 42.0,
+      "y": 30.0
+    },
+    {
+      "code": "LDM",
+      "slot": 7,
+      "wyscout": "ldmf",
+      "x": 42.0,
+      "y": 70.0
+    },
+    {
+      "code": "CAM",
+      "slot": 8,
+      "wyscout": "amf",
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCF",
+      "slot": 9,
+      "wyscout": "ss",
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "slot": 10,
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "42121": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "statsbomb": [1],
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "statsbomb": [2],
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "statsbomb": [3],
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "statsbomb": [5],
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "slot": 5,
+      "statsbomb": [6],
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RDM",
+      "slot": 6,
+      "statsbomb": [9],
+      "x": 42.0,
+      "y": 30.0
+    },
+    {
+      "code": "LDM",
+      "slot": 7,
+      "statsbomb": [11],
+      "x": 42.0,
+      "y": 70.0
+    },
+    {
+      "code": "CM",
+      "slot": 8,
+      "statsbomb": [14],
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "RW",
+      "slot": 9,
+      "statsbomb": [17],
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "slot": 10,
+      "statsbomb": [21],
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "ST",
+      "slot": 11,
+      "statsbomb": [23],
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "4213": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "statsbomb": [2],
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "statsbomb": [3],
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "slot": 5,
+      "statsbomb": [6],
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RDM",
+      "slot": 6,
+      "statsbomb": [9],
+      "wyscout": "rdmf",
+      "x": 42.0,
+      "y": 30.0
+    },
+    {
+      "code": "LDM",
+      "slot": 7,
+      "statsbomb": [11],
+      "wyscout": "ldmf",
+      "x": 42.0,
+      "y": 70.0
+    },
+    {
+      "code": "CAM",
+      "slot": 8,
+      "statsbomb": [19],
+      "wyscout": "amf",
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCF",
+      "slot": 9,
+      "statsbomb": [22],
+      "wyscout": "rwf",
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "ST",
+      "slot": 10,
+      "statsbomb": [23],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCF",
+      "slot": 11,
+      "statsbomb": [24],
+      "wyscout": "lwf",
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "422": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "slot": 5,
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RCM",
+      "slot": 6,
+      "wyscout": "rdmf",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 7,
+      "wyscout": "ldmf",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "slot": 8,
+      "wyscout": "ramf",
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "slot": 9,
+      "wyscout": "lamf",
+      "x": 74.0,
+      "y": 90.0
+    }
+  ],
+  "4221": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "slot": 5,
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RCM",
+      "slot": 6,
+      "wyscout": "rdmf",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 7,
+      "wyscout": "ldmf",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "slot": 8,
+      "wyscout": "ramf",
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "slot": 9,
+      "wyscout": "lamf",
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "ST",
+      "slot": 10,
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "42211": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "statsbomb": [1],
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "statsbomb": [2],
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "statsbomb": [3],
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "statsbomb": [5],
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "slot": 5,
+      "statsbomb": [6],
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RDM",
+      "slot": 6,
+      "statsbomb": [9, 13],
+      "x": 42.0,
+      "y": 30.0
+    },
+    {
+      "code": "LDM",
+      "slot": 7,
+      "statsbomb": [11, 15],
+      "x": 42.0,
+      "y": 70.0
+    },
+    {
+      "code": "RM",
+      "slot": 8,
+      "statsbomb": [12, 17],
+      "x": 58.0,
+      "y": 10.0
+    },
+    {
+      "code": "LM",
+      "slot": 9,
+      "statsbomb": [16, 21],
+      "x": 58.0,
+      "y": 90.0
+    },
+    {
+      "code": "CAM",
+      "slot": 10,
+      "statsbomb": [19],
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "ST",
+      "slot": 11,
+      "statsbomb": [23, 25],
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "4222": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 2,
+      "statsbomb": [2],
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [3],
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "opta": 6,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 5,
+      "statsbomb": [6],
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RCM",
+      "opta": 4,
+      "slot": 6,
+      "statsbomb": [13, 9],
+      "wyscout": "rdmf",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "opta": 8,
+      "slot": 7,
+      "statsbomb": [15, 11],
+      "wyscout": "ldmf",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "opta": 7,
+      "slot": 8,
+      "statsbomb": [17, 12, 18],
+      "wyscout": "ramf",
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "opta": 11,
+      "slot": 9,
+      "statsbomb": [21, 16, 20],
+      "wyscout": "lamf",
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCF",
+      "opta": 10,
+      "slot": 10,
+      "statsbomb": [22],
+      "wyscout": "ss",
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [24],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "4231": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 2,
+      "statsbomb": [2],
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [3],
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "opta": 6,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 5,
+      "statsbomb": [6],
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RDM",
+      "opta": 8,
+      "slot": 6,
+      "statsbomb": [9, 13],
+      "wyscout": "rdmf",
+      "x": 42.0,
+      "y": 30.0
+    },
+    {
+      "code": "LDM",
+      "opta": 4,
+      "slot": 7,
+      "statsbomb": [11, 15],
+      "wyscout": "ldmf",
+      "x": 42.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "opta": 7,
+      "slot": 8,
+      "statsbomb": [17, 12, 18],
+      "wyscout": "ramf",
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "CAM",
+      "opta": 10,
+      "slot": 9,
+      "statsbomb": [19],
+      "wyscout": "amf",
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "LW",
+      "opta": 11,
+      "slot": 10,
+      "statsbomb": [21, 16, 20],
+      "wyscout": "lamf",
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [23],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "424": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 2,
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 3,
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "opta": 6,
+      "slot": 4,
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 5,
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RDM",
+      "opta": 4,
+      "slot": 6,
+      "x": 42.0,
+      "y": 30.0
+    },
+    {
+      "code": "LDM",
+      "opta": 8,
+      "slot": 7,
+      "x": 42.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "opta": 7,
+      "slot": 8,
+      "x": 74.0,
+      "y": 12.5
+    },
+    {
+      "code": "LW",
+      "opta": 11,
+      "slot": 9,
+      "x": 74.0,
+      "y": 87.5
+    },
+    {
+      "code": "RCF",
+      "opta": 9,
+      "slot": 10,
+      "x": 90.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCF",
+      "opta": 10,
+      "slot": 11,
+      "x": 90.0,
+      "y": 62.5
+    }
+  ],
+  "431": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "slot": 5,
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RCM",
+      "slot": 6,
+      "wyscout": "rcmf3",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "CM",
+      "slot": 7,
+      "wyscout": "dmf",
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCM",
+      "slot": 8,
+      "wyscout": "lcmf3",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "ST",
+      "slot": 9,
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "4311": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "slot": 5,
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RCM",
+      "slot": 6,
+      "wyscout": "rcmf3",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "CM",
+      "slot": 7,
+      "wyscout": "dmf",
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCM",
+      "slot": 8,
+      "wyscout": "lcmf3",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "CAM",
+      "slot": 9,
+      "wyscout": "amf",
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "ST",
+      "slot": 10,
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "4312": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 2,
+      "statsbomb": [2],
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [3],
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "opta": 6,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 5,
+      "statsbomb": [6],
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RCM",
+      "opta": 7,
+      "slot": 6,
+      "statsbomb": [13, 9],
+      "wyscout": "rcmf3",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "CM",
+      "opta": 4,
+      "slot": 7,
+      "statsbomb": [14, 10],
+      "wyscout": "dmf",
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCM",
+      "opta": 11,
+      "slot": 8,
+      "statsbomb": [15, 11],
+      "wyscout": "lcmf3",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "CAM",
+      "opta": 8,
+      "slot": 9,
+      "statsbomb": [19],
+      "wyscout": "amf",
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCF",
+      "opta": 9,
+      "slot": 10,
+      "statsbomb": [22],
+      "wyscout": "ss",
+      "x": 90.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCF",
+      "opta": 10,
+      "slot": 11,
+      "statsbomb": [24],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 62.5
+    }
+  ],
+  "432": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "slot": 5,
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "CDM",
+      "slot": 6,
+      "wyscout": "dmf",
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "wyscout": "rcmf3",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 8,
+      "wyscout": "lcmf3",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCF",
+      "slot": 9,
+      "wyscout": "ss",
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCF",
+      "slot": 10,
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "4321": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 2,
+      "statsbomb": [2],
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [3],
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "opta": 6,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 5,
+      "statsbomb": [6],
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RCM",
+      "opta": 8,
+      "slot": 6,
+      "statsbomb": [13, 12],
+      "wyscout": "rcmf3",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "CM",
+      "opta": 4,
+      "slot": 7,
+      "statsbomb": [14, 10],
+      "wyscout": "dmf",
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCM",
+      "opta": 7,
+      "slot": 8,
+      "statsbomb": [15, 16],
+      "wyscout": "lcmf3",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "opta": 10,
+      "slot": 9,
+      "statsbomb": [17, 18],
+      "wyscout": "ramf",
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "opta": 11,
+      "slot": 10,
+      "statsbomb": [21, 20],
+      "wyscout": "lamf",
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [23, 25],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "433": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 2,
+      "statsbomb": [2],
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [3],
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "opta": 6,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 5,
+      "statsbomb": [6],
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "CDM",
+      "opta": 4,
+      "slot": 6,
+      "statsbomb": [10, 14],
+      "wyscout": "dmf",
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCM",
+      "opta": 7,
+      "slot": 7,
+      "statsbomb": [13, 12, 9],
+      "wyscout": "rcmf3",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "opta": 8,
+      "slot": 8,
+      "statsbomb": [15, 16, 11],
+      "wyscout": "lcmf3",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "opta": 10,
+      "slot": 9,
+      "statsbomb": [17, 22],
+      "wyscout": "rwf",
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "opta": 11,
+      "slot": 10,
+      "statsbomb": [21, 24],
+      "wyscout": "lwf",
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [23, 25, 19],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "44": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "slot": 5,
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RM",
+      "slot": 6,
+      "wyscout": "rw",
+      "x": 58.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "wyscout": "rcmf",
+      "x": 58.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCM",
+      "slot": 8,
+      "wyscout": "lcmf",
+      "x": 58.0,
+      "y": 62.5
+    },
+    {
+      "code": "LM",
+      "slot": 9,
+      "wyscout": "lw",
+      "x": 58.0,
+      "y": 87.5
+    }
+  ],
+  "441": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "slot": 5,
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RM",
+      "slot": 6,
+      "wyscout": "rw",
+      "x": 58.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "wyscout": "rcmf",
+      "x": 58.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCM",
+      "slot": 8,
+      "wyscout": "lcmf",
+      "x": 58.0,
+      "y": 62.5
+    },
+    {
+      "code": "LM",
+      "slot": 9,
+      "wyscout": "lw",
+      "x": 58.0,
+      "y": 87.5
+    },
+    {
+      "code": "ST",
+      "slot": 10,
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "4411": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 2,
+      "statsbomb": [2],
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [3],
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "opta": 6,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 5,
+      "statsbomb": [6],
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RM",
+      "opta": 7,
+      "slot": 6,
+      "statsbomb": [12, 17],
+      "wyscout": "rw",
+      "x": 58.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCM",
+      "opta": 4,
+      "slot": 7,
+      "statsbomb": [9, 13],
+      "wyscout": "rcmf",
+      "x": 58.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCM",
+      "opta": 8,
+      "slot": 8,
+      "statsbomb": [11, 15],
+      "wyscout": "lcmf",
+      "x": 58.0,
+      "y": 62.5
+    },
+    {
+      "code": "LM",
+      "opta": 11,
+      "slot": 9,
+      "statsbomb": [16, 21],
+      "wyscout": "lw",
+      "x": 58.0,
+      "y": 87.5
+    },
+    {
+      "code": "CAM",
+      "opta": 10,
+      "slot": 10,
+      "statsbomb": [19, 25],
+      "wyscout": "amf",
+      "x": 74.0,
+      "y": 50.0
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [23],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "442": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 2,
+      "statsbomb": [2],
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [3],
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "opta": 6,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 5,
+      "statsbomb": [6],
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RM",
+      "opta": 7,
+      "slot": 6,
+      "statsbomb": [12, 17],
+      "wyscout": "rw",
+      "x": 58.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCM",
+      "opta": 4,
+      "slot": 7,
+      "statsbomb": [13, 9],
+      "wyscout": "rcmf",
+      "x": 58.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCM",
+      "opta": 8,
+      "slot": 8,
+      "statsbomb": [15, 11],
+      "wyscout": "lcmf",
+      "x": 58.0,
+      "y": 62.5
+    },
+    {
+      "code": "LM",
+      "opta": 11,
+      "slot": 9,
+      "statsbomb": [16, 21],
+      "wyscout": "lw",
+      "x": 58.0,
+      "y": 87.5
+    },
+    {
+      "code": "RCF",
+      "opta": 10,
+      "slot": 10,
+      "statsbomb": [22],
+      "wyscout": "ss",
+      "x": 90.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCF",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [24],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 62.5
+    }
+  ],
+  "451": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 2,
+      "statsbomb": [2],
+      "wyscout": "rb",
+      "x": 26.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [3],
+      "wyscout": "rcb",
+      "x": 26.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCB",
+      "opta": 6,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb",
+      "x": 26.0,
+      "y": 62.5
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 5,
+      "statsbomb": [6],
+      "wyscout": "lb",
+      "x": 26.0,
+      "y": 87.5
+    },
+    {
+      "code": "RM",
+      "opta": 7,
+      "slot": 6,
+      "statsbomb": [12, 17],
+      "wyscout": "rw",
+      "x": 58.0,
+      "y": 10.0
+    },
+    {
+      "code": "RCM",
+      "opta": 4,
+      "slot": 7,
+      "statsbomb": [13, 9],
+      "wyscout": "rcmf3",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "CM",
+      "opta": 10,
+      "slot": 8,
+      "statsbomb": [10, 14, 19],
+      "wyscout": "dmf",
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCM",
+      "opta": 8,
+      "slot": 9,
+      "statsbomb": [15, 11],
+      "wyscout": "lcmf3",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "LM",
+      "opta": 11,
+      "slot": 10,
+      "statsbomb": [16, 21],
+      "wyscout": "lw",
+      "x": 58.0,
+      "y": 90.0
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [23, 25],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "5221": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "statsbomb": [1],
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "statsbomb": [2],
+      "x": 26.0,
+      "y": 10.0
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "statsbomb": [3],
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "slot": 4,
+      "statsbomb": [4],
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "slot": 5,
+      "statsbomb": [5],
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "LB",
+      "slot": 6,
+      "statsbomb": [6],
+      "x": 26.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "statsbomb": [13, 9],
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 8,
+      "statsbomb": [15, 11],
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "slot": 9,
+      "statsbomb": [17],
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "slot": 10,
+      "statsbomb": [21],
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "ST",
+      "slot": 11,
+      "statsbomb": [23],
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "53": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "wyscout": "rb5",
+      "x": 26.0,
+      "y": 10.0
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "slot": 4,
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "slot": 5,
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "LB",
+      "slot": 6,
+      "wyscout": "lb5",
+      "x": 26.0,
+      "y": 90.0
+    },
+    {
+      "code": "CDM",
+      "slot": 7,
+      "wyscout": "dmf",
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCM",
+      "slot": 8,
+      "wyscout": "rcmf3",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 9,
+      "wyscout": "lcmf3",
+      "x": 58.0,
+      "y": 70.0
+    }
+  ],
+  "531": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "slot": 2,
+      "wyscout": "rb5",
+      "x": 26.0,
+      "y": 10.0
+    },
+    {
+      "code": "RCB",
+      "slot": 3,
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "slot": 4,
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "slot": 5,
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "LB",
+      "slot": 6,
+      "wyscout": "lb5",
+      "x": 26.0,
+      "y": 90.0
+    },
+    {
+      "code": "CDM",
+      "slot": 7,
+      "wyscout": "dmf",
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCM",
+      "slot": 8,
+      "wyscout": "rcmf3",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 9,
+      "wyscout": "lcmf3",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "ST",
+      "slot": 10,
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "532": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 2,
+      "statsbomb": [2, 7],
+      "wyscout": "rb5",
+      "x": 26.0,
+      "y": 10.0
+    },
+    {
+      "code": "RCB",
+      "opta": 6,
+      "slot": 3,
+      "statsbomb": [3],
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 5,
+      "slot": 4,
+      "statsbomb": [4],
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 5,
+      "statsbomb": [5],
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 6,
+      "statsbomb": [6, 8],
+      "wyscout": "lb5",
+      "x": 26.0,
+      "y": 90.0
+    },
+    {
+      "code": "CDM",
+      "opta": 8,
+      "slot": 7,
+      "statsbomb": [10, 14],
+      "wyscout": "dmf",
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCM",
+      "opta": 7,
+      "slot": 8,
+      "statsbomb": [13, 12, 18],
+      "wyscout": "rcmf3",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "opta": 11,
+      "slot": 9,
+      "statsbomb": [15, 16, 20],
+      "wyscout": "lcmf3",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCF",
+      "opta": 10,
+      "slot": 10,
+      "statsbomb": [22],
+      "wyscout": "ss",
+      "x": 90.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCF",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [24],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 62.5
+    }
+  ],
+  "532flat": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 6,
+      "slot": 2,
+      "statsbomb": [3],
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [4],
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 5,
+      "statsbomb": [7, 12, 17],
+      "wyscout": "rwb",
+      "x": 26.0,
+      "y": 10.0
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 6,
+      "statsbomb": [8, 16, 21],
+      "wyscout": "lwb",
+      "x": 26.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "opta": 7,
+      "slot": 7,
+      "statsbomb": [13, 18],
+      "wyscout": "rcmf3",
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "CM",
+      "opta": 11,
+      "slot": 8,
+      "statsbomb": [10, 14],
+      "wyscout": "dmf",
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCM",
+      "opta": 8,
+      "slot": 9,
+      "statsbomb": [15, 20],
+      "wyscout": "lcmf3",
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCF",
+      "opta": 10,
+      "slot": 10,
+      "statsbomb": [22],
+      "wyscout": "ss",
+      "x": 90.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCF",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [24],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 62.5
+    }
+  ],
+  "541": [
+    {
+      "code": "GK",
+      "opta": 1,
+      "slot": 1,
+      "statsbomb": [1],
+      "wyscout": "gk",
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "opta": 6,
+      "slot": 2,
+      "statsbomb": [3],
+      "wyscout": "rcb3",
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "opta": 5,
+      "slot": 3,
+      "statsbomb": [4],
+      "wyscout": "cb",
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "opta": 4,
+      "slot": 4,
+      "statsbomb": [5],
+      "wyscout": "lcb3",
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RB",
+      "opta": 2,
+      "slot": 5,
+      "statsbomb": [2, 7],
+      "wyscout": "rb5",
+      "x": 26.0,
+      "y": 10.0
+    },
+    {
+      "code": "LB",
+      "opta": 3,
+      "slot": 6,
+      "statsbomb": [6, 8],
+      "wyscout": "lb5",
+      "x": 26.0,
+      "y": 90.0
+    },
+    {
+      "code": "RM",
+      "opta": 7,
+      "slot": 7,
+      "statsbomb": [12, 18, 17],
+      "wyscout": "rw",
+      "x": 58.0,
+      "y": 12.5
+    },
+    {
+      "code": "RCM",
+      "opta": 8,
+      "slot": 8,
+      "statsbomb": [13, 9],
+      "wyscout": "rcmf",
+      "x": 58.0,
+      "y": 37.5
+    },
+    {
+      "code": "LCM",
+      "opta": 10,
+      "slot": 9,
+      "statsbomb": [15, 11],
+      "wyscout": "lcmf",
+      "x": 58.0,
+      "y": 62.5
+    },
+    {
+      "code": "LM",
+      "opta": 11,
+      "slot": 10,
+      "statsbomb": [16, 20, 21],
+      "wyscout": "lw",
+      "x": 58.0,
+      "y": 87.5
+    },
+    {
+      "code": "ST",
+      "opta": 9,
+      "slot": 11,
+      "statsbomb": [23],
+      "wyscout": "cf",
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "metodo": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCB",
+      "slot": 3,
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RWB",
+      "slot": 4,
+      "x": 42.0,
+      "y": 10.0
+    },
+    {
+      "code": "CDM",
+      "slot": 5,
+      "x": 42.0,
+      "y": 50.0
+    },
+    {
+      "code": "LWB",
+      "slot": 6,
+      "x": 42.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 8,
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "slot": 9,
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "slot": 10,
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "ST",
+      "slot": 11,
+      "x": 90.0,
+      "y": 50.0
+    }
+  ],
+  "pyramid": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCB",
+      "slot": 3,
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RCM",
+      "slot": 4,
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "CM",
+      "slot": 5,
+      "x": 58.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCM",
+      "slot": 6,
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "slot": 7,
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "slot": 8,
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "RCF",
+      "slot": 9,
+      "x": 90.0,
+      "y": 30.0
+    },
+    {
+      "code": "ST",
+      "slot": 10,
+      "x": 90.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCF",
+      "slot": 11,
+      "x": 90.0,
+      "y": 70.0
+    }
+  ],
+  "wm": [
+    {
+      "code": "GK",
+      "slot": 1,
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "code": "RCB",
+      "slot": 2,
+      "x": 26.0,
+      "y": 30.0
+    },
+    {
+      "code": "CB",
+      "slot": 3,
+      "x": 26.0,
+      "y": 50.0
+    },
+    {
+      "code": "LCB",
+      "slot": 4,
+      "x": 26.0,
+      "y": 70.0
+    },
+    {
+      "code": "RDM",
+      "slot": 5,
+      "x": 42.0,
+      "y": 37.5
+    },
+    {
+      "code": "LDM",
+      "slot": 6,
+      "x": 42.0,
+      "y": 62.5
+    },
+    {
+      "code": "RCM",
+      "slot": 7,
+      "x": 58.0,
+      "y": 30.0
+    },
+    {
+      "code": "LCM",
+      "slot": 8,
+      "x": 58.0,
+      "y": 70.0
+    },
+    {
+      "code": "RW",
+      "slot": 9,
+      "x": 74.0,
+      "y": 10.0
+    },
+    {
+      "code": "LW",
+      "slot": 10,
+      "x": 74.0,
+      "y": 90.0
+    },
+    {
+      "code": "ST",
+      "slot": 11,
+      "x": 90.0,
+      "y": 50.0
+    }
+  ]
+}

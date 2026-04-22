@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/recovery-event.schema.json",
+  "title": "RecoveryEvent",
+  "description": "Canonical ball recovery event normalized into Campos pitch space.",
+  "type": "object",
+  "required": [
+    "kind",
+    "id",
+    "matchId",
+    "teamId",
+    "playerId",
+    "playerName",
+    "minute",
+    "addedMinute",
+    "second",
+    "period",
+    "x",
+    "y",
+    "provider",
+    "providerEventId"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "kind": {
+      "const": "recovery",
+      "description": "Discriminant for the event union."
+    },
+    "id": {
+      "type": "string",
+      "description": "Stable Campos event identifier."
+    },
+    "matchId": {
+      "type": "string",
+      "description": "Match identifier in the consuming app or source dataset."
+    },
+    "teamId": {
+      "type": "string",
+      "description": "Identifier for the team recovering the ball."
+    },
+    "playerId": {
+      "type": ["string", "null"],
+      "description": "Provider player identifier when available."
+    },
+    "playerName": {
+      "type": ["string", "null"],
+      "description": "Display-ready player name when present in the source feed."
+    },
+    "minute": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 200
+    },
+    "addedMinute": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "description": "Stoppage-time minute offset, null when not in added time."
+    },
+    "second": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 59
+    },
+    "period": {
+      "type": "integer",
+      "enum": [1, 2, 3, 4, 5],
+      "description": "Match period: 1-2 regular halves, 3-4 extra time, 5 penalty shootout."
+    },
+    "x": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Campos pitch x-coordinate (0 = own goal line, 100 = opposition goal line). Null for events without coordinates."
+    },
+    "y": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Campos pitch y-coordinate (0 = attacker's right, 100 = attacker's left). Null for events without coordinates."
+    },
+    "provider": {
+      "type": "string",
+      "description": "Source provider identifier such as opta, statsbomb, or whoscored."
+    },
+    "providerEventId": {
+      "type": "string",
+      "description": "Raw event identifier from the source provider."
+    },
+    "sourceMeta": {
+      "type": ["object", "null"],
+      "additionalProperties": true,
+      "description": "Provider-scoped metadata bag for provenance and advanced debugging. It must stay JSON-serializable, must not duplicate canonical top-level fields, and must not reinterpret raw provider semantics into fake cross-provider meaning."
+    }
+  }
+}

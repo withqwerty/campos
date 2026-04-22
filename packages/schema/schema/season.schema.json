@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Season",
+  "description": "Season metadata. Only id is required.",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": ["string", "null"] },
+    "competitionId": { "type": ["string", "null"] }
+  },
+  "required": ["id"]
+}

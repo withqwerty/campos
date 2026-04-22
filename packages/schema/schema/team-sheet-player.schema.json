@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/team-sheet-player.schema.json",
+  "title": "TeamSheetPlayer",
+  "description": "Canonical lineup or bench player entry for a match-day team sheet.",
+  "type": "object",
+  "required": ["playerId"],
+  "additionalProperties": false,
+  "properties": {
+    "playerId": {
+      "type": "string",
+      "description": "Stable provider or canonical player identifier."
+    },
+    "label": {
+      "type": ["string", "null"],
+      "description": "Display-ready player name when known."
+    },
+    "number": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "description": "Shirt number when the source provides it."
+    },
+    "positionCode": {
+      "type": ["string", "null"],
+      "description": "Provider-normalized or canonical position code when known."
+    },
+    "slot": {
+      "type": ["integer", "null"],
+      "minimum": 1,
+      "description": "Formation slot when the player belongs to a formation snapshot."
+    },
+    "captain": {
+      "type": "boolean",
+      "description": "True when this player is the team's captain."
+    },
+    "starter": {
+      "type": "boolean",
+      "description": "True when this player is in the starting XI."
+    },
+    "substitutedIn": {
+      "type": "boolean",
+      "description": "True when the player entered as a substitute."
+    },
+    "substitutedOut": {
+      "type": "boolean",
+      "description": "True when the player left the pitch as a substitution."
+    },
+    "minuteOn": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "maximum": 200,
+      "description": "Minute the player entered the pitch, when derivable."
+    },
+    "minuteOff": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "maximum": 200,
+      "description": "Minute the player left the pitch, when derivable."
+    },
+    "rating": {
+      "type": ["number", "null"],
+      "description": "Provider-supplied player rating when available."
+    },
+    "x": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Campos pitch x-coordinate override when the source provides explicit formation coordinates."
+    },
+    "y": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Campos pitch y-coordinate override when the source provides explicit formation coordinates."
+    },
+    "sourceMeta": {
+      "type": ["object", "null"],
+      "additionalProperties": true,
+      "description": "Provider-scoped metadata bag for provenance and advanced debugging. It must stay JSON-serializable, must not duplicate canonical top-level fields, and must not reinterpret raw provider semantics into fake cross-provider meaning."
+    }
+  }
+}

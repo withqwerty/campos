@@ -1,0 +1,67 @@
+{
+  "name": "@withqwerty/campos-static",
+  "version": "0.1.0-alpha.0",
+  "description": "Node-side static export for Campos charts — render chart specs to SVG or PNG via react-dom/server and sharp.",
+  "license": "MIT",
+  "author": "withqwerty <rahulkeerthi2@gmail.com>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist/index.js",
+    "dist/index.js.map",
+    "dist/index.d.ts",
+    "dist/index.d.ts.map",
+    "dist/src",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withqwerty/campos.git",
+    "directory": "packages/static"
+  },
+  "homepage": "https://campos.withqwerty.com",
+  "bugs": {
+    "url": "https://github.com/withqwerty/campos/issues"
+  },
+  "keywords": [
+    "football",
+    "soccer",
+    "data-visualization",
+    "typescript",
+    "campos",
+    "static",
+    "export",
+    "png",
+    "svg",
+    "ssr",
+    "sharp",
+    "og-image"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json && mv dist/static/* dist/ && rmdir dist/static"
+  },
+  "dependencies": {
+    "@withqwerty/campos-react": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "sharp": "^0.34.0"
+  },
+  "peerDependenciesMeta": {
+    "sharp": {
+      "optional": true
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "matchInfo": {
+    "id": "duklz4bwjxf7gne6j5gq20qnd",
+    "description": "Everton vs Watford",
+    "contestant": [
+      {
+        "id": "ehd2iemqmschhj2ec0vayztzz",
+        "name": "Everton",
+        "shortName": "Everton",
+        "officialName": "Everton FC",
+        "code": "EVE",
+        "position": "home"
+      },
+      {
+        "id": "4t83rqbdbekinxl5fz2ygsyta",
+        "name": "Watford",
+        "shortName": "Watford",
+        "officialName": "Watford FC",
+        "code": "WAT",
+        "position": "away"
+      }
+    ]
+  },
+  "liveData": {
+    "event": [
+      {
+        "id": 1608522038,
+        "eventId": 119,
+        "typeId": 16,
+        "periodId": 1,
+        "timeMin": 13,
+        "timeSec": 0,
+        "contestantId": "4t83rqbdbekinxl5fz2ygsyta",
+        "playerId": "dq7sreeigwha462ih1rx93105",
+        "playerName": "M. Layún",
+        "outcome": 1,
+        "x": 88.7,
+        "y": 46,
+        "qualifier": [
+          { "qualifierId": 17 },
+          { "qualifierId": 20 },
+          { "qualifierId": 22 },
+          { "qualifierId": 56, "value": "Center" },
+          { "qualifierId": 77 },
+          { "qualifierId": 102, "value": "53.3" },
+          { "qualifierId": 103, "value": "22.2" },
+          { "qualifierId": 113 },
+          { "qualifierId": 193, "value": "2" },
+          { "qualifierId": 213, "value": "0.24" }
+        ]
+      }
+    ]
+  }
+}
