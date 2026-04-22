@@ -4,6 +4,11 @@ Campos is a React-first TypeScript component library for football visualizations
 
 Docs and examples: `https://campos.withqwerty.com`
 
+For the first alpha, prefer `npm install` when consuming the published packages.
+`npm` resolves the live scoped publishes correctly, while some package managers
+that rely on npm's abbreviated metadata endpoint can still see temporary `404`
+responses on fresh publishes.
+
 The current public package story is:
 
 - `@withqwerty/campos-react` — primary runtime package for chart components and chart-level React APIs

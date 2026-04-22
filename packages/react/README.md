@@ -11,11 +11,16 @@ Docs and examples live at `https://campos.withqwerty.com`.
 ## Install
 
 ```bash
-pnpm add @withqwerty/campos-react react react-dom
+npm install @withqwerty/campos-react react react-dom
 ```
 
 If your data still needs provider normalization, also install
 `@withqwerty/campos-adapters`.
+
+For the first alpha, prefer `npm install` over `pnpm add` for published Campos
+packages. npm resolves the live scoped publish metadata correctly, while npm's
+abbreviated metadata endpoint can still return temporary `404` responses to
+other package managers immediately after publish.
 
 ## Quick start
 

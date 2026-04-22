@@ -62,10 +62,10 @@ for the composition contract.
 
 ```bash
 # SVG only
-pnpm add @withqwerty/campos-static
+npm install @withqwerty/campos-static
 
 # SVG + PNG
-pnpm add @withqwerty/campos-static sharp
+npm install @withqwerty/campos-static sharp
 ```
 
 See `https://campos.withqwerty.com` for docs and examples, and the main
