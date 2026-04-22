@@ -21,8 +21,6 @@ apps/*/.astro/
 .remember/
 .agents/
 skills-lock.json
-AGENTS.md
-CLAUDE.md
 
 # Gate runner outputs — regenerated on each run; review markdown files are committed
 docs/reviews/screenshots/**/*.png
@@ -46,6 +44,8 @@ lab
 !/scripts/repo-split/
 scripts/repo-split/*
 !/scripts/repo-split/*.mjs
+!/scripts/repo-split/templates/
+!/scripts/repo-split/templates/*.md
 .tmp-playwright
 .playwright-mcp
 .env
