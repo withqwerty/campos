@@ -38,14 +38,6 @@ packages/*/src/*.d.ts.map
 docs/solutions
 docs/superpowers
 lab
-/scripts
-!/scripts/
-/scripts/*
-!/scripts/repo-split/
-scripts/repo-split/*
-!/scripts/repo-split/*.mjs
-!/scripts/repo-split/templates/
-!/scripts/repo-split/templates/*.md
 .tmp-playwright
 .playwright-mcp
 .env
