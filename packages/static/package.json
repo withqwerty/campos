@@ -1,6 +1,6 @@
 {
   "name": "@withqwerty/campos-static",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0-alpha.1",
   "description": "Node-side static export for Campos charts — render chart specs to SVG or PNG via react-dom/server and sharp.",
   "license": "MIT",
   "author": "withqwerty <rahulkeerthi2@gmail.com>",

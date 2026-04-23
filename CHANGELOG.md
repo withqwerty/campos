@@ -8,6 +8,29 @@ alpha release cadence.
 
 ## [Unreleased]
 
+## [0.1.0-alpha.1] - 2026-04-23
+
+### Fixed
+
+- **`@withqwerty/campos-adapters`** — `fromUnderstat.shots()` no longer infers
+  extra-time periods from the scrape-backed minute field. Understat's shot
+  clock is minute-only, so raw values like `47` were previously ambiguous and
+  values `>= 90` were incorrectly promoted to period 3/4. Campos now resolves
+  this lossy seam by treating `46..90` as second-half regulation and `90+` as
+  second-half stoppage time (`minute: 90, addedMinute: minute - 90,
+period: 2`), and never invents extra-time periods from this provider.
+- **`@withqwerty/campos-react`** — `computeXGTimeline` now derives
+  `hasExtraTime` from explicit `period === 3 || 4` markers rather than from
+  end-minute > 90, so Understat matches (which can never produce extra-time
+  periods under the new adapter contract) no longer render spurious extra-time
+  pills in the xG timeline.
+
+### Changed
+
+- Adapter contract and gap matrix now document Understat's minute-only shot
+  clock limitation explicitly, so downstream consumers know this lossy edge
+  is handled by policy rather than invention.
+
 ## [0.1.0-alpha.0] - 2026-04-22
 
 ### Added
