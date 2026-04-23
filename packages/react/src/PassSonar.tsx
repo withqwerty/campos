@@ -167,6 +167,21 @@ export type PassSonarTextStyle = {
   fontSize?: StyleValue<number, PassSonarTextStyleContext>;
 };
 
+export type PassSonarStaticLegendSpec =
+  | {
+      kind: "items";
+      items: Array<{ key: string; label: string; color: string }>;
+    }
+  | {
+      kind: "scale";
+      label: string;
+      startLabel: string;
+      endLabel: string;
+      colors: string[];
+      tickAt?: number;
+      tickLabel?: string;
+    };
+
 /**
  * Props for the `<PassSonar>` React component.
  *
@@ -1364,6 +1379,95 @@ function renderLegend({
       theme={theme}
     />
   );
+}
+
+export function resolvePassSonarStaticLegendSpec(
+  props: PassSonarProps,
+  theme: UITheme = LIGHT_THEME,
+): PassSonarStaticLegendSpec | null {
+  if (props.showLegend === false) return null;
+
+  const colorBy: PassSonarColorBy = props.colorBy ?? "completion";
+  const model = computePassSonar({
+    passes: props.passes,
+    ...(props.subjectLabel != null ? { subjectLabel: props.subjectLabel } : {}),
+    ...(props.subjectId != null ? { subjectId: props.subjectId } : {}),
+    ...(props.subjectKind != null ? { subjectKind: props.subjectKind } : {}),
+    ...(props.scaleMaxAttempts != null
+      ? { scaleMaxAttempts: props.scaleMaxAttempts }
+      : {}),
+    ...(props.scaleMaxLength != null ? { scaleMaxLength: props.scaleMaxLength } : {}),
+    ...(props.metricForPass != null ? { metricForPass: props.metricForPass } : {}),
+    ...(props.binCount != null ? { binCount: props.binCount } : {}),
+    ...(props.lengthBy != null ? { lengthBy: props.lengthBy } : {}),
+  });
+  const spec = resolveEncodingSpec(props, model, theme);
+  const palette = resolveThemePalette(props.seriesColors, theme) ?? [
+    "#3b82f6",
+    "#22c55e",
+  ];
+
+  if (colorBy === "distance") {
+    return {
+      kind: "scale",
+      label: "Avg pass distance",
+      startLabel: "0",
+      endLabel: `${spec.distanceClipMax}+`,
+      colors: spec.distanceStops.map((stop) => stop.color),
+    };
+  }
+
+  if (colorBy === "frequency") {
+    return {
+      kind: "scale",
+      label: "Passes per bin",
+      startLabel: "0",
+      endLabel: model.meta.empty ? "—" : `${Math.round(spec.resolvedFrequencyClip)}`,
+      colors: spec.frequencyStops.map((stop) => stop.color),
+    };
+  }
+
+  if (colorBy === "metric") {
+    if (spec.resolvedMetricCenter === "zero") {
+      const [lo, hi] = spec.resolvedMetricDomain;
+      return {
+        kind: "scale",
+        label: "Metric",
+        startLabel: lo.toFixed(2),
+        endLabel: `+${hi.toFixed(2)}`,
+        colors: spec.metricStops.map((stop) => stop.color),
+        tickAt: 0.5,
+        tickLabel: "0",
+      };
+    }
+
+    return {
+      kind: "scale",
+      label: "Metric",
+      startLabel:
+        model.meta.metricRange == null ? "min" : model.meta.metricRange.min.toFixed(2),
+      endLabel:
+        model.meta.metricRange == null ? "max" : model.meta.metricRange.max.toFixed(2),
+      colors: spec.metricStops.map((stop) => stop.color),
+    };
+  }
+
+  if (colorBy === "none") {
+    return {
+      kind: "items",
+      items: [
+        { key: "attempted", label: "Attempted passes", color: palette[0] ?? "#3b82f6" },
+      ],
+    };
+  }
+
+  return {
+    kind: "items",
+    items: [
+      { key: "attempted", label: "Attempted passes", color: palette[0] ?? "#3b82f6" },
+      { key: "completed", label: "Completed passes", color: palette[1] ?? "#22c55e" },
+    ],
+  };
 }
 
 // ---------------------------------------------------------------------------

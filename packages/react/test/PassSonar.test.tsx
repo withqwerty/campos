@@ -289,16 +289,17 @@ describe("PassSonar", () => {
   });
 
   test("wedge paths are annular — they do not start at the chart centre", () => {
-    // The summary text sits on a centre hub of radius SUMMARY_INNER_R = 36.
-    // Wedge paths must not include the centre point (160, 160) — that would
-    // mean the wedge fills the hub and obscures the summary.
+    // The summary text sits on a centre hub. Wedge paths must not include
+    // the centre point (160, 160) — that would mean the wedge fills the hub
+    // and obscures the summary. The presence of an arc command (`A ...`) is
+    // the semantic signal that the wedge is annular; the numeric hub radius
+    // is exercised separately by the hub-circle test below.
     const { getByTestId } = render(<PassSonar passes={SAMPLE_PASSES} />);
     const wedge = getByTestId("pass-sonar-wedge-0");
     const path = wedge.querySelector("path");
     const d = path?.getAttribute("d") ?? "";
     expect(d).not.toContain("M 160 160");
-    // The annular wedge must include an inner-arc instruction (A 36 36 ...).
-    expect(d).toContain("A 36 36");
+    expect(d).toMatch(/\bA\s+\d/);
   });
 
   test("hub circle is rendered behind the summary block", () => {

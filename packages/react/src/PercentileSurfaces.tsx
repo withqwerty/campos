@@ -199,6 +199,11 @@ const EMPTY_STATE_COPY: Record<string, string> = {
   missingComparisonLabel: "Missing comparison sample",
 };
 
+export const PERCENTILE_BAR_STATIC_VIEWBOX = {
+  width: BAR_VIEWBOX_WIDTH,
+  height: BAR_VIEWBOX_HEIGHT,
+} as const;
+
 function accessibleLabelString(label: PercentileAccessibleLabel | null): string {
   if (label == null) return "";
   const parts = [label.metricLabel, label.percentileText, label.sampleText];
@@ -270,15 +275,27 @@ function useWarningsEffect(
 // PercentileBar
 // ---------------------------------------------------------------------------
 
-export function PercentileBar(props: PercentileBarProps) {
-  const theme = useTheme();
-  const resolved: PercentileBarProps = useMemo(() => {
-    if (!props.recipe) return props;
-    const base = mergeChartRecipeProps<PercentileBarProps>(props.recipe);
-    return { ...base, ...props } as PercentileBarProps;
-  }, [props]);
-  void theme;
+type PercentileBarSvgProps = {
+  resolved: PercentileBarProps;
+  theme: UITheme;
+  width: string | number;
+  height: string | number;
+  preserveAspectRatio: string;
+  focusable?: boolean;
+  tabIndex?: number;
+  responsive?: boolean;
+};
 
+function PercentileBarSvg({
+  resolved,
+  theme,
+  width,
+  height,
+  preserveAspectRatio,
+  focusable,
+  tabIndex,
+  responsive = false,
+}: PercentileBarSvgProps) {
   const {
     metric,
     comparison,
@@ -315,10 +332,14 @@ export function PercentileBar(props: PercentileBarProps) {
       role="img"
       direction="ltr"
       viewBox={`0 0 ${BAR_VIEWBOX_WIDTH} ${BAR_VIEWBOX_HEIGHT}`}
-      width={BAR_VIEWBOX_WIDTH}
-      height={BAR_VIEWBOX_HEIGHT}
-      preserveAspectRatio="xMinYMid meet"
-      style={{ maxWidth: "100%", height: "auto", display: "block" }}
+      width={width}
+      height={height}
+      preserveAspectRatio={preserveAspectRatio}
+      style={
+        responsive
+          ? { maxWidth: "100%", height: "auto", display: "block" }
+          : { display: "block" }
+      }
       aria-label={ariaLabel}
       aria-description={
         model.meta.invalidReason != null
@@ -326,8 +347,8 @@ export function PercentileBar(props: PercentileBarProps) {
           : undefined
       }
       data-slot="percentile-bar"
-      tabIndex={0}
-      focusable={true}
+      {...(tabIndex != null ? { tabIndex } : {})}
+      {...(focusable != null ? { focusable } : {})}
     >
       {model.meta.invalidReason != null ? (
         <ChartSvgEmptyState
@@ -357,6 +378,45 @@ export function PercentileBar(props: PercentileBarProps) {
         />
       )}
     </svg>
+  );
+}
+
+function resolvePercentileBarProps(props: PercentileBarProps): PercentileBarProps {
+  if (!props.recipe) return props;
+  const base = mergeChartRecipeProps<PercentileBarProps>(props.recipe);
+  return { ...base, ...props } as PercentileBarProps;
+}
+
+export function PercentileBar(props: PercentileBarProps) {
+  const theme = useTheme();
+  const resolved = useMemo(() => resolvePercentileBarProps(props), [props]);
+
+  return (
+    <PercentileBarSvg
+      resolved={resolved}
+      theme={theme}
+      width={BAR_VIEWBOX_WIDTH}
+      height={BAR_VIEWBOX_HEIGHT}
+      preserveAspectRatio="xMinYMid meet"
+      tabIndex={0}
+      focusable={true}
+      responsive={true}
+    />
+  );
+}
+
+export function PercentileBarStaticSvg(props: PercentileBarProps) {
+  const theme = useTheme();
+  const resolved = useMemo(() => resolvePercentileBarProps(props), [props]);
+
+  return (
+    <PercentileBarSvg
+      resolved={resolved}
+      theme={theme}
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+    />
   );
 }
 

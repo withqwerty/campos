@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import type { Event, MatchContext } from "@withqwerty/campos-schema";
+import { EVENT_KINDS, type Event, type MatchContext } from "@withqwerty/campos-schema";
 
 import { fromOpta } from "../../src/index";
 
@@ -48,7 +48,9 @@ describe("fromOpta.events — mixed event stream", () => {
 
   it("every event has valid base fields", () => {
     for (const event of events) {
-      expect(event.kind).toBeDefined();
+      // Bind the kind check to the production EVENT_KINDS const so adding a
+      // new event kind forces this test to recognise it in one place.
+      expect(EVENT_KINDS).toContain(event.kind);
       expect(typeof event.id).toBe("string");
       expect(event.id.length).toBeGreaterThan(0);
       expect(typeof event.provider).toBe("string");

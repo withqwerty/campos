@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { normalizeStatsBombClock } from "../../src/statsbomb/clock.js";
 import type { StatsBombEvent } from "../../src/statsbomb/parse.js";
 
-import argentinaVsFranceExtraTime from "../fixtures/statsbomb-raw-extra-time-argentina-vs-france.json";
+import argentinaVsFranceExtraTime from "../fixtures/statsbomb/raw-extra-time-argentina-vs-france.json";
 
 function buildEvent(
   overrides: Partial<Pick<StatsBombEvent, "period" | "minute" | "second">> = {},

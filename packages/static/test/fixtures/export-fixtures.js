@@ -116,6 +116,19 @@ export const radarRows = [
   { metric: "Pressures", value: 40, percentile: 71, category: "Defending" },
 ];
 
+export const percentileMetric = {
+  id: "prog-passes",
+  label: "Progressive passes",
+  percentile: 72,
+  rawValue: 6.4,
+  rawValueUnit: " /90",
+};
+
+export const percentileComparison = {
+  label: "Premier League wingers",
+  seasonLabel: "2025/26",
+};
+
 export function buildGoldenSpecs(createExportFrameSpec) {
   return [
     {
@@ -228,6 +241,83 @@ export function buildGoldenSpecs(createExportFrameSpec) {
       spec: createExportFrameSpec({
         title: "Radar",
         chart: { kind: "radar-chart", props: { rows: radarRows } },
+      }),
+    },
+    {
+      id: "percentile-bar",
+      spec: createExportFrameSpec({
+        title: "Percentile",
+        chart: {
+          kind: "percentile-bar",
+          props: {
+            metric: percentileMetric,
+            comparison: percentileComparison,
+          },
+        },
+      }),
+    },
+    {
+      id: "pass-sonar",
+      spec: createExportFrameSpec({
+        title: "Pass sonar",
+        chart: {
+          kind: "pass-sonar",
+          props: {
+            passes: [
+              {
+                kind: "pass",
+                id: "pass-2",
+                matchId: "m1",
+                teamId: "home",
+                playerId: "p1",
+                playerName: "Rice",
+                minute: 14,
+                addedMinute: null,
+                second: 10,
+                period: 1,
+                x: 45,
+                y: 48,
+                endX: 72,
+                endY: 35,
+                length: 30,
+                angle: 0.2,
+                recipient: "Saka",
+                passResult: "complete",
+                passType: "ground",
+                isAssist: false,
+                provider: "opta",
+                providerEventId: "pass-2",
+                sourceMeta: {},
+              },
+              {
+                kind: "pass",
+                id: "pass-3",
+                matchId: "m1",
+                teamId: "home",
+                playerId: "p1",
+                playerName: "Rice",
+                minute: 18,
+                addedMinute: null,
+                second: 22,
+                period: 1,
+                x: 46,
+                y: 50,
+                endX: 58,
+                endY: 66,
+                length: 20,
+                angle: 0.8,
+                recipient: "Martinelli",
+                passResult: "incomplete",
+                passType: "ground",
+                isAssist: false,
+                provider: "opta",
+                providerEventId: "pass-3",
+                sourceMeta: {},
+              },
+            ],
+            subjectLabel: "Rice",
+          },
+        },
       }),
     },
   ];

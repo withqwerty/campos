@@ -63,11 +63,16 @@ describe("<Pitch>", () => {
       </Pitch>,
     );
     const [outerSvg, innerSvg] = Array.from(container.querySelectorAll("svg"));
+    // Half-pitch viewBox spans the attacking half: x-origin 52.5, width 52.5,
+    // y-origin 0, height 68. Exact string match on the whole viewBox is fine
+    // because these four values together identify the crop; but parse the
+    // inner svg attributes numerically so float drift doesn't produce a
+    // rare mismatch if Pitch later rounds to more decimal places.
     expect(outerSvg?.getAttribute("viewBox")).toBe("52.5 0 52.5 68");
-    expect(innerSvg?.getAttribute("x")).toBe("52.5");
-    expect(innerSvg?.getAttribute("y")).toBe("0");
-    expect(innerSvg?.getAttribute("width")).toBe("52.5");
-    expect(innerSvg?.getAttribute("height")).toBe("68");
+    expect(Number(innerSvg?.getAttribute("x"))).toBeCloseTo(52.5, 3);
+    expect(Number(innerSvg?.getAttribute("y"))).toBe(0);
+    expect(Number(innerSvg?.getAttribute("width"))).toBeCloseTo(52.5, 3);
+    expect(Number(innerSvg?.getAttribute("height"))).toBe(68);
   });
 
   it("places the inner svg at the absolute crop origin for vertical half attack", () => {

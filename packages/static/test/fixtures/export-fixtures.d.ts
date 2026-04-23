@@ -24,6 +24,17 @@ export declare const passes: ComputePassMapInput["passes"];
 export declare const heatmapEvents: HeatmapEvent[];
 export declare const scatterPoints: Array<Record<string, string | number>>;
 export declare const radarRows: RadarChartRow[];
+export declare const percentileMetric: {
+  id: string;
+  label: string;
+  percentile: number;
+  rawValue: number;
+  rawValueUnit: string;
+};
+export declare const percentileComparison: {
+  label: string;
+  seasonLabel: string;
+};
 
 export declare function buildGoldenSpecs(
   createSpec: CreateExportFrameSpec,

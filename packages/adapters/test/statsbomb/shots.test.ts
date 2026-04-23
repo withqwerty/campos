@@ -117,8 +117,7 @@ describe("fromStatsBomb.shots", () => {
       (s) => s.providerEventId === "c577e730-b9f5-44f2-9257-9e7730c23d7b",
     );
 
-    expect(setPieceShot).toBeDefined();
-    expect((setPieceShot as NonNullable<typeof setPieceShot>).context).toBe("set-piece");
+    expect(setPieceShot).toMatchObject({ context: "set-piece" });
   });
 
   it("maps direct free-kick context from shot.type.name using a real fixture", () => {
@@ -143,8 +142,7 @@ describe("fromStatsBomb.shots", () => {
       (s) => s.providerEventId === "b2c3d59d-3bef-4f8a-ad86-26b69940c64e",
     );
 
-    expect(cornerShot).toBeDefined();
-    expect((cornerShot as NonNullable<typeof cornerShot>).context).toBe("from-corner");
+    expect(cornerShot).toMatchObject({ context: "from-corner" });
   });
 
   it("maps fast-break context from From Counter play pattern", () => {
@@ -153,8 +151,7 @@ describe("fromStatsBomb.shots", () => {
       (s) => s.providerEventId === "4a223f2d-3c3f-4655-b561-9c43a03b0f42",
     );
 
-    expect(counterShot).toBeDefined();
-    expect((counterShot as NonNullable<typeof counterShot>).context).toBe("fast-break");
+    expect(counterShot).toMatchObject({ context: "fast-break" });
   });
 
   it("normalizes real Bayer vs Bremen shots with correct field structure", () => {

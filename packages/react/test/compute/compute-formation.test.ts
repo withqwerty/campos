@@ -75,11 +75,14 @@ describe("formation-positions.json (generated)", () => {
     }
   });
 
-  it("each slot has a non-empty position code", () => {
+  it("each slot has a non-empty position code matching the expected pattern", () => {
+    // Codes are typically 2-4 uppercase letters, optionally suffixed by L/R
+    // (e.g. GK, CB, LCM, AMR, DMC, LWB). The pattern guards against null,
+    // empty strings, whitespace, and accidentally lowercased inputs.
+    const pattern = /^[A-Z]{1,5}$/;
     for (const [name, slots] of Object.entries(formationPositions)) {
       for (const slot of slots) {
-        expect(slot.code, `${name} slot ${slot.slot}`).toBeTruthy();
-        expect(typeof slot.code, `${name} slot ${slot.slot}`).toBe("string");
+        expect(slot.code, `${name} slot ${slot.slot}`).toMatch(pattern);
       }
     }
   });

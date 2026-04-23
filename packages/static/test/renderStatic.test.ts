@@ -21,6 +21,8 @@ import {
   buildEmptyStateSpec,
   buildGoldenSpecs,
   buildLongTextSpec,
+  percentileComparison,
+  percentileMetric,
   buildThemeSpecs,
 } from "./fixtures/export-fixtures.js";
 
@@ -133,6 +135,23 @@ const radarRows: RadarChartRow[] = [
   { metric: "Assists", value: 9, percentile: 88, category: "Creation" },
   { metric: "Pressures", value: 40, percentile: 71, category: "Defending" },
 ];
+
+function buildIncompletePass(id: string): ComputePassMapInput["passes"][number] {
+  const base = passes[0];
+  if (base == null) {
+    throw new Error("Expected pass fixture");
+  }
+
+  return {
+    ...base,
+    id,
+    providerEventId: id,
+    endX: 60,
+    endY: 66,
+    angle: 0.9,
+    passResult: "incomplete",
+  };
+}
 
 describe("@withqwerty/campos-static", () => {
   it("renders a standalone SVG card", () => {
@@ -363,6 +382,34 @@ describe("@withqwerty/campos-static", () => {
         }),
         expected: "Goals",
       },
+      {
+        title: "Percentile",
+        spec: createExportFrameSpec({
+          title: "Percentile",
+          chart: {
+            kind: "percentile-bar",
+            props: {
+              metric: percentileMetric,
+              comparison: percentileComparison,
+            },
+          },
+        }),
+        expected: "Progressive passes",
+      },
+      {
+        title: "Pass sonar",
+        spec: createExportFrameSpec({
+          title: "Pass sonar",
+          chart: {
+            kind: "pass-sonar",
+            props: {
+              passes: [...passes, buildIncompletePass("pass-2")],
+              subjectLabel: "Rice",
+            },
+          },
+        }),
+        expected: "Pass sonar for Rice",
+      },
     ];
 
     for (const testCase of cases) {
@@ -426,6 +473,316 @@ describe("@withqwerty/campos-static", () => {
     expect(svg).toContain("full-pitch only");
   });
 
+  it("suppresses frame legends when export chart props disable them", () => {
+    const multiResultPasses: ComputePassMapInput["passes"] = [
+      ...passes,
+      buildIncompletePass("pass-2"),
+    ];
+
+    const shotSvg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Shots",
+        chart: {
+          kind: "shot-map",
+          props: {
+            shots,
+            showLegend: false,
+          },
+        },
+      }),
+    );
+    expect(shotSvg).not.toContain(">Goal<");
+
+    const passMapSvg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Passes",
+        chart: {
+          kind: "pass-map",
+          props: {
+            passes: multiResultPasses,
+            showLegend: false,
+          },
+        },
+      }),
+    );
+    expect(passMapSvg).not.toContain(">Complete<");
+    expect(passMapSvg).not.toContain(">Incomplete<");
+
+    const passSonarSvg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Pass sonar",
+        chart: {
+          kind: "pass-sonar",
+          props: {
+            passes: multiResultPasses,
+            subjectLabel: "Rice",
+            showLegend: false,
+          },
+        },
+      }),
+    );
+    expect(passSonarSvg).not.toContain(">Attempted passes<");
+    expect(passSonarSvg).not.toContain(">Completed passes<");
+  });
+
+  it("suppresses pass-flow export legends when showLegend=false", () => {
+    const svg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Flow",
+        chart: {
+          kind: "pass-flow",
+          props: {
+            passes,
+            minCountForArrow: 1,
+            metricLabel: "Danger flow",
+            showLegend: false,
+          },
+        },
+      }),
+    );
+
+    expect(svg).not.toContain(">DANGER FLOW<");
+  });
+
+  it("matches pass-sonar export legends to the active colorBy mode", () => {
+    const sonarPasses: ComputePassMapInput["passes"] = [
+      ...passes,
+      buildIncompletePass("pass-2"),
+    ];
+
+    const noneSvg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Pass sonar none",
+        chart: {
+          kind: "pass-sonar",
+          props: {
+            passes: sonarPasses,
+            colorBy: "none",
+          },
+        },
+      }),
+    );
+    expect(noneSvg).toContain(">Attempted passes<");
+    expect(noneSvg).not.toContain(">Completed passes<");
+
+    const distanceSvg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Pass sonar distance",
+        chart: {
+          kind: "pass-sonar",
+          props: {
+            passes: sonarPasses,
+            colorBy: "distance",
+          },
+        },
+      }),
+    );
+    expect(distanceSvg).toContain(">AVG PASS DISTANCE<");
+    expect(distanceSvg).not.toContain(">Completed passes<");
+
+    const frequencySvg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Pass sonar frequency",
+        chart: {
+          kind: "pass-sonar",
+          props: {
+            passes: sonarPasses,
+            colorBy: "frequency",
+          },
+        },
+      }),
+    );
+    expect(frequencySvg).toContain(">PASSES PER BIN<");
+
+    const metricSvg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Pass sonar metric",
+        chart: {
+          kind: "pass-sonar",
+          props: {
+            passes: sonarPasses,
+            colorBy: "metric",
+            metricCenter: "zero",
+            metricForPass: (pass) => (pass.passResult === "complete" ? 1 : -1),
+          },
+        },
+      }),
+    );
+    expect(metricSvg).toContain(">METRIC<");
+    expect(metricSvg).toContain(">0<");
+  });
+
+  it("respects Formation legendPlacement='none' in static export", () => {
+    const svg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Formation",
+        chart: {
+          kind: "formation",
+          props: {
+            home: { formation: "4-3-3", players: [], label: "Cobalt United" },
+            away: { formation: "4-4-2", players: [], label: "Amber Town" },
+            legendPlacement: "none",
+          },
+        },
+      }),
+    );
+
+    expect(svg).not.toContain(">Cobalt United<");
+    expect(svg).not.toContain(">Amber Town<");
+  });
+
+  it("preserves pass-network size and width legend rows in static export", () => {
+    const svg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Pass network",
+        chart: {
+          kind: "pass-network",
+          props: {
+            nodes: [
+              ...passNetworkNodes,
+              { id: "cm", label: "Rice", x: 45, y: 52, passCount: 18 },
+            ],
+            edges: [
+              ...passNetworkEdges,
+              { sourceId: "cb", targetId: "cm", passCount: 7 },
+            ],
+          },
+        },
+      }),
+    );
+
+    expect(svg).toContain(">NODE SIZE<");
+    expect(svg).toContain(">EDGE WIDTH<");
+  });
+
+  it("renders full heatmap scale-bar labels in static export", () => {
+    const svg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Heat",
+        chart: {
+          kind: "heatmap",
+          props: {
+            events: heatmapEvents,
+            metricLabel: "Danger zones",
+          },
+        },
+      }),
+    );
+
+    expect(svg).toContain(">DANGER ZONES<");
+  });
+
+  it("renders export header stats for charts that default them on", () => {
+    const passMapSvg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Passes",
+        chart: {
+          kind: "pass-map",
+          props: { passes },
+        },
+      }),
+    );
+    expect(passMapSvg).toContain(">COMPLETION<");
+
+    const passFlowSvg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Flow",
+        chart: {
+          kind: "pass-flow",
+          props: { passes, minCountForArrow: 1 },
+        },
+      }),
+    );
+    expect(passFlowSvg).toContain(">MEAN LENGTH<");
+
+    const passNetworkSvg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Network",
+        chart: {
+          kind: "pass-network",
+          props: {
+            nodes: passNetworkNodes,
+            edges: passNetworkEdges,
+          },
+        },
+      }),
+    );
+    expect(passNetworkSvg).toContain(">PLAYERS<");
+    expect(passNetworkSvg).toContain(">CONNECTIONS<");
+    expect(passNetworkSvg).toContain(">THRESHOLD<");
+  });
+
+  it("renders shot-map export header, size scale, and color scale blocks", () => {
+    const headerSvg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Shots",
+        chart: {
+          kind: "shot-map",
+          props: {
+            shots,
+            showHeaderStats: true,
+          },
+        },
+      }),
+    );
+    expect(headerSvg).toContain(">SHOTS<");
+    expect(headerSvg).toContain(">GOALS<");
+
+    const defaultSvg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Shots",
+        chart: {
+          kind: "shot-map",
+          props: {
+            shots,
+          },
+        },
+      }),
+    );
+    expect(defaultSvg).toContain(">XG<");
+    expect(defaultSvg).toContain(">0.15<");
+  });
+
+  it("scales percentile-bar exports to fill the chart slot", () => {
+    const svg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Percentile",
+        chart: {
+          kind: "percentile-bar",
+          props: {
+            metric: percentileMetric,
+            comparison: percentileComparison,
+          },
+        },
+      }),
+    );
+
+    expect(svg).toContain('width="100%"');
+    expect(svg).toContain('height="100%"');
+  });
+
+  it("rejects export frames that do not leave positive chart area", () => {
+    expect(() =>
+      renderStaticSvg(
+        createExportFrameSpec({
+          width: 220,
+          height: 140,
+          padding: 48,
+          title: "Tiny",
+          subtitle: "Subtitle",
+          footer: "Footer",
+          chart: {
+            kind: "pizza-chart",
+            props: {
+              rows: pizzaRows,
+              centerContent: { kind: "initials", label: "RW" },
+            },
+          },
+        }),
+      ),
+    ).toThrow(/too small/i);
+  });
+
   it("rejects unsupported chart kinds explicitly", () => {
     expect(() =>
       renderStaticSvg({
@@ -443,5 +800,224 @@ describe("@withqwerty/campos-static", () => {
         } as never,
       }),
     ).toThrow(/unsupported export chart kind/i);
+  });
+
+  // ----------------------------------------------------------------------
+  // Regression guards for the static-export fix run
+  //
+  // The existing suite exercises each fix in one direction — usually the
+  // suppression or opt-out path. These guards pair those checks with the
+  // opposite-direction positive assertion so a future regression cannot
+  // pass the negative test for the wrong reason (e.g. legend silently
+  // disappearing on the default path would still satisfy
+  // `not.toContain(">Goal<")`). They also cover scale-bar tick rendering,
+  // which the existing tests only verify via metric-label presence.
+  // ----------------------------------------------------------------------
+
+  it("renders the default frame legend when showLegend is not overridden (shot-map)", () => {
+    // Counterpart to the showLegend=false suppression case. Without a
+    // positive default assertion, a bug that suppressed the legend in all
+    // paths would still pass the negative test.
+    //
+    // The existing `shots` fixture contains one goal, so only the Goal
+    // swatch should render (the Shot swatch only appears when at least
+    // one non-goal shot is present — an encoding decision worth locking).
+    const svg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Shots",
+        chart: {
+          kind: "shot-map",
+          props: { shots },
+        },
+      }),
+    );
+
+    expect(svg).toContain(">Goal<");
+    expect(svg).not.toContain(">Shot<");
+  });
+
+  it("renders the default frame legend when showLegend is not overridden (pass-map)", () => {
+    const multiResultPasses: ComputePassMapInput["passes"] = [
+      ...passes,
+      buildIncompletePass("pass-regress-1"),
+    ];
+
+    const svg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Passes",
+        chart: {
+          kind: "pass-map",
+          props: { passes: multiResultPasses },
+        },
+      }),
+    );
+
+    expect(svg).toContain(">Complete<");
+    expect(svg).toContain(">Incomplete<");
+  });
+
+  it("renders the default frame legend when showLegend is not overridden (pass-sonar)", () => {
+    const multiResultPasses: ComputePassMapInput["passes"] = [
+      ...passes,
+      buildIncompletePass("pass-regress-2"),
+    ];
+
+    const svg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Pass sonar",
+        chart: {
+          kind: "pass-sonar",
+          props: {
+            passes: multiResultPasses,
+            subjectLabel: "Rice",
+          },
+        },
+      }),
+    );
+
+    expect(svg).toContain(">Attempted passes<");
+    expect(svg).toContain(">Completed passes<");
+  });
+
+  it("renders the default scale-bar when showLegend is not overridden (pass-flow)", () => {
+    // Pass-flow has no `>Goal</>Shot<` swatches — its "legend" is the
+    // scale-bar metadata block. This paired assertion verifies fix #14
+    // (scale-bar metadata preserved rather than flattened) in the DEFAULT
+    // path, not just under showLegend=false suppression.
+    const svg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Flow",
+        chart: {
+          kind: "pass-flow",
+          props: {
+            passes,
+            minCountForArrow: 1,
+            metricLabel: "Danger flow",
+          },
+        },
+      }),
+    );
+
+    expect(svg).toContain(">DANGER FLOW<");
+  });
+
+  it("renders a populated pass-flow scale-bar with range labels", () => {
+    // Guards against silent flattening where the metric label survives but
+    // the range/tick display collapses. `>0 - 1<` is the default range
+    // label for share-valued pass-flow; if the scale-bar model is
+    // flattened to generic swatches, no range appears.
+    const svg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Flow",
+        chart: {
+          kind: "pass-flow",
+          props: { passes, minCountForArrow: 1 },
+        },
+      }),
+    );
+
+    expect(svg).toContain(">PASS ORIGIN SHARE<");
+    expect(svg).toContain(">0 - 1<");
+  });
+
+  it("renders a populated heatmap scale-bar with range labels", () => {
+    // Same concern as pass-flow. The existing test (fix #15) only verifies
+    // the metric label; this one adds the range. Silent flattening would
+    // pass the existing metric-label check.
+    const svg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Heat",
+        chart: {
+          kind: "heatmap",
+          props: { events: heatmapEvents },
+        },
+      }),
+    );
+
+    expect(svg).toContain(">EVENTS<");
+    expect(svg).toContain(">0 - 1<");
+  });
+
+  it("renders the shot-map size-scale with at least three ticks", () => {
+    // Fix #20 restored the size-scale footer. The existing test asserts
+    // one tick (`>0.15<`). A regression collapsing the scale to a single
+    // tick would pass that check. Assert three of the five ticks to catch
+    // tick-count regressions while staying robust to minor relabel choices.
+    const svg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Shots",
+        chart: {
+          kind: "shot-map",
+          props: { shots },
+        },
+      }),
+    );
+
+    expect(svg).toContain(">XG<");
+    expect(svg).toContain(">0.05<");
+    expect(svg).toContain(">0.15<");
+    expect(svg).toContain(">0.30<");
+  });
+
+  it("renders Formation team labels under the default legendPlacement", () => {
+    // Counterpart to fix #11's legendPlacement='none' suppression. Without
+    // a positive default assertion, a future break that suppressed the
+    // legend unconditionally would still satisfy the `not.toContain`
+    // check.
+    const svg = renderStaticSvg(
+      createExportFrameSpec({
+        title: "Formation",
+        chart: {
+          kind: "formation",
+          props: {
+            home: { formation: "4-3-3", players: [], label: "Cobalt United" },
+            away: { formation: "4-4-2", players: [], label: "Amber Town" },
+          },
+        },
+      }),
+    );
+
+    expect(svg).toContain(">Cobalt United<");
+    expect(svg).toContain(">Amber Town<");
+  });
+
+  it("renders all four pass-sonar colorBy legend modes with distinguishable labels", () => {
+    // The existing test (fix #7–#10) asserts the uppercased header label
+    // per mode. This regression guard adds cross-mode uniqueness: none,
+    // distance, frequency, and metric must each surface their own label
+    // and must NOT bleed another mode's label into the output. Catches a
+    // dispatch-table regression where (say) distance mode renders the
+    // frequency legend.
+    const sonarPasses: ComputePassMapInput["passes"] = [
+      ...passes,
+      buildIncompletePass("pass-regress-3"),
+    ];
+
+    const modes = [
+      { colorBy: "none" as const, expected: ">Attempted passes<" },
+      { colorBy: "distance" as const, expected: ">AVG PASS DISTANCE<" },
+      { colorBy: "frequency" as const, expected: ">PASSES PER BIN<" },
+    ];
+
+    for (const mode of modes) {
+      const svg = renderStaticSvg(
+        createExportFrameSpec({
+          title: `sonar ${mode.colorBy}`,
+          chart: {
+            kind: "pass-sonar",
+            props: { passes: sonarPasses, colorBy: mode.colorBy },
+          },
+        }),
+      );
+
+      expect(svg).toContain(mode.expected);
+      for (const other of modes) {
+        if (other.colorBy === mode.colorBy) continue;
+        expect(
+          svg,
+          `mode "${mode.colorBy}" should not bleed "${other.colorBy}" label (${other.expected})`,
+        ).not.toContain(other.expected);
+      }
+    }
   });
 });

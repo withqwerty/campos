@@ -186,7 +186,7 @@ describe("<Goal>", () => {
       </Goal>,
     );
     const framePath = container.querySelector("[data-stadia='goal-frame'] path[stroke]");
-    expect(framePath?.getAttribute("stroke-width")).toBe("0.2");
+    expect(Number(framePath?.getAttribute("stroke-width"))).toBeCloseTo(0.2, 5);
   });
 
   it("supports recessed box-net geometry", () => {
@@ -216,9 +216,32 @@ describe("<Goal>", () => {
     );
     const goalFrame = container.querySelector("[data-stadia='goal-frame']");
     const netGroup = goalFrame?.querySelector("g[stroke-opacity]");
-    const groundLine = goalFrame?.querySelector("line[x1='-2.562']");
-    expect(netGroup?.getAttribute("stroke-width")).toBe("0.02928");
-    expect(groundLine?.getAttribute("stroke-width")).toBe("0.03904");
+
+    // Ground line extends `GOAL_PROJECT_GROUND_EXTENSION = GOAL.width * 0.35`
+    // beyond each post (see packages/stadia/src/react/Goal.tsx:24). Rather
+    // than matching the exact serialized string `-2.562`, find the line
+    // whose `x1` is within tolerance of the computed extension. Ties the
+    // test to the exported `GOAL` geometry, not the magic-number output.
+    const expectedX1 = -GOAL.width * 0.35;
+    const groundLine = Array.from(goalFrame?.querySelectorAll("line") ?? []).find(
+      (line) => {
+        const x1 = Number(line.getAttribute("x1"));
+        return Number.isFinite(x1) && Math.abs(x1 - expectedX1) < 1e-3;
+      },
+    );
+    expect(groundLine).toBeDefined();
+
+    // Net thickness is `GOAL_PROJECT_NET_THICKNESS = GOAL.depth * 0.012`
+    // and ground thickness is `GOAL_PROJECT_GROUND_THICKNESS = GOAL.depth * 0.016`
+    // (both defined in Goal.tsx, both independent of barThickness).
+    expect(Number(netGroup?.getAttribute("stroke-width"))).toBeCloseTo(
+      GOAL.depth * 0.012,
+      5,
+    );
+    expect(Number(groundLine?.getAttribute("stroke-width"))).toBeCloseTo(
+      GOAL.depth * 0.016,
+      5,
+    );
   });
 
   it("renders children on top", () => {

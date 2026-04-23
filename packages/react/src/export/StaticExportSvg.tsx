@@ -18,14 +18,17 @@ import { HeatmapStaticSvg } from "../Heatmap.js";
 import { PassFlowStaticSvg } from "../PassFlow.js";
 import { PassMapStaticSvg } from "../PassMap.js";
 import { PassNetworkStaticSvg } from "../PassNetwork.js";
-import { PassSonarStaticSvg } from "../PassSonar.js";
+import { PassSonarStaticSvg, resolvePassSonarStaticLegendSpec } from "../PassSonar.js";
 import { PizzaChartStaticSvg } from "../PizzaChart.js";
+import {
+  PERCENTILE_BAR_STATIC_VIEWBOX,
+  PercentileBarStaticSvg,
+} from "../PercentileSurfaces.js";
 import { RadarChartStaticSvg } from "../RadarChart.js";
 import { ScatterPlotStaticSvg } from "../ScatterPlot.js";
 import { ShotMapStaticSvg } from "../ShotMap.js";
 import { TerritoryStaticSvg } from "../Territory.js";
 import { XGTimelineStaticSvg } from "../XGTimeline.js";
-import { PercentileBar } from "../PercentileSurfaces.js";
 import { ThemeProvider } from "../ThemeContext.js";
 import { DARK_THEME, LIGHT_THEME, type UITheme } from "../theme.js";
 import { resolveThemePalette } from "../themePalette.js";
@@ -39,6 +42,45 @@ type LegendItem = {
   key: string;
   label: string;
   color: string;
+};
+
+type LegendBlock =
+  | {
+      kind: "items";
+      items: LegendItem[];
+    }
+  | {
+      kind: "scale";
+      label: string;
+      startLabel: string;
+      endLabel: string;
+      stops: Array<{ offset: number; color: string }>;
+      tickAt?: number;
+      tickLabel?: string;
+    }
+  | {
+      kind: "circle-range";
+      label: string;
+      minLabel: string;
+      maxLabel: string;
+      color: string;
+    }
+  | {
+      kind: "line-range";
+      label: string;
+      minLabel: string;
+      maxLabel: string;
+      color: string;
+    }
+  | {
+      kind: "size-samples";
+      label: string;
+      samples: Array<{ label: string; radius: number }>;
+    };
+
+type HeaderBlock = {
+  kind: "stats";
+  items: Array<{ label: string; value: string }>;
 };
 
 function resolveTheme(themeName: ExportFrameSpec["theme"]): UITheme {
@@ -92,7 +134,7 @@ function chartAspectRatio(chart: ExportChartSpec): number {
     case "radar-chart":
       return 1;
     case "percentile-bar":
-      return 360 / 56;
+      return PERCENTILE_BAR_STATIC_VIEWBOX.width / PERCENTILE_BAR_STATIC_VIEWBOX.height;
     case "pass-sonar":
       return 1;
     default:
@@ -100,7 +142,125 @@ function chartAspectRatio(chart: ExportChartSpec): number {
   }
 }
 
-function resolveLegend(chart: ExportChartSpec, theme: UITheme): LegendItem[] {
+function evenlySpacedStops(
+  colors: readonly string[],
+): Array<{ offset: number; color: string }> {
+  if (colors.length <= 1) {
+    return [{ offset: 0, color: colors[0] ?? "#94a3b8" }];
+  }
+
+  return colors.map((color, index) => ({
+    offset: index / (colors.length - 1),
+    color,
+  }));
+}
+
+function resolveHeaderBlocks(chart: ExportChartSpec): HeaderBlock[] {
+  if (chart.kind === "pass-map") {
+    if (chart.props.showHeaderStats === false) return [];
+    const model = computePassMap({
+      passes: chart.props.passes,
+      ...(chart.props.crop != null ? { crop: chart.props.crop } : {}),
+      ...(chart.props.attackingDirection != null
+        ? { attackingDirection: chart.props.attackingDirection }
+        : {}),
+    });
+    return model.headerStats != null
+      ? [{ kind: "stats", items: model.headerStats.items }]
+      : [];
+  }
+
+  if (chart.kind === "pass-flow") {
+    if (chart.props.showHeaderStats === false) return [];
+    const model = computePassFlow({
+      passes: chart.props.passes,
+      ...(chart.props.crop != null ? { crop: chart.props.crop } : {}),
+      ...(chart.props.attackingDirection != null
+        ? { attackingDirection: chart.props.attackingDirection }
+        : {}),
+      ...(chart.props.bins != null ? { bins: chart.props.bins } : {}),
+      ...(chart.props.xEdges != null ? { xEdges: chart.props.xEdges } : {}),
+      ...(chart.props.yEdges != null ? { yEdges: chart.props.yEdges } : {}),
+      ...(chart.props.completionFilter != null
+        ? { completionFilter: chart.props.completionFilter }
+        : {}),
+      ...(chart.props.directionFilter != null
+        ? { directionFilter: chart.props.directionFilter }
+        : {}),
+      ...(chart.props.minMinute != null ? { minMinute: chart.props.minMinute } : {}),
+      ...(chart.props.maxMinute != null ? { maxMinute: chart.props.maxMinute } : {}),
+      ...(chart.props.periodFilter != null
+        ? { periodFilter: chart.props.periodFilter }
+        : {}),
+      ...(chart.props.valueMode != null ? { valueMode: chart.props.valueMode } : {}),
+      ...(chart.props.colorScale != null ? { colorScale: chart.props.colorScale } : {}),
+      ...(chart.props.colorStops != null ? { colorStops: chart.props.colorStops } : {}),
+      ...(chart.props.arrowLengthMode != null
+        ? { arrowLengthMode: chart.props.arrowLengthMode }
+        : {}),
+      ...(chart.props.dispersionFloor != null
+        ? { dispersionFloor: chart.props.dispersionFloor }
+        : {}),
+      ...(chart.props.minCountForArrow != null
+        ? { minCountForArrow: chart.props.minCountForArrow }
+        : {}),
+      ...(chart.props.lowDispersionGlyph != null
+        ? { lowDispersionGlyph: chart.props.lowDispersionGlyph }
+        : {}),
+      ...(chart.props.metricLabel != null
+        ? { metricLabel: chart.props.metricLabel }
+        : {}),
+    });
+    return model.headerStats != null
+      ? [{ kind: "stats", items: model.headerStats.items }]
+      : [];
+  }
+
+  if (chart.kind === "pass-network") {
+    const model = computePassNetwork({
+      nodes: chart.props.nodes,
+      edges: chart.props.edges,
+      ...(chart.props.minEdgePasses != null
+        ? { minEdgePasses: chart.props.minEdgePasses }
+        : {}),
+      ...(chart.props.showLabels != null ? { showLabels: chart.props.showLabels } : {}),
+      ...(chart.props.attackingDirection != null
+        ? { attackingDirection: chart.props.attackingDirection }
+        : {}),
+      ...(chart.props.directed != null ? { directed: chart.props.directed } : {}),
+      ...(chart.props.collisionPadding != null
+        ? { collisionPadding: chart.props.collisionPadding }
+        : {}),
+    });
+    return model.headerStats != null
+      ? [{ kind: "stats", items: model.headerStats.items }]
+      : [];
+  }
+
+  if (chart.kind === "shot-map") {
+    if (chart.props.showHeaderStats !== true) return [];
+    const model = computeShotMap({
+      shots: chart.props.shots,
+      ...(chart.props.preset != null ? { preset: chart.props.preset } : {}),
+      ...(chart.props.colorScale != null ? { colorScale: chart.props.colorScale } : {}),
+      ...(chart.props.crop != null ? { crop: chart.props.crop } : {}),
+      ...(chart.props.attackingDirection != null
+        ? { attackingDirection: chart.props.attackingDirection }
+        : {}),
+      ...(chart.props.side != null ? { side: chart.props.side } : {}),
+      ...(chart.props.sharedScale != null
+        ? { sharedScale: chart.props.sharedScale }
+        : {}),
+    });
+    return model.headerStats != null
+      ? [{ kind: "stats", items: model.headerStats.items }]
+      : [];
+  }
+
+  return [];
+}
+
+function resolveLegendBlocks(chart: ExportChartSpec, theme: UITheme): LegendBlock[] {
   if (chart.kind === "bump-chart") {
     const model = computeBumpChart({
       rows: chart.props.rows,
@@ -140,13 +300,18 @@ function resolveLegend(chart: ExportChartSpec, theme: UITheme): LegendItem[] {
       return [];
     }
 
-    return model.lines
-      .filter((line) => line.highlighted)
-      .map((line) => ({
-        key: line.team,
-        label: line.teamLabel,
-        color: line.color,
-      }));
+    return [
+      {
+        kind: "items",
+        items: model.lines
+          .filter((line) => line.highlighted)
+          .map((line) => ({
+            key: line.team,
+            label: line.teamLabel,
+            color: line.color,
+          })),
+      },
+    ];
   }
 
   if (chart.kind === "pizza-chart") {
@@ -178,31 +343,46 @@ function resolveLegend(chart: ExportChartSpec, theme: UITheme): LegendItem[] {
         : {}),
     });
 
-    return model.legend?.items ?? [];
+    return model.legend?.items != null
+      ? [{ kind: "items", items: model.legend.items }]
+      : [];
   }
 
   if (chart.kind === "formation") {
+    if ("legendPlacement" in chart.props && chart.props.legendPlacement === "none") {
+      return [];
+    }
     if ("home" in chart.props && "away" in chart.props) {
       return [
         {
-          key: "home",
-          label: chart.props.home.label ?? "Home",
-          color: chart.props.home.color ?? "#e50027",
+          kind: "items",
+          items: [
+            {
+              key: "home",
+              label: chart.props.home.label ?? "Home",
+              color: chart.props.home.color ?? "#e50027",
+            },
+            {
+              key: "away",
+              label: chart.props.away.label ?? "Away",
+              color: chart.props.away.color ?? "#2563eb",
+            },
+          ].filter((item) => item.label.length > 0),
         },
-        {
-          key: "away",
-          label: chart.props.away.label ?? "Away",
-          color: chart.props.away.color ?? "#2563eb",
-        },
-      ].filter((item) => item.label.length > 0);
+      ];
     }
 
     if (chart.props.teamLabel != null && chart.props.teamLabel.length > 0) {
       return [
         {
-          key: "team",
-          label: chart.props.teamLabel,
-          color: chart.props.teamColor ?? "#d33",
+          kind: "items",
+          items: [
+            {
+              key: "team",
+              label: chart.props.teamLabel,
+              color: chart.props.teamColor ?? "#d33",
+            },
+          ],
         },
       ];
     }
@@ -223,7 +403,7 @@ function resolveLegend(chart: ExportChartSpec, theme: UITheme): LegendItem[] {
         : {}),
       ...(chart.props.showLabels != null ? { showLabels: chart.props.showLabels } : {}),
       ...(chart.props.attackingDirection != null
-        ? { orientation: chart.props.attackingDirection }
+        ? { attackingDirection: chart.props.attackingDirection }
         : {}),
       ...(chart.props.directed != null ? { directed: chart.props.directed } : {}),
       ...(chart.props.collisionPadding != null
@@ -231,33 +411,45 @@ function resolveLegend(chart: ExportChartSpec, theme: UITheme): LegendItem[] {
         : {}),
     });
 
-    return (
-      model.legend?.rows.flatMap((row) => {
-        if (row.kind !== "color") return [];
-        if (row.mode === "team") {
-          return [
-            {
-              key: row.label,
-              label: row.label,
-              color: row.color,
-            },
-          ];
-        }
+    const blocks: LegendBlock[] = [];
+    for (const row of model.legend?.rows ?? []) {
+      if (row.kind === "size") {
+        blocks.push({
+          kind: "circle-range",
+          label: row.label,
+          minLabel: row.minLabel,
+          maxLabel: row.maxLabel,
+          color: row.color,
+        });
+        continue;
+      }
+      if (row.kind === "width") {
+        blocks.push({
+          kind: "line-range",
+          label: row.label,
+          minLabel: row.minLabel,
+          maxLabel: row.maxLabel,
+          color: row.color,
+        });
+        continue;
+      }
+      if (row.mode === "team") {
+        blocks.push({
+          kind: "items",
+          items: [{ key: row.label, label: row.label, color: row.color }],
+        });
+        continue;
+      }
+      blocks.push({
+        kind: "scale",
+        label: row.label,
+        startLabel: row.minLabel,
+        endLabel: row.maxLabel,
+        stops: evenlySpacedStops(row.gradient),
+      });
+    }
 
-        return [
-          {
-            key: `${row.label}-min`,
-            label: row.minLabel,
-            color: row.gradient[0] ?? "#94a3b8",
-          },
-          {
-            key: `${row.label}-max`,
-            label: row.maxLabel,
-            color: row.gradient[row.gradient.length - 1] ?? "#0f172a",
-          },
-        ];
-      }) ?? []
-    );
+    return blocks;
   }
 
   if (chart.kind === "shot-map") {
@@ -265,38 +457,84 @@ function resolveLegend(chart: ExportChartSpec, theme: UITheme): LegendItem[] {
       shots: chart.props.shots,
       ...(chart.props.preset != null ? { preset: chart.props.preset } : {}),
       ...(chart.props.colorScale != null ? { colorScale: chart.props.colorScale } : {}),
+      ...(chart.props.crop != null ? { crop: chart.props.crop } : {}),
+      ...(chart.props.attackingDirection != null
+        ? { attackingDirection: chart.props.attackingDirection }
+        : {}),
+      ...(chart.props.side != null ? { side: chart.props.side } : {}),
+      ...(chart.props.sharedScale != null
+        ? { sharedScale: chart.props.sharedScale }
+        : {}),
     });
 
-    return (
-      model.legend?.groups.flatMap((group) =>
-        group.items.map((item) => ({
-          key: `${group.kind}-${item.key}`,
-          label: item.label,
-          color: item.color ?? "#64748b",
+    const blocks: LegendBlock[] = [];
+
+    if (chart.props.showSizeScale !== false && model.sizeScale != null) {
+      blocks.push({
+        kind: "size-samples",
+        label: model.sizeScale.label,
+        samples: model.sizeScale.samples.map((sample) => ({
+          label: sample.xg.toFixed(2),
+          radius: Math.max(3, sample.size * 3),
         })),
-      ) ?? []
-    );
+      });
+    }
+
+    if (chart.props.showScaleBar !== false && model.scaleBar != null) {
+      blocks.push({
+        kind: "scale",
+        label: model.scaleBar.label,
+        startLabel: model.scaleBar.domain[0].toFixed(2),
+        endLabel: model.scaleBar.domain[1].toFixed(2),
+        stops: model.scaleBar.stops.map((stop) => ({
+          offset: stop.offset,
+          color: stop.color,
+        })),
+      });
+    }
+
+    if (chart.props.showLegend !== false && model.legend != null) {
+      blocks.push({
+        kind: "items",
+        items: model.legend.groups.flatMap((group) =>
+          group.items.map((item) => ({
+            key: `${group.kind}-${item.key}`,
+            label: item.label,
+            color: item.color ?? "#64748b",
+          })),
+        ),
+      });
+    }
+
+    return blocks;
   }
 
   if (chart.kind === "pass-map") {
+    if (chart.props.showLegend === false) return [];
     const model = computePassMap({
       passes: chart.props.passes,
       ...(chart.props.crop != null ? { crop: chart.props.crop } : {}),
       ...(chart.props.attackingDirection != null
-        ? { orientation: chart.props.attackingDirection }
+        ? { attackingDirection: chart.props.attackingDirection }
         : {}),
     });
 
-    return (
-      model.legend?.items.map((item) => ({
-        key: item.key,
-        label: item.label,
-        color: item.color,
-      })) ?? []
-    );
+    return model.legend?.items != null
+      ? [
+          {
+            kind: "items",
+            items: model.legend.items.map((item) => ({
+              key: item.key,
+              label: item.label,
+              color: item.color,
+            })),
+          },
+        ]
+      : [];
   }
 
   if (chart.kind === "pass-flow") {
+    if (chart.props.showLegend === false) return [];
     const model = computePassFlow({
       passes: chart.props.passes,
       ...(chart.props.crop != null ? { crop: chart.props.crop } : {}),
@@ -317,27 +555,23 @@ function resolveLegend(chart: ExportChartSpec, theme: UITheme): LegendItem[] {
         : {}),
     });
     if (!model.legend) return [];
-    const stops = model.legend.stops;
-    const first = stops[0];
-    const last = stops[stops.length - 1];
-    const isDiverging =
-      chart.props.colorScale === "diverging-rdbu" ||
-      model.meta.valueMode === "relative-frequency";
-    if (isDiverging) {
-      // Diverging ramps encode deviation from a neutral midpoint, not
-      // small-vs-large magnitude. Emit three items so "Baseline" (white) is
-      // explicit; "Under" and "Over" reflect the signed nature of the
-      // relative-frequency signal.
-      const mid = stops[Math.floor(stops.length / 2)];
-      return [
-        { key: "passflow-under", label: "Under", color: first?.color ?? "#2166ac" },
-        { key: "passflow-baseline", label: "Baseline", color: mid?.color ?? "#f7f7f7" },
-        { key: "passflow-over", label: "Over", color: last?.color ?? "#b2182b" },
-      ];
-    }
     return [
-      { key: "passflow-low", label: "Low", color: first?.color ?? "#94a3b8" },
-      { key: "passflow-high", label: "High", color: last?.color ?? "#0f172a" },
+      {
+        kind: "scale",
+        label: model.legend.title,
+        startLabel: model.legend.domain[0].toString(),
+        endLabel: model.legend.domain[1].toString(),
+        stops: model.legend.stops.map((stop) => ({
+          offset: stop.offset,
+          color: stop.color,
+        })),
+        ...(model.meta.valueMode === "relative-frequency" && model.legend.domain[1] > 0
+          ? {
+              tickAt: 1 / model.legend.domain[1],
+              tickLabel: "1",
+            }
+          : {}),
+      },
     ];
   }
 
@@ -352,7 +586,7 @@ function resolveLegend(chart: ExportChartSpec, theme: UITheme): LegendItem[] {
       ...(chart.props.colorScale != null ? { colorScale: chart.props.colorScale } : {}),
       ...(chart.props.colorStops != null ? { colorStops: chart.props.colorStops } : {}),
       ...(chart.props.attackingDirection != null
-        ? { orientation: chart.props.attackingDirection }
+        ? { attackingDirection: chart.props.attackingDirection }
         : {}),
       ...(chart.props.crop != null ? { crop: chart.props.crop } : {}),
       ...(chart.props.metricLabel != null
@@ -362,25 +596,23 @@ function resolveLegend(chart: ExportChartSpec, theme: UITheme): LegendItem[] {
     });
 
     if (!model.scaleBar) return [];
-    const first = model.scaleBar.stops[0];
-    const last = model.scaleBar.stops[model.scaleBar.stops.length - 1];
     return [
       {
-        key: "heatmap-low",
-        label: "Low",
-        color: first?.color ?? "#94a3b8",
-      },
-      {
-        key: "heatmap-high",
-        label: "High",
-        color: last?.color ?? "#0f172a",
+        kind: "scale",
+        label: model.scaleBar.label,
+        startLabel: model.scaleBar.domain[0].toString(),
+        endLabel: model.scaleBar.domain[1].toString(),
+        stops: model.scaleBar.stops.map((stop) => ({
+          offset: stop.offset,
+          color: stop.color,
+        })),
       },
     ];
   }
 
   if (chart.kind === "scatter-plot") {
     const model = computeScatterPlot(chart.props);
-    return model.legends.flatMap((legend) => {
+    const items = model.legends.flatMap((legend) => {
       if (legend.kind === "categorical") {
         return legend.items.map((item) => ({
           key: `${legend.title}-${item.key}`,
@@ -412,6 +644,8 @@ function resolveLegend(chart: ExportChartSpec, theme: UITheme): LegendItem[] {
         color: "#4665d8",
       }));
     });
+
+    return items.length > 0 ? [{ kind: "items", items }] : [];
   }
 
   if (chart.kind === "xg-timeline") {
@@ -433,11 +667,16 @@ function resolveLegend(chart: ExportChartSpec, theme: UITheme): LegendItem[] {
       ...(chart.props.teamColors != null ? { teamColors: chart.props.teamColors } : {}),
     });
 
-    return model.endLabels.map((label) => ({
-      key: label.teamId,
-      label: label.text,
-      color: label.color,
-    }));
+    return [
+      {
+        kind: "items",
+        items: model.endLabels.map((label) => ({
+          key: label.teamId,
+          label: label.text,
+          color: label.color,
+        })),
+      },
+    ];
   }
 
   if (chart.kind === "percentile-bar") {
@@ -445,20 +684,20 @@ function resolveLegend(chart: ExportChartSpec, theme: UITheme): LegendItem[] {
   }
 
   if (chart.kind === "pass-sonar") {
-    const palette = resolveThemePalette(chart.props.seriesColors, theme) ?? [
-      "#3b82f6",
-      "#22c55e",
-    ];
+    const legend = resolvePassSonarStaticLegendSpec(chart.props, theme);
+    if (legend == null) return [];
+    if (legend.kind === "items") {
+      return [{ kind: "items", items: legend.items }];
+    }
     return [
       {
-        key: "attempted",
-        label: "Attempted passes",
-        color: palette[0] ?? "#3b82f6",
-      },
-      {
-        key: "completed",
-        label: "Completed passes",
-        color: palette[1] ?? "#22c55e",
+        kind: "scale",
+        label: legend.label,
+        startLabel: legend.startLabel,
+        endLabel: legend.endLabel,
+        stops: evenlySpacedStops(legend.colors),
+        ...(legend.tickAt != null ? { tickAt: legend.tickAt } : {}),
+        ...(legend.tickLabel != null ? { tickLabel: legend.tickLabel } : {}),
       },
     ];
   }
@@ -487,13 +726,9 @@ function resolveLegend(chart: ExportChartSpec, theme: UITheme): LegendItem[] {
     ...(categoryColors != null ? { categoryColors } : {}),
   });
 
-  return (
-    model.legend?.items.map((item) => ({
-      key: item.key,
-      label: item.label,
-      color: item.color,
-    })) ?? []
-  );
+  return model.legend?.items != null
+    ? [{ kind: "items", items: model.legend.items }]
+    : [];
 }
 
 function renderChart(chart: ExportChartSpec, theme: UITheme) {
@@ -525,7 +760,7 @@ function renderChart(chart: ExportChartSpec, theme: UITheme) {
     case "percentile-bar":
       return (
         <ThemeProvider value={theme}>
-          <PercentileBar {...chart.props} />
+          <PercentileBarStaticSvg {...chart.props} />
         </ThemeProvider>
       );
     case "pass-sonar":
@@ -535,7 +770,7 @@ function renderChart(chart: ExportChartSpec, theme: UITheme) {
   }
 }
 
-function SvgLegendRow({
+function SvgLegendItemsRow({
   items,
   x,
   y,
@@ -587,17 +822,515 @@ function SvgLegendRow({
   );
 }
 
+function SvgHeaderStatsBlock({
+  block,
+  x,
+  y,
+  width,
+  theme,
+}: {
+  block: HeaderBlock;
+  x: number;
+  y: number;
+  width: number;
+  theme: UITheme;
+}) {
+  if (block.items.length === 0) return null;
+
+  const itemWidth = width / block.items.length;
+
+  return (
+    <g transform={`translate(0 ${y})`}>
+      {block.items.map((item, index) => {
+        const itemX = x + itemWidth * index + itemWidth / 2;
+        return (
+          <g key={`${item.label}-${index}`}>
+            <text
+              x={itemX}
+              y={10}
+              textAnchor="middle"
+              fill={theme.text.secondary}
+              fontFamily={FONT_FAMILY}
+              fontSize={11}
+              letterSpacing="0.06em"
+            >
+              {item.label.toUpperCase()}
+            </text>
+            <text
+              x={itemX}
+              y={28}
+              textAnchor="middle"
+              fill={theme.text.primary}
+              fontFamily={FONT_FAMILY}
+              fontSize={18}
+              fontWeight={700}
+            >
+              {item.value}
+            </text>
+          </g>
+        );
+      })}
+    </g>
+  );
+}
+
+function SvgScaleLegendBlock({
+  block,
+  x,
+  y,
+  width,
+  theme,
+}: {
+  block: Extract<LegendBlock, { kind: "scale" }>;
+  x: number;
+  y: number;
+  width: number;
+  theme: UITheme;
+}) {
+  const gradientId = `export-gradient-${block.label.replace(/[^a-zA-Z0-9]/g, "").toLowerCase()}-${Math.round(
+    x + y + width,
+  )}`;
+  const barWidth = Math.min(width, 320);
+  const barX = x + (width - barWidth) / 2;
+
+  return (
+    <g transform={`translate(0 ${y})`}>
+      <defs>
+        <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
+          {block.stops.map((stop, index) => (
+            <stop
+              key={`${gradientId}-${index}`}
+              offset={`${stop.offset * 100}%`}
+              stopColor={stop.color}
+            />
+          ))}
+        </linearGradient>
+      </defs>
+      <text
+        x={barX}
+        y={10}
+        fill={theme.text.secondary}
+        fontFamily={FONT_FAMILY}
+        fontSize={11}
+        letterSpacing="0.06em"
+      >
+        {block.label.toUpperCase()}
+      </text>
+      <text
+        x={barX + barWidth}
+        y={10}
+        textAnchor="end"
+        fill={theme.text.secondary}
+        fontFamily={FONT_FAMILY}
+        fontSize={11}
+      >
+        {block.startLabel} - {block.endLabel}
+      </text>
+      <rect
+        x={barX}
+        y={18}
+        width={barWidth}
+        height={10}
+        rx={5}
+        fill={`url(#${gradientId})`}
+      />
+      {block.tickAt != null && block.tickLabel != null ? (
+        <g transform={`translate(${barX + barWidth * block.tickAt} 0)`}>
+          <line
+            x1={0}
+            y1={16}
+            x2={0}
+            y2={30}
+            stroke={theme.text.primary}
+            strokeWidth={1}
+          />
+          <text
+            x={0}
+            y={41}
+            textAnchor="middle"
+            fill={theme.text.secondary}
+            fontFamily={FONT_FAMILY}
+            fontSize={10}
+          >
+            {block.tickLabel}
+          </text>
+        </g>
+      ) : null}
+    </g>
+  );
+}
+
+function SvgCircleRangeLegendBlock({
+  block,
+  x,
+  y,
+  width,
+  theme,
+}: {
+  block: Extract<LegendBlock, { kind: "circle-range" }>;
+  x: number;
+  y: number;
+  width: number;
+  theme: UITheme;
+}) {
+  const centerX = x + width / 2;
+  return (
+    <g transform={`translate(0 ${y})`}>
+      <text
+        x={centerX}
+        y={10}
+        textAnchor="middle"
+        fill={theme.text.secondary}
+        fontFamily={FONT_FAMILY}
+        fontSize={11}
+        letterSpacing="0.06em"
+      >
+        {block.label.toUpperCase()}
+      </text>
+      <circle cx={centerX - 64} cy={26} r={3} fill={block.color} />
+      <circle cx={centerX - 40} cy={26} r={7} fill={block.color} />
+      <text
+        x={centerX - 12}
+        y={30}
+        fill={theme.text.secondary}
+        fontFamily={FONT_FAMILY}
+        fontSize={12}
+      >
+        {block.minLabel}
+      </text>
+      <text
+        x={centerX + 34}
+        y={30}
+        textAnchor="middle"
+        fill={theme.text.secondary}
+        fontFamily={FONT_FAMILY}
+        fontSize={12}
+      >
+        →
+      </text>
+      <text
+        x={centerX + 56}
+        y={30}
+        fill={theme.text.secondary}
+        fontFamily={FONT_FAMILY}
+        fontSize={12}
+      >
+        {block.maxLabel}
+      </text>
+    </g>
+  );
+}
+
+function SvgLineRangeLegendBlock({
+  block,
+  x,
+  y,
+  width,
+  theme,
+}: {
+  block: Extract<LegendBlock, { kind: "line-range" }>;
+  x: number;
+  y: number;
+  width: number;
+  theme: UITheme;
+}) {
+  const centerX = x + width / 2;
+  return (
+    <g transform={`translate(0 ${y})`}>
+      <text
+        x={centerX}
+        y={10}
+        textAnchor="middle"
+        fill={theme.text.secondary}
+        fontFamily={FONT_FAMILY}
+        fontSize={11}
+        letterSpacing="0.06em"
+      >
+        {block.label.toUpperCase()}
+      </text>
+      <line
+        x1={centerX - 74}
+        y1={26}
+        x2={centerX - 56}
+        y2={26}
+        stroke={block.color}
+        strokeWidth={1}
+      />
+      <line
+        x1={centerX - 48}
+        y1={26}
+        x2={centerX - 26}
+        y2={26}
+        stroke={block.color}
+        strokeWidth={3.5}
+      />
+      <text
+        x={centerX - 8}
+        y={30}
+        fill={theme.text.secondary}
+        fontFamily={FONT_FAMILY}
+        fontSize={12}
+      >
+        {block.minLabel}
+      </text>
+      <text
+        x={centerX + 38}
+        y={30}
+        textAnchor="middle"
+        fill={theme.text.secondary}
+        fontFamily={FONT_FAMILY}
+        fontSize={12}
+      >
+        →
+      </text>
+      <text
+        x={centerX + 60}
+        y={30}
+        fill={theme.text.secondary}
+        fontFamily={FONT_FAMILY}
+        fontSize={12}
+      >
+        {block.maxLabel}
+      </text>
+    </g>
+  );
+}
+
+function SvgSizeSamplesLegendBlock({
+  block,
+  x,
+  y,
+  width,
+  theme,
+}: {
+  block: Extract<LegendBlock, { kind: "size-samples" }>;
+  x: number;
+  y: number;
+  width: number;
+  theme: UITheme;
+}) {
+  const sampleWidth = width / Math.max(1, block.samples.length);
+  return (
+    <g transform={`translate(0 ${y})`}>
+      <text
+        x={x + width / 2}
+        y={10}
+        textAnchor="middle"
+        fill={theme.text.secondary}
+        fontFamily={FONT_FAMILY}
+        fontSize={11}
+        letterSpacing="0.06em"
+      >
+        {block.label.toUpperCase()}
+      </text>
+      {block.samples.map((sample, index) => {
+        const centerX = x + sampleWidth * index + sampleWidth / 2;
+        return (
+          <g key={`${sample.label}-${index}`}>
+            <circle
+              cx={centerX}
+              cy={26}
+              r={Math.min(10, sample.radius)}
+              fill="none"
+              stroke={theme.text.primary}
+              strokeWidth={1.5}
+            />
+            <text
+              x={centerX}
+              y={43}
+              textAnchor="middle"
+              fill={theme.text.secondary}
+              fontFamily={FONT_FAMILY}
+              fontSize={11}
+            >
+              {sample.label}
+            </text>
+          </g>
+        );
+      })}
+    </g>
+  );
+}
+
+function blockHeight(block: LegendBlock): number {
+  switch (block.kind) {
+    case "items":
+      return 28;
+    case "scale":
+      return block.tickAt != null && block.tickLabel != null ? 46 : 32;
+    case "circle-range":
+    case "line-range":
+      return 36;
+    case "size-samples":
+      return 48;
+  }
+}
+
+function headerBlockHeight(): number {
+  return 32;
+}
+
+function positionBlocks<T>({
+  blocks,
+  startY,
+  heightFor,
+  gap,
+}: {
+  blocks: T[];
+  startY: number;
+  heightFor: (block: T) => number;
+  gap: number;
+}): Array<{ block: T; y: number; index: number }> {
+  return blocks.reduce<{
+    entries: Array<{ block: T; y: number; index: number }>;
+    nextY: number;
+  }>(
+    (acc, block, index) => ({
+      entries: [...acc.entries, { block, y: acc.nextY, index }],
+      nextY: acc.nextY + heightFor(block) + (index < blocks.length - 1 ? gap : 0),
+    }),
+    { entries: [], nextY: startY },
+  ).entries;
+}
+
+function SvgHeaderBlocks({
+  blocks,
+  x,
+  y,
+  width,
+  theme,
+}: {
+  blocks: HeaderBlock[];
+  x: number;
+  y: number;
+  width: number;
+  theme: UITheme;
+}) {
+  if (blocks.length === 0) return null;
+
+  const nodes = positionBlocks({
+    blocks,
+    startY: y,
+    heightFor: () => headerBlockHeight(),
+    gap: 8,
+  }).map(({ block, y: currentY, index }) => {
+    return (
+      <SvgHeaderStatsBlock
+        key={`header-stats-${index}`}
+        block={block}
+        x={x}
+        y={currentY}
+        width={width}
+        theme={theme}
+      />
+    );
+  });
+
+  return <>{nodes}</>;
+}
+
+function SvgLegendBlocks({
+  blocks,
+  x,
+  y,
+  width,
+  theme,
+}: {
+  blocks: LegendBlock[];
+  x: number;
+  y: number;
+  width: number;
+  theme: UITheme;
+}) {
+  if (blocks.length === 0) return null;
+
+  const nodes = positionBlocks({
+    blocks,
+    startY: y,
+    heightFor: blockHeight,
+    gap: 10,
+  }).map(({ block, y: currentY, index }) => {
+    if (block.kind === "items") {
+      return (
+        <SvgLegendItemsRow
+          key={`legend-items-${index}`}
+          items={block.items}
+          x={x}
+          y={currentY}
+          width={width}
+          theme={theme}
+        />
+      );
+    }
+    if (block.kind === "scale") {
+      return (
+        <SvgScaleLegendBlock
+          key={`legend-scale-${index}`}
+          block={block}
+          x={x}
+          y={currentY}
+          width={width}
+          theme={theme}
+        />
+      );
+    }
+    if (block.kind === "circle-range") {
+      return (
+        <SvgCircleRangeLegendBlock
+          key={`legend-circle-${index}`}
+          block={block}
+          x={x}
+          y={currentY}
+          width={width}
+          theme={theme}
+        />
+      );
+    }
+    if (block.kind === "size-samples") {
+      return (
+        <SvgSizeSamplesLegendBlock
+          key={`legend-size-samples-${index}`}
+          block={block}
+          x={x}
+          y={currentY}
+          width={width}
+          theme={theme}
+        />
+      );
+    }
+    return (
+      <SvgLineRangeLegendBlock
+        key={`legend-line-${index}`}
+        block={block}
+        x={x}
+        y={currentY}
+        width={width}
+        theme={theme}
+      />
+    );
+  });
+
+  return <>{nodes}</>;
+}
+
 export function StaticExportSvg({ spec }: { spec: ExportFrameSpec }) {
   const theme = resolveTheme(spec.theme);
   const background = resolveExportBackground(spec.background, theme, spec.theme);
-  const legendItems = resolveLegend(spec.chart, theme);
+  const headerBlocks = resolveHeaderBlocks(spec.chart);
+  const legendBlocks = resolveLegendBlocks(spec.chart, theme);
   const titleBlockHeight =
     (spec.eyebrow ? 18 : 0) + (spec.title ? 50 : 0) + (spec.subtitle ? 30 : 0);
   const footerHeight = spec.footer ? 20 : 0;
-  const legendHeight = legendItems.length > 0 ? 28 : 0;
+  const headerBlocksHeight =
+    headerBlocks.reduce((sum) => sum + headerBlockHeight(), 0) +
+    Math.max(0, headerBlocks.length - 1) * 8;
+  const legendHeight =
+    legendBlocks.reduce((sum, block) => sum + blockHeight(block), 0) +
+    Math.max(0, legendBlocks.length - 1) * 10;
 
   const chartBoxX = spec.padding;
-  const chartBoxY = spec.padding + titleBlockHeight + (titleBlockHeight > 0 ? 16 : 0);
+  const headerY = spec.padding + titleBlockHeight + (titleBlockHeight > 0 ? 16 : 0);
+  const chartBoxY = headerY + headerBlocksHeight + (headerBlocksHeight > 0 ? 12 : 0);
   const chartBoxWidth = spec.width - spec.padding * 2;
   const chartBoxHeight =
     spec.height -
@@ -605,7 +1338,12 @@ export function StaticExportSvg({ spec }: { spec: ExportFrameSpec }) {
     spec.padding -
     footerHeight -
     legendHeight -
+    (legendHeight > 0 ? 12 : 0) -
     (footerHeight > 0 ? 8 : 0);
+
+  if (chartBoxWidth <= 0 || chartBoxHeight <= 0) {
+    throw new Error("Export frame is too small for the requested padding and copy slots");
+  }
 
   const aspect = chartAspectRatio(spec.chart);
   const fitWidth = Math.min(chartBoxWidth, chartBoxHeight * aspect);
@@ -669,12 +1407,20 @@ export function StaticExportSvg({ spec }: { spec: ExportFrameSpec }) {
         </text>
       ) : null}
 
+      <SvgHeaderBlocks
+        blocks={headerBlocks}
+        x={spec.padding}
+        y={headerY}
+        width={spec.width - spec.padding * 2}
+        theme={theme}
+      />
+
       <svg x={chartX} y={chartY} width={fitWidth} height={fitHeight}>
         {renderChart(spec.chart, theme)}
       </svg>
 
-      <SvgLegendRow
-        items={legendItems}
+      <SvgLegendBlocks
+        blocks={legendBlocks}
         x={spec.padding}
         y={spec.height - spec.padding - footerHeight - legendHeight}
         width={spec.width - spec.padding * 2}
