@@ -1,12 +1,18 @@
 import { cleanup, render, fireEvent } from "@testing-library/react";
+import { renderToStaticMarkup } from "react-dom/server";
 import { axe } from "vitest-axe";
 import { afterEach, describe, expect, it } from "vitest";
 
 import type { RadarChartRow } from "../src/compute/index.js";
 
 import { RadarChart, ThemeProvider, DARK_THEME } from "../src/index";
+import { RadarChartStaticSvg } from "../src/RadarChart.js";
 
 afterEach(cleanup);
+
+function collectIdAttributes(markup: string): string[] {
+  return [...markup.matchAll(/(?:\s|<)id="([^"]+)"/g)].map((match) => match[1] ?? "");
+}
 
 const STANDARD_ROWS: RadarChartRow[] = [
   { metric: "Goals", value: 0.68, percentile: 92, category: "Attacking" },
@@ -222,6 +228,14 @@ describe("<RadarChart /> — interaction", () => {
 
     expect(getByTestId("radar-tooltip").textContent).toContain("Goals");
   });
+
+  it("shows tooltip on keyboard activation", () => {
+    const { getByTestId } = render(<RadarChart rows={STANDARD_ROWS} />);
+
+    fireEvent.keyDown(getByTestId("radar-vertex-hit-0"), { key: "Enter" });
+
+    expect(getByTestId("radar-tooltip").textContent).toContain("Goals");
+  });
 });
 
 // ─── Theme ──────────────────────────────────────────────────────────
@@ -262,6 +276,19 @@ describe("<RadarChart /> — ring styles", () => {
     );
     const clipAttr = getByTestId("radar-bands").getAttribute("clip-path");
     expect(clipAttr).toMatch(/^url\(#radar-bands-clip-/);
+  });
+
+  it("keeps static clip and label ids distinct across sibling charts", () => {
+    const markup = renderToStaticMarkup(
+      <>
+        <RadarChartStaticSvg rows={STANDARD_ROWS} ringStyle="banded-inside-polygon" />
+        <RadarChartStaticSvg rows={STANDARD_ROWS} ringStyle="banded-inside-polygon" />
+      </>,
+    );
+
+    const ids = collectIdAttributes(markup);
+    expect(ids.length).toBeGreaterThan(0);
+    expect(new Set(ids).size).toBe(ids.length);
   });
 
   it("defaults polygon fill to transparent in banded-inside-polygon (bands show through)", () => {

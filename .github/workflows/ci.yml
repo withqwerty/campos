@@ -26,7 +26,12 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
-      - run: pnpm check
+      # build before check: eslint's strictTypeChecked rules resolve
+      # @withqwerty/campos-* imports through each package's dist/*.d.ts.
+      # Without a prior build, dist/ is empty and every workspace import
+      # resolves to `unknown`, cascading 1000+ no-unsafe-* lint errors in
+      # apps/site. scripts/check.sh builds in the same order locally.
       - run: pnpm build
+      - run: pnpm check
       - run: pnpm verify:package-imports
       - run: pnpm --filter @withqwerty/campos-site build

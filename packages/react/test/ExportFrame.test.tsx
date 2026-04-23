@@ -1,4 +1,5 @@
 import { cleanup, render } from "@testing-library/react";
+import { renderToStaticMarkup } from "react-dom/server";
 import { afterEach, describe, expect, it } from "vitest";
 
 import type {
@@ -13,13 +14,17 @@ import type {
 } from "../src/compute/index.js";
 import type { Shot } from "@withqwerty/campos-schema";
 
-import { ExportFrame, createExportFrameSpec } from "../src/index";
+import { ExportFrame, StaticExportSvg, createExportFrameSpec } from "../src/index";
 import {
   buildEmptyStateSpec,
   buildLongTextSpec,
 } from "../../static/test/fixtures/export-fixtures.js";
 
 afterEach(cleanup);
+
+function collectIdAttributes(markup: string): string[] {
+  return [...markup.matchAll(/(?:\s|<)id="([^"]+)"/g)].map((match) => match[1] ?? "");
+}
 
 const bumpRows: BumpChartRow[] = [
   { team: "LIV", label: "Liverpool", timepoint: 1, rank: 1 },
@@ -478,6 +483,26 @@ describe("<ExportFrame />", () => {
       expect(getByLabelText("Export frame preview")).toBeInTheDocument();
       unmount();
     }
+  });
+
+  it("keeps export legend gradient ids distinct across sibling static renders", () => {
+    const spec = createExportFrameSpec({
+      title: "Heat",
+      chart: { kind: "heatmap", props: { events: heatmapEvents } },
+    });
+
+    const markup = renderToStaticMarkup(
+      <>
+        <StaticExportSvg spec={spec} />
+        <StaticExportSvg spec={spec} />
+      </>,
+    );
+
+    const ids = collectIdAttributes(markup).filter((id) =>
+      id.startsWith("export-gradient-"),
+    );
+    expect(ids.length).toBeGreaterThan(0);
+    expect(new Set(ids).size).toBe(ids.length);
   });
 
   it("renders long-text export copy without dropping the bounded frame surface", () => {

@@ -608,7 +608,7 @@ export function PizzaChartStaticSvg({
   ...props
 }: PizzaChartProps & { theme?: UITheme }) {
   const model = buildPizzaChartModel(props, theme);
-  const uid = "pizza-static";
+  const uid = useId();
   const {
     center,
     outerRadius: outerR,

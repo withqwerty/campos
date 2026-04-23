@@ -14,6 +14,7 @@ import {
   formatDistributionValue,
 } from "./distributionUtils.js";
 import { useTheme } from "./ThemeContext.js";
+import { triggerButtonActionOnKeyDown } from "./keyboardActivation.js";
 import {
   ChartCartesianAxes,
   ChartFrame,
@@ -187,6 +188,11 @@ function DistributionChartSvg({
             onFocus={() => onMarkerEnter?.(series.id)}
             onBlur={() => onMarkerLeave?.(series.id)}
             onClick={() => onMarkerEnter?.(series.id)}
+            onKeyDown={(event) => {
+              triggerButtonActionOnKeyDown(event, () => {
+                onMarkerEnter?.(series.id);
+              });
+            }}
             style={{ cursor: "pointer", outline: "none" }}
           >
             <circle cx={series.marker.x} cy={series.marker.y} r={12} fill="transparent" />

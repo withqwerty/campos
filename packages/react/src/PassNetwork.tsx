@@ -24,6 +24,7 @@ import {
 } from "@withqwerty/campos-stadia";
 
 import { useTheme } from "./ThemeContext.js";
+import { triggerButtonActionOnKeyDown } from "./keyboardActivation.js";
 import { LIGHT_THEME, type UITheme } from "./theme.js";
 import { resolveStyleValue, type StyleValue } from "./styleValue.js";
 import {
@@ -241,6 +242,9 @@ function renderEdge(
       onFocus={onFocus}
       onBlur={onBlur}
       onClick={onClick}
+      onKeyDown={(event) => {
+        triggerButtonActionOnKeyDown(event, onClick);
+      }}
       style={{ cursor: "pointer", outline: "none" }}
     >
       {/* Invisible wider hit stroke */}
@@ -320,6 +324,9 @@ function renderNode(
       onFocus={onFocus}
       onBlur={onBlur}
       onClick={onClick}
+      onKeyDown={(event) => {
+        triggerButtonActionOnKeyDown(event, onClick);
+      }}
       opacity={opacity}
       style={{ cursor: "pointer", outline: "none" }}
     >

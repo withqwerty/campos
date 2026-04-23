@@ -503,6 +503,22 @@ describe("<ShotMap /> — interaction", () => {
     expect(queryByTestId("shotmap-tooltip")).not.toBeInTheDocument();
   });
 
+  it("toggles tooltip on keyboard activation", () => {
+    const { getAllByRole, getByTestId, queryByTestId } = render(
+      <ShotMap shots={shots} />,
+    );
+
+    const marker = getAllByRole("button", {
+      name: /Player: Eriksen/,
+    })[0] as HTMLElement;
+
+    fireEvent.keyDown(marker, { key: "Enter" });
+    expect(getByTestId("shotmap-tooltip")).toBeInTheDocument();
+
+    fireEvent.keyDown(marker, { key: " " });
+    expect(queryByTestId("shotmap-tooltip")).not.toBeInTheDocument();
+  });
+
   it("switches tooltip when hovering from one marker to another", () => {
     const { getAllByRole, getByText, queryByText } = render(<ShotMap shots={shots} />);
 

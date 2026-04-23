@@ -1,4 +1,5 @@
 import { cleanup, fireEvent, render } from "@testing-library/react";
+import { renderToStaticMarkup } from "react-dom/server";
 import { axe } from "vitest-axe";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
@@ -39,6 +40,13 @@ describe("<KDE /> — rendering", () => {
     const { getByText } = render(<KDE events={events} />);
 
     expect(getByText("Density")).toBeInTheDocument();
+  });
+
+  it("includes the density surface in static markup before hydration", () => {
+    const markup = renderToStaticMarkup(<KDE events={events} />);
+
+    expect(markup).toContain('data-testid="kde-surface"');
+    expect(markup).toContain("data:image/png;base64,");
   });
 
   it("hides scale bar in empty state", () => {

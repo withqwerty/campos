@@ -1,3 +1,5 @@
+import { useId } from "react";
+
 import {
   computeBumpChart,
   computeHeatmap,
@@ -887,9 +889,7 @@ function SvgScaleLegendBlock({
   width: number;
   theme: UITheme;
 }) {
-  const gradientId = `export-gradient-${block.label.replace(/[^a-zA-Z0-9]/g, "").toLowerCase()}-${Math.round(
-    x + y + width,
-  )}`;
+  const gradientId = `export-gradient-${useId().replace(/:/g, "")}`;
   const barWidth = Math.min(width, 320);
   const barX = x + (width - barWidth) / 2;
 

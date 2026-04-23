@@ -18,6 +18,7 @@ import {
 } from "@withqwerty/campos-stadia";
 
 import { useTheme } from "./ThemeContext.js";
+import { triggerButtonActionOnKeyDown } from "./keyboardActivation.js";
 import { LIGHT_THEME, type UITheme } from "./theme.js";
 import {
   ChartPointMark,
@@ -591,6 +592,13 @@ export function ShotMap({
                     setActiveMarkerId((current) =>
                       current === marker.shotId ? null : marker.shotId,
                     );
+                  }}
+                  onKeyDown={(event) => {
+                    triggerButtonActionOnKeyDown(event, () => {
+                      setActiveMarkerId((current) =>
+                        current === marker.shotId ? null : marker.shotId,
+                      );
+                    });
                   }}
                   style={{ cursor: "pointer", outline: "none" }}
                 >

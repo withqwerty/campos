@@ -15,6 +15,7 @@ import {
   formatDistributionValue,
 } from "./distributionUtils.js";
 import { useTheme } from "./ThemeContext.js";
+import { triggerButtonActionOnKeyDown } from "./keyboardActivation.js";
 import {
   ChartFrame,
   ChartLegend,
@@ -257,7 +258,7 @@ function DistributionComparisonSvg({
     | ((
         rowId: string,
         seriesId: string,
-        event: React.MouseEvent<SVGElement> | React.FocusEvent<SVGElement>,
+        event?: React.MouseEvent<SVGElement> | React.FocusEvent<SVGElement>,
       ) => void)
     | undefined;
   onMarkerLeave?: ((rowId: string, seriesId: string) => void) | undefined;
@@ -413,6 +414,11 @@ function DistributionComparisonSvg({
                   onFocus={(event) => onMarkerEnter?.(row.id, series.id, event)}
                   onBlur={() => onMarkerLeave?.(row.id, series.id)}
                   onClick={(event) => onMarkerEnter?.(row.id, series.id, event)}
+                  onKeyDown={(event) => {
+                    triggerButtonActionOnKeyDown(event, () => {
+                      onMarkerEnter?.(row.id, series.id);
+                    });
+                  }}
                   style={{ cursor: "pointer", outline: "none" }}
                 >
                   <circle

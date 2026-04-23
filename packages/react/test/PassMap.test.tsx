@@ -386,6 +386,22 @@ describe("<PassMap /> — interaction", () => {
     expect(queryByTestId("passmap-tooltip")).not.toBeInTheDocument();
   });
 
+  it("toggles tooltip on keyboard activation", () => {
+    const { getAllByRole, getByTestId, queryByTestId } = render(
+      <PassMap passes={passes} />,
+    );
+
+    const marker = getAllByRole("button", {
+      name: /Player: Ødegaard/,
+    })[0] as HTMLElement;
+
+    fireEvent.keyDown(marker, { key: "Enter" });
+    expect(getByTestId("passmap-tooltip")).toBeInTheDocument();
+
+    fireEvent.keyDown(marker, { key: " " });
+    expect(queryByTestId("passmap-tooltip")).not.toBeInTheDocument();
+  });
+
   it("switches tooltip when hovering between markers", () => {
     const { getAllByRole, getByText, queryByText } = render(<PassMap passes={passes} />);
 

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 
 import {
   computeKDE,
@@ -112,13 +112,10 @@ function DensitySurface({
   colorStops: ColorStop[];
   opacity: number;
 }) {
-  const [dataURL, setDataURL] = useState<string | null>(null);
-
-  useEffect(() => {
-    const url = densityToDataURL(model, colorStops, opacity);
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional: compute data URL from model on mount/change
-    setDataURL(url);
-  }, [model, colorStops, opacity]);
+  const dataURL = useMemo(
+    () => densityToDataURL(model, colorStops, opacity),
+    [model, colorStops, opacity],
+  );
 
   return (
     <ChartDensitySurfaceImage

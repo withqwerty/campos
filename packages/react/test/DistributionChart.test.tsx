@@ -49,6 +49,23 @@ describe("<DistributionChart />", () => {
     expect(within(tooltip).getByText("Median")).toBeInTheDocument();
   });
 
+  it("shows marker tooltip content on keyboard activation", () => {
+    render(
+      <DistributionChart
+        series={overlaySeries}
+        xLabel="Shots per match"
+        defaultMarker="median"
+      />,
+    );
+
+    const marker = screen.getAllByRole("button", { name: /Liverpool:/ })[0]!;
+    fireEvent.keyDown(marker, { key: "Enter" });
+
+    const tooltip = screen.getByTestId("distributionchart-tooltip");
+    expect(tooltip).toBeInTheDocument();
+    expect(within(tooltip).getByText("Series")).toBeInTheDocument();
+  });
+
   it("renders the empty-state message when every series is invalid", () => {
     render(
       <DistributionChart
@@ -107,5 +124,16 @@ describe("<DistributionComparison />", () => {
     expect(tooltip).toBeInTheDocument();
     expect(within(tooltip).getByText("Metric")).toBeInTheDocument();
     expect(within(tooltip).getByText("Shots")).toBeInTheDocument();
+  });
+
+  it("shows comparison tooltip content on keyboard activation", () => {
+    render(<DistributionComparison rows={rows} defaultMarker="mean" />);
+
+    const marker = screen.getAllByRole("button", { name: /Shots, Liverpool:/ })[0]!;
+    fireEvent.keyDown(marker, { key: " " });
+
+    const tooltip = screen.getByTestId("distributioncomparison-tooltip");
+    expect(tooltip).toBeInTheDocument();
+    expect(within(tooltip).getByText("Metric")).toBeInTheDocument();
   });
 });

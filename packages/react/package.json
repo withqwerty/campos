@@ -1,6 +1,6 @@
 {
   "name": "@withqwerty/campos-react",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "React SVG components for football data visualizations — shot maps, pass networks, heatmaps, radar and pizza charts. Main entry point for the Campos library.",
   "license": "MIT",
   "author": "withqwerty <rahulkeerthi2@gmail.com>",

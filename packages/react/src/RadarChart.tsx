@@ -647,7 +647,7 @@ export function RadarChartStaticSvg({
 }: RadarChartProps & { theme?: UITheme }) {
   const model = buildRadarChartModel(props, theme);
   const sparsePolygonFallback = hasSparsePolygonFallback(model);
-  const uid = "radar-static";
+  const uid = useId();
   const { center, outerRadius: outerR, viewBoxSize } = model.geometry;
   const cx = center;
   const cy = center;

@@ -26,6 +26,12 @@ run "schema"    pnpm generate:schema
 if [ -d "apps/site" ]; then
   run "astro-sync" pnpm --filter @withqwerty/campos-site exec astro sync
 fi
+# Build packages before lint: eslint's strictTypeChecked rules resolve
+# @withqwerty/campos-* imports through each package's dist/*.d.ts. With
+# empty dist/, workspace imports in apps/site resolve to `unknown` and
+# cascade 1000+ no-unsafe-* errors — the exact signal that made CI diverge
+# from local previously.
+run "build"     pnpm build
 run "lint"      pnpm lint
 run "format"    pnpm format:check
 run "typecheck" pnpm typecheck

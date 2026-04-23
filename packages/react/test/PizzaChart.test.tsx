@@ -1,12 +1,18 @@
 import { cleanup, render, fireEvent } from "@testing-library/react";
+import { renderToStaticMarkup } from "react-dom/server";
 import { axe } from "vitest-axe";
 import { afterEach, describe, expect, it } from "vitest";
 
 import type { PizzaChartRow } from "../src/compute/index.js";
 
 import { PizzaChart, ThemeProvider, DARK_THEME } from "../src/index";
+import { PizzaChartStaticSvg } from "../src/PizzaChart.js";
 
 afterEach(cleanup);
+
+function collectIdAttributes(markup: string): string[] {
+  return [...markup.matchAll(/(?:\s|<)id="([^"]+)"/g)].map((match) => match[1] ?? "");
+}
 
 const STANDARD_ROWS: PizzaChartRow[] = [
   {
@@ -177,6 +183,14 @@ describe("<PizzaChart /> — interaction", () => {
 
     expect(getByTestId("pizza-tooltip").textContent).toContain("Goals");
   });
+
+  it("shows tooltip on keyboard activation", () => {
+    const { getByTestId } = render(<PizzaChart rows={STANDARD_ROWS} />);
+
+    fireEvent.keyDown(getByTestId("pizza-slice-0"), { key: "Enter" });
+
+    expect(getByTestId("pizza-tooltip").textContent).toContain("Goals");
+  });
 });
 
 // ─── Prop customization ─────────────────────────────────────────────
@@ -227,6 +241,19 @@ describe("<PizzaChart /> — props", () => {
     expect(clipPaths).toHaveLength(2);
     const ids = clipPaths.map((node) => node.getAttribute("id"));
     expect(new Set(ids).size).toBe(2);
+  });
+
+  it("keeps static label-path ids distinct across sibling charts", () => {
+    const markup = renderToStaticMarkup(
+      <>
+        <PizzaChartStaticSvg rows={STANDARD_ROWS} />
+        <PizzaChartStaticSvg rows={STANDARD_ROWS} />
+      </>,
+    );
+
+    const ids = collectIdAttributes(markup);
+    expect(ids.length).toBeGreaterThan(0);
+    expect(new Set(ids).size).toBe(ids.length);
   });
 });
 

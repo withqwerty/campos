@@ -132,6 +132,21 @@ describe("<PassNetwork /> — interaction", () => {
     expect(queryByTestId("passnetwork-tooltip")).not.toBeInTheDocument();
   });
 
+  it("toggles a tooltip on keyboard activation", () => {
+    const { getAllByRole, queryByTestId } = render(
+      <PassNetwork nodes={nodes} edges={edges} />,
+    );
+    const nodeGroup = getAllByRole("button").find((el) =>
+      (el.getAttribute("aria-label") ?? "").includes("Player: Rice"),
+    )!;
+
+    fireEvent.keyDown(nodeGroup, { key: "Enter" });
+    expect(queryByTestId("passnetwork-tooltip")).toBeInTheDocument();
+
+    fireEvent.keyDown(nodeGroup, { key: " " });
+    expect(queryByTestId("passnetwork-tooltip")).not.toBeInTheDocument();
+  });
+
   it("dims non-related nodes when a node is focused (ego highlight)", () => {
     // Fixture: 5 nodes, edges gk↔cb1, gk↔cb2, cb1↔cm, cm↔am.
     // Focusing gk (Raya) → related set = {gk, cb1, cb2}, non-related = {cm, am}.

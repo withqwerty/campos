@@ -16,6 +16,7 @@ import {
 } from "@withqwerty/campos-stadia";
 
 import { useTheme } from "./ThemeContext.js";
+import { triggerButtonActionOnKeyDown } from "./keyboardActivation.js";
 import { LIGHT_THEME, type UITheme } from "./theme.js";
 import {
   ChartLineMark,
@@ -584,6 +585,13 @@ export function PassMap({
                       setActiveMarkerId((c) =>
                         c === marker.passId ? null : marker.passId,
                       );
+                    }}
+                    onKeyDown={(event) => {
+                      triggerButtonActionOnKeyDown(event, () => {
+                        setActiveMarkerId((c) =>
+                          c === marker.passId ? null : marker.passId,
+                        );
+                      });
                     }}
                     style={{ cursor: "pointer", outline: "none" }}
                   >

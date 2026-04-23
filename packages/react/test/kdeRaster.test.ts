@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import { kdeGridToRGBA, type KDEModel } from "../src/compute/index.js";
 
-import { buildKDERasterData } from "../src/kdeRaster";
+import { buildKDERasterData, densityToDataURL } from "../src/kdeRaster";
 
 const stops = [
   { offset: 0, color: "#000000" },
@@ -160,5 +160,18 @@ describe("kdeRaster", () => {
     expect(readPixel(raster?.pixels ?? new Uint8ClampedArray(), 3, 1, 2)).toEqual(
       readPixel(sourcePixels, 2, 2, 1),
     );
+  });
+
+  it("falls back to a pure PNG data URL when no document is available", () => {
+    const model = makeModel({
+      attackingDirection: "right",
+      gridWidth: 2,
+      gridHeight: 1,
+      grid: [0.25, 1],
+    });
+
+    const dataUrl = densityToDataURL(model, [...stops], 1, null);
+
+    expect(dataUrl).toMatch(/^data:image\/png;base64,/);
   });
 });
