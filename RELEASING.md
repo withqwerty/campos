@@ -59,124 +59,116 @@ Campos follows [semver](https://semver.org) with a pre-v1 convention:
 
 ## Release workflow
 
-The release process is currently manual — no changesets, no automated version management. This is intentional for alpha; we may adopt changesets before v1.
+Campos uses [`changesets`](https://github.com/changesets/changesets) to drive version bumps, CHANGELOG entries, and npm publishes. The five `@withqwerty/campos-*` packages are declared as `fixed` in `.changeset/config.json`, so they always ship in lockstep. The `@withqwerty/campos-site` package is in `ignore` — changesets never versions or publishes it.
 
-### 1. Decide the version
+During alpha, the workspace stays in changesets' **pre-release mode** (`pnpm exec changeset pre enter alpha`), which produces `0.1.0-alpha.N` versions on the `alpha` dist-tag. When stabilising, exit pre-release with `pnpm exec changeset pre exit` and the next `release:version` will drop the `-alpha.N` suffix.
 
-Pick the next version number based on the policy above. Example: you're on `0.1.0-alpha.2` and fixing a bug → next version is `0.1.0-alpha.3`.
+### 1. Add a changeset for your change
 
-### 2. Bump versions in all library package manifests kept in lockstep
-
-Edit `version` in these five `package.json` files to the new version:
-
-- `packages/schema/package.json`
-- `packages/adapters/package.json`
-- `packages/stadia/package.json`
-- `packages/react/package.json`
-- `packages/static/package.json`
-
-All five library package versions must match. Version skew between workspace packages is a bug waiting to happen.
-
-### 3. Update CHANGELOG.md
-
-Add a new entry at the top of `CHANGELOG.md`. Follow the [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) convention: group by `Added` / `Changed` / `Deprecated` / `Removed` / `Fixed` / `Security`.
-
-Write for the person reading on npmjs.com's package page — a useful release note, not a commit dump. "What changed and why should I care." Example:
-
-```markdown
-## [0.1.0-alpha.3] — 2026-04-25
-
-### Fixed
-
-- `<Heatmap>` no longer crashes on empty `events` arrays. Previously
-  threw `TypeError: Cannot read properties of undefined` at the scale
-  computation step.
-
-### Changed
-
-- `autoPitchLines` default is now `true` for dark colorscales across
-  both `<Heatmap>` and `<KDE>` (was: only Heatmap).
-```
-
-### 4. Regenerate the lockfile
+In the same PR as your code change:
 
 ```bash
-pnpm install
+pnpm changeset
 ```
 
-This picks up the version bumps in `workspace:*` dependency resolution. The lockfile should change (updated version references). If it doesn't change, you probably forgot to bump a version.
+You'll be prompted to:
 
-### 5. Run full verification
+- pick which packages are affected (because of the `fixed` array, all five ship together regardless of what you pick, but choose the real ones for honest CHANGELOG attribution);
+- pick the bump kind (`major` / `minor` / `patch`) — during alpha pre-release, every bump maps to a new `alpha.N` counter, so pick `patch` for bug fixes and `minor` for new features as a signal of intent;
+- describe the change — write this as the CHANGELOG reader would want to read it ("what changed and why should I care"), not as a commit dump.
 
-Re-run the prerequisite checks (all seven commands from the top of this doc). Yes, even though you already ran them before starting. The version bumps can interact with resolution in surprising ways, and it's cheaper to catch a regression here than after publish.
+The tool writes a `.changeset/<random-name>.md` file. Commit it with your code.
 
-### 6. Commit the version bump
+### 2. When you're ready to release
 
 ```bash
-git add packages/*/package.json CHANGELOG.md pnpm-lock.yaml
-git commit -m "release: 0.1.0-alpha.3"
+pnpm release:version
 ```
 
-Use `release:` as the scope prefix so release commits are easy to filter in `git log`.
+This runs `changeset version && pnpm install --lockfile-only`, which:
 
-### 7. Tag the release
+- bumps `version` in all five library `package.json` files to the next pre-release counter;
+- writes a new entry in `CHANGELOG.md` from all pending `.changeset/*.md` files;
+- removes the processed changeset files;
+- updates `pnpm-lock.yaml` to match.
+
+Inspect the diff. If the CHANGELOG entry needs polish, edit it before committing.
+
+### 3. Run full verification
 
 ```bash
-git tag v0.1.0-alpha.3
+pnpm check
+pnpm build
 ```
 
-Tag with a `v` prefix. The tag name is the version number.
+All must be green. The version bumps can interact with resolution in surprising ways and the lockfile refresh sometimes surfaces peer-dep warnings that matter; cheaper to catch here than post-publish.
 
-### 8. Push commit and tag
+### 4. Commit and tag
+
+```bash
+git add packages/*/package.json CHANGELOG.md pnpm-lock.yaml .changeset
+git commit -m "release: 0.1.0-alpha.N"
+git tag v0.1.0-alpha.N
+```
+
+Use `release:` as the subject prefix so release commits are easy to filter in `git log`. Tag with a `v` prefix; the tag name is the version number.
+
+### 5. Push commit and tag
 
 ```bash
 git push origin main
-git push origin v0.1.0-alpha.3
+git push origin v0.1.0-alpha.N
 ```
 
-The two pushes are separate because tags don't go with a normal `git push`.
+Two separate pushes because tags don't ride along on a normal `git push`.
 
-### 9. Publish to npm
+### 6. Publish to npm
 
 ```bash
-pnpm -r publish --access public --tag alpha --no-git-checks
+pnpm release:publish
 ```
 
-Flag-by-flag:
+This runs `pnpm build && changeset publish`. In pre-release mode, `changeset publish` automatically uses the `alpha` dist-tag and publishes only packages whose current version on npm is older than the local `package.json`. Packages in `ignore` (campos-site) are skipped.
 
-- `-r` — recursive, publish all workspace packages that aren't private.
-- `--access public` — first-time publish of a scoped package requires this. Subsequent publishes don't, but it's harmless to always include.
-- `--tag alpha` — publish to the `alpha` dist-tag instead of `latest`. Consumers won't see these on `pnpm add @withqwerty/campos-react` by default — they have to explicitly opt in with `@alpha`.
-- `--no-git-checks` — skip pnpm's built-in "is working tree clean" check. We run our own checks in step 5, and pnpm's check can fail spuriously on unrelated untracked files.
+If you're on a 2FA-protected npm account:
 
-pnpm will publish each package in dependency order, rewriting `workspace:*`
-references to concrete version numbers in each published tarball automatically.
+```bash
+pnpm exec changeset publish --otp <code>
+```
 
-### 10. Verify the publish
+### 7. Verify the publish
 
 ```bash
 npm view @withqwerty/campos-react versions --json
 npm view @withqwerty/campos-react dist-tags
 ```
 
-Confirm the new version appears in the `versions` list and the `alpha` dist-tag points to it.
+Confirm the new version is in the `versions` list and the `alpha` dist-tag points to it.
 
-Smoke-test the install in a throwaway project:
+Smoke-test in a throwaway project:
 
 ```bash
 mkdir /tmp/campos-smoke-test && cd /tmp/campos-smoke-test
 pnpm init
 pnpm add react react-dom @withqwerty/campos-react@alpha
 # Write a small tsx file importing ShotMap, make sure it typechecks
-```
-
-### 11. Clean up
-
-```bash
 rm -rf /tmp/campos-smoke-test
 ```
 
 Done. The release is live on the `alpha` tag.
+
+## Manual release flow (fallback only)
+
+If changesets is unavailable or in a broken state (e.g. `.changeset/pre.json` corrupted, a reverted version bump that left the tree inconsistent), the hand-rolled flow below still works. Don't use it for routine releases — it's here as a hotfix path.
+
+1. Edit `version` in each of `packages/{schema,adapters,stadia,react,static}/package.json` to the new value. All five must match.
+2. Hand-write a new entry at the top of `CHANGELOG.md` under a heading like `## [0.1.0-alpha.N] - YYYY-MM-DD`, grouped by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) sections (`Added` / `Changed` / `Deprecated` / `Removed` / `Fixed` / `Security`).
+3. `pnpm install` to refresh the lockfile.
+4. Run `pnpm check` and `pnpm build` — must be green.
+5. `git add packages/*/package.json CHANGELOG.md pnpm-lock.yaml && git commit -m "release: 0.1.0-alpha.N"`
+6. `git tag v0.1.0-alpha.N`
+7. `git push origin main && git push origin v0.1.0-alpha.N`
+8. `pnpm -r publish --access public --tag alpha --no-git-checks`
 
 ## Dist-tag promotion
 
