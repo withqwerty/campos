@@ -74,12 +74,12 @@ Before starting a component:
 These are deliberately narrower than the main four-provider event matrix above.
 They widen match-page support without claiming full event parity.
 
-| Provider  | Landed public surface       | Current status | Notes                                                                                                                                   |
-| --------- | --------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Understat | `matchSummary()`, `shots()` | supported      | Best narrow xG/result adapter. Good fit for result cards, `ShotMap`, and `XGTimeline`.                                                  |
-| FBref     | `matchSummary()`            | supported      | Good fit for scoreline headers and result cards from schedule rows. Current seam is not an honest shot-map or stable-ID lineup adapter. |
-| Sofascore | `matchSummary()`            | supported      | Good fit for live/result status cards. Current landed seam is summary-only.                                                             |
-| ESPN      | not landed in this packet   | unsupported    | Reference libs suggest a plausible summary/lineup path, but it was not implemented here because the raw seam needs a tighter contract.  |
+| Provider  | Landed public surface       | Current status | Notes                                                                                                                                                                                        |
+| --------- | --------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Understat | `matchSummary()`, `shots()` | supported      | Best narrow xG/result adapter. Good fit for result cards, `ShotMap`, and `XGTimeline`, but its minute-only clock cannot distinguish first-half stoppage from early second-half regular time. |
+| FBref     | `matchSummary()`            | supported      | Good fit for scoreline headers and result cards from schedule rows. Current seam is not an honest shot-map or stable-ID lineup adapter.                                                      |
+| Sofascore | `matchSummary()`            | supported      | Good fit for live/result status cards. Current landed seam is summary-only.                                                                                                                  |
+| ESPN      | not landed in this packet   | unsupported    | Reference libs suggest a plausible summary/lineup path, but it was not implemented here because the raw seam needs a tighter contract.                                                       |
 
 ## Reference-backed partial adapters
 

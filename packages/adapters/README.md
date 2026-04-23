@@ -181,6 +181,13 @@ Notes:
 
 - Narrow result/xG adapter based on `soccerdata`'s Understat outputs.
 - Good fit for result cards, `ShotMap`, and `XGTimeline`.
+- Only exposes a match-relative minute, not an explicit period or stoppage-time
+  split. Raw values like `47` are ambiguous: they may be first-half `45+2` or
+  second-half `47'`.
+- Treats `90+` shot minutes as second-half stoppage time and never invents
+  extra-time periods from the scrape-backed minute field. Campos currently
+  treats `46..90` as second-half regulation because this scrape-backed seam
+  cannot recover first-half stoppage fidelity.
 - Not a full event-stream adapter.
 
 ### FBref

@@ -260,15 +260,18 @@ function shotSortComparator(a: Shot, b: Shot): number {
   return a.second - b.second;
 }
 
+function hasExtraTimePeriods(shots: readonly Shot[]): boolean {
+  return shots.some((shot) => shot.period === 3 || shot.period === 4);
+}
+
 /** Determine match end minute from shot data. */
 function determineEndMinute(shots: readonly Shot[]): number {
   let maxMinute = 90;
-  let hasExtraTime = false;
+  const hasExtraTime = hasExtraTimePeriods(shots);
 
   for (const shot of shots) {
     const lm = linearMinute(shot);
     if (lm > maxMinute) maxMinute = lm;
-    if (shot.period === 3 || shot.period === 4) hasExtraTime = true;
   }
 
   if (hasExtraTime) {
@@ -361,8 +364,8 @@ export function computeXGTimeline(input: ComputeXGTimelineInput): XGTimelineMode
   const awayColor = teamColors?.[1] ?? DEFAULT_AWAY_COLOR;
 
   // ---- determine end minute -------------------------------------------------
+  const hasExtraTime = hasExtraTimePeriods(sorted);
   const endMinute = determineEndMinute(sorted);
-  const hasExtraTime = endMinute > 90;
 
   // ---- x-axis ---------------------------------------------------------------
   const xTicks: number[] = [];

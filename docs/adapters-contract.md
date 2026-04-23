@@ -320,7 +320,7 @@ Supported providers:
 - **Stats Perform** — reference-backed public surface is `events(ma3Document)`, `shots(ma3Document)`, `passes(ma3Document)`, `matchContext(ma3Document)`, `matchLineups(ma1Document)`, and `formations(ma1Document, side)` from MA1 / MA3 sample seams
 - **Impect** — open-data public surface is `events(openDataSlice)`, `shots(openDataSlice)`, `passes(openDataSlice)`, `matchLineups(openDataSlice)`, and `formations(openDataSlice, side)` from the Bundesliga release
 - **Sportec** — open-data XML public surface is `events(metaXmlOrMeta, eventXmlOrEvents)`, `shots(metaXmlOrMeta, eventXmlOrEvents)`, `passes(metaXmlOrMeta, eventXmlOrEvents)`, `parseMeta(xml)`, `parseEvents(xml)`, `matchContext(metaXmlOrMeta, eventXmlOrEvents)`, `matchLineups(metaXmlOrMeta)`, and `formations(metaXmlOrMeta, side)` as a narrower real subset rather than full taxonomy parity
-- **Understat** — narrow scrape-backed public surface is `matchSummary(scheduleRow)` and `shots(shotRows)` from the `soccerdata` seam
+- **Understat** — narrow scrape-backed public surface is `matchSummary(scheduleRow)` and `shots(shotRows)` from the `soccerdata` seam; the shot clock is minute-only, so this seam cannot distinguish first-half stoppage (`45+2`) from early second-half regular time (`47'`)
 - **FBref** — narrow scrape-backed public surface is `matchSummary(scheduleRow)` from the `soccerdata` schedule seam
 - **Sofascore** — narrow scrape-backed public surface is `matchSummary(matchEvent)` from the local `soccerdata` / `ScraperFC` event-status seam
 

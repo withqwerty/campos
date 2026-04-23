@@ -147,4 +147,58 @@ describe("fromUnderstat.shots", () => {
     expect(shot?.context).toBe("penalty");
     expect(shot?.outcome).toBe("saved");
   });
+
+  it("treats raw 47 as second-half time because Understat cannot expose first-half stoppage fidelity", () => {
+    const [shot] = fromUnderstat.shots([
+      {
+        game_id: 500,
+        shot_id: 9000,
+        team_id: 10,
+        team: "Ambiguity FC",
+        player_id: 76,
+        player: "Clock Caveat",
+        xg: 0.12,
+        location_x: 0.82,
+        location_y: 0.44,
+        minute: 47,
+        body_part: "Right Foot",
+        situation: "Open Play",
+        result: "Saved Shot",
+      },
+    ]);
+
+    expect(shot).toMatchObject({
+      minute: 47,
+      addedMinute: null,
+      period: 2,
+      outcome: "saved",
+    });
+  });
+
+  it("treats 90+ minutes as second-half stoppage time, not extra time", () => {
+    const [shot] = fromUnderstat.shots([
+      {
+        game_id: 501,
+        shot_id: 9002,
+        team_id: 10,
+        team: "Stoppage FC",
+        player_id: 78,
+        player: "Late Winner",
+        xg: 0.35,
+        location_x: 0.88,
+        location_y: 0.52,
+        minute: 99,
+        body_part: "Right Foot",
+        situation: "Open Play",
+        result: "Goal",
+      },
+    ]);
+
+    expect(shot).toMatchObject({
+      minute: 90,
+      addedMinute: 9,
+      period: 2,
+      outcome: "goal",
+    });
+  });
 });

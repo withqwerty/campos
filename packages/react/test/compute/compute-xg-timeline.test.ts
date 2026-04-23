@@ -297,6 +297,27 @@ describe("computeXGTimeline", () => {
       const secondHalfBand = nullBands.find((b) => b.x >= htX);
       expect(secondHalfBand).toBeDefined();
     });
+
+    it("does not treat 90+ stoppage time as extra time when no ET periods exist", () => {
+      const shots: Shot[] = [
+        makeShot({ id: "s1", teamId: HOME, xg: 0.1, minute: 10, period: 1 }),
+        makeShot({
+          id: "s2",
+          teamId: AWAY,
+          xg: 0.22,
+          minute: 90,
+          addedMinute: 9,
+          period: 2,
+        }),
+      ];
+
+      const model = computeXGTimeline({ shots, homeTeam: HOME, awayTeam: AWAY });
+
+      expect(model.axes.x.domain[1]).toBe(99);
+      expect(model.guides.map((guide) => guide.label)).not.toContain("ET HT");
+      expect(model.guides.map((guide) => guide.label)).not.toContain("ET FT");
+      expect(model.backgroundBands.some((band) => band.label === "ET")).toBe(false);
+    });
   });
 
   // ---- extra time ---------------------------------------------------------

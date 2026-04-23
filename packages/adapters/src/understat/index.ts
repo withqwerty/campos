@@ -102,7 +102,8 @@ function requireUnderstatTeamLabel(
 function mapUnderstatShot(row: UnderstatShotRow): ShotEvent | null {
   const rawX = toNullableNumber(row.location_x);
   const rawY = toNullableNumber(row.location_y);
-  const minute = toNullableInteger(row.minute) ?? 0;
+  const rawMinute = toNullableInteger(row.minute) ?? 0;
+  const time = normalizeUnderstatClock(rawMinute);
   const result = normalizeText(row.result);
   const isOwnGoal = result === "Own Goal";
 
@@ -113,14 +114,14 @@ function mapUnderstatShot(row: UnderstatShotRow): ShotEvent | null {
   const providerEventIdResolved =
     row.shot_id != null
       ? String(row.shot_id)
-      : buildFallbackMatchId(row.player_id, minute);
+      : buildFallbackMatchId(row.player_id, rawMinute);
   const matchId =
     row.game_id != null
       ? String(row.game_id)
       : buildFallbackMatchId(
           normalizeText(row.team) ?? row.team_id ?? row.player,
           normalizeText(row.player) ?? row.player_id,
-          minute,
+          rawMinute,
         );
   const playerId = row.player_id != null ? String(row.player_id) : null;
   const playerName = normalizeText(row.player);
@@ -138,10 +139,10 @@ function mapUnderstatShot(row: UnderstatShotRow): ShotEvent | null {
     teamId,
     playerId,
     playerName,
-    minute,
-    addedMinute: null,
+    minute: time.minute,
+    addedMinute: time.addedMinute,
     second: 0,
-    period: inferPeriodFromMinute(minute),
+    period: time.period,
     x: clampToCamposRange(rawX * 100),
     // Understat Y=0 is the top touchline (TV perspective); Campos canonical
     // y=0 is the attacker's right (physical bottom).
@@ -169,11 +170,27 @@ function mapUnderstatShot(row: UnderstatShotRow): ShotEvent | null {
   };
 }
 
-function inferPeriodFromMinute(minute: number): 1 | 2 | 3 | 4 {
-  if (minute < 45) return 1;
-  if (minute < 90) return 2;
-  if (minute < 105) return 3;
-  return 4;
+function normalizeUnderstatClock(
+  minute: number,
+): Pick<ShotEvent, "minute" | "addedMinute" | "period"> {
+  // Understat shot rows only expose a match-relative minute, not an explicit
+  // period or stoppage split. That means raw values like 47 are ambiguous:
+  // they could be 45+2 in the first half or 47' in the second half. Campos
+  // resolves this lossy seam by treating 46..90 as second-half regulation and
+  // 90+ as second-half stoppage time, never as invented extra-time periods.
+  if (minute > 90) {
+    return {
+      minute: 90,
+      addedMinute: minute - 90,
+      period: 2,
+    };
+  }
+
+  return {
+    minute,
+    addedMinute: null,
+    period: minute <= 45 ? 1 : 2,
+  };
 }
 
 function normalizeOutcome(result: string | null): ShotEvent["outcome"] {
