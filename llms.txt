@@ -23,4 +23,12 @@ Current workspace shape:
 - shared schema package
 - shared Stadia surface primitives
 - static export package
-- Astro demo site under apps/site
+- Astro demo/docs site at https://campos.withqwerty.com (separate repo)
+
+Agent-facing registry:
+- chart and adapter catalogue: https://campos.withqwerty.com/r/registry.json
+- per-chart metadata: https://campos.withqwerty.com/r/charts/<Name>.json
+- per-adapter metadata: https://campos.withqwerty.com/r/adapters/<provider>.json
+- provider × chart capability matrix: https://campos.withqwerty.com/r/adapter-matrix.json
+- recipes per chart: https://campos.withqwerty.com/r/recipes/<Name>.json
+- schemaVersion: 1, updated on every site deploy
