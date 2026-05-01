@@ -1,6 +1,6 @@
 {
   "name": "@withqwerty/campos-schema",
-  "version": "0.1.0-beta.3",
+  "version": "0.1.0-beta.4",
   "description": "Canonical football data types for Campos — generated TypeScript definitions for shots, passes, events, players, and clubs.",
   "license": "MIT",
   "author": "withqwerty <rahulkeerthi2@gmail.com>",

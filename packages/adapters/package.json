@@ -1,6 +1,6 @@
 {
   "name": "@withqwerty/campos-adapters",
-  "version": "0.1.0-beta.3",
+  "version": "0.1.0-beta.4",
   "description": "Provider-to-Campos data adapters — Opta, StatsBomb, WhoScored, and Wyscout normalization for the Campos football schema.",
   "license": "MIT",
   "author": "withqwerty <rahulkeerthi2@gmail.com>",
