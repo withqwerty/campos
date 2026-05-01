@@ -7,7 +7,8 @@
     "@withqwerty/campos-react": "0.1.0-alpha.2",
     "@withqwerty/campos-schema": "0.1.0-alpha.2",
     "@withqwerty/campos-stadia": "0.1.0-alpha.2",
-    "@withqwerty/campos-static": "0.1.0-alpha.2"
+    "@withqwerty/campos-static": "0.1.0-alpha.2",
+    "@withqwerty/campos-promo": "0.0.1"
   },
   "changesets": [
     "first-beta",

@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- 256bb33: Pitch presets, single-install type surface, and publishable defaults.
+- 19065d0: Pitch presets, single-install type surface, and publishable defaults.
 
   **New: `pitchPreset` prop on every chart.** `<ShotMap pitchPreset="outline" />` (or `"green"` / `"dark"`) replaces the need to combine `pitchTheme` + `pitchColors`. The default is `"outline"` (white pitch with dark lines), tuned for editorial / docs surfaces. Existing `pitchTheme` / `pitchColors` props still work and override the preset when set.
 
@@ -21,7 +21,7 @@
 
 ### Patch Changes
 
-- Updated dependencies [256bb33]
+- Updated dependencies [19065d0]
   - @withqwerty/campos-schema@0.1.0-beta.4
 
 ## 0.1.0-beta.3
