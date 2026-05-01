@@ -1,6 +1,6 @@
 {
   "name": "@withqwerty/campos-stadia",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.0-beta.3",
   "description": "React pitch primitives for Campos — background, lines, goals, and viewBox transforms, with zero data assumptions.",
   "license": "MIT",
   "author": "withqwerty <rahulkeerthi2@gmail.com>",
