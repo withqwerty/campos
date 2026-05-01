@@ -9,5 +9,8 @@
     "@withqwerty/campos-stadia": "0.1.0-alpha.2",
     "@withqwerty/campos-static": "0.1.0-alpha.2"
   },
-  "changesets": ["chart-a11y-ssr-kde-ssr"]
+  "changesets": [
+    "first-beta",
+    "oidc-trusted-publishing"
+  ]
 }
