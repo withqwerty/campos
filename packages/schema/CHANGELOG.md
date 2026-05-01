@@ -4,10 +4,10 @@
 
 ### Minor Changes
 
-- e6653a5: First beta release. Public preview — APIs may still shift before 1.0, but breaking changes will be called out in CHANGELOGs.
+- 4f336f5: First beta release. Public preview — APIs may still shift before 1.0, but breaking changes will be called out in CHANGELOGs.
 
 ### Patch Changes
 
-- c84e1b1: chore: switch publishing to npm trusted publishers (OIDC) with provenance attestations
+- 7da83fb: chore: switch publishing to npm trusted publishers (OIDC) with provenance attestations
 
 ## 0.1.0-alpha.2
