@@ -2,9 +2,9 @@
 
 ## Supported Versions
 
-Campos is currently in alpha. Security fixes are handled on a best-effort basis
-for the latest unreleased work on `main` and the latest published alpha
-versions.
+Campos is currently in beta (pre-1.0). Security fixes are handled on a
+best-effort basis for the latest unreleased work on `main` and the latest
+published beta versions. Older alpha versions are not supported.
 
 | Version | Supported |
 | ------- | --------- |

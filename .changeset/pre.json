@@ -1,13 +1,13 @@
 {
   "mode": "pre",
-  "tag": "alpha",
+  "tag": "beta",
   "initialVersions": {
     "@withqwerty/campos-site": "0.0.1",
-    "@withqwerty/campos-adapters": "0.1.0-alpha.1",
-    "@withqwerty/campos-react": "0.1.0-alpha.1",
-    "@withqwerty/campos-schema": "0.1.0-alpha.1",
-    "@withqwerty/campos-stadia": "0.1.0-alpha.1",
-    "@withqwerty/campos-static": "0.1.0-alpha.1"
+    "@withqwerty/campos-adapters": "0.1.0-alpha.2",
+    "@withqwerty/campos-react": "0.1.0-alpha.2",
+    "@withqwerty/campos-schema": "0.1.0-alpha.2",
+    "@withqwerty/campos-stadia": "0.1.0-alpha.2",
+    "@withqwerty/campos-static": "0.1.0-alpha.2"
   },
   "changesets": ["chart-a11y-ssr-kde-ssr"]
 }
