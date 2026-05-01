@@ -8,7 +8,11 @@ import type {
   FormationHalfSide,
   FormationPlayer,
 } from "./compute/index.js";
-import type { Theme as PitchTheme, PitchColors } from "@withqwerty/campos-stadia";
+import type {
+  Theme as PitchTheme,
+  PitchColors,
+  PitchPreset,
+} from "@withqwerty/campos-stadia";
 
 import type {
   MarkerGlyphConfig,
@@ -80,6 +84,7 @@ type FormationCommonProps = {
   showNames?: boolean;
   className?: string;
   style?: CSSProperties;
+  pitchPreset?: PitchPreset;
   pitchTheme?: PitchTheme;
   pitchColors?: PitchColors;
   markers?: FormationMarkersStyle;

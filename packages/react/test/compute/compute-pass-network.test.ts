@@ -208,7 +208,7 @@ describe("computePassNetwork — dedup + merge", () => {
     expect(model.meta.warnings.some((w) => w.includes("duplicate node id"))).toBe(true);
   });
 
-  it("merges reversed edge pairs into a single undirected edge", () => {
+  it("merges reversed edge pairs into a single undirected edge silently", () => {
     const nodes: PassNetworkNode[] = [
       { id: "a", label: "A", x: 30, y: 50, passCount: 5 },
       { id: "b", label: "B", x: 70, y: 50, passCount: 5 },
@@ -223,7 +223,23 @@ describe("computePassNetwork — dedup + merge", () => {
     expect(merged.passCount).toBe(8);
     // weighted average: (5*0.1 + 3*0.2) / 8 = 1.1/8 = 0.1375
     expect(merged.xT).toBeCloseTo(0.1375, 4);
-    expect(model.meta.warnings.some((w) => w.includes("Merged"))).toBe(true);
+    // Reversed pairs are expected in undirected mode — no warning for that.
+    expect(model.meta.warnings.some((w) => w.includes("duplicate"))).toBe(false);
+  });
+
+  it("warns on literal duplicate edges (same direction twice)", () => {
+    const nodes: PassNetworkNode[] = [
+      { id: "a", label: "A", x: 30, y: 50, passCount: 5 },
+      { id: "b", label: "B", x: 70, y: 50, passCount: 5 },
+    ];
+    const edges: PassNetworkEdge[] = [
+      { sourceId: "a", targetId: "b", passCount: 5, xT: 0.1 },
+      { sourceId: "a", targetId: "b", passCount: 3, xT: 0.2 },
+    ];
+    const model = computePassNetwork({ nodes, edges });
+    expect(model.meta.warnings.some((w) => w.includes("Dropped duplicate edge"))).toBe(
+      true,
+    );
   });
 
   it("drops edges referencing unknown node ids with a warning", () => {

@@ -987,11 +987,12 @@ function SvgCircleRangeLegendBlock({
       >
         {block.label.toUpperCase()}
       </text>
-      <circle cx={centerX - 64} cy={26} r={3} fill={block.color} />
-      <circle cx={centerX - 40} cy={26} r={7} fill={block.color} />
+      <circle cx={centerX - 134} cy={26} r={3} fill={block.color} />
+      <circle cx={centerX - 110} cy={26} r={7} fill={block.color} />
       <text
         x={centerX - 12}
         y={30}
+        textAnchor="end"
         fill={theme.text.secondary}
         fontFamily={FONT_FAMILY}
         fontSize={12}
@@ -999,7 +1000,7 @@ function SvgCircleRangeLegendBlock({
         {block.minLabel}
       </text>
       <text
-        x={centerX + 34}
+        x={centerX}
         y={30}
         textAnchor="middle"
         fill={theme.text.secondary}
@@ -1009,8 +1010,9 @@ function SvgCircleRangeLegendBlock({
         →
       </text>
       <text
-        x={centerX + 56}
+        x={centerX + 12}
         y={30}
+        textAnchor="start"
         fill={theme.text.secondary}
         fontFamily={FONT_FAMILY}
         fontSize={12}
@@ -1049,24 +1051,25 @@ function SvgLineRangeLegendBlock({
         {block.label.toUpperCase()}
       </text>
       <line
-        x1={centerX - 74}
+        x1={centerX - 144}
         y1={26}
-        x2={centerX - 56}
+        x2={centerX - 126}
         y2={26}
         stroke={block.color}
         strokeWidth={1}
       />
       <line
-        x1={centerX - 48}
+        x1={centerX - 118}
         y1={26}
-        x2={centerX - 26}
+        x2={centerX - 96}
         y2={26}
         stroke={block.color}
         strokeWidth={3.5}
       />
       <text
-        x={centerX - 8}
+        x={centerX - 12}
         y={30}
+        textAnchor="end"
         fill={theme.text.secondary}
         fontFamily={FONT_FAMILY}
         fontSize={12}
@@ -1074,7 +1077,7 @@ function SvgLineRangeLegendBlock({
         {block.minLabel}
       </text>
       <text
-        x={centerX + 38}
+        x={centerX}
         y={30}
         textAnchor="middle"
         fill={theme.text.secondary}
@@ -1084,8 +1087,9 @@ function SvgLineRangeLegendBlock({
         →
       </text>
       <text
-        x={centerX + 60}
+        x={centerX + 12}
         y={30}
+        textAnchor="start"
         fill={theme.text.secondary}
         fontFamily={FONT_FAMILY}
         fontSize={12}

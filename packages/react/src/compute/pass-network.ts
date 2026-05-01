@@ -515,7 +515,20 @@ export function computePassNetwork(input: ComputePassNetworkInput): PassNetworkM
       colorOverride: string | null;
     };
     const buckets = new Map<string, MergeBucket>();
+    // Track exact directed pairs we've already seen so we can flag *literal*
+    // duplicates (same sourceId → same targetId twice). Merging a reversed
+    // pair (A→B + B→A) is expected in undirected mode and does not warrant
+    // a warning.
+    const seenDirected = new Set<string>();
     for (const edge of validEdges) {
+      const directedKey = `${edge.sourceId}->${edge.targetId}`;
+      if (seenDirected.has(directedKey)) {
+        warnings.push(
+          `Dropped duplicate edge: ${edge.sourceId}→${edge.targetId} appeared twice`,
+        );
+      }
+      seenDirected.add(directedKey);
+
       const [a, b] =
         edge.sourceId <= edge.targetId
           ? [edge.sourceId, edge.targetId]
@@ -534,10 +547,6 @@ export function computePassNetwork(input: ComputePassNetworkInput): PassNetworkM
           colorOverride: edge.color ?? null,
         };
         buckets.set(key, bucket);
-      } else {
-        warnings.push(
-          `Merged duplicate/reversed edge pair: ${edge.sourceId}↔${edge.targetId}`,
-        );
       }
       bucket.passCount += edge.passCount;
       if (edge.xT != null && Number.isFinite(edge.xT)) {

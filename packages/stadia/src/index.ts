@@ -36,6 +36,11 @@ export { Goal, type GoalPadding, type GoalProps } from "./react/Goal.js";
 
 // Theme
 export type { PitchColors, GoalColors, Theme } from "./react/theme.js";
+export {
+  type PitchPreset,
+  DEFAULT_PITCH_PRESET,
+  resolvePitchPreset,
+} from "./react/theme.js";
 
 // Grass patterns
 export type { GrassPattern } from "./react/grass.js";

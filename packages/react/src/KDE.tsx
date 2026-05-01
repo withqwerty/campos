@@ -12,6 +12,7 @@ import {
   type ProjectFn,
   type Theme as PitchTheme,
   type PitchColors,
+  type PitchPreset,
 } from "@withqwerty/campos-stadia";
 
 import { useTheme } from "./ThemeContext.js";
@@ -66,6 +67,7 @@ export type KDEProps = {
   threshold?: number;
   attackingDirection?: "up" | "down" | "left" | "right";
   crop?: "full" | "half";
+  pitchPreset?: PitchPreset;
   pitchTheme?: PitchTheme;
   pitchColors?: PitchColors;
   /**
@@ -168,6 +170,7 @@ export function KDE({
   threshold,
   attackingDirection,
   crop,
+  pitchPreset,
   pitchTheme,
   pitchColors,
   autoPitchLines = true,
@@ -276,6 +279,7 @@ export function KDE({
           <Pitch
             crop={model.pitch.crop}
             attackingDirection={model.pitch.attackingDirection}
+            {...(pitchPreset != null ? { preset: pitchPreset } : {})}
             {...(pitchTheme != null ? { theme: pitchTheme } : {})}
             {...(resolvedPitchColors != null ? { colors: resolvedPitchColors } : {})}
             underlay={({ project }) =>

@@ -134,10 +134,10 @@ describe("<Pitch>", () => {
     expect(container.querySelector("[data-testid='child']")).not.toBeNull();
   });
 
-  it("applies dark theme colors by default", () => {
+  it("applies the outline preset by default", () => {
     const { container } = render(<Pitch crop="full">{() => null}</Pitch>);
     const bg = container.querySelector("rect");
-    expect(bg?.getAttribute("fill")).toBe("#1a472a");
+    expect(bg?.getAttribute("fill")).toBe("#ffffff");
   });
 
   it("applies light theme when specified", () => {
@@ -147,7 +147,7 @@ describe("<Pitch>", () => {
       </Pitch>,
     );
     const bg = container.querySelector("rect");
-    expect(bg?.getAttribute("fill")).toBe("#12141a");
+    expect(bg?.getAttribute("fill")).toBe("#1e293b");
   });
 
   it("color overrides take precedence", () => {

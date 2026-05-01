@@ -46,6 +46,7 @@ export function FormationStaticSvg(props: FormationProps): ReactElement {
       labelStrategy = "auto",
       showLabels = true,
       showNames = true,
+      pitchPreset,
       pitchTheme,
       pitchColors,
       markers,
@@ -83,6 +84,7 @@ export function FormationStaticSvg(props: FormationProps): ReactElement {
         interactive={false}
         role="img"
         ariaLabel={buildDualAriaLabel({ home, away })}
+        {...(pitchPreset != null ? { preset: pitchPreset } : {})}
         {...(pitchTheme != null ? { theme: pitchTheme } : {})}
         {...(pitchColors != null ? { colors: pitchColors } : {})}
       >
@@ -150,6 +152,7 @@ export function FormationStaticSvg(props: FormationProps): ReactElement {
     labelStrategy = "auto",
     showLabels = true,
     showNames = true,
+    pitchPreset,
     pitchTheme,
     pitchColors,
     markers,
@@ -186,6 +189,7 @@ export function FormationStaticSvg(props: FormationProps): ReactElement {
         teamLabel,
         playerCount: players.length,
       })}
+      {...(pitchPreset != null ? { preset: pitchPreset } : {})}
       {...(pitchTheme != null ? { theme: pitchTheme } : {})}
       {...(pitchColors != null ? { colors: pitchColors } : {})}
     >

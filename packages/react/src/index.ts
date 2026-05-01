@@ -722,6 +722,22 @@ export type {
   SharedPitchScaleAccessors,
 } from "./compute/index.js";
 
+// Re-export pitch preset surface from @withqwerty/campos-stadia so consumers
+// can pin a single dep on @withqwerty/campos-react and still satisfy the
+// pitchPreset prop on every chart.
+export {
+  type PitchPreset,
+  type PitchColors,
+  type Theme as PitchTheme,
+  DEFAULT_PITCH_PRESET,
+  resolvePitchPreset,
+} from "@withqwerty/campos-stadia";
+
+// Re-export the canonical schema (event types, formation helpers, country
+// helpers, coordinate bounds, etc.) so a single `@withqwerty/campos-react`
+// install gives consumers the full type surface for their own app code.
+export * from "@withqwerty/campos-schema";
+
 export { createExportFrameSpec, ExportFrame, StaticExportSvg } from "./export/index.js";
 export type {
   CreateExportFrameSpecInput,

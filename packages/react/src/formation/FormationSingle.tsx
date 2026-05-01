@@ -31,6 +31,7 @@ export function FormationSingle(props: FormationSingleProps): ReactElement {
     showNames = true,
     className,
     style,
+    pitchPreset,
     pitchTheme,
     pitchColors,
     markers,
@@ -76,6 +77,7 @@ export function FormationSingle(props: FormationSingleProps): ReactElement {
       side={side}
       role="img"
       ariaLabel={ariaLabel}
+      {...(pitchPreset != null ? { preset: pitchPreset } : {})}
       {...(pitchTheme != null ? { theme: pitchTheme } : {})}
       {...(pitchColors != null ? { colors: pitchColors } : {})}
     >

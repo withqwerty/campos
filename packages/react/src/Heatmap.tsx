@@ -13,6 +13,7 @@ import {
   Pitch,
   type PitchColors,
   type PitchMarkingsConfig,
+  type PitchPreset,
   type ProjectFn,
   type Theme as PitchTheme,
 } from "@withqwerty/campos-stadia";
@@ -65,6 +66,7 @@ export type HeatmapProps = {
    * @default "count"
    */
   valueMode?: HeatmapValueMode;
+  pitchPreset?: PitchPreset;
   pitchTheme?: PitchTheme;
   pitchColors?: PitchColors;
   /**
@@ -406,7 +408,7 @@ export function HeatmapStaticSvg({
   theme = LIGHT_THEME,
   ...props
 }: HeatmapProps & { theme?: UITheme }) {
-  const { pitchTheme, pitchColors, autoPitchLines = true, cells } = props;
+  const { pitchPreset, pitchTheme, pitchColors, autoPitchLines = true, cells } = props;
   const { model, pitchMarkings: resolvedPitchMarkings } = buildHeatmapModel(props);
   const resolvedPitchColors = resolveAutoPitchLineColors(pitchColors, {
     autoPitchLines,
@@ -425,6 +427,7 @@ export function HeatmapStaticSvg({
           ? "Heatmap: no events"
           : `Heatmap: ${model.grid.columns}x${model.grid.rows} grid`
       }
+      {...(pitchPreset != null ? { preset: pitchPreset } : {})}
       {...(pitchTheme != null ? { theme: pitchTheme } : {})}
       {...(resolvedPitchColors != null ? { colors: resolvedPitchColors } : {})}
       {...(resolvedPitchMarkings != null ? { markings: resolvedPitchMarkings } : {})}
@@ -474,6 +477,7 @@ export function Heatmap({
   crop,
   metricLabel = "Events",
   valueMode = "count",
+  pitchPreset,
   pitchTheme,
   pitchColors,
   pitchMarkings,
@@ -571,6 +575,7 @@ export function Heatmap({
           <Pitch
             crop={model.pitch.crop}
             attackingDirection={model.pitch.attackingDirection}
+            {...(pitchPreset != null ? { preset: pitchPreset } : {})}
             {...(pitchTheme != null ? { theme: pitchTheme } : {})}
             {...(resolvedPitchColors != null ? { colors: resolvedPitchColors } : {})}
             {...(resolvedPitchMarkings != null

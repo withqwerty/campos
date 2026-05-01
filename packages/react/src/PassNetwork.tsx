@@ -21,6 +21,7 @@ import {
   type ProjectFn,
   type Theme as PitchTheme,
   type PitchColors,
+  type PitchPreset,
 } from "@withqwerty/campos-stadia";
 
 import { useTheme } from "./ThemeContext.js";
@@ -44,6 +45,7 @@ export type PassNetworkProps = {
   attackingDirection?: ComputePassNetworkInput["attackingDirection"];
   directed?: ComputePassNetworkInput["directed"];
   collisionPadding?: ComputePassNetworkInput["collisionPadding"];
+  pitchPreset?: PitchPreset;
   pitchTheme?: PitchTheme;
   pitchColors?: PitchColors;
   /**
@@ -789,6 +791,7 @@ export function PassNetworkStaticSvg({
   attackingDirection,
   directed,
   collisionPadding,
+  pitchPreset,
   pitchTheme,
   pitchColors,
   theme = LIGHT_THEME,
@@ -821,6 +824,7 @@ export function PassNetworkStaticSvg({
       interactive={false}
       role="img"
       ariaLabel={model.meta.accessibleLabel}
+      {...(pitchPreset != null ? { preset: pitchPreset } : {})}
       {...(pitchTheme != null ? { theme: pitchTheme } : {})}
       {...(pitchColors != null ? { colors: pitchColors } : {})}
     >
@@ -954,6 +958,7 @@ export function PassNetwork({
   attackingDirection,
   directed,
   collisionPadding,
+  pitchPreset,
   pitchTheme,
   pitchColors,
   egoHighlight = true,
@@ -1065,6 +1070,7 @@ export function PassNetwork({
           // all four edges so nodes near the touchline/goalline stay fully
           // inside the viewBox and don't get clipped by overflow="hidden".
           padding={3}
+          {...(pitchPreset != null ? { preset: pitchPreset } : {})}
           {...(pitchTheme != null ? { theme: pitchTheme } : {})}
           {...(pitchColors != null ? { colors: pitchColors } : {})}
         >

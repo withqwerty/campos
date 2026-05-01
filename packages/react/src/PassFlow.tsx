@@ -13,6 +13,7 @@ import {
   Pitch,
   type PitchColors,
   type PitchMarkingsConfig,
+  type PitchPreset,
   type ProjectFn,
   type Theme as PitchTheme,
 } from "@withqwerty/campos-stadia";
@@ -129,6 +130,7 @@ export type PassFlowProps = {
   showHeaderStats?: boolean;
   /** Colourbar legend visibility. @default true */
   showLegend?: boolean;
+  pitchPreset?: PitchPreset;
   pitchTheme?: PitchTheme;
   pitchColors?: PitchColors;
   /**
@@ -363,6 +365,7 @@ export function PassFlowStaticSvg({
 }: PassFlowProps & { theme?: UITheme }) {
   const model = buildModel(props);
   const {
+    pitchPreset,
     pitchTheme,
     pitchColors,
     pitchMarkings,
@@ -406,6 +409,7 @@ export function PassFlowStaticSvg({
       interactive={false}
       role="img"
       ariaLabel={model.meta.accessibleLabel}
+      {...(pitchPreset != null ? { preset: pitchPreset } : {})}
       {...(pitchTheme != null ? { theme: pitchTheme } : {})}
       {...(resolvedPitchColors != null ? { colors: resolvedPitchColors } : {})}
       {...(pitchMarkings != null ? { markings: pitchMarkings } : {})}
@@ -490,6 +494,7 @@ export function PassFlow(props: PassFlowProps) {
     hoverDestinationColor,
     showHeaderStats = true,
     showLegend = true,
+    pitchPreset,
     pitchTheme,
     pitchColors,
     pitchMarkings,
@@ -618,6 +623,7 @@ export function PassFlow(props: PassFlowProps) {
       <Pitch
         crop={model.plot.pitch.crop}
         attackingDirection={model.plot.pitch.attackingDirection}
+        {...(pitchPreset != null ? { preset: pitchPreset } : {})}
         {...(pitchTheme != null ? { theme: pitchTheme } : {})}
         {...(resolvedPitchColors != null ? { colors: resolvedPitchColors } : {})}
         {...(pitchMarkings != null ? { markings: pitchMarkings } : {})}

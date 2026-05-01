@@ -13,6 +13,7 @@ import {
   type ProjectFn,
   type Theme as PitchTheme,
   type PitchColors,
+  type PitchPreset,
 } from "@withqwerty/campos-stadia";
 
 import { useTheme } from "./ThemeContext.js";
@@ -70,6 +71,7 @@ export type PassMapProps = {
   showLegend?: boolean;
   lines?: PassMapLineStyle;
   dots?: PassMapDotStyle;
+  pitchPreset?: PitchPreset;
   pitchTheme?: PitchTheme;
   pitchColors?: PitchColors;
   /** Override frame padding in pixels. Default 16. Set to 0 for composites. */
@@ -345,6 +347,7 @@ export function PassMapStaticSvg({
       interactive={false}
       role="img"
       ariaLabel={model.meta.accessibleLabel}
+      {...(props.pitchPreset != null ? { preset: props.pitchPreset } : {})}
       {...(props.pitchTheme != null ? { theme: props.pitchTheme } : {})}
       {...(props.pitchColors != null ? { colors: props.pitchColors } : {})}
     >
@@ -440,6 +443,7 @@ export function PassMap({
   showLegend = true,
   lines,
   dots,
+  pitchPreset,
   pitchTheme,
   pitchColors,
   framePadding,
@@ -511,6 +515,7 @@ export function PassMap({
         <Pitch
           crop={model.plot.pitch.crop}
           attackingDirection={model.plot.pitch.attackingDirection}
+          {...(pitchPreset != null ? { preset: pitchPreset } : {})}
           {...(pitchTheme != null ? { theme: pitchTheme } : {})}
           {...(pitchColors != null ? { colors: pitchColors } : {})}
         >

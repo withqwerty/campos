@@ -15,6 +15,8 @@ import {
   type ProjectFn,
   type Theme as PitchTheme,
   type PitchColors,
+  type PitchPreset,
+  resolvePitchPreset,
 } from "@withqwerty/campos-stadia";
 
 import { useTheme } from "./ThemeContext.js";
@@ -102,6 +104,7 @@ export type ShotMapProps = {
   /** When false, hides lines from shot origin to `endX`/`endY` when present. Default true. */
   showShotTrajectory?: boolean;
   trajectories?: ShotTrajectoryStyle;
+  pitchPreset?: PitchPreset;
   pitchTheme?: PitchTheme;
   pitchColors?: PitchColors;
   /** Override frame padding in pixels. Default 16. Set to 0 for composites. */
@@ -346,7 +349,8 @@ export function ShotMapStaticSvg({
 }: ShotMapProps & { theme?: UITheme }) {
   const model = buildShotMapModel(props);
   const shotById = buildShotLookup(props.shots);
-  const isDarkPitch = props.pitchTheme === "secondary";
+  const isDarkPitch =
+    resolvePitchPreset(props.pitchPreset, props.pitchTheme).theme === "secondary";
   const viewBox = computeViewBox(
     model.plot.pitch.crop,
     model.plot.pitch.attackingDirection,
@@ -361,6 +365,7 @@ export function ShotMapStaticSvg({
       interactive={false}
       role="img"
       ariaLabel={model.meta.accessibleLabel}
+      {...(props.pitchPreset != null ? { preset: props.pitchPreset } : {})}
       {...(props.pitchTheme != null ? { theme: props.pitchTheme } : {})}
       {...(props.pitchColors != null ? { colors: props.pitchColors } : {})}
       style={{ overflow: "visible" }}
@@ -430,13 +435,14 @@ export function ShotMap({
   markers,
   showShotTrajectory = true,
   trajectories,
+  pitchPreset,
   pitchTheme,
   pitchColors,
   framePadding,
   maxWidth,
 }: ShotMapProps) {
   const theme = useTheme();
-  const isDarkPitch = pitchTheme === "secondary";
+  const isDarkPitch = resolvePitchPreset(pitchPreset, pitchTheme).theme === "secondary";
   const model = useMemo(
     () =>
       buildShotMapModel({
@@ -551,6 +557,7 @@ export function ShotMap({
           crop={model.plot.pitch.crop}
           attackingDirection={model.plot.pitch.attackingDirection}
           side={model.plot.pitch.side}
+          {...(pitchPreset != null ? { preset: pitchPreset } : {})}
           {...(pitchTheme != null ? { theme: pitchTheme } : {})}
           {...(pitchColors != null ? { colors: pitchColors } : {})}
           style={{ overflow: "visible" }}

@@ -31,6 +31,7 @@ export function FormationDual(props: FormationDualProps): ReactElement {
     showNames = true,
     className,
     style,
+    pitchPreset,
     pitchTheme,
     pitchColors,
     markers,
@@ -74,6 +75,7 @@ export function FormationDual(props: FormationDualProps): ReactElement {
       attackingDirection={attackingDirection}
       role="img"
       ariaLabel={ariaLabel}
+      {...(pitchPreset != null ? { preset: pitchPreset } : {})}
       {...(pitchTheme != null ? { theme: pitchTheme } : {})}
       {...(pitchColors != null ? { colors: pitchColors } : {})}
     >

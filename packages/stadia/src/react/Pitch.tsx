@@ -10,7 +10,12 @@ import {
   type PitchSide,
 } from "../transforms/pitch-transform.js";
 import { computeViewBox } from "../transforms/viewbox.js";
-import { resolvePitchColors, type PitchColors, type Theme } from "./theme.js";
+import {
+  resolvePitchPreset,
+  type PitchColors,
+  type PitchPreset,
+  type Theme,
+} from "./theme.js";
 import { PitchBackground, PitchLines, PitchMarkings } from "./PitchMarkings.js";
 import { TacticalMarkings, type ZoneLayout } from "./TacticalMarkings.js";
 import type { GrassPattern } from "./grass.js";
@@ -56,7 +61,18 @@ export type PitchProps = {
    * full-pitch frame and clips the selected crop inside it.
    */
   frame?: "crop" | "full";
-  /** Built-in pitch color preset. `primary` is green/white; `secondary` is dark/muted. */
+  /**
+   * High-level pitch look. Defaults to `outline` (white pitch, dark lines —
+   * publishable for editorial / docs). Other options: `green` (broadcast
+   * green) and `dark` (slate). Bundles theme + colors in one prop;
+   * `theme` and `colors` win over the preset when supplied.
+   */
+  preset?: PitchPreset;
+  /**
+   * Lower-level theme switch used by some chart shorthands. `primary` ↔ light
+   * theme family; `secondary` ↔ dark theme family. Most consumers should use
+   * `preset` instead.
+   */
   theme?: Theme;
   /** Tactical overlays for half-spaces, thirds, and zone-grid review views. */
   markings?: PitchMarkingsConfig;
@@ -134,7 +150,8 @@ export function Pitch({
   attackingDirection = "up",
   side = "attack",
   frame = "crop",
-  theme = "primary",
+  preset,
+  theme,
   markings,
   colors: colorOverrides,
   grass,
@@ -165,9 +182,9 @@ export function Pitch({
     [frame, attackingDirection, padding, cropViewBox],
   );
 
-  const colors = useMemo(
-    () => resolvePitchColors(theme, colorOverrides),
-    [theme, colorOverrides],
+  const { colors } = useMemo(
+    () => resolvePitchPreset(preset, theme, colorOverrides),
+    [preset, theme, colorOverrides],
   );
 
   const frameAspectRatio = useMemo(

@@ -11,10 +11,14 @@ import {
 import type { ColorStop, HeatmapColorScale } from "./compute/index.js";
 import {
   Pitch,
+  resolvePitchPreset,
   type ProjectFn,
   type Theme as PitchTheme,
   type PitchColors,
+  type PitchPreset,
 } from "@withqwerty/campos-stadia";
+
+import { hexLuminance } from "./colorUtils.js";
 import { useTheme } from "./ThemeContext.js";
 import { pickContrast } from "./colorContrast.js";
 import { pitchMarkingsForZonePreset } from "./pitchZonePresets.js";
@@ -65,6 +69,7 @@ export type TerritoryProps = {
    * @default "events"
    */
   metricLabel?: string;
+  pitchPreset?: PitchPreset;
   pitchTheme?: PitchTheme;
   pitchColors?: PitchColors;
   /**
@@ -279,6 +284,7 @@ export function Territory({
   colorScale,
   colorStops,
   metricLabel = "events",
+  pitchPreset,
   pitchTheme,
   pitchColors,
   autoPitchLines = true,
@@ -319,15 +325,28 @@ export function Territory({
 
   const computedAriaLabel = ariaLabel ?? defaultAriaLabel(model);
 
+  // Look at the actual rendered pitch fill (preset/theme/colors merged) so
+  // the autoPitchLines fallback reflects what the user will see, not a
+  // hardcoded assumption. Critical for the white outline default — without
+  // this, no-colorScale + outline would paint white-on-white lines.
+  const resolvedPitchFill = useMemo(
+    () => resolvePitchPreset(pitchPreset, pitchTheme, pitchColors).colors.fill,
+    [pitchPreset, pitchTheme, pitchColors],
+  );
+  const fallbackIsDark = useMemo(
+    () => hexLuminance(resolvedPitchFill) < 0.5,
+    [resolvedPitchFill],
+  );
+
   const resolvedPitchColors = useMemo<PitchColors | undefined>(
     () =>
       resolveAutoPitchLineColors(pitchColors, {
         autoPitchLines,
         colorScale,
-        fallbackIsDark: true,
+        fallbackIsDark,
         stops: colorStops,
       }),
-    [pitchColors, autoPitchLines, colorScale, colorStops],
+    [pitchColors, autoPitchLines, colorScale, colorStops, fallbackIsDark],
   );
   const resolvedPitchMarkings = useMemo(
     () => pitchMarkingsForZonePreset(zonePreset),
@@ -352,6 +371,7 @@ export function Territory({
           <Pitch
             crop={model.pitch.crop}
             attackingDirection={model.pitch.attackingDirection}
+            {...(pitchPreset != null ? { preset: pitchPreset } : {})}
             {...(pitchTheme != null ? { theme: pitchTheme } : {})}
             {...(resolvedPitchColors != null ? { colors: resolvedPitchColors } : {})}
             {...(resolvedPitchMarkings != null
@@ -402,6 +422,7 @@ export function TerritoryStaticSvg({
     colorScale,
     colorStops,
     metricLabel = "events",
+    pitchPreset,
     pitchTheme,
     pitchColors,
     autoPitchLines = true,
@@ -422,10 +443,14 @@ export function TerritoryStaticSvg({
     ...(colorStops != null ? { colorStops } : {}),
   });
 
+  const resolvedPitchFill = resolvePitchPreset(pitchPreset, pitchTheme, pitchColors)
+    .colors.fill;
+  const fallbackIsDark = hexLuminance(resolvedPitchFill) < 0.5;
+
   const resolvedPitchColors = resolveAutoPitchLineColors(pitchColors, {
     autoPitchLines,
     colorScale,
-    fallbackIsDark: true,
+    fallbackIsDark,
     stops: colorStops,
   });
   const resolvedPitchMarkings = pitchMarkingsForZonePreset(zonePreset);
@@ -437,6 +462,7 @@ export function TerritoryStaticSvg({
       interactive={false}
       role="img"
       ariaLabel={props.ariaLabel ?? defaultAriaLabel(model)}
+      {...(pitchPreset != null ? { preset: pitchPreset } : {})}
       {...(pitchTheme != null ? { theme: pitchTheme } : {})}
       {...(resolvedPitchColors != null ? { colors: resolvedPitchColors } : {})}
       {...(resolvedPitchMarkings != null ? { markings: resolvedPitchMarkings } : {})}
