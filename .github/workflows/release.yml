@@ -9,6 +9,9 @@ concurrency:
   group: release-${{ github.ref }}
   cancel-in-progress: false
 
+env:
+  LEFTHOOK: "0"
+
 jobs:
   release:
     name: Publish to npm
