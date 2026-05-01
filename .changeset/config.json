@@ -1,0 +1,19 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.1.4/schema.json",
+  "changelog": "@changesets/cli/changelog",
+  "commit": false,
+  "fixed": [
+    [
+      "@withqwerty/campos-adapters",
+      "@withqwerty/campos-react",
+      "@withqwerty/campos-schema",
+      "@withqwerty/campos-stadia",
+      "@withqwerty/campos-static"
+    ]
+  ],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": ["@withqwerty/campos-site"]
+}
