@@ -48,7 +48,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "jsdom": "^26.1.0",
     "json-schema-to-typescript": "^15.0.4",
-    "lefthook": "^2.1.5",
+    "lefthook": "^2.1.6",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "react": "^19.1.0",
