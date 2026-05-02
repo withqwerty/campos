@@ -21,15 +21,13 @@ The docs/demo site at `https://campos.withqwerty.com` lives in a separate repo a
 
 ## Campos Architecture
 
-Read `docs/architecture-decision.md` first. It is the source of context for the React-first architecture, product principles, and the zero-config `<ShotMap />` spec.
-
 Canonical pitch coordinate frame: attacker-perspective.
 
 - `x: 0..100` from own goal to opposition goal
 - `y: 0..100` from attacker's right touchline to attacker's left touchline
 - origin at bottom-left
 
-Every event produced by an adapter must already be in this frame. Downstream consumers never flip axes. Visual orientation is controlled exclusively via the `attackingDirection: "up" | "down" | "left" | "right"` prop on `Pitch` and every chart component. Butterfly layouts use `attackingDirection="left"` / `"right"`, not CSS `scaleX(-1)`. See `docs/standards/coordinate-invariants.md` for the full contract and provider-specific notes.
+Every event produced by an adapter must already be in this frame. Downstream consumers never flip axes. Visual orientation is controlled exclusively via the `attackingDirection: "up" | "down" | "left" | "right"` prop on `Pitch` and every chart component. Butterfly layouts use `attackingDirection="left"` / `"right"`, not CSS `scaleX(-1)`.
 
 Flag SVGs in `assets/flags/` use FIFA three-letter country codes (`ENG`, `SCO`, `WAL`, `NIR` are distinct football nations — not ISO 3166). Use `getCountryCode()` from `@withqwerty/campos-schema` to resolve provider country names. Add aliases to `packages/schema/src/country.ts` or `packages/schema/src/countryMapping.json`.
 
@@ -61,18 +59,9 @@ Never hand-edit `packages/schema/src/generated.ts`. Update the relevant `schema/
 - The compute/model layer preserves football semantics (e.g. expected-goal regions, possession phases) rather than collapsing into generic plotting primitives.
 - Types, JSDoc, error messages, and public docs are part of the API surface. A change to any of them is an API change.
 
-## Docs & Specs
-
-- `docs/README.md` is the authority-ordered index for tracked docs.
-- `docs/architecture-decision.md` is required reading before any significant change.
-- `docs/roadmap-v0.3.md` is the active roadmap.
-- `docs/specs/` contains per-component specs; read the relevant spec before widening a component or adapter surface.
-- `docs/standards/` holds coordinate invariants, the component ship checklist, and the adapter gap matrix.
-- `docs/testing.md` defines the 12-axis quality bar for new work: empty, sparse, dense, missing fields, extreme values, text edges, responsive, themeable, composable, React hygiene, accessibility, and explicit checklist coverage.
-
 ## Testing Standards
 
-Name tests after behaviour, not implementation. Keep edge cases explicit. Translate the 12-axis bar into:
+Name tests after behaviour, not implementation. Keep edge cases explicit. New work should cover the 12-axis quality bar — empty, sparse, dense, missing fields, extreme values, text edges, responsive, themeable, composable, React hygiene, accessibility, and explicit checklist coverage — translated into:
 
 - adapter fixture tests for raw-provider edge cases
 - compute-layer tests for semantic output contracts
@@ -88,7 +77,7 @@ For any visual change (component, demo, chart), verify the rendered output in a 
 
 ## Release & Stage
 
-Campos is currently in alpha. Published packages are tagged both `alpha` and `latest` at `0.1.0-alpha.x`. See `RELEASING.md` for the release flow.
+Campos is currently in beta. Published packages are tagged `beta` at `0.1.0-beta.x`. See `RELEASING.md` for the release flow.
 
 ## Commit Style
 

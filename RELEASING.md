@@ -39,29 +39,29 @@ Before cutting a release, confirm all of:
   All must be green. No shortcuts.
 - If the docs/demo site is part of the release validation, run its build in the
   separate site repo against the package versions you intend to publish.
-- You have tested the change in an actual consumer context — either the docs/demo site repo rendering the affected chart, or a throwaway project installing the dist-tag you plan to publish (`@alpha` during alpha, default tag for stable) and importing the component.
+- You have tested the change in an actual consumer context — either the docs/demo site repo rendering the affected chart, or a throwaway project installing the dist-tag you plan to publish (`@beta` during beta, default tag for stable) and importing the component.
 
 ## Versioning policy
 
 Campos follows [semver](https://semver.org) with a pre-v1 convention:
 
-- **`0.x.y`** — pre-v1. Breaking changes between minor versions (`0.1.y` → `0.2.0`) are allowed and expected during alpha.
-- **Alpha tag during alpha** — release as `0.1.0-alpha.N` pre-release versions published to the `alpha` dist-tag, not `latest`. Consumers must opt in with `pnpm add @withqwerty/campos-react@alpha`.
+- **`0.x.y`** — pre-v1. Breaking changes between minor versions (`0.1.y` → `0.2.0`) are allowed and expected during beta.
+- **Beta tag during beta** — release as `0.1.0-beta.N` pre-release versions published to the `beta` dist-tag, not `latest`. Consumers must opt in with `pnpm add @withqwerty/campos-react@beta`.
 - **Promoting to `latest`** — when you decide a version is stable, use `npm dist-tag add` to move it to `latest` (see "Dist-tag promotion" below). Do not republish under a new version just to change the tag.
 
 ### When to bump
 
-- **Bug fix, no API change** → bump alpha counter. `0.1.0-alpha.3` → `0.1.0-alpha.4`.
-- **New feature, additive only** → bump alpha counter, note in CHANGELOG.
-- **Breaking change during alpha** → bump alpha counter, loud note in CHANGELOG, consider whether the consuming users (if any) need a heads-up.
-- **First stable release** → drop `-alpha.N` suffix: `0.1.0-alpha.4` → `0.1.0`. Publish with `--tag latest` (default).
+- **Bug fix, no API change** → bump beta counter. `0.1.0-beta.3` → `0.1.0-beta.4`.
+- **New feature, additive only** → bump beta counter, note in CHANGELOG.
+- **Breaking change during beta** → bump beta counter, loud note in CHANGELOG, consider whether the consuming users (if any) need a heads-up.
+- **First stable release** → drop `-beta.N` suffix: `0.1.0-beta.4` → `0.1.0`. Publish with `--tag latest` (default).
 - **Breaking change after first stable** → bump minor: `0.1.0` → `0.2.0`. Campos is pre-v1, so minor-version breaks are the semver convention for "allowed but please read the CHANGELOG."
 
 ## Release workflow
 
 Campos uses [`changesets`](https://github.com/changesets/changesets) to drive version bumps, CHANGELOG entries, and npm publishes. The five `@withqwerty/campos-*` packages are declared as `fixed` in `.changeset/config.json`, so they always ship in lockstep. The `@withqwerty/campos-site` package is in `ignore` — changesets never versions or publishes it.
 
-During alpha, the workspace stays in changesets' **pre-release mode** (`pnpm exec changeset pre enter alpha`), which produces `0.1.0-alpha.N` versions on the `alpha` dist-tag. When stabilising, exit pre-release with `pnpm exec changeset pre exit` and the next `release:version` will drop the `-alpha.N` suffix.
+During beta, the workspace stays in changesets' **pre-release mode** (`pnpm exec changeset pre enter beta`), which produces `0.1.0-beta.N` versions on the `beta` dist-tag. When stabilising, exit pre-release with `pnpm exec changeset pre exit` and the next `release:version` will drop the `-beta.N` suffix.
 
 ### 1. Add a changeset for your change
 
@@ -74,7 +74,7 @@ pnpm changeset
 You'll be prompted to:
 
 - pick which packages are affected (because of the `fixed` array, all five ship together regardless of what you pick, but choose the real ones for honest CHANGELOG attribution);
-- pick the bump kind (`major` / `minor` / `patch`) — during alpha pre-release, every bump maps to a new `alpha.N` counter, so pick `patch` for bug fixes and `minor` for new features as a signal of intent;
+- pick the bump kind (`major` / `minor` / `patch`) — during beta pre-release, every bump maps to a new `beta.N` counter, so pick `patch` for bug fixes and `minor` for new features as a signal of intent;
 - describe the change — write this as the CHANGELOG reader would want to read it ("what changed and why should I care"), not as a commit dump.
 
 The tool writes a `.changeset/<random-name>.md` file. Commit it with your code.
@@ -107,8 +107,8 @@ All must be green. The version bumps can interact with resolution in surprising 
 
 ```bash
 git add packages/*/package.json CHANGELOG.md pnpm-lock.yaml .changeset
-git commit -m "release: 0.1.0-alpha.N"
-git tag v0.1.0-alpha.N
+git commit -m "release: 0.1.0-beta.N"
+git tag v0.1.0-beta.N
 ```
 
 Use `release:` as the subject prefix so release commits are easy to filter in `git log`. Tag with a `v` prefix; the tag name is the version number.
@@ -117,7 +117,7 @@ Use `release:` as the subject prefix so release commits are easy to filter in `g
 
 ```bash
 git push origin main
-git push origin v0.1.0-alpha.N
+git push origin v0.1.0-beta.N
 ```
 
 Two separate pushes because tags don't ride along on a normal `git push`.
@@ -128,7 +128,7 @@ Two separate pushes because tags don't ride along on a normal `git push`.
 pnpm release:publish
 ```
 
-This runs `pnpm build && changeset publish`. In pre-release mode, `changeset publish` automatically uses the `alpha` dist-tag and publishes only packages whose current version on npm is older than the local `package.json`. Packages in `ignore` (campos-site) are skipped.
+This runs `pnpm build && changeset publish`. In pre-release mode, `changeset publish` automatically uses the `beta` dist-tag and publishes only packages whose current version on npm is older than the local `package.json`. Packages in `ignore` (campos-site) are skipped.
 
 If you're on a 2FA-protected npm account:
 
@@ -143,32 +143,32 @@ npm view @withqwerty/campos-react versions --json
 npm view @withqwerty/campos-react dist-tags
 ```
 
-Confirm the new version is in the `versions` list and the `alpha` dist-tag points to it.
+Confirm the new version is in the `versions` list and the `beta` dist-tag points to it.
 
 Smoke-test in a throwaway project:
 
 ```bash
 mkdir /tmp/campos-smoke-test && cd /tmp/campos-smoke-test
 pnpm init
-pnpm add react react-dom @withqwerty/campos-react@alpha
+pnpm add react react-dom @withqwerty/campos-react@beta
 # Write a small tsx file importing ShotMap, make sure it typechecks
 rm -rf /tmp/campos-smoke-test
 ```
 
-Done. The release is live on the `alpha` tag.
+Done. The release is live on the `beta` tag.
 
 ## Manual release flow (fallback only)
 
 If changesets is unavailable or in a broken state (e.g. `.changeset/pre.json` corrupted, a reverted version bump that left the tree inconsistent), the hand-rolled flow below still works. Don't use it for routine releases — it's here as a hotfix path.
 
 1. Edit `version` in each of `packages/{schema,adapters,stadia,react,static}/package.json` to the new value. All five must match.
-2. Hand-write a new entry at the top of `CHANGELOG.md` under a heading like `## [0.1.0-alpha.N] - YYYY-MM-DD`, grouped by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) sections (`Added` / `Changed` / `Deprecated` / `Removed` / `Fixed` / `Security`).
+2. Hand-write a new entry at the top of `CHANGELOG.md` under a heading like `## [0.1.0-beta.N] - YYYY-MM-DD`, grouped by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) sections (`Added` / `Changed` / `Deprecated` / `Removed` / `Fixed` / `Security`).
 3. `pnpm install` to refresh the lockfile.
 4. Run `pnpm check` and `pnpm build` — must be green.
-5. `git add packages/*/package.json CHANGELOG.md pnpm-lock.yaml && git commit -m "release: 0.1.0-alpha.N"`
-6. `git tag v0.1.0-alpha.N`
-7. `git push origin main && git push origin v0.1.0-alpha.N`
-8. `pnpm -r publish --access public --tag alpha --no-git-checks`
+5. `git add packages/*/package.json CHANGELOG.md pnpm-lock.yaml && git commit -m "release: 0.1.0-beta.N"`
+6. `git tag v0.1.0-beta.N`
+7. `git push origin main && git push origin v0.1.0-beta.N`
+8. `pnpm -r publish --access public --tag beta --no-git-checks`
 
 ## Dist-tag promotion
 
@@ -192,20 +192,20 @@ Things will go wrong. Options, in order of severity:
 
 ### Within 72 hours of publish: `npm unpublish`
 
-npm allows unpublishing a version within 72 hours of its initial publish. Use this for clear mistakes only — accidentally shipping a broken `alpha.0`, publishing to the wrong scope, etc.
+npm allows unpublishing a version within 72 hours of its initial publish. Use this for clear mistakes only — accidentally shipping a broken `beta.0`, publishing to the wrong scope, etc.
 
 ```bash
-command npm unpublish @withqwerty/campos-react@0.1.0-alpha.3
+command npm unpublish @withqwerty/campos-react@0.1.0-beta.3
 ```
 
-Unpublishing a version is still recorded in npm's metadata. The version number is permanently burnt — you cannot republish `0.1.0-alpha.3` later. Bump to `alpha.4` and ship the fix.
+Unpublishing a version is still recorded in npm's metadata. The version number is permanently burnt — you cannot republish `0.1.0-beta.3` later. Bump to `beta.4` and ship the fix.
 
 ### Older than 72 hours: `npm deprecate`
 
 Deprecation doesn't remove the package, but it shows a warning on install:
 
 ```bash
-command npm deprecate @withqwerty/campos-react@0.1.0-alpha.3 "Broken, use @0.1.0-alpha.4 instead"
+command npm deprecate @withqwerty/campos-react@0.1.0-beta.3 "Broken, use @0.1.0-beta.4 instead"
 ```
 
 Repeat for each package. This is the right tool for "don't use this version" once anyone outside your control might have installed it.
@@ -264,7 +264,7 @@ inlined sibling workspace outputs.
 
 ### `workspace:*` is rewritten automatically
 
-Inside the monorepo, packages reference each other with `"@withqwerty/campos-schema": "workspace:*"` and similar. At publish time, pnpm rewrites these to concrete version numbers (`"@withqwerty/campos-schema": "0.1.0-alpha.3"`) in the tarball's `package.json`. The source file on disk stays as `workspace:*`.
+Inside the monorepo, packages reference each other with `"@withqwerty/campos-schema": "workspace:*"` and similar. At publish time, pnpm rewrites these to concrete version numbers (`"@withqwerty/campos-schema": "0.1.0-beta.3"`) in the tarball's `package.json`. The source file on disk stays as `workspace:*`.
 
 You do not need to manually update `workspace:*` references during a release. Do not try.
 
@@ -335,11 +335,11 @@ Normal. `pnpm publish` may update the lockfile with resolution metadata. Stage a
 
 ### `npm view` shows an old version
 
-Check the dist-tag you're looking at: `npm view @withqwerty/campos-react dist-tags`. The `latest` tag may point to a stable version while new work ships to `alpha`. That's by design, not a bug.
+Check the dist-tag you're looking at: `npm view @withqwerty/campos-react dist-tags`. The `latest` tag may point to a stable version while new work ships to `beta`. That's by design, not a bug.
 
 ## Future improvements
 
-Not blockers for alpha releases. Worth adopting before v1:
+Not blockers for beta releases. Worth adopting before v1:
 
 - **Changesets** ([github.com/changesets/changesets](https://github.com/changesets/changesets)) for automated version management. Removes the manual step of bumping five library `package.json` files in lockstep.
 - **CI-driven releases** via GitHub Actions so publishes happen on tag push, not manually from a laptop.

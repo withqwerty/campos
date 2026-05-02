@@ -5,7 +5,6 @@
   "packageManager": "pnpm@10.33.0",
   "scripts": {
     "generate:schema": "pnpm --filter @withqwerty/campos-schema generate",
-    "generate:formations": "python3 scripts/extract-mplsoccer-formations.py",
     "generate:registry": "node scripts/generate-registry.mjs",
     "build": "pnpm generate:schema && pnpm --filter @withqwerty/campos-schema build && pnpm --filter @withqwerty/campos-adapters build && pnpm --filter @withqwerty/campos-stadia build && pnpm --filter @withqwerty/campos-react build && pnpm --filter @withqwerty/campos-static build",
     "typecheck": "pnpm generate:schema && tsc --noEmit -p tsconfig.json",

@@ -51,6 +51,32 @@ pnpm --filter @withqwerty/campos-site build
 - Prefer honest docs over aspirational docs. If a feature is limited, say so
   directly.
 
+## How PRs Land
+
+This repo is mirrored from a private monorepo. The export tool wipes the public
+tree on each release, so PR commits don't survive a re-export verbatim. The flow
+we follow:
+
+1. You open a PR against `withqwerty/campos`.
+2. We review and discuss on the PR. If changes are needed, push to your branch
+   as normal.
+3. Once accepted, a maintainer ports the diff into the source repo, re-exports,
+   and the change ships in the next release.
+4. The public PR is closed with a link to the release commit and `CHANGELOG.md`
+   entry. You're credited there.
+
+Practical implications:
+
+- Your commit SHA won't appear in `main` history on this repo. The release
+  commit will reference your PR.
+- Don't be surprised if the merged change shows a different author. The
+  CHANGELOG entry and release notes are the canonical attribution.
+- For larger changes, please open an issue first so we can confirm scope before
+  you build — saves a port that might not be wanted.
+
+Filing an issue is also a perfectly good contribution. If you've found a bug or
+gap and don't want to write the fix yourself, a clear repro is genuinely useful.
+
 ## Pull Requests
 
 Before opening a PR, run:

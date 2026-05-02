@@ -11,9 +11,6 @@ commit conventions. Everything below adds only Claude-specific notes on top.
 
 - For broad codebase questions, launch the Explore agent. For known paths, use
   Read and Grep directly.
-- For component, adapter, or compute-layer work, read `docs/architecture-decision.md`
-  and the relevant spec in `docs/specs/` before implementing. The spec is the
-  contract — do not widen a surface without updating it first.
 - For any visual change (component, demo, chart, or renderer), open the affected
   page in a browser and verify the rendered output before declaring the task
   complete. Passing typecheck, tests, and build is necessary but not sufficient

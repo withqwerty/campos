@@ -25,9 +25,8 @@ import { STARTER_COUNT } from "../shared/constants.js";
  * Campos delegates the translation to
  * {@link getMplSlotForOptaSlot} in `@withqwerty/campos-schema`, which reads
  * the `opta` field stored on each entry in `formation-positions.json`.
- * That JSON is regenerated from mplsoccer's `formations.py` via
- * `scripts/extract-mplsoccer-formations.py`, so mplsoccer is the single
- * source of truth for the slot convention and all 24 supported Opta
+ * That JSON is derived from mplsoccer's `formations.py`, so mplsoccer is the
+ * single source of truth for the slot convention and all 24 supported Opta
  * formations get the correct mapping automatically.
  */
 

@@ -4,7 +4,7 @@
 
 Campos is currently in beta (pre-1.0). Security fixes are handled on a
 best-effort basis for the latest unreleased work on `main` and the latest
-published beta versions. Older alpha versions are not supported.
+published beta versions. Older pre-release versions are not supported.
 
 | Version | Supported |
 | ------- | --------- |
