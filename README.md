@@ -4,7 +4,7 @@ Campos is a React-first TypeScript component library for football visualizations
 
 Docs and examples: `https://campos.withqwerty.com`
 
-For the first alpha, prefer `npm install` when consuming the published packages.
+During the beta line, prefer `npm install` when consuming the published packages.
 `npm` resolves the live scoped publishes correctly, while some package managers
 that rely on npm's abbreviated metadata endpoint can still see temporary `404`
 responses on fresh publishes.
@@ -17,9 +17,7 @@ The current public package story is:
 - `@withqwerty/campos-stadia` — pitch and goal primitives for football surfaces
 - `@withqwerty/campos-static` — server-side SVG/PNG export for Campos charts
 
-Internal compute/model helpers currently live inside the React package rather than a separate consumer-facing core package. They remain publicly importable from `@withqwerty/campos-react` during alpha as a transitional helper surface. The old `@withqwerty/campos-core` package name is retired.
-
-Current architecture and implementation specs live in [`docs/README.md`](https://github.com/withqwerty/campos/blob/main/docs/README.md).
+Internal compute/model helpers currently live inside the React package and are publicly importable from `@withqwerty/campos-react` during the beta line as a transitional helper surface.
 
 ## Workspace
 
