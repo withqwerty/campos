@@ -34,8 +34,8 @@ importers:
         specifier: ^19.1.5
         version: 19.2.3(@types/react@19.2.14)
       axe-core:
-        specifier: ^4.11.2
-        version: 4.11.2
+        specifier: ^4.11.4
+        version: 4.11.4
       eslint:
         specifier: ^10.2.0
         version: 10.2.0
@@ -1082,8 +1082,8 @@ packages:
     resolution: {integrity: sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==}
     engines: {node: '>=12'}
 
-  axe-core@4.11.2:
-    resolution: {integrity: sha512-byD6KPdvo72y/wj2T/4zGEvvlis+PsZsn/yPS3pEO+sFpcrqRpX/TJCxvVaEsNeMrfQbCr7w163YqoD9IYwHXw==}
+  axe-core@4.11.4:
+    resolution: {integrity: sha512-KunSNx+TVpkAw/6ULfhnx+HWRecjqZGTOyquAoWHYLRSdK1tB5Ihce1ZW+UY3fj33bYAFWPu7W/GRSmmrCGuxA==}
     engines: {node: '>=4'}
 
   balanced-match@4.0.4:
@@ -3034,7 +3034,7 @@ snapshots:
 
   assertion-error@2.0.1: {}
 
-  axe-core@4.11.2: {}
+  axe-core@4.11.4: {}
 
   balanced-match@4.0.4: {}
 
@@ -3974,7 +3974,7 @@ snapshots:
   vitest-axe@0.1.0(vitest@3.2.4(@types/debug@4.1.13)(@types/node@24.12.2)(jsdom@26.1.0)):
     dependencies:
       aria-query: 5.3.2
-      axe-core: 4.11.2
+      axe-core: 4.11.4
       chalk: 5.6.2
       dom-accessibility-api: 0.5.16
       lodash-es: 4.18.1

@@ -42,7 +42,7 @@
     "@types/node": "^24.5.2",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
-    "axe-core": "^4.11.2",
+    "axe-core": "^4.11.4",
     "eslint": "^10.2.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "^7.0.1",
