@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/tracking-frame-snapshot.schema.json",
+  "title": "TrackingFrameSnapshot",
+  "description": "A single provider-normalised tracking frame for pitch freeze views. Coordinates are absolute full-pitch Campos percentages, not attacker-relative event coordinates.",
+  "type": "object",
+  "required": [
+    "id",
+    "matchId",
+    "period",
+    "frameId",
+    "gameClockSeconds",
+    "live",
+    "coordinateFrame",
+    "pitchDimensions",
+    "players",
+    "ball",
+    "provider",
+    "providerFrameId"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable Campos tracking-frame identifier."
+    },
+    "matchId": {
+      "type": "string",
+      "description": "Match identifier in the consuming app or source dataset."
+    },
+    "period": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "frameId": {
+      "type": "string",
+      "description": "Provider frame identifier as a string."
+    },
+    "gameClockSeconds": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Seconds elapsed inside the current period."
+    },
+    "wallClockSeconds": {
+      "type": ["number", "null"],
+      "description": "Provider wall-clock or epoch-like frame time when supplied."
+    },
+    "live": {
+      "type": "boolean",
+      "description": "Whether the provider marks the frame as ball-in-play/live."
+    },
+    "coordinateFrame": {
+      "const": "absolute-pitch",
+      "description": "Tracking freezes contain both teams at once, so x/y are absolute full-pitch co-ordinates: x=0 at the decreasing-x goal line, x=100 at the increasing-x goal line, y=0 at the lower touchline, y=100 at the upper touchline."
+    },
+    "pitchDimensions": {
+      "type": "object",
+      "required": ["length", "width"],
+      "additionalProperties": false,
+      "properties": {
+        "length": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "width": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "homeAttacksToward": {
+      "type": ["string", "null"],
+      "enum": ["increasing-x", "decreasing-x", null],
+      "description": "Home attacking direction for this period when known. This is metadata for interpretation; player x/y remain absolute."
+    },
+    "players": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["side", "playerId", "optaId", "shirtNumber", "x", "y", "speed"],
+        "additionalProperties": false,
+        "properties": {
+          "side": {
+            "type": "string",
+            "enum": ["home", "away"]
+          },
+          "playerId": {
+            "type": "string",
+            "description": "Stable provider player identifier for this tracking feed."
+          },
+          "optaId": {
+            "type": ["string", "null"],
+            "description": "Opta player identifier when the provider crosswalk supplies it."
+          },
+          "shirtNumber": {
+            "type": ["number", "null"],
+            "description": "Shirt number when supplied."
+          },
+          "x": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "y": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "z": {
+            "type": ["number", "null"],
+            "description": "Provider z value when supplied. Usually null for players."
+          },
+          "speed": {
+            "type": ["number", "null"],
+            "minimum": 0
+          },
+          "sourceMeta": {
+            "type": ["object", "null"],
+            "additionalProperties": true,
+            "description": "Provider-scoped metadata bag for provenance and debugging."
+          }
+        }
+      }
+    },
+    "ball": {
+      "type": ["object", "null"],
+      "required": ["x", "y", "z", "speed"],
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "y": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "z": {
+          "type": ["number", "null"]
+        },
+        "speed": {
+          "type": ["number", "null"],
+          "minimum": 0
+        }
+      }
+    },
+    "provider": {
+      "type": "string",
+      "description": "Source provider identifier, usually second-spectrum."
+    },
+    "providerFrameId": {
+      "type": "string",
+      "description": "Raw provider frame identifier."
+    },
+    "sourceMeta": {
+      "type": ["object", "null"],
+      "additionalProperties": true,
+      "description": "Provider-scoped metadata bag for provenance and advanced debugging."
+    }
+  }
+}

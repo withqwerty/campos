@@ -1,7 +1,13 @@
 import type { ShotEvent } from "@withqwerty/campos-schema";
 
 import { statsPerformGoalMouthToCampos } from "../shared/coordinates.js";
-import { hasQualifier, Q, readNumericQualifier, type OptaEvent } from "./qualifiers.js";
+import {
+  hasQualifier,
+  optaSourceMeta,
+  Q,
+  readNumericQualifier,
+  type OptaEvent,
+} from "./qualifiers.js";
 import {
   normalizeCoordinates,
   normalizeEndCoordinatesFromQualifiers,
@@ -104,10 +110,6 @@ export function mapShot(event: OptaEvent, matchContext: ContextWithPeriods): Sho
     goalMouthZ: goalMouth.goalMouthZ,
     provider: "opta",
     providerEventId: String(event.id),
-    sourceMeta: {
-      typeId: event.typeId,
-      eventId: event.eventId,
-      outcome: event.outcome,
-    },
+    sourceMeta: optaSourceMeta(event),
   };
 }

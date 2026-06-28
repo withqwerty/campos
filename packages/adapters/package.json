@@ -1,6 +1,6 @@
 {
   "name": "@withqwerty/campos-adapters",
-  "version": "0.1.0-beta.4",
+  "version": "0.1.0-beta.5",
   "description": "Provider-to-Campos data adapters — Opta, StatsBomb, WhoScored, and Wyscout normalization for the Campos football schema.",
   "license": "MIT",
   "author": "withqwerty <rahulkeerthi2@gmail.com>",
@@ -15,6 +15,10 @@
     "./opta": {
       "types": "./dist/src/opta/index.d.ts",
       "import": "./dist/src/opta/index.js"
+    },
+    "./second-spectrum": {
+      "types": "./dist/src/secondspectrum/index.d.ts",
+      "import": "./dist/src/secondspectrum/index.js"
     },
     "./statsbomb": {
       "types": "./dist/src/statsbomb/index.d.ts",

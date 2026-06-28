@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/physical-window.schema.json",
+  "title": "PhysicalWindow",
+  "description": "A provider-normalised physical-output row for a player or team over a time window.",
+  "type": "object",
+  "required": [
+    "id",
+    "matchId",
+    "subjectKind",
+    "subjectId",
+    "subjectName",
+    "side",
+    "phase",
+    "label",
+    "startMinute",
+    "endMinute",
+    "metrics",
+    "provider",
+    "providerRowId"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "matchId": {
+      "type": "string"
+    },
+    "subjectKind": {
+      "type": "string",
+      "enum": ["team", "player"]
+    },
+    "subjectId": {
+      "type": "string"
+    },
+    "subjectName": {
+      "type": ["string", "null"]
+    },
+    "side": {
+      "type": ["string", "null"],
+      "enum": ["home", "away", null]
+    },
+    "phase": {
+      "type": "string",
+      "enum": ["all", "in-possession", "out-of-possession", "ball-out-of-play"]
+    },
+    "label": {
+      "type": "string",
+      "description": "Display label for the provider window, for example 60-65."
+    },
+    "startMinute": {
+      "type": ["number", "null"],
+      "minimum": 0
+    },
+    "endMinute": {
+      "type": ["number", "null"],
+      "minimum": 0
+    },
+    "metrics": {
+      "type": "object",
+      "required": [
+        "distance",
+        "highSpeedRunning",
+        "sprinting",
+        "highIntensityRuns",
+        "highSpeedRunningCount",
+        "sprintingCount",
+        "topSpeed",
+        "averageSpeed"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "distance": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "highSpeedRunning": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "sprinting": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "highIntensityRuns": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "highSpeedRunningCount": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "sprintingCount": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "topSpeed": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "averageSpeed": {
+          "type": ["number", "null"],
+          "minimum": 0
+        }
+      }
+    },
+    "provider": {
+      "type": "string"
+    },
+    "providerRowId": {
+      "type": "string"
+    },
+    "sourceMeta": {
+      "type": ["object", "null"],
+      "additionalProperties": true,
+      "description": "Provider-scoped metadata bag for provenance and debugging."
+    }
+  }
+}

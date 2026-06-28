@@ -13,6 +13,7 @@
   "changesets": [
     "first-beta",
     "oidc-trusted-publishing",
-    "pitch-presets-and-schema-reexport"
+    "pitch-presets-and-schema-reexport",
+    "tracking-analysis-packets"
   ]
 }

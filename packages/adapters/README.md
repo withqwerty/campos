@@ -47,6 +47,7 @@ Bad adapter methods usually look like chart-shaped packets:
 - `fromOpta.events(events, matchContext)`
 - `fromOpta.shots(events, matchContext)`
 - `fromOpta.passes(events, matchContext)`
+- `fromOpta.eventSurface(events, matchContext, options?)`
 - `fromOpta.parseSquads(rawSquadsFile)`
 - `fromOpta.formations(lineupEvent, options)`
 - `fromOpta.matchLineups({ home, away }, { squads, matchId? })`
@@ -58,6 +59,69 @@ Notes:
   recoverable from raw F24 rows alone.
 - `matchLineups()` is intentionally kickoff-lineup focused: starters, bench ordering,
   captain, formation, shirts, and squad-joined labels.
+- `eventSurface()` packages canonical events, pass and shot projections, MA36
+  possession windows, provider context tags, enrichment counts, evidence, and
+  caveats. Context tags expose qualifier counts, timestamps, possession/sequence
+  IDs, pressure/reception/line-break flags, and xThreat values as provider
+  metadata only; tactical phases, production cost, repeatability, and calibration
+  remain consumer-owned.
+
+### Second Spectrum
+
+- `fromSecondSpectrum.trackingFrame(frame, context)`
+- `fromSecondSpectrum.trackingFrames(frames, context)`
+- `fromSecondSpectrum.physicalWindow(row, context)`
+- `fromSecondSpectrum.physicalWindows(rows, context)`
+- `fromSecondSpectrum.physicalSummaryWindow(row, context)`
+- `fromSecondSpectrum.physicalSummaryWindows(rows, context)`
+- `fromSecondSpectrum.physicalTeamSplitWindows(block, context)`
+- `fromSecondSpectrum.physicalTeamSplitBlocks(blocks, context)`
+- `fromSecondSpectrum.sequenceMoment(moment, context)`
+- `fromSecondSpectrum.sequenceMoments(moments, context)`
+- `fromSecondSpectrum.teamShapeSnapshot(snapshot, context)`
+- `fromSecondSpectrum.teamShapeSnapshots(snapshots, context)`
+- `fromSecondSpectrum.metricToCampos(point, pitchDimensions)`
+
+Notes:
+
+- Tracking frames are normalised into an absolute full-pitch frame because a
+  freeze contains both teams at once. This is intentionally different from
+  attacker-relative event coordinates.
+- Physical windows expose distance, HSR, sprinting, high-intensity runs,
+  HSR-count, and sprint-count metrics as stable nullable fields so consumers can
+  compare load and repeated-effort bins without provider-specific key checks.
+- `physicalSummaryWindow(s)` maps parsed player summary rows into full-match
+  player windows. `physicalTeamSplitWindow(s)` maps parsed team split blocks into
+  five-minute-style bins and preserves ambiguous provider split indices, including
+  repeated half-time labels.
+- The adapter preserves missing Opta IDs, ball values, speeds, and provider
+  metadata instead of inventing complete tracking records.
+- Sequence moments only sync event IDs, tracking frame IDs, video time, evidence,
+  and caveats. Tactical classifications remain consumer-owned derived products.
+- Team-shape snapshots carry reusable visual overlays for average line proxies,
+  centroids, convex-hull polygons, movement arrows, movement-derived facing
+  hints, and candidate ball-to-receiver lanes. They preserve caveats and
+  provenance, and deliberately avoid tactical labels such as repeatability,
+  intent, body orientation, or value.
+
+### Visual
+
+- `fromVisual.phaseMapSnapshot(snapshot, context)`
+- `fromVisual.phaseMapSnapshots(snapshots, context)`
+- `fromVisual.playerSurfaceSnapshot(snapshot, context)`
+- `fromVisual.playerSurfaceSnapshots(snapshots, context)`
+
+Notes:
+
+- Phase-map snapshots package output/cost score-space points, team centroids,
+  calibration status, evidence, and caveats for quadrant-style maps without
+  owning the consumer's scoring or interpretation.
+- Player-surface snapshots package lineups, average-position points, passing-network
+  edges, and role-tag candidates into a reusable visual analysis packet.
+- The adapter normalises IDs, clamps Campos coordinates, preserves inferred-edge
+  flags, and carries source metadata, evidence, and caveats.
+- It deliberately avoids tactical-value, repeatability, or responsibility claims.
+  Those remain consumer-owned interpretations.
 
 ### StatsBomb
 

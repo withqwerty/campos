@@ -160,4 +160,200 @@ describe("fromOpta.events — mixed event stream", () => {
     const result = fromOpta.events([], ctx);
     expect(result).toEqual([]);
   });
+
+  it("preserves Opta qualifiers, timestamps, and MA36 enrichment as source metadata", () => {
+    const enriched = fromOpta.events(
+      [
+        {
+          id: 9001,
+          eventId: 901,
+          typeId: 1,
+          periodId: 1,
+          timeMin: 12,
+          timeSec: 34,
+          contestantId: home.id,
+          playerId: "p1",
+          outcome: 1,
+          x: 40,
+          y: 45,
+          qualifier: [
+            { qualifierId: 140, value: "58" },
+            { qualifierId: 141, value: "52" },
+          ],
+          timestampUtc: "2025-08-15T19:12:34.000Z",
+          sequenceId: "seq-12",
+          possessionId: "pos-7",
+          hasPressure: true,
+          hasPressureReceived: false,
+          hasPassOption: true,
+          hasPassTarget: true,
+          hasReception: true,
+          hasLineBreakingPass: true,
+          xThreatApplied: 0.123,
+          xThreatRemoved: 0.01,
+        },
+      ],
+      ctx,
+    );
+    const pass = enriched[0];
+
+    expect(pass?.kind).toBe("pass");
+    const sourceMeta = pass?.sourceMeta as Record<string, unknown> | undefined;
+    const ma36 = sourceMeta?.ma36 as Record<string, unknown> | undefined;
+    expect(sourceMeta?.timestampUtc).toBe("2025-08-15T19:12:34.000Z");
+    expect(sourceMeta?.qualifiers).toEqual([
+      { qualifierId: 140, value: "58" },
+      { qualifierId: 141, value: "52" },
+    ]);
+    expect(ma36).toMatchObject({
+      sequenceId: "seq-12",
+      possessionId: "pos-7",
+      hasPressure: true,
+      hasPassOption: true,
+      hasReception: true,
+      hasLineBreakingPass: true,
+      xThreatApplied: 0.123,
+      xThreatRemoved: 0.01,
+    });
+  });
+
+  it("groups MA36-enriched canonical events into possession windows", () => {
+    const canonical = fromOpta.events(
+      [
+        {
+          id: 9101,
+          eventId: 911,
+          typeId: 1,
+          periodId: 1,
+          timeMin: 7,
+          timeSec: 5,
+          contestantId: home.id,
+          playerId: "p1",
+          outcome: 1,
+          x: 40,
+          y: 45,
+          qualifier: [
+            { qualifierId: 140, value: "52" },
+            { qualifierId: 141, value: "48" },
+          ],
+          sequenceId: "seq-a",
+          possessionId: "pos-a",
+          hasPressure: true,
+          hasReception: false,
+          hasLineBreakingPass: true,
+          xThreatApplied: 0.2,
+          xThreatRemoved: 0.03,
+        },
+        {
+          id: 9102,
+          eventId: 912,
+          typeId: 1,
+          periodId: 1,
+          timeMin: 7,
+          timeSec: 12,
+          contestantId: home.id,
+          playerId: "p2",
+          outcome: 1,
+          x: 52,
+          y: 48,
+          qualifier: [
+            { qualifierId: 140, value: "63" },
+            { qualifierId: 141, value: "46" },
+          ],
+          sequenceId: "seq-a",
+          possessionId: "pos-a",
+          hasPressure: false,
+          hasReception: true,
+          hasLineBreakingPass: false,
+          xThreatApplied: 0.05,
+          xThreatRemoved: 0,
+        },
+      ],
+      ctx,
+    );
+    const windows = fromOpta.possessionWindows(canonical, {
+      teamNamesById: { [home.id]: "Home" },
+    });
+
+    expect(windows).toHaveLength(1);
+    expect(windows[0]).toMatchObject({
+      provider: "opta",
+      providerPossessionId: "pos-a",
+      sequenceId: "seq-a",
+      teamId: home.id,
+      teamName: "Home",
+      period: 1,
+      startMinute: 7,
+      startSecond: 5,
+      endMinute: 7,
+      endSecond: 12,
+      metrics: {
+        eventCount: 2,
+        passCount: 2,
+        shotCount: 0,
+        pressureTaggedEventCount: 1,
+        receptionCount: 1,
+        lineBreakingPassCount: 1,
+        xThreatApplied: 0.25,
+        xThreatRemoved: 0.03,
+      },
+    });
+    expect(windows[0]?.sourceMeta?.caveat).toContain("do not classify");
+  });
+
+  it("splits provider possession windows when canonical events have a large time gap", () => {
+    const canonical = fromOpta.events(
+      [
+        {
+          id: 9201,
+          eventId: 921,
+          typeId: 1,
+          periodId: 1,
+          timeMin: 2,
+          timeSec: 0,
+          contestantId: home.id,
+          playerId: "p1",
+          outcome: 1,
+          x: 40,
+          y: 45,
+          qualifier: [
+            { qualifierId: 140, value: "52" },
+            { qualifierId: 141, value: "48" },
+          ],
+          sequenceId: "seq-gap",
+          possessionId: "pos-gap",
+        },
+        {
+          id: 9202,
+          eventId: 922,
+          typeId: 1,
+          periodId: 1,
+          timeMin: 6,
+          timeSec: 0,
+          contestantId: home.id,
+          playerId: "p2",
+          outcome: 1,
+          x: 52,
+          y: 48,
+          qualifier: [
+            { qualifierId: 140, value: "63" },
+            { qualifierId: 141, value: "46" },
+          ],
+          sequenceId: "seq-gap",
+          possessionId: "pos-gap",
+        },
+      ],
+      ctx,
+    );
+    const windows = fromOpta.possessionWindows(canonical, {
+      maxEventGapSeconds: 30,
+    });
+
+    expect(windows).toHaveLength(2);
+    expect(windows.map((window) => window.providerPossessionId)).toEqual([
+      "pos-gap",
+      "pos-gap",
+    ]);
+    expect(windows.map((window) => window.sourceMeta?.segmentCount)).toEqual([2, 2]);
+  });
 });

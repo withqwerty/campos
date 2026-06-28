@@ -1,5 +1,18 @@
 # @withqwerty/campos-adapters
 
+## 0.1.0-beta.5
+
+### Minor Changes
+
+- Add reusable football analysis packets for Opta event surfaces, Second Spectrum tracking and physical windows, and visual phase/player surfaces.
+
+  The new adapter methods preserve source evidence, caveats, provider context, and nullable fields so applications can build match-analysis views without baking tactical interpretation into Campos.
+
+### Patch Changes
+
+- Updated dependencies
+  - @withqwerty/campos-schema@0.1.0-beta.5
+
 ## 0.1.0-beta.4
 
 ### Minor Changes

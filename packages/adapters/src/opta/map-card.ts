@@ -1,6 +1,6 @@
 import type { CardEvent } from "@withqwerty/campos-schema";
 
-import type { OptaEvent } from "./qualifiers.js";
+import { optaSourceMeta, type OptaEvent } from "./qualifiers.js";
 import { normalizePeriod, normalizeTime, type ContextWithPeriods } from "./normalize.js";
 
 // ---------------------------------------------------------------------------
@@ -46,10 +46,6 @@ export function mapCard(event: OptaEvent, matchContext: ContextWithPeriods): Car
     cardType: mapCardType(event),
     provider: "opta",
     providerEventId: String(event.id),
-    sourceMeta: {
-      typeId: event.typeId,
-      eventId: event.eventId,
-      outcome: event.outcome,
-    },
+    sourceMeta: optaSourceMeta(event),
   };
 }

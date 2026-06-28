@@ -1,6 +1,6 @@
 import type { SubstitutionEvent } from "@withqwerty/campos-schema";
 
-import type { OptaEvent } from "./qualifiers.js";
+import { optaSourceMeta, type OptaEvent } from "./qualifiers.js";
 import { normalizePeriod, normalizeTime, type ContextWithPeriods } from "./normalize.js";
 
 // ---------------------------------------------------------------------------
@@ -33,9 +33,7 @@ export function mapSubstitution(
     provider: "opta",
     providerEventId: String(event.id),
     sourceMeta: {
-      typeId: event.typeId,
-      eventId: event.eventId,
-      outcome: event.outcome,
+      ...optaSourceMeta(event),
       ...(incomingEvent != null
         ? {
             playerInEventId: incomingEvent.eventId,

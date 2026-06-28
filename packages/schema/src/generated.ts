@@ -703,6 +703,127 @@ export interface MatchSummary {
 }
 
 /**
+ * A provider-normalised Opta event surface for visual and audit use. It packages canonical events, pass and shot projections, MA36 possession windows, enrichment counts, evidence, and caveats without tactical interpretation.
+ */
+export interface OptaEventSurface {
+  id: string;
+  matchId: string;
+  provider: "opta";
+  /**
+   * Canonical event co-ordinates are normalised so x is attacking direction for the event team.
+   */
+  coordinateFrame: "team-attacking";
+  events: (
+    | ShotEvent
+    | PassEvent
+    | CarryEvent
+    | CardEvent
+    | TackleEvent
+    | InterceptionEvent
+    | DuelEvent
+    | GoalkeeperEvent
+    | ClearanceEvent
+    | SubstitutionEvent
+    | FoulCommittedEvent
+    | TakeOnEvent
+    | RecoveryEvent
+    | PressureEvent
+  )[];
+  passes: PassEvent[];
+  shots: ShotEvent[];
+  possessions: OptaPossessionWindow[];
+  /**
+   * Provider context preserved from F24 qualifiers, timestamps, and MA36 enrichment. These rows are source tags, not tactical phase classifications.
+   */
+  contextTags: {
+    eventId: string;
+    providerEventId: string;
+    kind: string;
+    period: number;
+    minute: number;
+    second: number;
+    teamId: string;
+    playerId: string | null;
+    timestampUtc: string | null;
+    qualifierCount: number;
+    possessionId: string | null;
+    sequenceId: string | null;
+    hasPressure: boolean;
+    hasPressureReceived: boolean;
+    hasPassOption: boolean;
+    hasPassTarget: boolean;
+    hasReception: boolean;
+    hasLineBreakingPass: boolean;
+    xThreatApplied: number | null;
+    xThreatRemoved: number | null;
+    sourceMeta?: {
+      [k: string]: unknown;
+    } | null;
+  }[];
+  enrichment: {
+    f24Events: number;
+    ma36Events: number;
+    canonicalEvents: number;
+    passes: number;
+    shots: number;
+    eventsWithMa36: number;
+    possessionTaggedEvents: number;
+    sequenceTaggedEvents: number;
+    pressureTaggedEvents: number;
+    pressureReceivedEvents: number;
+    receptionEvents: number;
+    lineBreakingPassEvents: number;
+    xThreatEvents: number;
+    possessionWindows: number;
+    qualifierTaggedEvents: number;
+    timestampedEvents: number;
+  };
+  evidence: string[];
+  caveat: string;
+  /**
+   * Provider-scoped metadata bag for provenance and debugging.
+   */
+  sourceMeta?: {
+    [k: string]: unknown;
+  } | null;
+}
+
+/**
+ * A provider-normalised Opta/MA36 possession window grouped from enriched event rows. This is source context, not a tactical phase classification.
+ */
+export interface OptaPossessionWindow {
+  id: string;
+  matchId: string;
+  provider: "opta";
+  providerPossessionId: string;
+  sequenceId: string | null;
+  teamId: string;
+  teamName: string | null;
+  period: 1 | 2 | 3 | 4 | 5;
+  startMinute: number;
+  startSecond: number;
+  endMinute: number;
+  endSecond: number;
+  eventIds: string[];
+  metrics: {
+    eventCount: number;
+    passCount: number;
+    shotCount: number;
+    pressureTaggedEventCount: number;
+    receptionCount: number;
+    lineBreakingPassCount: number;
+    xThreatApplied: number;
+    xThreatRemoved: number;
+  };
+  /**
+   * Provider-scoped metadata bag for provenance and debugging.
+   */
+  sourceMeta: {
+    [k: string]: unknown;
+  } | null;
+}
+
+/**
  * Canonical pass event normalized into Campos pitch space.
  */
 export interface PassEvent {
@@ -797,6 +918,213 @@ export interface PassEvent {
   /**
    * Provider-scoped metadata bag for provenance and advanced debugging. It must stay JSON-serializable, must not duplicate canonical top-level fields, and must not reinterpret raw provider semantics into fake cross-provider meaning.
    */
+  sourceMeta?: {
+    [k: string]: unknown;
+  } | null;
+}
+
+/**
+ * A reusable score-space visual packet for output/cost quadrant maps. It carries points, team centroids, evidence, caveats, and calibration status, but not match-specific scoring logic.
+ */
+export interface PhaseMapSnapshot {
+  id: string;
+  matchId: string;
+  /**
+   * x and y are 0-100 diagnostic score co-ordinates, not pitch co-ordinates.
+   */
+  coordinateFrame: "diagnostic-score-space";
+  xAxis: {
+    key: string;
+    label: string;
+    /**
+     * @minItems 2
+     * @maxItems 2
+     */
+    domain: [number, number];
+  };
+  yAxis: {
+    key: string;
+    label: string;
+    /**
+     * @minItems 2
+     * @maxItems 2
+     */
+    domain: [number, number];
+  };
+  calibrationStatus: "within-match" | "insufficient-rich-sample" | "multi-match-baseline-ready" | "unknown";
+  points: {
+    id: string;
+    phaseId: string;
+    side: "home" | "away";
+    teamName: string;
+    label: string;
+    phaseType: string;
+    period: number;
+    startMinute: number;
+    startSecond: number;
+    endMinute: number;
+    endSecond: number;
+    x: number;
+    y: number;
+    outputScore: number;
+    costScore: number;
+    repeatabilityScore: number;
+    repeatabilityLabel: "stable" | "mixed" | "fragile";
+    quadrant: "high-output-high-cost" | "high-output-low-cost" | "low-output-high-cost" | "low-output-low-cost";
+    evidence: string[];
+    caveat: string;
+    sourceMeta?: {
+      [k: string]: unknown;
+    } | null;
+  }[];
+  centroids: {
+    side: "home" | "away";
+    teamName: string;
+    x: number;
+    y: number;
+    outputScore: number;
+    costScore: number;
+    count: number;
+    evidence: string[];
+    caveat: string;
+    sourceMeta?: {
+      [k: string]: unknown;
+    } | null;
+  }[];
+  provider: string;
+  /**
+   * Calibration or interpretation caveat. Null only when no caveat is needed.
+   */
+  caveat: string | null;
+  /**
+   * Provider-scoped metadata bag for provenance and debugging.
+   */
+  sourceMeta?: {
+    [k: string]: unknown;
+  } | null;
+}
+
+/**
+ * A provider-normalised physical-output row for a player or team over a time window.
+ */
+export interface PhysicalWindow {
+  id: string;
+  matchId: string;
+  subjectKind: "team" | "player";
+  subjectId: string;
+  subjectName: string | null;
+  side: "home" | "away" | null;
+  phase: "all" | "in-possession" | "out-of-possession" | "ball-out-of-play";
+  /**
+   * Display label for the provider window, for example 60-65.
+   */
+  label: string;
+  startMinute: number | null;
+  endMinute: number | null;
+  metrics: {
+    distance: number | null;
+    highSpeedRunning: number | null;
+    sprinting: number | null;
+    highIntensityRuns: number | null;
+    highSpeedRunningCount: number | null;
+    sprintingCount: number | null;
+    topSpeed: number | null;
+    averageSpeed: number | null;
+  };
+  provider: string;
+  providerRowId: string;
+  /**
+   * Provider-scoped metadata bag for provenance and debugging.
+   */
+  sourceMeta?: {
+    [k: string]: unknown;
+  } | null;
+}
+
+/**
+ * A reusable player-level visual packet for lineup, average-position, passing-network, and role-tag views. It carries derived geometry, evidence, and caveats, but not match-specific tactical conclusions.
+ */
+export interface PlayerSurfaceSnapshot {
+  id: string;
+  matchId: string;
+  /**
+   * All x/y values are Campos absolute full-pitch co-ordinates.
+   */
+  coordinateFrame: "absolute-pitch";
+  primaryWindow: {
+    label: string;
+    startMinute: number;
+    startSecond: number;
+    endMinute: number;
+    endSecond: number;
+    evidence: string[];
+    caveat: string;
+  };
+  /**
+   * Home and away team sheets used by the player-level view, when available.
+   */
+  lineups: MatchLineups | null;
+  averagePositions: {
+    side: "home" | "away";
+    playerId: string;
+    optaId?: string | null;
+    playerName: string;
+    shirtNumber?: number | null;
+    position?: string | null;
+    x: number;
+    y: number;
+    eventCount: number;
+    passCount: number;
+    windowLabel: string;
+    evidence: string[];
+    caveat: string;
+    sourceMeta?: {
+      [k: string]: unknown;
+    } | null;
+  }[];
+  passingNetworkEdges: {
+    id: string;
+    side: "home" | "away";
+    fromPlayerId: string;
+    fromOptaId?: string | null;
+    fromShirtNumber?: number | null;
+    fromPlayerName: string;
+    toPlayerId: string;
+    toOptaId?: string | null;
+    toShirtNumber?: number | null;
+    toPlayerName: string;
+    x: number;
+    y: number;
+    endX: number;
+    endY: number;
+    count: number;
+    inferred: boolean;
+    evidence: string[];
+    caveat: string;
+    sourceMeta?: {
+      [k: string]: unknown;
+    } | null;
+  }[];
+  roleTags: {
+    side: "home" | "away";
+    playerId: string;
+    optaId?: string | null;
+    playerName: string;
+    shirtNumber?: number | null;
+    position?: string | null;
+    label: string;
+    score: number;
+    evidence: string[];
+    caveat: string;
+    sourceMeta?: {
+      [k: string]: unknown;
+    } | null;
+  }[];
+  provider: string;
+  /**
+   * Missingness or interpretation caveat. Null only when no caveat is needed.
+   */
+  caveat?: string | null;
   sourceMeta?: {
     [k: string]: unknown;
   } | null;
@@ -950,6 +1278,39 @@ export interface Season {
   name?: string | null;
   competitionId?: string | null;
   [k: string]: unknown;
+}
+
+/**
+ * A source-backed sequence moment for syncing event context, a tracking frame, and video time without embedding match-specific tactical judgement.
+ */
+export interface SequenceMomentSnapshot {
+  id: string;
+  matchId: string;
+  title: string;
+  period: number;
+  minute: number;
+  second: number;
+  /**
+   * Video seek time when the consuming app has aligned video; null when unavailable.
+   */
+  videoTimeSeconds: number | null;
+  eventIds: string[];
+  /**
+   * Linked TrackingFrameSnapshot id when a tracking frame is available.
+   */
+  trackingFrameId: string | null;
+  evidence: string[];
+  /**
+   * Missingness or alignment caveat. Null only when no caveat is needed.
+   */
+  caveat: string | null;
+  provider: string;
+  /**
+   * Provider-scoped metadata bag for provenance and debugging.
+   */
+  sourceMeta?: {
+    [k: string]: unknown;
+  } | null;
 }
 
 /**
@@ -1353,6 +1714,136 @@ export interface TakeOnEvent {
 }
 
 /**
+ * A provider-normalised team-shape overlay packet for tracking freeze views. It carries visual geometry and source provenance, but not match-specific tactical judgement.
+ */
+export interface TeamShapeSnapshot {
+  id: string;
+  matchId: string;
+  /**
+   * Linked SequenceMomentSnapshot id when the overlay is sequence-specific.
+   */
+  sequenceMomentId?: string | null;
+  /**
+   * Linked TrackingFrameSnapshot id when the overlay is tied to a specific frame.
+   */
+  trackingFrameId?: string | null;
+  /**
+   * All x/y values are Campos absolute full-pitch co-ordinates.
+   */
+  coordinateFrame: "absolute-pitch";
+  lines: {
+    side: "home" | "away";
+    line: "back" | "middle" | "front";
+    x: number;
+    evidence?: string[];
+    sourceMeta?: {
+      [k: string]: unknown;
+    } | null;
+  }[];
+  centroids: {
+    side: "home" | "away";
+    x: number;
+    y: number;
+    evidence?: string[];
+    sourceMeta?: {
+      [k: string]: unknown;
+    } | null;
+  }[];
+  polygons: {
+    side: "home" | "away";
+    method: "convex-hull";
+    /**
+     * @minItems 3
+     */
+    points: [
+      {
+        x: number;
+        y: number;
+      },
+      {
+        x: number;
+        y: number;
+      },
+      {
+        x: number;
+        y: number;
+      },
+      ...{
+        x: number;
+        y: number;
+      }[]
+    ];
+    evidence?: string[];
+    sourceMeta?: {
+      [k: string]: unknown;
+    } | null;
+  }[];
+  movements: {
+    side: "home" | "away";
+    playerId: string;
+    optaId: string | null;
+    shirtNumber: number | null;
+    x: number;
+    y: number;
+    endX: number;
+    endY: number;
+    speed: number | null;
+    seconds: number | null;
+    evidence?: string[];
+    sourceMeta?: {
+      [k: string]: unknown;
+    } | null;
+  }[];
+  facingHints: {
+    side: "home" | "away";
+    playerId: string;
+    optaId: string | null;
+    shirtNumber: number | null;
+    x: number;
+    y: number;
+    endX: number;
+    endY: number;
+    basis: "movement-vector";
+    speed: number | null;
+    evidence?: string[];
+    sourceMeta?: {
+      [k: string]: unknown;
+    } | null;
+  }[];
+  candidateLanes: {
+    side: "home" | "away";
+    receiverPlayerId: string;
+    receiverOptaId: string | null;
+    receiverShirtNumber: number | null;
+    x: number;
+    y: number;
+    endX: number;
+    endY: number;
+    /**
+     * Minimum provider-space distance to an opponent near the lane. Null when unavailable.
+     */
+    clearance: number | null;
+    /**
+     * Count of opponents under the producer's blocker threshold. Null when unavailable.
+     */
+    blockers: number | null;
+    length: number | null;
+    evidence?: string[];
+    sourceMeta?: {
+      [k: string]: unknown;
+    } | null;
+  }[];
+  provider: string;
+  /**
+   * Missingness or interpretation caveat. Null only when no caveat is needed.
+   */
+  caveat?: string | null;
+  sourceMeta?: {
+    [k: string]: unknown;
+  } | null;
+}
+
+/**
  * Canonical lineup or bench player entry for a match-day team sheet.
  */
 export interface TeamSheetPlayer {
@@ -1468,4 +1959,95 @@ export interface Team {
   name?: string | null;
   shortName?: string | null;
   [k: string]: unknown;
+}
+
+/**
+ * A single provider-normalised tracking frame for pitch freeze views. Coordinates are absolute full-pitch Campos percentages, not attacker-relative event coordinates.
+ */
+export interface TrackingFrameSnapshot {
+  /**
+   * Stable Campos tracking-frame identifier.
+   */
+  id: string;
+  /**
+   * Match identifier in the consuming app or source dataset.
+   */
+  matchId: string;
+  period: number;
+  /**
+   * Provider frame identifier as a string.
+   */
+  frameId: string;
+  /**
+   * Seconds elapsed inside the current period.
+   */
+  gameClockSeconds: number;
+  /**
+   * Provider wall-clock or epoch-like frame time when supplied.
+   */
+  wallClockSeconds?: number | null;
+  /**
+   * Whether the provider marks the frame as ball-in-play/live.
+   */
+  live: boolean;
+  /**
+   * Tracking freezes contain both teams at once, so x/y are absolute full-pitch co-ordinates: x=0 at the decreasing-x goal line, x=100 at the increasing-x goal line, y=0 at the lower touchline, y=100 at the upper touchline.
+   */
+  coordinateFrame: "absolute-pitch";
+  pitchDimensions: {
+    length: number;
+    width: number;
+  };
+  /**
+   * Home attacking direction for this period when known. This is metadata for interpretation; player x/y remain absolute.
+   */
+  homeAttacksToward?: "increasing-x" | "decreasing-x" | null;
+  players: {
+    side: "home" | "away";
+    /**
+     * Stable provider player identifier for this tracking feed.
+     */
+    playerId: string;
+    /**
+     * Opta player identifier when the provider crosswalk supplies it.
+     */
+    optaId: string | null;
+    /**
+     * Shirt number when supplied.
+     */
+    shirtNumber: number | null;
+    x: number;
+    y: number;
+    /**
+     * Provider z value when supplied. Usually null for players.
+     */
+    z?: number | null;
+    speed: number | null;
+    /**
+     * Provider-scoped metadata bag for provenance and debugging.
+     */
+    sourceMeta?: {
+      [k: string]: unknown;
+    } | null;
+  }[];
+  ball: {
+    x: number;
+    y: number;
+    z: number | null;
+    speed: number | null;
+  } | null;
+  /**
+   * Source provider identifier, usually second-spectrum.
+   */
+  provider: string;
+  /**
+   * Raw provider frame identifier.
+   */
+  providerFrameId: string;
+  /**
+   * Provider-scoped metadata bag for provenance and advanced debugging.
+   */
+  sourceMeta?: {
+    [k: string]: unknown;
+  } | null;
 }

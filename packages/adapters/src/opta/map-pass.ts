@@ -1,7 +1,7 @@
 import type { PassEvent } from "@withqwerty/campos-schema";
 
 import { computePassLengthAndAngle } from "../shared/pass-geometry.js";
-import { hasQualifier, Q, type OptaEvent } from "./qualifiers.js";
+import { hasQualifier, optaSourceMeta, Q, type OptaEvent } from "./qualifiers.js";
 import {
   normalizeCoordinates,
   normalizeEndCoordinatesFromQualifiers,
@@ -65,10 +65,6 @@ export function mapPass(event: OptaEvent, matchContext: ContextWithPeriods): Pas
     isAssist: hasQualifier(event, Q.ASSIST),
     provider: "opta",
     providerEventId: String(event.id),
-    sourceMeta: {
-      typeId: event.typeId,
-      eventId: event.eventId,
-      outcome: event.outcome,
-    },
+    sourceMeta: optaSourceMeta(event),
   };
 }

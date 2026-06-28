@@ -1,0 +1,390 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/team-shape-snapshot.schema.json",
+  "title": "TeamShapeSnapshot",
+  "description": "A provider-normalised team-shape overlay packet for tracking freeze views. It carries visual geometry and source provenance, but not match-specific tactical judgement.",
+  "type": "object",
+  "required": [
+    "id",
+    "matchId",
+    "coordinateFrame",
+    "lines",
+    "centroids",
+    "polygons",
+    "movements",
+    "facingHints",
+    "candidateLanes",
+    "provider"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "matchId": {
+      "type": "string"
+    },
+    "sequenceMomentId": {
+      "type": ["string", "null"],
+      "description": "Linked SequenceMomentSnapshot id when the overlay is sequence-specific."
+    },
+    "trackingFrameId": {
+      "type": ["string", "null"],
+      "description": "Linked TrackingFrameSnapshot id when the overlay is tied to a specific frame."
+    },
+    "coordinateFrame": {
+      "const": "absolute-pitch",
+      "description": "All x/y values are Campos absolute full-pitch co-ordinates."
+    },
+    "lines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["side", "line", "x"],
+        "additionalProperties": false,
+        "properties": {
+          "side": {
+            "type": "string",
+            "enum": ["home", "away"]
+          },
+          "line": {
+            "type": "string",
+            "enum": ["back", "middle", "front"]
+          },
+          "x": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sourceMeta": {
+            "type": ["object", "null"],
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "centroids": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["side", "x", "y"],
+        "additionalProperties": false,
+        "properties": {
+          "side": {
+            "type": "string",
+            "enum": ["home", "away"]
+          },
+          "x": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "y": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sourceMeta": {
+            "type": ["object", "null"],
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "polygons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["side", "method", "points"],
+        "additionalProperties": false,
+        "properties": {
+          "side": {
+            "type": "string",
+            "enum": ["home", "away"]
+          },
+          "method": {
+            "type": "string",
+            "enum": ["convex-hull"]
+          },
+          "points": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "object",
+              "required": ["x", "y"],
+              "additionalProperties": false,
+              "properties": {
+                "x": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "y": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                }
+              }
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sourceMeta": {
+            "type": ["object", "null"],
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "movements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "side",
+          "playerId",
+          "optaId",
+          "shirtNumber",
+          "x",
+          "y",
+          "endX",
+          "endY",
+          "speed",
+          "seconds"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "side": {
+            "type": "string",
+            "enum": ["home", "away"]
+          },
+          "playerId": {
+            "type": "string"
+          },
+          "optaId": {
+            "type": ["string", "null"]
+          },
+          "shirtNumber": {
+            "type": ["number", "null"]
+          },
+          "x": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "y": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "endX": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "endY": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "speed": {
+            "type": ["number", "null"],
+            "minimum": 0
+          },
+          "seconds": {
+            "type": ["number", "null"],
+            "minimum": 0
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sourceMeta": {
+            "type": ["object", "null"],
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "facingHints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "side",
+          "playerId",
+          "optaId",
+          "shirtNumber",
+          "x",
+          "y",
+          "endX",
+          "endY",
+          "basis",
+          "speed"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "side": {
+            "type": "string",
+            "enum": ["home", "away"]
+          },
+          "playerId": {
+            "type": "string"
+          },
+          "optaId": {
+            "type": ["string", "null"]
+          },
+          "shirtNumber": {
+            "type": ["number", "null"]
+          },
+          "x": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "y": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "endX": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "endY": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "basis": {
+            "type": "string",
+            "enum": ["movement-vector"]
+          },
+          "speed": {
+            "type": ["number", "null"],
+            "minimum": 0
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sourceMeta": {
+            "type": ["object", "null"],
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "candidateLanes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "side",
+          "receiverPlayerId",
+          "receiverOptaId",
+          "receiverShirtNumber",
+          "x",
+          "y",
+          "endX",
+          "endY",
+          "clearance",
+          "blockers",
+          "length"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "side": {
+            "type": "string",
+            "enum": ["home", "away"]
+          },
+          "receiverPlayerId": {
+            "type": "string"
+          },
+          "receiverOptaId": {
+            "type": ["string", "null"]
+          },
+          "receiverShirtNumber": {
+            "type": ["number", "null"]
+          },
+          "x": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "y": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "endX": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "endY": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "clearance": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "description": "Minimum provider-space distance to an opponent near the lane. Null when unavailable."
+          },
+          "blockers": {
+            "type": ["integer", "null"],
+            "minimum": 0,
+            "description": "Count of opponents under the producer's blocker threshold. Null when unavailable."
+          },
+          "length": {
+            "type": ["number", "null"],
+            "minimum": 0
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sourceMeta": {
+            "type": ["object", "null"],
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "provider": {
+      "type": "string"
+    },
+    "caveat": {
+      "type": ["string", "null"],
+      "description": "Missingness or interpretation caveat. Null only when no caveat is needed."
+    },
+    "sourceMeta": {
+      "type": ["object", "null"],
+      "additionalProperties": true
+    }
+  }
+}

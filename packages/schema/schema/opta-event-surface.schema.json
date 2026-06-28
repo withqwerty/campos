@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/opta-event-surface.schema.json",
+  "title": "OptaEventSurface",
+  "description": "A provider-normalised Opta event surface for visual and audit use. It packages canonical events, pass and shot projections, MA36 possession windows, enrichment counts, evidence, and caveats without tactical interpretation.",
+  "type": "object",
+  "required": [
+    "id",
+    "matchId",
+    "provider",
+    "coordinateFrame",
+    "events",
+    "passes",
+    "shots",
+    "possessions",
+    "contextTags",
+    "enrichment",
+    "evidence",
+    "caveat"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string" },
+    "matchId": { "type": "string" },
+    "provider": { "type": "string", "const": "opta" },
+    "coordinateFrame": {
+      "type": "string",
+      "const": "team-attacking",
+      "description": "Canonical event co-ordinates are normalised so x is attacking direction for the event team."
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          { "$ref": "./shot-event.schema.json" },
+          { "$ref": "./pass-event.schema.json" },
+          { "$ref": "./carry-event.schema.json" },
+          { "$ref": "./card-event.schema.json" },
+          { "$ref": "./tackle-event.schema.json" },
+          { "$ref": "./interception-event.schema.json" },
+          { "$ref": "./duel-event.schema.json" },
+          { "$ref": "./goalkeeper-event.schema.json" },
+          { "$ref": "./clearance-event.schema.json" },
+          { "$ref": "./substitution-event.schema.json" },
+          { "$ref": "./foul-committed-event.schema.json" },
+          { "$ref": "./take-on-event.schema.json" },
+          { "$ref": "./recovery-event.schema.json" },
+          { "$ref": "./pressure-event.schema.json" }
+        ]
+      }
+    },
+    "passes": {
+      "type": "array",
+      "items": { "$ref": "./pass-event.schema.json" }
+    },
+    "shots": {
+      "type": "array",
+      "items": { "$ref": "./shot-event.schema.json" }
+    },
+    "possessions": {
+      "type": "array",
+      "items": { "$ref": "./opta-possession-window.schema.json" }
+    },
+    "contextTags": {
+      "type": "array",
+      "description": "Provider context preserved from F24 qualifiers, timestamps, and MA36 enrichment. These rows are source tags, not tactical phase classifications.",
+      "items": {
+        "type": "object",
+        "required": [
+          "eventId",
+          "providerEventId",
+          "kind",
+          "period",
+          "minute",
+          "second",
+          "teamId",
+          "playerId",
+          "timestampUtc",
+          "qualifierCount",
+          "possessionId",
+          "sequenceId",
+          "hasPressure",
+          "hasPressureReceived",
+          "hasPassOption",
+          "hasPassTarget",
+          "hasReception",
+          "hasLineBreakingPass",
+          "xThreatApplied",
+          "xThreatRemoved"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "eventId": { "type": "string" },
+          "providerEventId": { "type": "string" },
+          "kind": { "type": "string" },
+          "period": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "minute": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 200
+          },
+          "second": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 59
+          },
+          "teamId": { "type": "string" },
+          "playerId": { "type": ["string", "null"] },
+          "timestampUtc": { "type": ["string", "null"] },
+          "qualifierCount": { "type": "integer", "minimum": 0 },
+          "possessionId": { "type": ["string", "null"] },
+          "sequenceId": { "type": ["string", "null"] },
+          "hasPressure": { "type": "boolean" },
+          "hasPressureReceived": { "type": "boolean" },
+          "hasPassOption": { "type": "boolean" },
+          "hasPassTarget": { "type": "boolean" },
+          "hasReception": { "type": "boolean" },
+          "hasLineBreakingPass": { "type": "boolean" },
+          "xThreatApplied": { "type": ["number", "null"] },
+          "xThreatRemoved": { "type": ["number", "null"] },
+          "sourceMeta": {
+            "type": ["object", "null"],
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "enrichment": {
+      "type": "object",
+      "required": [
+        "f24Events",
+        "ma36Events",
+        "canonicalEvents",
+        "passes",
+        "shots",
+        "eventsWithMa36",
+        "possessionTaggedEvents",
+        "sequenceTaggedEvents",
+        "pressureTaggedEvents",
+        "pressureReceivedEvents",
+        "receptionEvents",
+        "lineBreakingPassEvents",
+        "xThreatEvents",
+        "possessionWindows",
+        "qualifierTaggedEvents",
+        "timestampedEvents"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "f24Events": { "type": "integer", "minimum": 0 },
+        "ma36Events": { "type": "integer", "minimum": 0 },
+        "canonicalEvents": { "type": "integer", "minimum": 0 },
+        "passes": { "type": "integer", "minimum": 0 },
+        "shots": { "type": "integer", "minimum": 0 },
+        "eventsWithMa36": { "type": "integer", "minimum": 0 },
+        "possessionTaggedEvents": { "type": "integer", "minimum": 0 },
+        "sequenceTaggedEvents": { "type": "integer", "minimum": 0 },
+        "pressureTaggedEvents": { "type": "integer", "minimum": 0 },
+        "pressureReceivedEvents": { "type": "integer", "minimum": 0 },
+        "receptionEvents": { "type": "integer", "minimum": 0 },
+        "lineBreakingPassEvents": { "type": "integer", "minimum": 0 },
+        "xThreatEvents": { "type": "integer", "minimum": 0 },
+        "possessionWindows": { "type": "integer", "minimum": 0 },
+        "qualifierTaggedEvents": { "type": "integer", "minimum": 0 },
+        "timestampedEvents": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "caveat": { "type": "string" },
+    "sourceMeta": {
+      "type": ["object", "null"],
+      "additionalProperties": true,
+      "description": "Provider-scoped metadata bag for provenance and debugging."
+    }
+  }
+}

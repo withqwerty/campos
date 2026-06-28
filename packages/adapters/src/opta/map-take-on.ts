@@ -1,5 +1,5 @@
 import type { TakeOnEvent } from "@withqwerty/campos-schema";
-import type { OptaEvent } from "./qualifiers.js";
+import { optaSourceMeta, type OptaEvent } from "./qualifiers.js";
 import {
   normalizeCoordinates,
   normalizePeriod,
@@ -30,6 +30,6 @@ export function mapTakeOn(
     takeOnResult: event.outcome === 1 ? "complete" : "incomplete",
     provider: "opta",
     providerEventId: String(event.id),
-    sourceMeta: { typeId: event.typeId, eventId: event.eventId, outcome: event.outcome },
+    sourceMeta: optaSourceMeta(event),
   };
 }

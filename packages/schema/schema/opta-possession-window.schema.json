@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/opta-possession-window.schema.json",
+  "title": "OptaPossessionWindow",
+  "description": "A provider-normalised Opta/MA36 possession window grouped from enriched event rows. This is source context, not a tactical phase classification.",
+  "type": "object",
+  "required": [
+    "id",
+    "matchId",
+    "provider",
+    "providerPossessionId",
+    "sequenceId",
+    "teamId",
+    "teamName",
+    "period",
+    "startMinute",
+    "startSecond",
+    "endMinute",
+    "endSecond",
+    "eventIds",
+    "metrics",
+    "sourceMeta"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string" },
+    "matchId": { "type": "string" },
+    "provider": { "type": "string", "const": "opta" },
+    "providerPossessionId": { "type": "string" },
+    "sequenceId": { "type": ["string", "null"] },
+    "teamId": { "type": "string" },
+    "teamName": { "type": ["string", "null"] },
+    "period": {
+      "type": "integer",
+      "enum": [1, 2, 3, 4, 5]
+    },
+    "startMinute": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 200
+    },
+    "startSecond": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 59
+    },
+    "endMinute": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 200
+    },
+    "endSecond": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 59
+    },
+    "eventIds": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "metrics": {
+      "type": "object",
+      "required": [
+        "eventCount",
+        "passCount",
+        "shotCount",
+        "pressureTaggedEventCount",
+        "receptionCount",
+        "lineBreakingPassCount",
+        "xThreatApplied",
+        "xThreatRemoved"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "eventCount": { "type": "integer", "minimum": 0 },
+        "passCount": { "type": "integer", "minimum": 0 },
+        "shotCount": { "type": "integer", "minimum": 0 },
+        "pressureTaggedEventCount": { "type": "integer", "minimum": 0 },
+        "receptionCount": { "type": "integer", "minimum": 0 },
+        "lineBreakingPassCount": { "type": "integer", "minimum": 0 },
+        "xThreatApplied": { "type": "number" },
+        "xThreatRemoved": { "type": "number" }
+      }
+    },
+    "sourceMeta": {
+      "type": ["object", "null"],
+      "additionalProperties": true,
+      "description": "Provider-scoped metadata bag for provenance and debugging."
+    }
+  }
+}

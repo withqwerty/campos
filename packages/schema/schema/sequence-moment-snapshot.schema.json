@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campos.football/schema/sequence-moment-snapshot.schema.json",
+  "title": "SequenceMomentSnapshot",
+  "description": "A source-backed sequence moment for syncing event context, a tracking frame, and video time without embedding match-specific tactical judgement.",
+  "type": "object",
+  "required": [
+    "id",
+    "matchId",
+    "title",
+    "period",
+    "minute",
+    "second",
+    "videoTimeSeconds",
+    "eventIds",
+    "trackingFrameId",
+    "evidence",
+    "caveat",
+    "provider"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "matchId": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "period": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "minute": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 200
+    },
+    "second": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 59
+    },
+    "videoTimeSeconds": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "description": "Video seek time when the consuming app has aligned video; null when unavailable."
+    },
+    "eventIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "trackingFrameId": {
+      "type": ["string", "null"],
+      "description": "Linked TrackingFrameSnapshot id when a tracking frame is available."
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "caveat": {
+      "type": ["string", "null"],
+      "description": "Missingness or alignment caveat. Null only when no caveat is needed."
+    },
+    "provider": {
+      "type": "string"
+    },
+    "sourceMeta": {
+      "type": ["object", "null"],
+      "additionalProperties": true,
+      "description": "Provider-scoped metadata bag for provenance and debugging."
+    }
+  }
+}

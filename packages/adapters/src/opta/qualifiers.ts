@@ -21,6 +21,17 @@ export type OptaEvent = {
   x: number;
   y: number;
   qualifier?: OptaQualifier[];
+  timestampUtc?: string;
+  sequenceId?: string;
+  possessionId?: string;
+  hasPressure?: boolean;
+  hasPressureReceived?: boolean;
+  hasPassOption?: boolean;
+  hasPassTarget?: boolean;
+  hasReception?: boolean;
+  hasLineBreakingPass?: boolean;
+  xThreatApplied?: number;
+  xThreatRemoved?: number;
 };
 
 // ---------------------------------------------------------------------------
@@ -129,4 +140,31 @@ export function readStringQualifier(
     (qualifier) => qualifier.qualifierId === qualifierId && qualifier.value != null,
   );
   return match?.value ?? null;
+}
+
+export function optaSourceMeta(event: OptaEvent): Record<string, unknown> {
+  const ma36: Record<string, unknown> = {};
+  const addMa36 = (key: string, value: unknown): void => {
+    if (value !== undefined && value !== null) ma36[key] = value;
+  };
+
+  addMa36("sequenceId", event.sequenceId);
+  addMa36("possessionId", event.possessionId);
+  addMa36("hasPressure", event.hasPressure);
+  addMa36("hasPressureReceived", event.hasPressureReceived);
+  addMa36("hasPassOption", event.hasPassOption);
+  addMa36("hasPassTarget", event.hasPassTarget);
+  addMa36("hasReception", event.hasReception);
+  addMa36("hasLineBreakingPass", event.hasLineBreakingPass);
+  addMa36("xThreatApplied", event.xThreatApplied);
+  addMa36("xThreatRemoved", event.xThreatRemoved);
+
+  return {
+    typeId: event.typeId,
+    eventId: event.eventId,
+    outcome: event.outcome,
+    ...(event.timestampUtc ? { timestampUtc: event.timestampUtc } : {}),
+    ...(event.qualifier?.length ? { qualifiers: event.qualifier } : {}),
+    ...(Object.keys(ma36).length ? { ma36 } : {}),
+  };
 }
