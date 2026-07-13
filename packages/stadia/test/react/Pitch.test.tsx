@@ -43,6 +43,38 @@ describe("<Pitch>", () => {
     expect(innerSvg?.getAttribute("viewBox")).toContain("23.15");
   });
 
+  it("matches the CSS aspect ratio to a padded full-pitch frame", () => {
+    const { container } = render(
+      <Pitch crop="full" padding={5}>
+        {() => null}
+      </Pitch>,
+    );
+    const outerSvg = container.querySelector("svg");
+    const [, , width, height] = (outerSvg?.getAttribute("viewBox") ?? "")
+      .split(" ")
+      .map(Number);
+
+    expect(outerSvg?.style.aspectRatio).toBe(`${width} / ${height}`);
+  });
+
+  it("matches the CSS aspect ratio to a padded horizontal crop", () => {
+    const { container } = render(
+      <Pitch
+        crop="half"
+        attackingDirection="right"
+        padding={{ top: 2, right: 5, bottom: 3, left: 4 }}
+      >
+        {() => null}
+      </Pitch>,
+    );
+    const outerSvg = container.querySelector("svg");
+    const [, , width, height] = (outerSvg?.getAttribute("viewBox") ?? "")
+      .split(" ")
+      .map(Number);
+
+    expect(outerSvg?.style.aspectRatio).toBe(`${width} / ${height}`);
+  });
+
   it("anchors defend crops to the bottom or right side of the frame", () => {
     const { container } = render(
       <Pitch crop="half" side="defend" frame="full">

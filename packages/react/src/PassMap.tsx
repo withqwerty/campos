@@ -21,6 +21,7 @@ import { triggerButtonActionOnKeyDown } from "./keyboardActivation.js";
 import { LIGHT_THEME, type UITheme } from "./theme.js";
 import {
   ChartLineMark,
+  ChartLegend,
   ChartSvgEmptyState,
   ChartTooltip,
   EmptyState,
@@ -636,48 +637,15 @@ export function PassMap({
     ),
     legend:
       showLegend && model.legend ? (
-        <div>
-          <div
-            style={{
-              fontSize: 11,
-              letterSpacing: "0.06em",
-              textTransform: "uppercase",
-              color: theme.text.muted,
-              marginBottom: 6,
-            }}
-          >
-            {model.legend.title}
-          </div>
-          <div
-            style={{
-              display: "flex",
-              gap: 12,
-              flexWrap: "wrap",
-              alignItems: "center",
-              fontSize: 12,
-              color: theme.text.secondary,
-            }}
-          >
-            {model.legend.items.map((item) => (
-              <div
-                key={item.key}
-                style={{ display: "flex", alignItems: "center", gap: 6 }}
-              >
-                <span
-                  aria-hidden="true"
-                  style={{
-                    display: "inline-block",
-                    width: 12,
-                    height: 3,
-                    borderRadius: 2,
-                    background: item.color,
-                  }}
-                />
-                <span>{item.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+        <ChartLegend
+          title={model.legend.title}
+          items={model.legend.items.map((item) => ({
+            kind: "line" as const,
+            ...item,
+            width: 3,
+          }))}
+          theme={theme}
+        />
       ) : null,
   };
 

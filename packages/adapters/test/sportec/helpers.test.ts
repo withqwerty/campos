@@ -1,13 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 
+import { mapSportecMatchLineups } from "../../src/sportec/lineups.js";
 import {
   buildSportecMatchContext,
-  mapSportecMatchLineups,
   normalizeSportecCoordinates,
-  parseSportecEventXml,
-  parseSportecMetaXml,
-} from "../../src/sportec/helpers.js";
+} from "../../src/sportec/context.js";
+import { parseSportecEventXml, parseSportecMetaXml } from "../../src/sportec/raw.js";
 
 const metaXml = readFileSync(
   "packages/adapters/test/fixtures/sportec/raw-matchinformation-koeln-vs-bayern.xml",

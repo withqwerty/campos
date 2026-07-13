@@ -179,6 +179,10 @@ describe("<LineChart />", () => {
     // Exactly one tooltip content node should be mounted — the implementation
     // renders a single cursor tooltip overlay, so no prefix match required.
     expect(getByText(/^tooltip:(xG|xGA)$/)).toBeInTheDocument();
+    expect(container.querySelector("[data-testid='cursor-tooltip']")).toHaveStyle({
+      whiteSpace: "normal",
+      overflowWrap: "anywhere",
+    });
   });
 
   it("suppresses lineTooltip when a marker is hovered (default priority)", () => {

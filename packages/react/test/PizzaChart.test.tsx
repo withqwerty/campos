@@ -52,6 +52,16 @@ describe("<PizzaChart /> — rendering", () => {
     expect(getByLabelText("Pizza chart: 9 metrics")).toBeInTheDocument();
   });
 
+  it("gives the static SVG the same accessible labels as the live chart", () => {
+    const { getByLabelText, rerender } = render(
+      <PizzaChartStaticSvg rows={STANDARD_ROWS} />,
+    );
+    expect(getByLabelText("Pizza chart: 9 metrics")).toBeInTheDocument();
+
+    rerender(<PizzaChartStaticSvg rows={[]} />);
+    expect(getByLabelText("Pizza chart: no profile data")).toBeInTheDocument();
+  });
+
   it("renders slices for each metric", () => {
     const { getByTestId } = render(<PizzaChart rows={STANDARD_ROWS} />);
     const slicesGroup = getByTestId("pizza-slices");

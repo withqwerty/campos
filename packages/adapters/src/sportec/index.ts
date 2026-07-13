@@ -10,23 +10,25 @@ import type {
 import { fromOpta } from "../opta/index.js";
 import { projectTeamSheetToFormation } from "../shared/project-formation.js";
 import {
+  buildSportecPeriodStarts,
+  normalizeSportecEventClock,
+  toSportecOptaEvents,
+} from "./helpers.js";
+import {
   buildSportecAttackRelativeContext,
   buildSportecMatchContext,
-  buildSportecPeriodStarts,
   buildSportecPlayerIndex,
-  makeSportecIdAllocator,
-  mapSportecMatchLineups,
-  normalizeSportecEventClock,
-  parseSportecEventXml,
-  parseSportecMetaXml,
-  toSportecOptaEvents,
-  type SportecEvent,
-  type SportecIdAllocator,
-  type SportecMeta,
-  type SportecOfficial,
-  type SportecTeam,
-  type SportecTeamPlayer,
-} from "./helpers.js";
+} from "./context.js";
+import { makeSportecIdAllocator, type SportecIdAllocator } from "./ids.js";
+import { mapSportecMatchLineups } from "./lineups.js";
+import { parseSportecEventXml, parseSportecMetaXml } from "./raw.js";
+import type {
+  SportecEvent,
+  SportecMeta,
+  SportecOfficial,
+  SportecTeam,
+  SportecTeamPlayer,
+} from "./types.js";
 
 export type SportecMetaSource = SportecMeta | string;
 export type SportecEventSource = readonly SportecEvent[] | string;

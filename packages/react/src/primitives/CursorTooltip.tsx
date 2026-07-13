@@ -70,7 +70,8 @@ export function useCursorTooltip(theme: UITheme = LIGHT_THEME): CursorTooltipApi
         border: `1px solid ${theme.border.tooltip}`,
         boxShadow: theme.shadow.tooltip,
         pointerEvents: "none",
-        whiteSpace: "nowrap",
+        whiteSpace: "normal",
+        overflowWrap: "anywhere",
         zIndex: 20,
         maxWidth: 260,
       }}

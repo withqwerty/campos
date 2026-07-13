@@ -133,6 +133,23 @@ export type StatsBombFreezeFrameEntry = {
   teammate: boolean;
 };
 
+/**
+ * One event-linked frame from StatsBomb 360 data. Unlike shot-level
+ * `freeze_frame` records, 360 participants do not expose player identities.
+ */
+export type StatsBombThreeSixtyFrame = {
+  event_uuid: string;
+  visible_area?: number[] | null;
+  freeze_frame?: StatsBombThreeSixtyParticipant[] | null;
+};
+
+export type StatsBombThreeSixtyParticipant = {
+  location?: [number, number] | null;
+  teammate?: boolean | null;
+  actor?: boolean | null;
+  keeper?: boolean | null;
+};
+
 export type StatsBombTactics = {
   formation: number;
   lineup: StatsBombTacticsLineupEntry[];

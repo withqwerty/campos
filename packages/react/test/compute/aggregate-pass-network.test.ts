@@ -33,6 +33,7 @@ function makePass(
     length: null,
     angle: null,
     recipient: partial.recipient ?? null,
+    ...(partial.recipientId != null ? { recipientId: partial.recipientId } : {}),
     passType: "ground",
     passResult: partial.passResult ?? "complete",
     isAssist: false,
@@ -44,6 +45,44 @@ function makePass(
 // ─── Basic aggregation ─────────────────────────────────────────────
 
 describe("aggregatePassNetwork — basic aggregation", () => {
+  it("uses paired provider identities without merging players who share a display name", () => {
+    const passes: PassEvent[] = [
+      makePass({
+        id: "1",
+        playerId: "statsbomb-11",
+        playerName: "Alex Smith",
+        recipientId: "statsbomb-22",
+        recipient: "Alex Smith",
+        x: 30,
+        y: 40,
+        endX: 50,
+        endY: 40,
+      }),
+      makePass({
+        id: "2",
+        playerId: "statsbomb-22",
+        playerName: "Alex Smith",
+        recipientId: "statsbomb-11",
+        recipient: "Alex Smith",
+        x: 50,
+        y: 40,
+        endX: 30,
+        endY: 40,
+      }),
+    ];
+
+    const result = aggregatePassNetwork(passes, { teamId: "home", minPassesForNode: 1 });
+
+    expect(result.nodes.map((node) => node.id).sort()).toEqual([
+      "statsbomb-11",
+      "statsbomb-22",
+    ]);
+    expect(result.edges).toEqual([
+      expect.objectContaining({ sourceId: "statsbomb-11", targetId: "statsbomb-22" }),
+      expect.objectContaining({ sourceId: "statsbomb-22", targetId: "statsbomb-11" }),
+    ]);
+  });
+
   it("returns nodes keyed by player name with average positions", () => {
     const passes: PassEvent[] = [
       // Ødegaard passes (2)

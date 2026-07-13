@@ -10,6 +10,7 @@ import {
   median,
   min,
   minBy,
+  resolveVerticalLabelOverlaps,
   sum,
   sumBy,
 } from "../../src/compute/math";
@@ -55,5 +56,14 @@ describe("math helpers", () => {
     expect(maxBy(rows, (row) => row.value)).toBeUndefined();
     expect(sumBy(rows, (row) => row.value)).toBe(0);
     expect(extentBy(rows, (row) => row.value)).toBeNull();
+  });
+
+  it("resolves sorted label overlaps without mutating the input", () => {
+    const positions = [10, 11, 12];
+
+    expect(resolveVerticalLabelOverlaps(positions, 4)).toEqual([10, 14, 18]);
+    expect(positions).toEqual([10, 11, 12]);
+    expect(resolveVerticalLabelOverlaps([20], 4)).toEqual([20]);
+    expect(resolveVerticalLabelOverlaps([], 4)).toEqual([]);
   });
 });

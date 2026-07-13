@@ -7,11 +7,7 @@ import {
 } from "../compute/index.js";
 import { computeViewBox, PITCH, Pitch } from "@withqwerty/campos-stadia";
 
-import type {
-  FormationDualProps,
-  FormationProps,
-  FormationSingleProps,
-} from "../Formation.js";
+import type { FormationProps } from "../Formation.js";
 
 import { FormationMarker } from "./FormationMarker.js";
 import {
@@ -24,21 +20,13 @@ import {
   SCALE_HALF,
   buildDualAriaLabel,
   buildSingleAriaLabel,
+  isDualFormationProps,
+  isSingleFormationProps,
   resolveSingleFormationFlip,
 } from "./shared.js";
 
-function isDualProps(props: FormationProps): props is FormationDualProps {
-  const bag = props as unknown as { home?: unknown; away?: unknown };
-  return bag.home != null && bag.away != null;
-}
-
-function isSingleProps(props: FormationProps): props is FormationSingleProps {
-  const bag = props as unknown as { formation?: unknown };
-  return bag.formation != null;
-}
-
 export function FormationStaticSvg(props: FormationProps): ReactElement {
-  if (isDualProps(props)) {
+  if (isDualFormationProps(props)) {
     const {
       home,
       away,
@@ -136,7 +124,7 @@ export function FormationStaticSvg(props: FormationProps): ReactElement {
     );
   }
 
-  if (!isSingleProps(props)) {
+  if (!isSingleFormationProps(props)) {
     throw new Error(FORMATION_MODE_ERROR);
   }
 

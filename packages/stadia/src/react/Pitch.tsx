@@ -132,19 +132,6 @@ function markingsContext(direction: AttackingDirection, side: PitchSide) {
   return { orientation, side: effectiveSide };
 }
 
-function resolveFrameAspectRatio(
-  frame: "crop" | "full",
-  crop: PitchCrop,
-  direction: AttackingDirection,
-  side: PitchSide,
-) {
-  const viewBox =
-    frame === "full"
-      ? computeViewBox("full", direction)
-      : computeViewBox(crop, direction, side);
-  return `${viewBox.width} / ${viewBox.height}`;
-}
-
 export function Pitch({
   crop,
   attackingDirection = "up",
@@ -187,10 +174,10 @@ export function Pitch({
     [preset, theme, colorOverrides],
   );
 
-  const frameAspectRatio = useMemo(
-    () => resolveFrameAspectRatio(frame, crop, attackingDirection, side),
-    [frame, crop, attackingDirection, side],
-  );
+  // The outer SVG must use the same dimensions as its padded frame viewBox.
+  // Otherwise preserveAspectRatio letterboxes the pitch whenever padding is
+  // present, because the CSS box and SVG coordinate space disagree.
+  const frameAspectRatio = `${frameViewBox.width} / ${frameViewBox.height}`;
 
   const { orientation: markingsOrientation, side: markingsSide } = useMemo(
     () => markingsContext(attackingDirection, side),

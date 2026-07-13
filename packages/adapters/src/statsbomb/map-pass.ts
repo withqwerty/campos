@@ -102,6 +102,7 @@ export function mapPass(event: StatsBombEvent, matchInfo: StatsBombMatchInfo): P
     length,
     angle,
     recipient: pass.recipient?.name ?? null,
+    recipientId: pass.recipient == null ? null : String(pass.recipient.id),
     passResult: mapPassResult(pass),
     passType: mapPassType(pass),
     isAssist: pass.goal_assist === true,

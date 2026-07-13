@@ -50,6 +50,78 @@ describe("legend primitives", () => {
     expect(container.innerHTML).toContain("border-radius: 50%");
   });
 
+  it("renders finite marker and line legend descriptors as semantic SVG swatches", () => {
+    const { container } = render(
+      <ChartLegend
+        testId="semantic-legend"
+        items={[
+          {
+            kind: "marker",
+            key: "blocked",
+            label: "Blocked",
+            shape: "diamond",
+            fill: "transparent",
+            stroke: "#334155",
+            strokeWidth: 1.5,
+          },
+          {
+            kind: "line",
+            key: "incomplete",
+            label: "Incomplete",
+            color: "#dc2626",
+            width: 3,
+            dash: "4 2",
+          },
+        ]}
+        theme={LIGHT_THEME}
+      />,
+    );
+
+    expect(screen.getByTestId("semantic-legend")).toHaveTextContent("Blocked");
+    expect(screen.getByTestId("semantic-legend")).toHaveTextContent("Incomplete");
+    expect(container.querySelector("polygon")).toBeTruthy();
+    expect(container.querySelector("line[stroke-dasharray='4 2']")).toBeTruthy();
+  });
+
+  it("renders marker and line range samples without reducing their size meaning to colour", () => {
+    const { container } = render(
+      <ChartLegend
+        items={[
+          {
+            kind: "range",
+            key: "touches",
+            label: "Touches",
+            sample: "marker",
+            color: "#2563eb",
+            minSize: 3,
+            maxSize: 7,
+            minLabel: "10",
+            maxLabel: "50",
+          },
+          {
+            kind: "range",
+            key: "passes",
+            label: "Passes",
+            sample: "line",
+            color: "#2563eb",
+            minSize: 1,
+            maxSize: 3.5,
+            minLabel: "1",
+            maxLabel: "12",
+          },
+        ]}
+        theme={LIGHT_THEME}
+      />,
+    );
+
+    expect(screen.getByText("Touches")).toBeInTheDocument();
+    expect(screen.getByText("Passes")).toBeInTheDocument();
+    expect(screen.getByText("10")).toBeInTheDocument();
+    expect(screen.getByText("12")).toBeInTheDocument();
+    expect(container.querySelectorAll("circle")).toHaveLength(2);
+    expect(container.querySelectorAll("line")).toHaveLength(2);
+  });
+
   it("renders a gradient legend with endpoint labels", () => {
     const { container } = render(
       <ChartGradientLegend

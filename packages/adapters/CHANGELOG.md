@@ -1,10 +1,25 @@
 # @withqwerty/campos-adapters
 
+## 0.1.0-beta.6
+
+### Minor Changes
+
+- 09725ac: Add continuous and event-linked tracking overlays, including StatsBomb 360
+  freeze frames, a Metrica/kloppy fixture seam, and stable full-pitch tracking
+  snapshots. Harden provider projections and pass-recipient identity handling,
+  while improving shared chart rendering defaults and accessible overlays.
+
+### Patch Changes
+
+- Updated dependencies [09725ac]
+  - @withqwerty/campos-schema@0.1.0-beta.6
+
 ## 0.1.0-beta.5
 
 ### Minor Changes
 
-- Add reusable football analysis packets for Opta event surfaces, Second Spectrum tracking and physical windows, and visual phase/player surfaces.
+- Add reusable football analysis packets for Opta event surfaces and Second
+  Spectrum tracking and physical windows.
 
   The new adapter methods preserve source evidence, caveats, provider context, and nullable fields so applications can build match-analysis views without baking tactical interpretation into Campos.
 

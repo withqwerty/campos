@@ -412,6 +412,7 @@ export function HeatmapStaticSvg({
   const { model, pitchMarkings: resolvedPitchMarkings } = buildHeatmapModel(props);
   const resolvedPitchColors = resolveAutoPitchLineColors(pitchColors, {
     autoPitchLines,
+    colorScale: props.colorScale,
     stops: model.scaleBar?.stops,
   });
   const viewBox = computeViewBox(model.pitch.crop, model.pitch.attackingDirection);
@@ -528,9 +529,10 @@ export function Heatmap({
     () =>
       resolveAutoPitchLineColors(pitchColors, {
         autoPitchLines,
+        colorScale,
         stops: model.scaleBar?.stops,
       }),
-    [pitchColors, model.scaleBar?.stops, autoPitchLines],
+    [pitchColors, colorScale, model.scaleBar?.stops, autoPitchLines],
   );
 
   const [activeCell, setActiveCell] = useState<string | null>(null);

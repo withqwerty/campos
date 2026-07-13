@@ -4,6 +4,10 @@ export {
 } from "./shared/coordinates.js";
 export { fromFbref } from "./fbref/index.js";
 export { fromImpect } from "./impect/index.js";
+export {
+  metricaKloppyToCampos,
+  metricaTrackingFrameFromKloppy,
+} from "./metrica/index.js";
 export { fromOpta } from "./opta/index.js";
 export { fromSofascore } from "./sofascore/index.js";
 export { fromSecondSpectrum } from "./secondspectrum/index.js";
@@ -11,7 +15,6 @@ export { fromStatsBomb } from "./statsbomb/index.js";
 export { fromStatsPerform } from "./statsperform/index.js";
 export { fromSportec } from "./sportec/index.js";
 export { fromUnderstat } from "./understat/index.js";
-export { fromVisual } from "./visual/index.js";
 export { fromWhoScored } from "./whoscored/index.js";
 export { fromWyscout } from "./wyscout/index.js";
 export type { FbrefScheduleRow } from "./fbref/index.js";
@@ -27,6 +30,13 @@ export type {
   ImpectStartingPosition,
   ImpectSubstitution,
 } from "./impect/index.js";
+export type {
+  MetricaKloppyCoordinate,
+  MetricaKloppyTrackingBall,
+  MetricaKloppyTrackingFrame,
+  MetricaKloppyTrackingFrameOptions,
+  MetricaKloppyTrackingPlayer,
+} from "./metrica/index.js";
 export type {
   FromOptaEventSurfaceOptions,
   FromOptaPossessionWindowsOptions,
@@ -69,7 +79,12 @@ export type {
   StatsBombEvent,
   StatsBombLineupTeam,
   StatsBombMatchInfo,
+  StatsBombThreeSixtyFrame,
 } from "./statsbomb/parse.js";
+export type {
+  StatsBombFreezeFrame,
+  StatsBombFreezeFrameParticipant,
+} from "./statsbomb/freeze-frames.js";
 export type {
   StatsPerformContestant,
   StatsPerformEvent,
@@ -90,17 +105,6 @@ export type {
   SportecTeamPlayer,
 } from "./sportec/index.js";
 export type { UnderstatScheduleRow, UnderstatShotRow } from "./understat/index.js";
-export type {
-  PhaseMapCentroidInput,
-  PhaseMapPointInput,
-  PhaseMapSnapshotInput,
-  PhaseMapSnapshotOptions,
-  PlayerSurfaceAveragePositionInput,
-  PlayerSurfacePassingNetworkEdgeInput,
-  PlayerSurfaceRoleTagInput,
-  PlayerSurfaceSnapshotInput,
-  PlayerSurfaceSnapshotOptions,
-} from "./visual/index.js";
 export type {
   WhoScoredEvent,
   WhoScoredMatchData,

@@ -889,6 +889,10 @@ export interface PassEvent {
    * Display-ready name of the pass recipient when available.
    */
   recipient: string | null;
+  /**
+   * Provider-stable pass recipient identifier when available. Optional while provider coverage is incomplete; do not infer it from a display name.
+   */
+  recipientId?: string | null;
   passType:
     | "ground"
     | "low"
@@ -917,87 +921,6 @@ export interface PassEvent {
   providerEventId: string;
   /**
    * Provider-scoped metadata bag for provenance and advanced debugging. It must stay JSON-serializable, must not duplicate canonical top-level fields, and must not reinterpret raw provider semantics into fake cross-provider meaning.
-   */
-  sourceMeta?: {
-    [k: string]: unknown;
-  } | null;
-}
-
-/**
- * A reusable score-space visual packet for output/cost quadrant maps. It carries points, team centroids, evidence, caveats, and calibration status, but not match-specific scoring logic.
- */
-export interface PhaseMapSnapshot {
-  id: string;
-  matchId: string;
-  /**
-   * x and y are 0-100 diagnostic score co-ordinates, not pitch co-ordinates.
-   */
-  coordinateFrame: "diagnostic-score-space";
-  xAxis: {
-    key: string;
-    label: string;
-    /**
-     * @minItems 2
-     * @maxItems 2
-     */
-    domain: [number, number];
-  };
-  yAxis: {
-    key: string;
-    label: string;
-    /**
-     * @minItems 2
-     * @maxItems 2
-     */
-    domain: [number, number];
-  };
-  calibrationStatus: "within-match" | "insufficient-rich-sample" | "multi-match-baseline-ready" | "unknown";
-  points: {
-    id: string;
-    phaseId: string;
-    side: "home" | "away";
-    teamName: string;
-    label: string;
-    phaseType: string;
-    period: number;
-    startMinute: number;
-    startSecond: number;
-    endMinute: number;
-    endSecond: number;
-    x: number;
-    y: number;
-    outputScore: number;
-    costScore: number;
-    repeatabilityScore: number;
-    repeatabilityLabel: "stable" | "mixed" | "fragile";
-    quadrant: "high-output-high-cost" | "high-output-low-cost" | "low-output-high-cost" | "low-output-low-cost";
-    evidence: string[];
-    caveat: string;
-    sourceMeta?: {
-      [k: string]: unknown;
-    } | null;
-  }[];
-  centroids: {
-    side: "home" | "away";
-    teamName: string;
-    x: number;
-    y: number;
-    outputScore: number;
-    costScore: number;
-    count: number;
-    evidence: string[];
-    caveat: string;
-    sourceMeta?: {
-      [k: string]: unknown;
-    } | null;
-  }[];
-  provider: string;
-  /**
-   * Calibration or interpretation caveat. Null only when no caveat is needed.
-   */
-  caveat: string | null;
-  /**
-   * Provider-scoped metadata bag for provenance and debugging.
    */
   sourceMeta?: {
     [k: string]: unknown;
@@ -1036,95 +959,6 @@ export interface PhysicalWindow {
   /**
    * Provider-scoped metadata bag for provenance and debugging.
    */
-  sourceMeta?: {
-    [k: string]: unknown;
-  } | null;
-}
-
-/**
- * A reusable player-level visual packet for lineup, average-position, passing-network, and role-tag views. It carries derived geometry, evidence, and caveats, but not match-specific tactical conclusions.
- */
-export interface PlayerSurfaceSnapshot {
-  id: string;
-  matchId: string;
-  /**
-   * All x/y values are Campos absolute full-pitch co-ordinates.
-   */
-  coordinateFrame: "absolute-pitch";
-  primaryWindow: {
-    label: string;
-    startMinute: number;
-    startSecond: number;
-    endMinute: number;
-    endSecond: number;
-    evidence: string[];
-    caveat: string;
-  };
-  /**
-   * Home and away team sheets used by the player-level view, when available.
-   */
-  lineups: MatchLineups | null;
-  averagePositions: {
-    side: "home" | "away";
-    playerId: string;
-    optaId?: string | null;
-    playerName: string;
-    shirtNumber?: number | null;
-    position?: string | null;
-    x: number;
-    y: number;
-    eventCount: number;
-    passCount: number;
-    windowLabel: string;
-    evidence: string[];
-    caveat: string;
-    sourceMeta?: {
-      [k: string]: unknown;
-    } | null;
-  }[];
-  passingNetworkEdges: {
-    id: string;
-    side: "home" | "away";
-    fromPlayerId: string;
-    fromOptaId?: string | null;
-    fromShirtNumber?: number | null;
-    fromPlayerName: string;
-    toPlayerId: string;
-    toOptaId?: string | null;
-    toShirtNumber?: number | null;
-    toPlayerName: string;
-    x: number;
-    y: number;
-    endX: number;
-    endY: number;
-    count: number;
-    inferred: boolean;
-    evidence: string[];
-    caveat: string;
-    sourceMeta?: {
-      [k: string]: unknown;
-    } | null;
-  }[];
-  roleTags: {
-    side: "home" | "away";
-    playerId: string;
-    optaId?: string | null;
-    playerName: string;
-    shirtNumber?: number | null;
-    position?: string | null;
-    label: string;
-    score: number;
-    evidence: string[];
-    caveat: string;
-    sourceMeta?: {
-      [k: string]: unknown;
-    } | null;
-  }[];
-  provider: string;
-  /**
-   * Missingness or interpretation caveat. Null only when no caveat is needed.
-   */
-  caveat?: string | null;
   sourceMeta?: {
     [k: string]: unknown;
   } | null;

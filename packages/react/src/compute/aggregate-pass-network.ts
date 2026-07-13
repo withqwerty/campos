@@ -133,10 +133,11 @@ function resolveWindow(
  * Reduce raw pass events into a single team's passing network
  * (`{ nodes, edges }`) suitable for the `PassNetwork` chart.
  *
- * Node id convention: `playerName` is used as the stable identifier so the
- * helper works across adapters that populate player names (Opta, StatsBomb,
- * WhoScored) without requiring a `recipientId` schema addition. Wyscout —
- * which does not populate `playerName` — is not supported by this helper.
+ * Node id convention: when both ends of a pass have provider-stable IDs, use
+ * those IDs. Otherwise retain the name-keyed fallback for adapters that do
+ * not expose recipient identities yet. This keeps one pass from mixing an ID
+ * key on one end with a display-name key on the other. Wyscout — which does
+ * not populate `playerName` — is not supported by this helper.
  *
  * Node position: mean of the (x, y) coordinates of every pass the player
  * made in the window PLUS the (endX, endY) of every pass where they were
@@ -167,8 +168,8 @@ export function aggregatePassNetwork(
 
   // Pre-filter: correct team, within window, usable coordinates + names.
   type UsablePass = {
-    playerName: string;
-    recipient: string;
+    passer: { id: string; name: string };
+    recipient: { id: string; name: string };
     x: number;
     y: number;
     endX: number;
@@ -184,9 +185,23 @@ export function aggregatePassNetwork(
     if (p.y == null || !Number.isFinite(p.y)) continue;
     if (p.endX == null || !Number.isFinite(p.endX)) continue;
     if (p.endY == null || !Number.isFinite(p.endY)) continue;
+    const passerId = p.playerId?.trim();
+    const recipientId = p.recipientId?.trim();
+    const identity =
+      passerId != null &&
+      passerId.length > 0 &&
+      recipientId != null &&
+      recipientId.length > 0
+        ? {
+            passer: { id: passerId, name: p.playerName },
+            recipient: { id: recipientId, name: p.recipient },
+          }
+        : {
+            passer: { id: p.playerName, name: p.playerName },
+            recipient: { id: p.recipient, name: p.recipient },
+          };
     usable.push({
-      playerName: p.playerName,
-      recipient: p.recipient,
+      ...identity,
       x: p.x,
       y: p.y,
       endX: p.endX,
@@ -200,28 +215,32 @@ export function aggregatePassNetwork(
   const incomingCount = new Map<string, number>();
   // Position samples per player: origin coords when passing, end coords when receiving.
   const positionSamples = new Map<string, { x: number; y: number }[]>();
+  // Display labels remain names even when graph identity uses provider IDs.
+  const participantNames = new Map<string, string>();
   // Directed pair counts (A → B).
   const pairCounts = new Map<string, Map<string, number>>();
 
   for (const p of usable) {
-    outgoingCount.set(p.playerName, (outgoingCount.get(p.playerName) ?? 0) + 1);
-    incomingCount.set(p.recipient, (incomingCount.get(p.recipient) ?? 0) + 1);
-    const passerSamples = positionSamples.get(p.playerName) ?? [];
+    participantNames.set(p.passer.id, p.passer.name);
+    participantNames.set(p.recipient.id, p.recipient.name);
+    outgoingCount.set(p.passer.id, (outgoingCount.get(p.passer.id) ?? 0) + 1);
+    incomingCount.set(p.recipient.id, (incomingCount.get(p.recipient.id) ?? 0) + 1);
+    const passerSamples = positionSamples.get(p.passer.id) ?? [];
     passerSamples.push({ x: p.x, y: p.y });
-    positionSamples.set(p.playerName, passerSamples);
-    const recipientSamples = positionSamples.get(p.recipient) ?? [];
+    positionSamples.set(p.passer.id, passerSamples);
+    const recipientSamples = positionSamples.get(p.recipient.id) ?? [];
     recipientSamples.push({ x: p.endX, y: p.endY });
-    positionSamples.set(p.recipient, recipientSamples);
-    const bucket = pairCounts.get(p.playerName) ?? new Map<string, number>();
-    bucket.set(p.recipient, (bucket.get(p.recipient) ?? 0) + 1);
-    pairCounts.set(p.playerName, bucket);
+    positionSamples.set(p.recipient.id, recipientSamples);
+    const bucket = pairCounts.get(p.passer.id) ?? new Map<string, number>();
+    bucket.set(p.recipient.id, (bucket.get(p.recipient.id) ?? 0) + 1);
+    pairCounts.set(p.passer.id, bucket);
   }
 
   // Candidate players: anyone observed as passer or recipient.
   const candidateIds = new Set<string>();
   for (const p of usable) {
-    candidateIds.add(p.playerName);
-    candidateIds.add(p.recipient);
+    candidateIds.add(p.passer.id);
+    candidateIds.add(p.recipient.id);
   }
 
   // A player is a node if their total pass involvements (outgoing + incoming)
@@ -241,8 +260,9 @@ export function aggregatePassNetwork(
     const meanX = meanBy(samples, (sample) => sample.x);
     const meanY = meanBy(samples, (sample) => sample.y);
     const passCount = outgoingCount.get(id) ?? 0;
-    const xT = xTForPlayer(id);
-    const { label, labelFull } = labelFor(id);
+    const playerName = participantNames.get(id) ?? id;
+    const xT = xTForPlayer(playerName);
+    const { label, labelFull } = labelFor(playerName);
     const node: PassNetworkNode = {
       id,
       label,
@@ -296,7 +316,10 @@ export function aggregatePassNetwork(
     for (const [target, count] of bucket) {
       if (!nodeIds.has(target)) continue;
       if (count < minPassesForEdge) continue;
-      const xT = xTForPair(source, target);
+      const xT = xTForPair(
+        participantNames.get(source) ?? source,
+        participantNames.get(target) ?? target,
+      );
       const edge: PassNetworkEdge = {
         sourceId: source,
         targetId: target,

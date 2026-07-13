@@ -78,6 +78,56 @@ describe("Second Spectrum adapter", () => {
     expect(frame.sourceMeta).toEqual({ lastTouch: "home" });
   });
 
+  it("normalizes the provider's singleton ball-speed array", () => {
+    // Second Spectrum raw JSONL stores ball speed as a one-element array.
+    const rawFrame = {
+      period: 1,
+      frameIdx: 6251,
+      gameClock: 250.04,
+      homePlayers: [{ playerId: "home-1", xyz: [0, 0, 0] as const }],
+      awayPlayers: [],
+      ball: { xyz: [0, 0, 0] as const, speed: [12.1] as const },
+    };
+
+    const frame = fromSecondSpectrum.trackingFrame(rawFrame, {
+      matchId: "match-1",
+      pitchDimensions,
+    });
+
+    expect(frame.ball).toMatchObject({ speed: 12.1, z: 0 });
+  });
+
+  it("drops the documented untracked-ball sentinel", () => {
+    const frame = fromSecondSpectrum.trackingFrame(
+      {
+        period: 1,
+        frameIdx: 6252,
+        gameClock: 250.08,
+        homePlayers: [{ playerId: "home-1", xyz: [0, 0, 0] }],
+        awayPlayers: [],
+        ball: { xyz: [0, 0, -10], speed: [0] },
+      },
+      { matchId: "match-1", pitchDimensions },
+    );
+
+    expect(frame.ball).toBeNull();
+  });
+
+  it("rejects players without a stable provider identity", () => {
+    expect(() =>
+      fromSecondSpectrum.trackingFrame(
+        {
+          period: 1,
+          frameIdx: 6253,
+          gameClock: 250.12,
+          homePlayers: [{ xyz: [0, 0, 0] }],
+          awayPlayers: [],
+        },
+        { matchId: "match-1", pitchDimensions },
+      ),
+    ).toThrow(/home.*6253.*stable player identifier/i);
+  });
+
   it("preserves physical-window missingness and possession-state phase", () => {
     const window = fromSecondSpectrum.physicalWindow(
       {
@@ -381,5 +431,36 @@ describe("Second Spectrum adapter", () => {
     });
     expect(shape).not.toHaveProperty("repeatability");
     expect(shape).not.toHaveProperty("tacticalValue");
+  });
+
+  it("rejects team-shape marks without stable participant identities", () => {
+    const options = { matchId: "match-1", pitchDimensions };
+
+    expect(() =>
+      fromSecondSpectrum.teamShapeSnapshot(
+        {
+          movements: [{ side: "home", start: [0, 0], end: [1, 0] }],
+        },
+        options,
+      ),
+    ).toThrow(/home movement requires a stable player identifier/i);
+
+    expect(() =>
+      fromSecondSpectrum.teamShapeSnapshot(
+        {
+          facingHints: [{ side: "away", start: [0, 0], end: [1, 0] }],
+        },
+        options,
+      ),
+    ).toThrow(/away facing hint requires a stable player identifier/i);
+
+    expect(() =>
+      fromSecondSpectrum.teamShapeSnapshot(
+        {
+          candidateLanes: [{ side: "home", start: [0, 0], end: [1, 0] }],
+        },
+        options,
+      ),
+    ).toThrow(/home candidate lane receiver requires a stable player identifier/i);
   });
 });

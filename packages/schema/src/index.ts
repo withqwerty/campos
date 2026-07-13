@@ -23,8 +23,6 @@ export type {
   MatchContext,
   OptaEventSurface,
   OptaPossessionWindow,
-  PhaseMapSnapshot,
-  PlayerSurfaceSnapshot,
   PhysicalWindow,
   SequenceMomentSnapshot,
   TeamShapeSnapshot,

@@ -78,7 +78,7 @@ export function sumBy<T>(values: readonly T[], accessor: NumericAccessor<T>): nu
 /** Extent of an array of numbers. Returns null for empty arrays. */
 export function extent(values: readonly number[]): [number, number] | null {
   const [lo, hi] = d3Extent(values);
-  if (lo == null || hi == null) {
+  if (!isFiniteNumber(lo) || !isFiniteNumber(hi)) {
     return null;
   }
   return [lo, hi];
@@ -90,10 +90,34 @@ export function extentBy<T>(
   accessor: NumericAccessor<T>,
 ): [number, number] | null {
   const [lo, hi] = d3Extent(values, accessor);
-  if (lo == null || hi == null) {
+  if (!isFiniteNumber(lo) || !isFiniteNumber(hi)) {
     return null;
   }
   return [lo, hi];
+}
+
+/**
+ * Push sorted vertical label positions apart with a forward/backward pass.
+ * Input is never mutated.
+ */
+export function resolveVerticalLabelOverlaps(
+  sortedYs: readonly number[],
+  minGap: number,
+): number[] {
+  if (sortedYs.length <= 1) return [...sortedYs];
+
+  const result = [...sortedYs];
+  for (let index = 1; index < result.length; index++) {
+    const current = result[index] as number;
+    const previous = result[index - 1] as number;
+    if (current - previous < minGap) result[index] = previous + minGap;
+  }
+  for (let index = result.length - 2; index >= 0; index--) {
+    const next = result[index + 1] as number;
+    const current = result[index] as number;
+    if (next - current < minGap) result[index] = next - minGap;
+  }
+  return result;
 }
 
 /** Format a match minute as `"45'"`. */

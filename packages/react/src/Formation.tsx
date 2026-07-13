@@ -24,7 +24,11 @@ import type { StyleValue } from "./styleValue.js";
 import { FormationDual } from "./formation/FormationDual.js";
 import { FormationSingle } from "./formation/FormationSingle.js";
 import { FormationStaticSvg as FormationStaticSvgImpl } from "./formation/FormationStaticSvg.js";
-import { FORMATION_MODE_ERROR } from "./formation/shared.js";
+import {
+  FORMATION_MODE_ERROR,
+  isDualFormationProps,
+  isSingleFormationProps,
+} from "./formation/shared.js";
 
 export type FormationMarkerComposition = {
   glyph?: MarkerGlyphConfig;
@@ -125,24 +129,11 @@ export type FormationDualProps = FormationCommonProps & {
 
 export type FormationProps = FormationSingleProps | FormationDualProps;
 
-function isDualProps(props: FormationProps): props is FormationDualProps {
-  const bag = props as unknown as {
-    home?: FormationTeamSpec | null;
-    away?: FormationTeamSpec | null;
-  };
-  return bag.home != null && bag.away != null;
-}
-
-function isSingleProps(props: FormationProps): props is FormationSingleProps {
-  const bag = props as unknown as { formation?: FormationKey | null };
-  return bag.formation != null;
-}
-
 export function Formation(props: FormationProps): ReactElement {
-  if (isDualProps(props)) {
+  if (isDualFormationProps(props)) {
     return <FormationDual {...props} />;
   }
-  if (isSingleProps(props)) {
+  if (isSingleFormationProps(props)) {
     return <FormationSingle {...props} />;
   }
   throw new Error(FORMATION_MODE_ERROR);

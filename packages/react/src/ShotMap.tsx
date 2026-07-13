@@ -24,6 +24,7 @@ import { triggerButtonActionOnKeyDown } from "./keyboardActivation.js";
 import { LIGHT_THEME, type UITheme } from "./theme.js";
 import {
   ChartPointMark,
+  ChartLegend,
   ChartScaleBar,
   ChartTooltip,
   EmptyState,
@@ -302,23 +303,6 @@ function renderMarker(
     shapeKey: resolveStyleValue(style?.shape, context) ?? markerShape(marker.shapeKey),
     ...common,
   });
-}
-
-function LegendShapeSwatch({ shapeKey, color }: { shapeKey: string; color: string }) {
-  const s = 5;
-  const c = 7;
-  return (
-    <svg width={14} height={14} aria-hidden="true" style={{ display: "block" }}>
-      {renderMarkerGlyph({
-        cx: c,
-        cy: c,
-        r: s,
-        shapeKey,
-        fill: color,
-        stroke: "none",
-      })}
-    </svg>
-  );
 }
 
 function buildShotMapModel({
@@ -648,45 +632,40 @@ export function ShotMap({
     ),
     legend:
       showLegend && model.legend ? (
-        <div
-          style={{
-            display: "flex",
-            gap: 12,
-            flexWrap: "wrap",
-            alignItems: "center",
-            fontSize: 12,
-            color: theme.text.secondary,
-          }}
-        >
-          {model.legend.groups.map((group) =>
-            group.items.map((item) => (
-              <div
-                key={`${group.kind}:${item.key}`}
-                style={{ display: "flex", alignItems: "center", gap: 6 }}
-              >
-                {group.kind === "shape" ? (
-                  <LegendShapeSwatch shapeKey={item.key} color={theme.text.muted} />
-                ) : (
-                  <span
-                    aria-hidden="true"
-                    style={{
-                      display: "inline-block",
-                      width: 10,
-                      height: 10,
-                      borderRadius: "50%",
-                      background:
-                        group.kind === "outline" && item.key === "shot"
-                          ? "transparent"
-                          : (item.color ?? theme.text.muted),
-                      border: `1.5px solid ${item.color ?? theme.text.muted}`,
-                    }}
-                  />
-                )}
-                <span>{item.label}</span>
-              </div>
-            )),
+        <ChartLegend
+          items={model.legend.groups.flatMap((group) =>
+            group.items.map((item) => {
+              const key = `${group.kind}:${item.key}`;
+              if (group.kind === "shape") {
+                return {
+                  kind: "marker" as const,
+                  key,
+                  label: item.label,
+                  shape: markerShape(item.key),
+                  fill: theme.text.muted,
+                };
+              }
+              if (group.kind === "outline") {
+                const color = item.color ?? theme.text.muted;
+                return {
+                  kind: "marker" as const,
+                  key,
+                  label: item.label,
+                  shape: "circle" as const,
+                  fill: item.key === "shot" ? "transparent" : color,
+                  stroke: color,
+                  strokeWidth: 1.5,
+                };
+              }
+              return {
+                key,
+                label: item.label,
+                color: item.color ?? theme.text.muted,
+              };
+            }),
           )}
-        </div>
+          theme={theme}
+        />
       ) : null,
   };
 

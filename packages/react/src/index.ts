@@ -1,5 +1,9 @@
 export { ConvexHullLayer } from "./primitives/ConvexHullLayer.js";
 export type { ConvexHullLayerProps } from "./primitives/ConvexHullLayer.js";
+export { TrackingFrameOverlay } from "./primitives/TrackingFrameOverlay.js";
+export type { TrackingFrameOverlayProps } from "./primitives/TrackingFrameOverlay.js";
+export { FreezeFrameOverlay } from "./primitives/FreezeFrameOverlay.js";
+export type { FreezeFrameOverlayProps } from "./primitives/FreezeFrameOverlay.js";
 export { MarginalDensity } from "./primitives/MarginalDensity.js";
 export type { MarginalDensityProps } from "./primitives/MarginalDensity.js";
 export { useCursorTooltip } from "./primitives/CursorTooltip.js";

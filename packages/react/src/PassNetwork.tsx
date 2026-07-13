@@ -30,6 +30,7 @@ import { LIGHT_THEME, type UITheme } from "./theme.js";
 import { resolveStyleValue, type StyleValue } from "./styleValue.js";
 import {
   ChartLineMark,
+  ChartLegend,
   ChartPointMark,
   PitchChartFrame,
   ChartTooltip,
@@ -844,76 +845,61 @@ export function PassNetworkStaticSvg({
   );
 }
 
-function LegendRowView({ row }: { row: PassNetworkLegendRow }) {
+function LegendRowView({ row, theme }: { row: PassNetworkLegendRow; theme: UITheme }) {
   if (row.kind === "size") {
     return (
-      <div style={{ display: "grid", gap: 4 }}>
-        <div
-          style={{
-            fontSize: 11,
-            letterSpacing: "0.06em",
-            textTransform: "uppercase",
-            opacity: 0.7,
-          }}
-        >
-          {row.label}
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12 }}>
-          <svg width={36} height={16} aria-hidden="true">
-            <circle cx={6} cy={8} r={3} fill={row.color} />
-            <circle cx={26} cy={8} r={7} fill={row.color} />
-          </svg>
-          <span style={{ opacity: 0.8 }}>{row.minLabel}</span>
-          <span aria-hidden="true" style={{ opacity: 0.4 }}>
-            →
-          </span>
-          <span style={{ opacity: 0.8 }}>{row.maxLabel}</span>
-        </div>
-      </div>
+      <ChartLegend
+        items={[
+          {
+            kind: "range",
+            key: "node-size",
+            label: row.label,
+            sample: "marker",
+            color: row.color,
+            minSize: row.minRadius,
+            maxSize: row.maxRadius,
+            minLabel: row.minLabel,
+            maxLabel: row.maxLabel,
+          },
+        ]}
+        theme={theme}
+      />
     );
   }
   if (row.kind === "width") {
     return (
-      <div style={{ display: "grid", gap: 4 }}>
-        <div
-          style={{
-            fontSize: 11,
-            letterSpacing: "0.06em",
-            textTransform: "uppercase",
-            opacity: 0.7,
-          }}
-        >
-          {row.label}
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12 }}>
-          <svg width={36} height={16} aria-hidden="true">
-            <line x1={2} y1={8} x2={16} y2={8} stroke={row.color} strokeWidth={1} />
-            <line x1={20} y1={8} x2={34} y2={8} stroke={row.color} strokeWidth={3.5} />
-          </svg>
-          <span style={{ opacity: 0.8 }}>{row.minLabel}</span>
-          <span aria-hidden="true" style={{ opacity: 0.4 }}>
-            →
-          </span>
-          <span style={{ opacity: 0.8 }}>{row.maxLabel}</span>
-        </div>
-      </div>
+      <ChartLegend
+        items={[
+          {
+            kind: "range",
+            key: "edge-width",
+            label: row.label,
+            sample: "line",
+            color: row.color,
+            minSize: row.minWidth,
+            maxSize: row.maxWidth,
+            minLabel: row.minLabel,
+            maxLabel: row.maxLabel,
+          },
+        ]}
+        theme={theme}
+      />
     );
   }
   if (row.mode === "team") {
     return (
-      <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12 }}>
-        <span
-          aria-hidden="true"
-          style={{
-            display: "inline-block",
-            width: 12,
-            height: 12,
-            borderRadius: "50%",
-            background: row.color,
-          }}
-        />
-        <span>{row.label}</span>
-      </div>
+      <ChartLegend
+        items={[
+          {
+            kind: "marker",
+            key: "team-colour",
+            label: row.label,
+            shape: "circle",
+            fill: row.color,
+          },
+        ]}
+        theme={theme}
+      />
     );
   }
   // xT gradient
@@ -1111,7 +1097,7 @@ export function PassNetwork({
         }}
       >
         {model.legend.rows.map((row, i) => (
-          <LegendRowView key={`${row.kind}-${i}`} row={row} />
+          <LegendRowView key={`${row.kind}-${i}`} row={row} theme={theme} />
         ))}
       </div>
     ) : null,

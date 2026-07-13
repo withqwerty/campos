@@ -619,7 +619,13 @@ export function PizzaChartStaticSvg({
   const cy = center;
 
   return (
-    <svg viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`} width="100%" height="100%">
+    <svg
+      viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`}
+      width="100%"
+      height="100%"
+      role="img"
+      aria-label={model.meta.accessibleLabel}
+    >
       {!model.meta.empty ? (
         <>
           {model.categoryWashes.length > 0 ? (

@@ -111,6 +111,10 @@
       "type": ["string", "null"],
       "description": "Display-ready name of the pass recipient when available."
     },
+    "recipientId": {
+      "type": ["string", "null"],
+      "description": "Provider-stable pass recipient identifier when available. Optional while provider coverage is incomplete; do not infer it from a display name."
+    },
     "passType": {
       "type": ["string", "null"],
       "enum": [

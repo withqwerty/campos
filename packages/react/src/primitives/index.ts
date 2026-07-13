@@ -6,7 +6,7 @@ export { useCursorTooltip } from "./CursorTooltip.js";
 export type { CursorTooltipApi } from "./CursorTooltip.js";
 export { ChartLegend } from "./ChartLegend.js";
 export { legendTitleStyle } from "./ChartLegend.js";
-export type { LegendItem, LegendSwatchShape } from "./ChartLegend.js";
+export type { ChartLegendItem, LegendItem, LegendSwatchShape } from "./ChartLegend.js";
 export {
   InteractiveChartLegend,
   nextInteractiveLegendValue,
@@ -68,6 +68,10 @@ export type { ChartFlowDestinationOverlayProps } from "./ChartFlowDestinationOve
 export { ChartDensitySurfaceImage } from "./ChartDensitySurfaceImage.js";
 export { ChartPointMark } from "./ChartPointMark.js";
 export type { PointShape } from "./ChartPointMark.js";
+export { TrackingFrameOverlay } from "./TrackingFrameOverlay.js";
+export type { TrackingFrameOverlayProps } from "./TrackingFrameOverlay.js";
+export { FreezeFrameOverlay } from "./FreezeFrameOverlay.js";
+export type { FreezeFrameOverlayProps } from "./FreezeFrameOverlay.js";
 export { GoalMouthShotLayer } from "./GoalMouthShotLayer.js";
 export type {
   GoalMouthShotLayerMarkersStyle,

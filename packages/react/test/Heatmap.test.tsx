@@ -247,6 +247,20 @@ describe("<Heatmap /> — autoPitchLines", () => {
     expect(strokes.some((s) => s.toLowerCase().includes("ffffff"))).toBe(true);
   });
 
+  it("keeps dark-scale contrast in the empty state", () => {
+    const { container } = render(
+      <Heatmap
+        events={[]}
+        colorScale="magma"
+        pitchColors={{ fill: "#ffffff", lines: "#1a1a1a" }}
+      />,
+    );
+
+    const strokes = getPitchLineStrokes(container);
+    expect(strokes).not.toContain("#1a1a1a");
+    expect(strokes.some((stroke) => stroke.toLowerCase().includes("ffffff"))).toBe(true);
+  });
+
   it("respects user pitch line colors when using a light colorscale (blues)", () => {
     const { container } = render(
       <Heatmap

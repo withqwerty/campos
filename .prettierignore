@@ -5,5 +5,7 @@ packages/schema/src/index.js
 packages/schema/src/index.d.ts
 pnpm-lock.yaml
 apps/*/.astro/
+# Internal working plans are intentionally untracked and not release artefacts.
+/plans/
 # Auto-generated minified-JSON pass fixture — prettifying would bloat to ~20MB.
 apps/site/src/data/passflow-mancity-2023-24.ts

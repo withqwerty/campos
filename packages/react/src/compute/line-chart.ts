@@ -14,6 +14,7 @@ import {
   type NumericAxisModel,
   resolveAxisPadding,
 } from "./scales/index.js";
+import { resolveVerticalLabelOverlaps } from "./math.js";
 import type { PlotAreaBand } from "../primitives/ChartPlotAreaBands.js";
 import type { PlotAreaReferenceLine } from "../primitives/ChartPlotAreaReferenceLines.js";
 
@@ -378,22 +379,6 @@ function linearRegression(points: readonly { x: number; y: number }[]): {
   const slope = (n * sumXY - sumX * sumY) / denom;
   const intercept = (sumY - slope * sumX) / n;
   return { slope, intercept };
-}
-
-function resolveOverlaps(sortedYs: number[], minGap: number): number[] {
-  if (sortedYs.length <= 1) return [...sortedYs];
-  const result = [...sortedYs];
-  for (let i = 1; i < result.length; i++) {
-    const curr = result[i] as number;
-    const prev = result[i - 1] as number;
-    if (curr - prev < minGap) result[i] = prev + minGap;
-  }
-  for (let i = result.length - 2; i >= 0; i--) {
-    const next = result[i + 1] as number;
-    const curr = result[i] as number;
-    if (next - curr < minGap) result[i] = next - minGap;
-  }
-  return result;
 }
 
 function resolveAxis(
@@ -769,7 +754,7 @@ export function computeLineChart(input: ComputeLineChartInput): LineChartModel {
         };
       })
       .sort((a, b) => a.rawY - b.rawY);
-    const resolved = resolveOverlaps(
+    const resolved = resolveVerticalLabelOverlaps(
       raw.map((r) => r.rawY),
       END_LABEL_MIN_GAP,
     );
@@ -937,7 +922,7 @@ export function computeLineChart(input: ComputeLineChartInput): LineChartModel {
     const sourceIds: string[] = [];
     if (env.kind === "series-pair") sourceIds.push(env.seriesAId, env.seriesBId);
     else if (env.kind === "center-offset") sourceIds.push(env.centerSeriesId);
-    else if (env.kind === "series-to-reference") sourceIds.push(env.seriesId);
+    else sourceIds.push(env.seriesId);
     for (const sid of sourceIds) {
       if (truncatedSeriesIds.has(sid)) {
         const label = env.id ?? "?";

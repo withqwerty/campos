@@ -6,7 +6,12 @@ import type {
   ShotEvent,
 } from "@withqwerty/campos-schema";
 
-import type { StatsBombEvent, StatsBombLineupTeam, StatsBombMatchInfo } from "./parse.js";
+import type {
+  StatsBombEvent,
+  StatsBombLineupTeam,
+  StatsBombMatchInfo,
+  StatsBombThreeSixtyFrame,
+} from "./parse.js";
 import { mapShot } from "./map-shot.js";
 import { mapPass } from "./map-pass.js";
 import { mapCarry } from "./map-carry.js";
@@ -25,8 +30,18 @@ import { projectShots } from "./project-shots.js";
 import { projectPasses } from "./project-passes.js";
 import { mapStatsBombMatchLineups } from "./map-lineups.js";
 import { projectTeamSheetToFormation } from "../shared/project-formation.js";
+import { mapStatsBombFreezeFrames } from "./freeze-frames.js";
 
-export type { StatsBombEvent, StatsBombLineupTeam, StatsBombMatchInfo } from "./parse.js";
+export type {
+  StatsBombEvent,
+  StatsBombLineupTeam,
+  StatsBombMatchInfo,
+  StatsBombThreeSixtyFrame,
+} from "./parse.js";
+export type {
+  StatsBombFreezeFrame,
+  StatsBombFreezeFrameParticipant,
+} from "./freeze-frames.js";
 
 /** StatsBomb type.id constants. */
 const BALL_RECOVERY_TYPE_ID = 2;
@@ -167,6 +182,17 @@ export const fromStatsBomb = {
    */
   passes(events: readonly StatsBombEvent[], matchInfo: StatsBombMatchInfo): PassEvent[] {
     return projectPasses(events, matchInfo);
+  },
+
+  /**
+   * Event-linked StatsBomb 360 positional snapshots. Participants intentionally
+   * remain anonymous because the provider does not disclose their identities.
+   */
+  freezeFrames(
+    frames: readonly StatsBombThreeSixtyFrame[],
+    matchInfo: StatsBombMatchInfo,
+  ) {
+    return mapStatsBombFreezeFrames(frames, matchInfo);
   },
 
   /**

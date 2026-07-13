@@ -7,7 +7,12 @@ import type {
   FormationOrientation,
 } from "../compute/index.js";
 
-import type { FormationTeamSpec } from "../Formation.js";
+import type {
+  FormationDualProps,
+  FormationProps,
+  FormationSingleProps,
+  FormationTeamSpec,
+} from "../Formation.js";
 
 export const FORMATION_MODE_ERROR =
   "Formation requires either `formation` (single-team mode) or both `home` and `away` (dual-team mode)";
@@ -16,6 +21,20 @@ export const DEFAULT_TEAM_COLOR = "#d33";
 export const DEFAULT_HOME_COLOR = "#e50027";
 export const DEFAULT_AWAY_COLOR = "#2563eb";
 export const STROKE_COLOR = "#1a202c";
+
+export function isDualFormationProps(props: FormationProps): props is FormationDualProps {
+  const candidate: {
+    home?: FormationTeamSpec | null;
+    away?: FormationTeamSpec | null;
+  } = props;
+  return candidate.home != null && candidate.away != null;
+}
+
+export function isSingleFormationProps(
+  props: FormationProps,
+): props is FormationSingleProps {
+  return props.formation != null;
+}
 
 const BASE_MARKER_RADIUS = 3.2;
 const BASE_LABEL_FONT_SIZE = 2.8;

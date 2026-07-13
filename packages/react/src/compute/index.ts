@@ -20,6 +20,21 @@ export {
   type SharedPitchScaleAccessors,
 } from "./shared-pitch-scale.js";
 
+export { buildTrackingFrameScene } from "./tracking-frame-overlay.js";
+export type {
+  TrackingFramePlayerMark,
+  TrackingFrameScene,
+} from "./tracking-frame-overlay.js";
+
+export { buildFreezeFrameScene } from "./freeze-frame-overlay.js";
+export type {
+  EventFreezeFrame,
+  FreezeFrameParticipant,
+  FreezeFrameParticipantMark,
+  FreezeFramePoint,
+  FreezeFrameScene,
+} from "./freeze-frame-overlay.js";
+
 export { computePassMap } from "./pass-map.js";
 export type {
   ComputePassMapInput,

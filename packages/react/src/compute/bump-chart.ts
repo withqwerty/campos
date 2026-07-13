@@ -7,6 +7,7 @@ import {
   resolveAxisPadding,
 } from "./scales/axis-padding.js";
 import { createLinearScale } from "./scales/linear-scale.js";
+import { resolveVerticalLabelOverlaps } from "./math.js";
 
 // ---------------------------------------------------------------------------
 // Public types
@@ -564,7 +565,7 @@ export function computeBumpChart(input: ComputeBumpChartInput): BumpChartModel {
       .sort((a, b) => a.rawY - b.rawY); // sort by y position
 
     // Resolve overlaps by pushing labels apart
-    const resolvedYs = resolveOverlaps(
+    const resolvedYs = resolveVerticalLabelOverlaps(
       rawLabels.map((l) => l.rawY),
       END_LABEL_MIN_GAP,
     );
@@ -607,7 +608,7 @@ export function computeBumpChart(input: ComputeBumpChartInput): BumpChartModel {
       }))
       .sort((a, b) => a.rawY - b.rawY);
 
-    const resolvedYs = resolveOverlaps(
+    const resolvedYs = resolveVerticalLabelOverlaps(
       rawLabels.map((l) => l.rawY),
       END_LABEL_MIN_GAP,
     );
@@ -664,40 +665,6 @@ export function computeBumpChart(input: ComputeBumpChartInput): BumpChartModel {
     startLabels,
     emptyState: null,
   };
-}
-
-// ---------------------------------------------------------------------------
-// Overlap resolution
-// ---------------------------------------------------------------------------
-
-/**
- * Resolve vertical overlaps in a sorted array of y-positions.
- * Pushes labels apart until all have at least `minGap` between them.
- */
-function resolveOverlaps(sortedYs: number[], minGap: number): number[] {
-  if (sortedYs.length <= 1) return [...sortedYs];
-
-  const result = [...sortedYs];
-
-  // Forward pass: push down labels that are too close
-  for (let i = 1; i < result.length; i++) {
-    const curr = result[i] as number;
-    const prev = result[i - 1] as number;
-    if (curr - prev < minGap) {
-      result[i] = prev + minGap;
-    }
-  }
-
-  // Backward pass: if we pushed labels too far down, pull them back up
-  for (let i = result.length - 2; i >= 0; i--) {
-    const next = result[i + 1] as number;
-    const curr = result[i] as number;
-    if (next - curr < minGap) {
-      result[i] = next - minGap;
-    }
-  }
-
-  return result;
 }
 
 // ---------------------------------------------------------------------------

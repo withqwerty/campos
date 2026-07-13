@@ -30,6 +30,11 @@ describe("fromStatsBomb.passes", () => {
     expect(passes).toEqual(eventPasses);
   });
 
+  it("preserves StatsBomb's stable pass-recipient identity", () => {
+    const passWithRecipient = passes.find((pass) => pass.recipient != null);
+    expect(passWithRecipient?.recipientId).toMatch(/^\d+$/);
+  });
+
   it("returns empty array for empty input", () => {
     expect(fromStatsBomb.passes([] as StatsBombEvent[], matchInfo)).toEqual([]);
   });

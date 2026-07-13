@@ -218,4 +218,33 @@ describe("fromStatsBomb.shots", () => {
     const shots = fromStatsBomb.shots([noLocEvent], matchInfo);
     expect(shots).toEqual([]);
   });
+
+  it("keeps outcome-only own goals in events but excludes them from product shots", () => {
+    const ownGoal: StatsBombEvent = {
+      id: "outcome-own-goal",
+      index: 1,
+      period: 1,
+      timestamp: "00:10:00.000",
+      minute: 10,
+      second: 0,
+      type: { id: 16, name: "Shot" },
+      possession: 1,
+      possession_team: { id: 1, name: "Home" },
+      play_pattern: { id: 1, name: "Regular Play" },
+      team: { id: 1, name: "Home" },
+      location: [100, 40],
+      shot: {
+        statsbomb_xg: 0,
+        end_location: [120, 40],
+        body_part: { id: 40, name: "Right Foot" },
+        type: { id: 87, name: "Open Play" },
+        outcome: { id: 115, name: "Own Goal" },
+      },
+    };
+
+    expect(fromStatsBomb.events([ownGoal], matchInfo)).toMatchObject([
+      { kind: "shot", isOwnGoal: true },
+    ]);
+    expect(fromStatsBomb.shots([ownGoal], matchInfo)).toEqual([]);
+  });
 });

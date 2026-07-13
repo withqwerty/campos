@@ -1,5 +1,14 @@
 # @withqwerty/campos-stadia
 
+## 0.1.0-beta.6
+
+### Minor Changes
+
+- 09725ac: Add continuous and event-linked tracking overlays, including StatsBomb 360
+  freeze frames, a Metrica/kloppy fixture seam, and stable full-pitch tracking
+  snapshots. Harden provider projections and pass-recipient identity handling,
+  while improving shared chart rendering defaults and accessible overlays.
+
 ## 0.1.0-beta.5
 
 ## 0.1.0-beta.4

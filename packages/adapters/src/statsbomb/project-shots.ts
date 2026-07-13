@@ -13,7 +13,7 @@ const SHOT_TYPE_ID = 16;
  *  - type.id === 16 (Shot)
  *  - shot object present
  *  - Not penalty shootout (period 5)
- *  - Not own goals ("Own Goal For" / "Own Goal Against")
+ *  - Not own goals (type or outcome)
  *  - Must have location
  *
  * Returns canonical ShotEvent[].
@@ -28,7 +28,12 @@ export function projectShots(
     .filter((event) => event.period !== 5)
     .filter((event) => {
       const typeName = event.shot?.type.name;
-      return typeName !== "Own Goal For" && typeName !== "Own Goal Against";
+      const outcomeName = event.shot?.outcome.name;
+      return (
+        typeName !== "Own Goal For" &&
+        typeName !== "Own Goal Against" &&
+        outcomeName !== "Own Goal"
+      );
     })
     .filter((event) => event.location != null)
     .map((event) => mapShot(event, matchInfo));
