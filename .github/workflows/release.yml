@@ -15,6 +15,7 @@ env:
 jobs:
   release:
     name: Publish to npm
+    if: github.repository == 'withqwerty/campos'
     runs-on: ubuntu-latest
     permissions:
       contents: write
