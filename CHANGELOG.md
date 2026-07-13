@@ -3,10 +3,49 @@
 All notable changes to Campos will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and Campos follows [Semantic Versioning](https://semver.org/) with a pre-v1
-alpha release cadence.
+and Campos follows [Semantic Versioning](https://semver.org/). Campos is in
+pre-v1 beta: the five published packages release together on the `beta` tag.
+
+For package-specific API and dependency notes, see the individual
+[package changelogs](#package-changelogs). GitHub also publishes one pre-release
+per package in the [Releases](https://github.com/withqwerty/campos/releases)
+section.
 
 ## [Unreleased]
+
+## [0.1.0-beta.6] - 2026-07-13
+
+### Added
+
+- Continuous tracking-frame and event-linked freeze-frame overlays for the
+  React surface, including StatsBomb 360 freeze frames and a Metrica/kloppy
+  tracking seam.
+
+### Changed
+
+- Provider projections and pass-recipient identity handling are more robust;
+  shared chart rendering defaults and accessible overlays are improved.
+
+## [0.1.0-beta.5] - 2026-06-28
+
+### Added
+
+- Reusable Opta event analysis packets plus Second Spectrum tracking and
+  physical-window packets, retaining source evidence and provider context.
+
+## [0.1.0-beta.4] - 2026-05-01
+
+### Added
+
+- Publishable pitch presets and a single-install type surface for the React
+  package.
+
+## [0.1.0-beta.3] - 2026-05-01
+
+### Added
+
+- First public beta release. APIs may still evolve before 1.0; breaking changes
+  are called out in the package changelogs.
 
 ## [0.1.0-alpha.1] - 2026-04-23
 
@@ -47,3 +86,11 @@ period: 2`), and never invents extra-time periods from this provider.
   its published package contents are narrowed to the files needed by consumers.
 - The docs/demo site is now maintained as a separate repo and consumes Campos
   through package entry points rather than monorepo source aliases.
+
+## Package changelogs
+
+- [Schema](packages/schema/CHANGELOG.md)
+- [Adapters](packages/adapters/CHANGELOG.md)
+- [Stadia](packages/stadia/CHANGELOG.md)
+- [React](packages/react/CHANGELOG.md)
+- [Static export](packages/static/CHANGELOG.md)
